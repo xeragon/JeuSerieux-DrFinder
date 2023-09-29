@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn4q68ses1j2i"]
+
+[ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="1_dlpbv"]
+[ext_resource type="Script" path="res://scenes/maps/map_inside_blue_building.gd" id="1_xl403"]
+
+[node name="map_inside_blue_building" type="Node2D"]
+script = ExtResource("1_xl403")
+
+[node name="player" parent="." instance=ExtResource("1_dlpbv")]
