@@ -1,0 +1,6 @@
+res://scenes/maps/acceuil_et_portes.tscn
+res://scenes/main.tscn
+res://scenes/maps/map.gd
+res://dialog/dialog.tscn
+res://scenes/dialog_hud.tscn
+res://scenes/maps/map.tscn
