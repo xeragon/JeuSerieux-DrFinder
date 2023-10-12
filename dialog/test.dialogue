@@ -1,0 +1,25 @@
+~ start	
+
+Dr.Zimzim : Voyons voir ....
+Dr.Zimzim: Sait tu inverser une matrice ? 
+- oui 
+	do GlobalScript.add_stress(30)
+	Dr.Zimzim: menteur.  
+	=> start
+- non
+	Dr.Zimzim: Sait tu compter ?
+	- oui 
+		Dr.Zimzim: Ah oui ? combien fait 1+1 ?.
+		- 2
+			Dr.Zimzim: Dommage c'est faux je te met 0 au ressource complémentaire....
+			- Mais vous ne savez pas compter ! 
+				Dr.Zimzim: Comment ca ! J'ai pourtant bien préciser que l'on parler de nombre en base 2 non ? 
+			- Oui je comprends .... 
+		- 1 
+			Dr.Zimzim: Je ne peux plus rien pour toi ...
+		- 3 
+			Dr.Zimzim: c'es bien mon enfant, je te met 3 au ressource complémentaires
+	- non 
+		c'est bien ce que je pensais... 
+do GlobalScript.interaction_finished()
+=> END
