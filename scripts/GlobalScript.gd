@@ -1,7 +1,7 @@
 extends Node
 
 var player_name : String
-var player : player = null
+var player : Player = null
 var current_map : Node2D
 
 var hud : CanvasLayer
