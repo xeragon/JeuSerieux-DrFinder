@@ -1,9 +1,11 @@
-
+class_name player
 
 extends CharacterBody2D
 
 
 @onready var anim = $AnimatedSprite2D
+@onready var emote = $emote
+@onready var interact_latency_timer = $interact_latency
 
 @export var move_speed : int
 var direction : Vector2
@@ -15,12 +17,14 @@ var body_in_interact_range = null
 func _ready():
 	GlobalScript.player_name = "alex"
 	GlobalScript.player = self
+	emote.visible = false
+	
 
 func _physics_process(delta):
 	
 	
 	if not interacting:
-		
+		$player_hud.visible = false
 		if body_in_interact_range and Input.is_action_just_pressed("ui_interact"):
 			interacting = true
 			body_in_interact_range.interact()
@@ -46,9 +50,11 @@ func _physics_process(delta):
 		else:
 			var deceleration = friction * delta 
 			velocity = velocity.move_toward(Vector2(0, 0), deceleration)
-	
-	move_and_slide()
-
+		move_and_slide()
+	else:
+		$player_hud.visible = true
+		animate(false)
+		
 func animate(isMoving : bool):
 	var anim_state: String 
 	if isMoving:
@@ -69,3 +75,6 @@ func _on_area_2d_body_entered(body):
 func _on_area_2d_body_exited(body):
 	if body == body_in_interact_range:
 		body_in_interact_range = null 
+
+func _on_interact_latency_timeout():
+	interacting = false
