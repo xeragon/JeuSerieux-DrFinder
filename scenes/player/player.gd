@@ -1,4 +1,4 @@
-class_name player
+class_name Player
 
 extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
@@ -12,11 +12,9 @@ var interacting = false
 var body_in_interact_range = null
 @export var friction = 300
 
-@onready var stress = $player_hud/Control/stress_bar
-@onready var sante = $player_hud/Control/health_bar
+@onready var stress = $player_hud/ui/stress_bar
+@onready var sante = $player_hud/ui/health_bar
 @onready var player_hud = $player_hud
-@onready var emote = $emote
-@onready var interact_latency_timer = $interact_latency
 
 
 func _ready():
@@ -58,6 +56,9 @@ func _physics_process(delta):
 		$player_hud.visible = true
 		animate(false)
 		
+
+	
+
 func animate(isMoving : bool):
 	var anim_state: String 
 	if isMoving:
