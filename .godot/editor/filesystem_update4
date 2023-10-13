@@ -1,0 +1,5 @@
+res://scenes/player/player.tscn
+res://scenes/npc/npc_green_casket_reading.tscn
+res://scenes/maps/map.tscn
+res://scenes/main.tscn
+res://scenes/player/player.gd
