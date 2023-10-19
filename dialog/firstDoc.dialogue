@@ -1,0 +1,7 @@
+~ start
+ChillDoc : Bonjour ! Comment allez vous ?
+do GlobalScript.remove_stress(10)
+- *hausser les épaules*
+	
+- *repondre que tout vas bien*
+=> END
