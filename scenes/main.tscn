@@ -6,3 +6,4 @@
 y_sort_enabled = true
 
 [node name="main_map" parent="." instance=ExtResource("1_gpqr6")]
+position = Vector2(5, 6)
