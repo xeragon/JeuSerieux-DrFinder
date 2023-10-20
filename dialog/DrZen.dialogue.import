@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_9"
+type="Resource"
+uid="uid://c8je3lkuav03p"
+path="res://.godot/imported/DrZen.dialogue-b4ac266b394b7cbb41df0a555d77ce68.tres"
+
+[deps]
+
+source_file="res://dialog/DrZen.dialogue"
+dest_files=["res://.godot/imported/DrZen.dialogue-b4ac266b394b7cbb41df0a555d77ce68.tres"]
+
+[params]
+
+defaults=true

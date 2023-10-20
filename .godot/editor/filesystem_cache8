@@ -1,9 +1,7 @@
 1f6e7d6f6d326d2351c0a2141d725277
-::res://::1697805355
+::res://::1697805564
 icon.svg::CompressedTexture2D::2206649096922879392::1696943591::1697805360::1::::<><>::
-main.dialogue::Resource::7049190971419455626::1697805297::1697805358::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 README.md::TextFile::-1::1696943582::0::1::::<><>::
-test.dialogue::Resource::3304140007606275326::1697805297::1697805358::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 ui_tel.tscn::PackedScene::1745329706422262512::1697803806::0::1::::<><>::
 ::res://addons/::1696943582
 ::res://addons/dialogue_manager/::1696943582
@@ -20,7 +18,7 @@ plugin.cfg::TextFile::-1::1696943582::0::1::::<><>::
 plugin.gd::GDScript::-1::1696943582::0::1::::<>EditorPlugin<>::
 test_scene.gd::GDScript::-1::1696943582::0::1::::BaseDialogueTestScene<>Node2D<>::
 test_scene.tscn::PackedScene::-1::1696943582::0::1::::<><>::res://addons/dialogue_manager/test_scene.gd
-::res://addons/dialogue_manager/assets/::1697804913
+::res://addons/dialogue_manager/assets/::1697805363
 icon.svg::CompressedTexture2D::9148339284877624195::1696943582::1697805363::1::::<><>::
 update.svg::CompressedTexture2D::9126631778427806641::1696943582::1697805363::1::::<><>::
 ::res://addons/dialogue_manager/components/::1696943582
@@ -29,7 +27,7 @@ code_edit.tscn::PackedScene::5379618807048408118::1696943582::0::1::::<><>::res:
 code_edit_syntax_highlighter.gd::GDScript::-1::1696943582::0::1::::<>SyntaxHighlighter<>::
 dialogue_cache.gd::GDScript::-1::1696943582::0::1::::<>Node<>::
 download_update_panel.gd::GDScript::-1::1696943582::0::1::::<>Control<>::
-download_update_panel.tscn::PackedScene::1130642722554629364::1696943582::0::1::::<><>::res://addons/dialogue_manager/components/download_update_panel.gd<>uid://d3baj6rygkb3f::::res://addons/dialogue_manager/assets/update.svg
+download_update_panel.tscn::PackedScene::1130642722554629364::1696943582::0::1::::<><>::res://addons/dialogue_manager/components/download_update_panel.gd<>uid://d3baj6rygkb3f
 errors_panel.gd::GDScript::-1::1696943582::0::1::::<>HBoxContainer<>::
 errors_panel.tscn::PackedScene::6105315990352960875::1696943582::0::1::::<><>::res://addons/dialogue_manager/components/errors_panel.gd
 files_list.gd::GDScript::-1::1696943582::0::1::::<>VBoxContainer<>::
@@ -43,11 +41,11 @@ settings.gd::GDScript::-1::1696943582::0::1::::<>Node<>::
 title_list.gd::GDScript::-1::1696943582::0::1::::<>VBoxContainer<>::
 title_list.tscn::PackedScene::6134415340044566558::1696943582::0::1::::<><>::res://addons/dialogue_manager/components/title_list.gd
 update_button.gd::GDScript::-1::1696943582::0::1::::<>Button<>::
-update_button.tscn::PackedScene::5825087957514786930::1696943582::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk::::res://addons/dialogue_manager/components/download_update_panel.tscn
+update_button.tscn::PackedScene::5825087957514786930::1696943582::0::1::::<><>::res://addons/dialogue_manager/components/update_button.gd<>uid://qdxrxv3c3hxk
 ::res://addons/dialogue_manager/example_balloon/::1696943582
 example_balloon.gd::GDScript::-1::1696943582::0::1::::<>CanvasLayer<>::
-example_balloon.tscn::PackedScene::2304415056852043862::1696943582::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn
-small_example_balloon.tscn::PackedScene::4417311113468315280::1696943582::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo::::res://addons/dialogue_manager/dialogue_label.tscn
+example_balloon.tscn::PackedScene::2304415056852043862::1696943582::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
+small_example_balloon.tscn::PackedScene::4417311113468315280::1696943582::0::1::::<><>::res://addons/dialogue_manager/example_balloon/example_balloon.gd<>uid://ckvgyvclnwggo
 ::res://addons/dialogue_manager/l10n/::1696943582
 en.mo::Translation::-1::1696943582::0::1::::<><>::
 en.po::Translation::-1::1696943582::0::1::::<><>::
@@ -55,15 +53,17 @@ zh-cn.po::Translation::-1::1696943582::0::1::::<><>::
 zh-tw.po::Translation::-1::1696943582::0::1::::<><>::
 ::res://addons/dialogue_manager/views/::1696943582
 main_view.gd::GDScript::-1::1696943582::0::1::::<>Control<>::
-main_view.tscn::PackedScene::4884668666408697448::1696943582::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://cpg4lg1r3ff6m::::res://addons/dialogue_manager/views/settings_view.tscn
+main_view.tscn::PackedScene::4884668666408697448::1696943582::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u
 settings_view.gd::GDScript::-1::1696943582::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1696943582::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://assets/::1697805297
-::res://assets/Modern tiles_Free/::1697804914
+::res://assets/::1697805535
+speech_bubble_animation-11x11.png::CompressedTexture2D::7557373278766150689::1697805535::1697805535::1::::<><>::
+tiny_speech_indicators-11x11.png::CompressedTexture2D::5617246297733002046::1697805535::1697805535::1::::<><>::
+::res://assets/Modern tiles_Free/::1697805364
 free_overview.png::CompressedTexture2D::4373839730263824954::1696943583::1697805364::1::::<><>::
 LICENSE.txt::TextFile::-1::1696943583::0::1::::<><>::
 READ ME.txt::TextFile::-1::1696943583::0::1::::<><>::
-::res://assets/Modern tiles_Free/Characters_free/::1697804913
+::res://assets/Modern tiles_Free/Characters_free/::1697805363
 Adam_16x16.png::CompressedTexture2D::4403039671885099888::1696943582::1697805363::1::::<><>::
 Adam_idle_16x16.png::CompressedTexture2D::8669606513154278784::1696943582::1697805363::1::::<><>::
 Adam_idle_anim_16x16.png::CompressedTexture2D::3708078192337145698::1696943582::1697805363::1::::<><>::
@@ -96,13 +96,13 @@ Bob_run_16x16.png::CompressedTexture2D::1131125351480888545::1696943583::1697805
 Bob_sit2_16x16.png::CompressedTexture2D::295471199265807090::1696943583::1697805363::1::::<><>::
 Bob_sit3_16x16.png::CompressedTexture2D::9140792503675728516::1696943583::1697805363::1::::<><>::
 Bob_sit_16x16.png::CompressedTexture2D::1265170307553543601::1696943583::1697805363::1::::<><>::
-::res://assets/Modern tiles_Free/Characters_free/RPGMAKERMV/::1697804913
+::res://assets/Modern tiles_Free/Characters_free/RPGMAKERMV/::1697805364
 Characters_MV.png::CompressedTexture2D::2936345506589421814::1696943583::1697805363::1::::<><>::
 ::res://assets/Modern tiles_Free/Interiors_free/::1696943583
-::res://assets/Modern tiles_Free/Interiors_free/16x16/::1697804913
+::res://assets/Modern tiles_Free/Interiors_free/16x16/::1697805363
 Interiors_free_16x16.png::CompressedTexture2D::9126546000921716640::1696943583::1697805363::1::::<><>::
 Room_Builder_free_16x16.png::CompressedTexture2D::2475592477882336369::1696943583::1697805363::1::::<><>::
-::res://assets/Modern tiles_Free/Old/::1697804913
+::res://assets/Modern tiles_Free/Old/::1697805363
 idle_16x16_2.png::CompressedTexture2D::539780864364030128::1696943583::1697805363::1::::<><>::
 idle_32x32_2.png::CompressedTexture2D::1677981321844082434::1696943583::1697805363::1::::<><>::
 idle_48x48_2.png::CompressedTexture2D::2024716437504891797::1696943583::1697805363::1::::<><>::
@@ -124,7 +124,7 @@ Tileset_48x48_2.png::CompressedTexture2D::1035621442820789285::1696943583::16978
 Tileset_48x48_3.png::CompressedTexture2D::5155092394322033068::1696943583::1697805362::1::::<><>::
 Tileset_48x48_9.png::CompressedTexture2D::5846552013139049799::1696943583::1697805362::1::::<><>::
 Tileset_48x48_16.png::CompressedTexture2D::637277216013391918::1696943583::1697805362::1::::<><>::
-::res://assets/Modern tiles_Free/Old/mv/::1697804912
+::res://assets/Modern tiles_Free/Old/mv/::1697805363
 Character_2_16x16_RPGMAKER.png::CompressedTexture2D::1670831960894543708::1696943583::1697805363::1::::<><>::
 Character_2_32x32_RPGMAKER.png::CompressedTexture2D::6493933712043742071::1696943583::1697805363::1::::<><>::
 Character_2_48x48_RPGMAKER.png::CompressedTexture2D::9043079923131568014::1696943583::1697805363::1::::<><>::
@@ -132,7 +132,7 @@ Character_2_48x48_RPGMAKER.png::CompressedTexture2D::9043079923131568014::169694
 ::res://assets/Modern_Exteriors_16x16/Animated_16x16/::1696943590
 GIF FORMAT ISSUE.txt::TextFile::-1::1696943590::0::1::::<><>::
 ::res://assets/Modern_Exteriors_16x16/Animated_16x16/Animated_gifs_16x16/::1696943586
-::res://assets/Modern_Exteriors_16x16/Animated_16x16/Animated_sheets_16x16/::1697804914
+::res://assets/Modern_Exteriors_16x16/Animated_16x16/Animated_sheets_16x16/::1697805366
 Ambulance_Rear_Door_16x16.png::CompressedTexture2D::1873585800163794174::1696943586::1697805362::1::::<><>::
 Automatic_Barrier_1_16x16.png::CompressedTexture2D::1266599787430232167::1696943586::1697805362::1::::<><>::
 Automatic_Barrier_2_16x16.png::CompressedTexture2D::197394101769910326::1696943586::1697805362::1::::<><>::
@@ -398,19 +398,19 @@ Worm_4_down_16x16.png::CompressedTexture2D::6644933040865690200::1696943590::169
 Worm_4_left_16x16.png::CompressedTexture2D::6702151199312123116::1696943590::1697805361::1::::<><>::
 Worm_4_right_16x16.png::CompressedTexture2D::2890099646116626087::1696943590::1697805362::1::::<><>::
 Worm_4_up_16x16.png::CompressedTexture2D::6438305995875228731::1696943590::1697805362::1::::<><>::
-::res://assets/Modern_Exteriors_16x16/Animated_16x16/Animated_Terrains_16x16/::1697804912
+::res://assets/Modern_Exteriors_16x16/Animated_16x16/Animated_Terrains_16x16/::1697805362
 Water_Tileset_16x16.png::CompressedTexture2D::3061078271819298095::1696943584::1697805362::1::::<><>::
 Water_Tileset_Diagonals_16x16.png::CompressedTexture2D::4529661237938717673::1696943584::1697805362::1::::<><>::
 Water_Tileset_Outer_Corners_16x16.png::CompressedTexture2D::9103194923305362780::1696943584::1697805362::1::::<><>::
 ::res://assets/Modern_Exteriors_16x16/Animated_16x16/Vehicles_16x16/::1696943590
-::res://assets/Modern_Exteriors_16x16/Animated_16x16/Vehicles_16x16/Buses_16x16/::1697804914
+::res://assets/Modern_Exteriors_16x16/Animated_16x16/Vehicles_16x16/Buses_16x16/::1697805364
 Buses_1.png::CompressedTexture2D::8744507955489606762::1696943590::1697805363::1::::<><>::
 Buses_2.png::CompressedTexture2D::202809994453067558::1696943590::1697805363::1::::<><>::
 Buses_3.png::CompressedTexture2D::9151679965812065749::1696943590::1697805363::1::::<><>::
 Buses_4.png::CompressedTexture2D::8682686874301670385::1696943590::1697805363::1::::<><>::
 Buses_5.png::CompressedTexture2D::5697727945878158837::1696943590::1697805363::1::::<><>::
 Buses_6.png::CompressedTexture2D::5474509441021603689::1696943590::1697805364::1::::<><>::
-::res://assets/Modern_Exteriors_16x16/Animated_16x16/Vehicles_16x16/Cars_16x16/::1697804912
+::res://assets/Modern_Exteriors_16x16/Animated_16x16/Vehicles_16x16/Cars_16x16/::1697805362
 Car_2_complete_1.png::CompressedTexture2D::6552598812454984320::1696943590::1697805361::1::::<><>::
 Car_2_complete_2.png::CompressedTexture2D::9221661635071917050::1696943590::1697805361::1::::<><>::
 Car_2_complete_3.png::CompressedTexture2D::5068587823189461317::1696943590::1697805361::1::::<><>::
@@ -426,7 +426,7 @@ Car_classic_green_complete_.png::CompressedTexture2D::1914409653701858938::16969
 Car_classic_grey_complete_.png::CompressedTexture2D::9022765123339774042::1696943590::1697805361::1::::<><>::
 Car_classic_orange_complete_.png::CompressedTexture2D::7996229354119152593::1696943590::1697805362::1::::<><>::
 Car_classic_red_complete_.png::CompressedTexture2D::2544360944223732562::1696943590::1697805360::1::::<><>::
-::res://assets/Modern_Exteriors_16x16/Animated_16x16/Vehicles_16x16/Trash_Truck_16x16/::1697804912
+::res://assets/Modern_Exteriors_16x16/Animated_16x16/Vehicles_16x16/Trash_Truck_16x16/::1697805360
 Trash_Truck_2_16x16.png::CompressedTexture2D::3727886025208161870::1696943590::1697805360::1::::<><>::
 Trash_Truck_16x16.png::CompressedTexture2D::8315095018128126867::1696943590::1697805360::1::::<><>::
 Trash_Truck_Going_Down_2_16x16.png::CompressedTexture2D::1736811879128458298::1696943591::1697805360::1::::<><>::
@@ -437,14 +437,14 @@ Trash_Truck_Going_Right_2_16x16.png::CompressedTexture2D::6024080378579092033::1
 Trash_Truck_Going_Right_16x16.png::CompressedTexture2D::862041707908392534::1696943591::1697805360::1::::<><>::
 Trash_Truck_Going_Up_2_16x16.png::CompressedTexture2D::965086708906615819::1696943591::1697805360::1::::<><>::
 Trash_Truck_Going_Up_16x16.png::CompressedTexture2D::3330801894052008179::1696943591::1697805360::1::::<><>::
-::res://assets/Modern_Exteriors_16x16/Character_Generator_Addons_16x16/::1697804912
+::res://assets/Modern_Exteriors_16x16/Character_Generator_Addons_16x16/::1697805360
 Accessory_20_Worker_Helmet_16x16.png::CompressedTexture2D::233948320662444846::1696943591::1697805360::1::::<><>::
 Accessory_21_Worker_Jacket_16x16.png::CompressedTexture2D::6474690073178953052::1696943591::1697805360::1::::<><>::
 Accessory_22_Scout_Snapback_16x16.png::CompressedTexture2D::4918475507980125720::1696943591::1697805360::1::::<><>::
 Accessory_23_Scout_Outfit_16x16_1.png::CompressedTexture2D::2101591767950848823::1696943591::1697805360::1::::<><>::
 Accessory_23_Scout_Outfit_16x16_2.png::CompressedTexture2D::4668989647215780672::1696943591::1697805360::1::::<><>::
 Accessory_23_Scout_Outfit_16x16_3.png::CompressedTexture2D::3153264700411899065::1696943591::1697805360::1::::<><>::
-::res://assets/Modern_Exteriors_16x16/Character_Generator_Addons_16x16/Characters_16x16/::1697804912
+::res://assets/Modern_Exteriors_16x16/Character_Generator_Addons_16x16/Characters_16x16/::1697805360
 Modern_Exteriors_Characters_Scout_16x16_1.png::CompressedTexture2D::7502008818712909189::1696943591::1697805360::1::::<><>::
 Modern_Exteriors_Characters_Scout_16x16_2.png::CompressedTexture2D::6051461633429658960::1696943591::1697805360::1::::<><>::
 Modern_Exteriors_Characters_Scout_16x16_3.png::CompressedTexture2D::4882437345556990631::1696943591::1697805360::1::::<><>::
@@ -452,7 +452,7 @@ Modern_Exteriors_Characters_Scout_16x16_4.png::CompressedTexture2D::671061414634
 Modern_Exteriors_Characters_Scout_16x16_5.png::CompressedTexture2D::6854859286474545857::1696943591::1697805360::1::::<><>::
 Modern_Exteriors_Characters_Scout_16x16_6.png::CompressedTexture2D::1140609954650828493::1696943591::1697805360::1::::<><>::
 Modern_Exteriors_Characters_Swimmers_16x16.png::CompressedTexture2D::8444559575515541950::1696943591::1697805360::1::::<><>::
-::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/::1697804912
+::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/::1697805361
 1_Terrains_and_Fences_16x16.png::CompressedTexture2D::5497790696758631401::1696943591::1697805361::1::::<><>::
 2_City_Terrains_16x16.png::CompressedTexture2D::5738014645220037310::1696943591::1697805361::1::::<><>::
 3_City_Props_16x16.png::CompressedTexture2D::8625452046837303372::1696943591::1697805361::1::::<><>::
@@ -471,32 +471,46 @@ Modern_Exteriors_Characters_Swimmers_16x16.png::CompressedTexture2D::84445595755
 16_Office_16x16.png::CompressedTexture2D::3256006285502084024::1696943591::1697805360::1::::<><>::
 17_Garden_16x16.png::CompressedTexture2D::2378975517509962472::1696943591::1697805361::1::::<><>::
 18_Fire_Station_16x16.png::CompressedTexture2D::6940714930547195052::1696943591::1697805360::1::::<><>::
-::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/Old_Sorting/::1697804912
+::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/Old_Sorting/::1697805362
 1_Terrains_16x16.png::CompressedTexture2D::2652641152991547350::1696943591::1697805361::1::::<><>::
 2_City_16x16.png::CompressedTexture2D::4032391683495867564::1696943591::1697805362::1::::<><>::
 3_Buildings_16x16.png::CompressedTexture2D::1589047566683408639::1696943591::1697805362::1::::<><>::
 4_Villas_16x16.png::CompressedTexture2D::3769740446124363709::1696943591::1697805361::1::::<><>::
 5_Camping_16x16.png::CompressedTexture2D::3802533731199234130::1696943591::1697805361::1::::<><>::
-::res://assets/ui_assets/::1697804912
+::res://assets/ui_assets/::1697805360
 Image_phone.png::CompressedTexture2D::3431652036314994813::1697803806::1697805360::1::::<><>::
-::res://dialog/::1697805297
-dialog.gd::GDScript::-1::1697805297::0::1::::Dialog<>Control<>::
-dialog.tscn::PackedScene::4798745996134176661::1697805297::0::1::::<><>::res://dialog/dialog.gd
-::res://scenes/::1697805297
-dialog_hud.tscn::PackedScene::77709847306006803::1697805297::0::1::::<><>::uid://camsv7e2dg44h::::res://dialog/dialog.tscn
-main.tscn::PackedScene::3633514813071472721::1697804563::0::1::::<><>::uid://y2tl6wgrehux::::res://scenes/maps/map.tscn
-::res://scenes/maps/::1697805297
-map.gd::GDScript::-1::1697805297::0::1::::<>map<>::
-map.tscn::PackedScene::1741445375772955723::1697805297::0::1::::<><>::res://scenes/maps/map.gd<>uid://cn0si6461lw7o::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/2_City_Terrains_16x16.png<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://cxb3pupskgipk::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/4_Generic_Buildings_16x16.png<>uid://bdv4tr4iuwb0::::res://scenes/dialog_hud.tscn<>uid://du62k3mlvoigk::::res://scenes/npc/npc_green_casket_reading.tscn
-map_inside_blue_building.gd::GDScript::-1::1697805297::0::1::::<>map<>::
-map_inside_blue_building.tscn::PackedScene::3359771198634433970::1697805297::0::1::::<><>::uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>res://scenes/maps/map_inside_blue_building.gd
-::res://scenes/npc/::1697805297
-npc_green_casket_reading.gd::GDScript::-1::1697805297::0::1::::<>npc<>::
-npc_green_casket_reading.tscn::PackedScene::8628693340679416854::1696943591::0::1::::<><>::res://scenes/npc/npc_green_casket_reading.gd<>uid://de5a8vragty4t::::res://assets/Modern_Exteriors_16x16/Character_Generator_Addons_16x16/Characters_16x16/Modern_Exteriors_Characters_Scout_16x16_1.png
-::res://scenes/player/::1697805297
-player.gd::GDScript::-1::1697805297::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::6677825599509099560::1697805297::0::1::::<><>::res://scenes/player/player.gd<>uid://e0fjhhk6468h::::res://assets/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png<>uid://hyot0ek1foau::::res://assets/Modern tiles_Free/Characters_free/Alex_run_16x16.png<>uid://bo5k2pwtd8s58::::res://assets/ui_assets/Image_phone.png
-::res://scripts/::1697805297
-GlobalScript.gd::GDScript::-1::1697805297::0::1::::<>Node<>::
-map.gd::GDScript::-1::1697805297::0::1::::map<>Node2D<>::
+::res://dialog/::1697805535
+DrZen.dialogue::Resource::7107946071542671187::1697805535::1697805566::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+firstDoc.dialogue::Resource::653093807710440241::1697805535::1697805566::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+main.dialogue::Resource::7386841853926687675::1697805535::1697805566::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+test.dialogue::Resource::9047246146171212488::1697805535::1697805566::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
+::res://scenes/::1697805535
+main.tscn::PackedScene::3633514813071472721::1697805379::0::1::::<><>::uid://y2tl6wgrehux::::res://scenes/maps/map.tscn
+::res://scenes/maps/::1697805535
+acceuil_et_portes.gd::GDScript::-1::1697805535::0::1::::<>map<>::
+acceuil_et_portes.tscn::PackedScene::4584826581609848864::1697805535::0::1::::<><>::uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>res://scenes/maps/acceuil_et_portes.gd<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png
+map.gd::GDScript::-1::1697805535::0::1::::<>map<>::
+map.tscn::PackedScene::1741445375772955723::1697805535::0::1::::<><>::res://scenes/maps/map.gd<>uid://cn0si6461lw7o::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/2_City_Terrains_16x16.png<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://cxb3pupskgipk::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/4_Generic_Buildings_16x16.png<>uid://du62k3mlvoigk::::res://scenes/npc/npc_green_casket_reading.tscn
+porte_medecin_1.gd::GDScript::-1::1697805535::0::1::::<>map<>::
+porte_medecin_1.tscn::PackedScene::2462616179849935603::1697805535::0::1::::<><>::res://scenes/maps/porte_medecin_1.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_2.gd::GDScript::-1::1697805535::0::1::::<>map<>::
+porte_medecin_2.tscn::PackedScene::6083044854669806487::1697805535::0::1::::<><>::res://scenes/maps/porte_medecin_2.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_3.gd::GDScript::-1::1697805535::0::1::::<>map<>::
+porte_medecin_3.tscn::PackedScene::8801113686481879689::1697805535::0::1::::<><>::res://scenes/maps/porte_medecin_3.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_4.gd::GDScript::-1::1697805535::0::1::::<>map<>::
+porte_medecin_4.tscn::PackedScene::1697063476309279605::1697805535::0::1::::<><>::res://scenes/maps/porte_medecin_4.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_5.gd::GDScript::-1::1697805535::0::1::::<>map<>::
+porte_medecin_5.tscn::PackedScene::8245358281680360514::1697805535::0::1::::<><>::res://scenes/maps/porte_medecin_5.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_6.gd::GDScript::-1::1697805535::0::1::::<>map<>::
+porte_medecin_6.tscn::PackedScene::7960219586404160405::1697805535::0::1::::<><>::res://scenes/maps/porte_medecin_6.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+::res://scenes/npc/::1697805535
+npc_green_casket_reading.gd::GDScript::-1::1697805535::0::1::::<>npc<>::
+npc_green_casket_reading.tscn::PackedScene::8628693340679416854::1696943591::0::1::::<><>::res://scenes/npc/npc_green_casket_reading.gd<>uid://de5a8vragty4t
+::res://scenes/player/::1697805535
+player.gd::GDScript::-1::1697805535::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::6677825599509099560::1697805535::0::1::::<><>::res://scenes/player/player.gd<>uid://e0fjhhk6468h::::res://assets/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png<>uid://hyot0ek1foau::::res://assets/Modern tiles_Free/Characters_free/Alex_run_16x16.png<>uid://dfw33l26eea2l::::res://assets/speech_bubble_animation-11x11.png<>uid://cmbbhxcfyivw5::::res://assets/tiny_speech_indicators-11x11.png
+player_hud.tscn::PackedScene::3179515186050833694::1697805535::0::1::::<><>::
+::res://scripts/::1697805535
+GlobalScript.gd::GDScript::-1::1697805535::0::1::::<>Node<>::
+map.gd::GDScript::-1::1697805535::0::1::::map<>Node2D<>::
 npc.gd::GDScript::-1::1696943592::0::1::::npc<>CharacterBody2D<>::
