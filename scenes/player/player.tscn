@@ -1,8 +1,9 @@
-[gd_scene load_steps=55 format=3 uid="uid://c2e12uwd7qwk3"]
+[gd_scene load_steps=56 format=3 uid="uid://c2e12uwd7qwk3"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_jqxhe"]
 [ext_resource type="Texture2D" uid="uid://e0fjhhk6468h" path="res://assets/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png" id="2_qigia"]
 [ext_resource type="Texture2D" uid="uid://hyot0ek1foau" path="res://assets/Modern tiles_Free/Characters_free/Alex_run_16x16.png" id="3_se7cc"]
+[ext_resource type="Texture2D" uid="uid://bo5k2pwtd8s58" path="res://assets/ui_assets/Image_phone.png" id="4_kv1je"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m0wob"]
 atlas = ExtResource("2_qigia")
@@ -415,6 +416,66 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_xr5qs")
+
+[node name="Ui" type="Control" parent="."]
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Telephone" type="Panel" parent="Ui"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -187.0
+offset_top = -126.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="Ui/Telephone"]
+custom_minimum_size = Vector2(100, 90)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -45.0
+offset_right = 50.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("4_kv1je")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Info_medcin" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -320.0
+offset_top = -184.0
+offset_right = 320.0
+offset_bottom = 180.0
+
+[node name="Panel" type="Panel" parent="Info_medcin"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
