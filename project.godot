@@ -27,6 +27,11 @@ scenes_split_offset=311
 dialogues_editor_type="NODES"
 dialogues_split_offset=215
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
@@ -69,7 +74,7 @@ ui_interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://main.dialogue", "res://test.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialog/DrZen.dialogue", "res://dialog/main.dialogue", "res://dialog/firstDoc.dialogue", "res://dialog/test.dialogue")
 
 [rendering]
 
