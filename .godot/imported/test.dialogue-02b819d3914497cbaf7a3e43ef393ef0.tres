@@ -1,0 +1,271 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_207js"]
+
+[resource]
+script = ExtResource("1_207js")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Dr.Zimzim")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "Dr.Zimzim",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"parent_id": "9",
+"text": "Sait tu compter ?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sait tu compter ?",
+"type": "dialogue"
+},
+"11": {
+"id": "11",
+"next_id": "12",
+"next_id_after": "24",
+"parent_id": "9",
+"responses": PackedStringArray("11", "22"),
+"text": "oui",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "oui",
+"type": "response"
+},
+"12": {
+"character": "Dr.Zimzim",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"parent_id": "11",
+"text": "Ah oui ? combien fait 1+1 ?.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ah oui ? combien fait 1+1 ?.",
+"type": "dialogue"
+},
+"13": {
+"id": "13",
+"next_id": "14",
+"next_id_after": "24",
+"parent_id": "11",
+"responses": PackedStringArray("13", "18", "20"),
+"text": "2",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "2",
+"type": "response"
+},
+"14": {
+"character": "Dr.Zimzim",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"parent_id": "13",
+"text": "Dommage c'est faux je te met 0 au ressource complémentaire....",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dommage c'est faux je te met 0 au ressource complémentaire....",
+"type": "dialogue"
+},
+"15": {
+"id": "15",
+"next_id": "16",
+"next_id_after": "24",
+"parent_id": "13",
+"responses": PackedStringArray("15", "17"),
+"text": "Mais vous ne savez pas compter !",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mais vous ne savez pas compter !",
+"type": "response"
+},
+"16": {
+"character": "Dr.Zimzim",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "24",
+"parent_id": "15",
+"text": "Comment ca ! J'ai pourtant bien préciser que l'on parler de nombre en base 2 non ?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Comment ca ! J'ai pourtant bien préciser que l'on parler de nombre en base 2 non ?",
+"type": "dialogue"
+},
+"17": {
+"id": "17",
+"next_id": "24",
+"next_id_after": "24",
+"parent_id": "13",
+"text": "Oui je comprends ....",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oui je comprends ....",
+"type": "response"
+},
+"18": {
+"id": "18",
+"next_id": "19",
+"next_id_after": "24",
+"parent_id": "11",
+"text": "1",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "1",
+"type": "response"
+},
+"19": {
+"character": "Dr.Zimzim",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "24",
+"parent_id": "18",
+"text": "Je ne peux plus rien pour toi ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Je ne peux plus rien pour toi ...",
+"type": "dialogue"
+},
+"20": {
+"id": "20",
+"next_id": "21",
+"next_id_after": "24",
+"parent_id": "11",
+"text": "3",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "3",
+"type": "response"
+},
+"21": {
+"character": "Dr.Zimzim",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "24",
+"parent_id": "20",
+"text": "c'es bien mon enfant, je te met 3 au ressource complémentaires",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "c'es bien mon enfant, je te met 3 au ressource complémentaires",
+"type": "dialogue"
+},
+"22": {
+"id": "22",
+"next_id": "23",
+"next_id_after": "24",
+"parent_id": "9",
+"text": "non",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "non",
+"type": "response"
+},
+"23": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"parent_id": "22",
+"text": "c'est bien ce que je pensais...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "c'est bien ce que je pensais...",
+"type": "dialogue"
+},
+"24": {
+"id": "24",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GlobalScript"
+}, {
+"type": "dot"
+}, {
+"function": "interaction_finished",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "25",
+"type": "mutation"
+},
+"25": {
+"id": "25",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "Dr.Zimzim",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"text": "Voyons voir ....",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Voyons voir ....",
+"type": "dialogue"
+},
+"4": {
+"character": "Dr.Zimzim",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"text": "Sait tu inverser une matrice ?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sait tu inverser une matrice ?",
+"type": "dialogue"
+},
+"5": {
+"id": "5",
+"next_id": "6",
+"next_id_after": "24",
+"responses": PackedStringArray("5", "9"),
+"text": "oui",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "oui",
+"type": "response"
+},
+"6": {
+"id": "6",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "GlobalScript"
+}, {
+"type": "dot"
+}, {
+"function": "add_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 30
+}])])
+}])
+},
+"next_id": "7",
+"parent_id": "5",
+"type": "mutation"
+},
+"7": {
+"character": "Dr.Zimzim",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"parent_id": "5",
+"text": "menteur.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "menteur.",
+"type": "dialogue"
+},
+"8": {
+"id": "8",
+"is_snippet": false,
+"next_id": "3",
+"parent_id": "5",
+"type": "goto"
+},
+"9": {
+"id": "9",
+"next_id": "10",
+"next_id_after": "24",
+"text": "non",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "non",
+"type": "response"
+}
+}
+metadata/dialogue_manager_version = "2.24.2"
