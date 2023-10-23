@@ -1,2 +1,9 @@
-res://scenes/player/player.tscn
-res://scenes/main.tscn
+res://scenes/maps/porte_medecin_2.tscn
+res://scripts/GlobalScript.gd
+res://scenes/maps/acceuil_et_portes.tscn
+res://scenes/maps/porte_medecin_1.tscn
+res://scenes/maps/porte_medecin_3.tscn
+res://scenes/maps/porte_medecin_4.tscn
+res://scenes/maps/porte_medecin_5.tscn
+res://scenes/maps/porte_medecin_6.tscn
+res://scenes/player/player.gd
