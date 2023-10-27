@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://hyot0ek1foau" path="res://assets/Modern tiles_Free/Characters_free/Alex_run_16x16.png" id="3_se7cc"]
 [ext_resource type="Texture2D" uid="uid://dfw33l26eea2l" path="res://assets/speech_bubble_animation-11x11.png" id="4_ogy1u"]
 [ext_resource type="Texture2D" uid="uid://cmbbhxcfyivw5" path="res://assets/tiny_speech_indicators-11x11.png" id="5_4n7fl"]
+[ext_resource type="Texture2D" uid="uid://dfw33l26eea2l" path="res://assets/speech_bubble_animation-11x11.png" id="4_ogy1u"]
+[ext_resource type="Texture2D" uid="uid://cmbbhxcfyivw5" path="res://assets/tiny_speech_indicators-11x11.png" id="5_4n7fl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m0wob"]
 atlas = ExtResource("2_qigia")

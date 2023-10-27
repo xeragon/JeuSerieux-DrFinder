@@ -26,7 +26,7 @@ func _ready():
 
 func _physics_process(delta):
 	if not interacting:
-		
+		$player_hud.visible = false
 		if body_in_interact_range and Input.is_action_just_pressed("ui_interact"):
 			interacting = true
 			body_in_interact_range.interact()
