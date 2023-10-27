@@ -1,9 +1,16 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_a3vhb"]
 
 [resource]
 script = ExtResource("1_a3vhb")
+=======
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_iortq"]
+
+[resource]
+script = ExtResource("1_iortq")
+>>>>>>> e05c7e4dff424c95d50f751145cd38fb8e110450
 titles = {
 "start": "3"
 }
