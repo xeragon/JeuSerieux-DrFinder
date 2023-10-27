@@ -20,12 +20,13 @@ var body_in_interact_range = null
 func _ready():
 	GlobalScript.player_name = "alex"
 	GlobalScript.player = self
+	GlobalScript.load_player_stats()
 	emote.visible = false
 	
 
 func _physics_process(delta):
 	if not interacting:
-		$player_hud.visible = false
+		
 		if body_in_interact_range and Input.is_action_just_pressed("ui_interact"):
 			interacting = true
 			body_in_interact_range.interact()
@@ -53,7 +54,7 @@ func _physics_process(delta):
 			velocity = velocity.move_toward(Vector2(0, 0), deceleration)
 		move_and_slide()
 	else:
-		$player_hud.visible = true
+		
 		animate(false)
 		
 

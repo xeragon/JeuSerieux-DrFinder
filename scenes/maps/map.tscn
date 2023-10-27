@@ -15851,8 +15851,6 @@ metadata/_edit_group_ = true
 position = Vector2(1.5, -4)
 shape = SubResource("RectangleShape2D_8d543")
 
-[node name="player" parent="." instance=ExtResource("4_chuom")]
-
 [node name="npc_green_casket_reading" parent="." instance=ExtResource("6_xn6hn")]
 position = Vector2(73, -13)
 
@@ -15871,5 +15869,7 @@ layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(21, 1507329, 87)
+
+[node name="player" parent="." instance=ExtResource("4_chuom")]
 
 [connection signal="body_entered" from="blue_building_door" to="." method="_on_blue_building_door_body_entered"]

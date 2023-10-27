@@ -1,5 +1,5 @@
 1f6e7d6f6d326d2351c0a2141d725277
-::res://::1697720793
+::res://::1698406106
 icon.svg::CompressedTexture2D::2206649096922879392::1695274840::1697200703::1::::<><>::
 README.md::TextFile::-1::1697718676::0::1::::<><>::
 ::res://addons/::1695714201
@@ -481,33 +481,33 @@ DrZen.dialogue::Resource::7107946071542671187::1697719893::1697718676::1::::<><>
 firstDoc.dialogue::Resource::653093807710440241::1697718676::1697718676::1::::<><>::
 main.dialogue::Resource::7386841853926687675::1697718676::1697718676::1::::<><>::
 test.dialogue::Resource::9047246146171212488::1697718676::1697718676::1::::<><>::
-::res://scenes/::1697718676
-main.tscn::PackedScene::3633514813071472721::1697718613::0::1::::<><>::uid://y2tl6wgrehux
-::res://scenes/maps/::1697720703
-acceuil_et_portes.gd::GDScript::-1::1697718676::0::1::::<>map<>::
-acceuil_et_portes.tscn::PackedScene::4584826581609848864::1697720700::0::1::::<><>::uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>res://scenes/maps/acceuil_et_portes.gd<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png
-map.gd::GDScript::-1::1697718676::0::1::::<>map<>::
-map.tscn::PackedScene::1741445375772955723::1697718676::0::1::::<><>::res://scenes/maps/map.gd<>uid://cn0si6461lw7o
+::res://scenes/::1698405964
+main.tscn::PackedScene::3633514813071472721::1698405964::0::1::::<><>::uid://y2tl6wgrehux::::res://scenes/maps/map.tscn
+::res://scenes/maps/::1698405965
+acceuil_et_portes.gd::GDScript::-1::1698137337::0::1::::<>map<>::
+acceuil_et_portes.tscn::PackedScene::4584826581609848864::1698405961::0::1::::<><>::res://scenes/maps/acceuil_et_portes.gd<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png
+map.gd::GDScript::-1::1698139023::0::1::::<>map<>::
+map.tscn::PackedScene::1741445375772955723::1698405965::0::1::::<><>::res://scenes/maps/map.gd<>uid://cn0si6461lw7o::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/2_City_Terrains_16x16.png<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://cxb3pupskgipk::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/4_Generic_Buildings_16x16.png<>uid://du62k3mlvoigk::::res://scenes/npc/npc_green_casket_reading.tscn
 porte_medecin_1.gd::GDScript::-1::1697718676::0::1::::<>map<>::
-porte_medecin_1.tscn::PackedScene::2462616179849935603::1697720700::0::1::::<><>::res://scenes/maps/porte_medecin_1.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_1.tscn::PackedScene::2462616179849935603::1698405961::0::1::::<><>::res://scenes/maps/porte_medecin_1.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
 porte_medecin_2.gd::GDScript::-1::1697718676::0::1::::<>map<>::
-porte_medecin_2.tscn::PackedScene::6083044854669806487::1697720701::0::1::::<><>::res://scenes/maps/porte_medecin_2.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_2.tscn::PackedScene::6083044854669806487::1698405962::0::1::::<><>::res://scenes/maps/porte_medecin_2.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
 porte_medecin_3.gd::GDScript::-1::1697718676::0::1::::<>map<>::
-porte_medecin_3.tscn::PackedScene::8801113686481879689::1697720701::0::1::::<><>::res://scenes/maps/porte_medecin_3.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_3.tscn::PackedScene::8801113686481879689::1698405962::0::1::::<><>::res://scenes/maps/porte_medecin_3.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
 porte_medecin_4.gd::GDScript::-1::1697718676::0::1::::<>map<>::
-porte_medecin_4.tscn::PackedScene::1697063476309279605::1697720702::0::1::::<><>::res://scenes/maps/porte_medecin_4.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_4.tscn::PackedScene::1697063476309279605::1698405963::0::1::::<><>::res://scenes/maps/porte_medecin_4.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
 porte_medecin_5.gd::GDScript::-1::1697718676::0::1::::<>map<>::
-porte_medecin_5.tscn::PackedScene::8245358281680360514::1697720702::0::1::::<><>::res://scenes/maps/porte_medecin_5.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_5.tscn::PackedScene::8245358281680360514::1698405963::0::1::::<><>::res://scenes/maps/porte_medecin_5.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
 porte_medecin_6.gd::GDScript::-1::1697718676::0::1::::<>map<>::
-porte_medecin_6.tscn::PackedScene::7960219586404160405::1697720703::0::1::::<><>::res://scenes/maps/porte_medecin_6.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
+porte_medecin_6.tscn::PackedScene::7960219586404160405::1698405964::0::1::::<><>::res://scenes/maps/porte_medecin_6.gd<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://d3a745ni4nyjw::::res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png<>uid://bbjgv8i8f1auj::::res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png<>uid://uiks7f0jn1ca::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/12_Hotel_and_Hospital_16x16.png
 ::res://scenes/npc/::1697718676
 npc_green_casket_reading.gd::GDScript::-1::1697718951::0::1::::<>npc<>::
 npc_green_casket_reading.tscn::PackedScene::8628693340679416854::1697718612::0::1::::<><>::res://scenes/npc/npc_green_casket_reading.gd<>uid://de5a8vragty4t
-::res://scenes/player/::1697720616
-player.gd::GDScript::-1::1697719927::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::6677825599509099560::1697720666::0::1::::<><>::res://scenes/player/player.gd<>uid://e0fjhhk6468h
+::res://scenes/player/::1698406092
+player.gd::GDScript::-1::1698138989::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::6677825599509099560::1698406092::0::1::::<><>::res://scenes/player/player.gd<>uid://e0fjhhk6468h::::res://assets/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png<>uid://hyot0ek1foau::::res://assets/Modern tiles_Free/Characters_free/Alex_run_16x16.png<>uid://dfw33l26eea2l::::res://assets/speech_bubble_animation-11x11.png<>uid://cmbbhxcfyivw5::::res://assets/tiny_speech_indicators-11x11.png
 player_hud.tscn::PackedScene::3179515186050833694::1697718676::0::1::::<><>::
-::res://scripts/::1697719893
-GlobalScript.gd::GDScript::-1::1697719995::0::1::::<>Node<>::
-map.gd::GDScript::-1::1697718676::0::1::::map<>Node2D<>::
+::res://scripts/::1698138989
+GlobalScript.gd::GDScript::-1::1698138936::0::1::::<>Node<>::
+map.gd::GDScript::-1::1698138989::0::1::::map<>Node2D<>::
 npc.gd::GDScript::-1::1695403466::0::1::::npc<>CharacterBody2D<>::
