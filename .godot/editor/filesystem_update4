@@ -1,3 +1,7 @@
-res://scenes/player/player.tscn
+res://scenes/maps/fin_dialogue.tscn
+res://scenes/maps/fin_dialogue.gd
 res://scenes/main.tscn
 res://scenes/maps/map.tscn
+res://scenes/player/player.tscn
+res://scenes/maps/porte_medecin_1.tscn
+res://scenes/maps/acceuil_et_portes.tscn
