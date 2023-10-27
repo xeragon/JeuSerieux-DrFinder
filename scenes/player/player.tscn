@@ -479,7 +479,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_txjav")
 }, {
-"duration": 1.0,
+"duration": 10.0,
 "texture": SubResource("AtlasTexture_5urei")
 }],
 "loop": false,
@@ -508,7 +508,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bkd5w")
 }, {
-"duration": 1.0,
+"duration": 10.0,
 "texture": SubResource("AtlasTexture_njpu8")
 }],
 "loop": false,
@@ -544,7 +544,6 @@ metadata/_edit_group_ = true
 shape = SubResource("CircleShape2D_xr5qs")
 
 [node name="player_hud" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="ui" type="Control" parent="player_hud"]
 layout_mode = 3

@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://b6k6ooc3nqlqe"]
 
-[ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="1_dlpbv"]
 [ext_resource type="Script" path="res://scenes/maps/acceuil_et_portes.gd" id="1_y5okk"]
 [ext_resource type="Texture2D" uid="uid://d3a745ni4nyjw" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="3_2rd62"]
+[ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="4_1g3ia"]
 [ext_resource type="Texture2D" uid="uid://bbjgv8i8f1auj" path="res://assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="4_8sduc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ddf2f"]
@@ -4087,12 +4087,9 @@ sources/1 = SubResource("TileSetAtlasSource_8vw1g")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qiqbo"]
 size = Vector2(16, 7.5625)
 
-[node name="map_inside_blue_building" type="Node2D"]
+[node name="acceuil_et_portes" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_y5okk")
-
-[node name="player" parent="." instance=ExtResource("1_dlpbv")]
-position = Vector2(-1, 75)
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -4152,6 +4149,11 @@ shape = SubResource("RectangleShape2D_qiqbo")
 [node name="medecin6" type="CollisionShape2D" parent="porte_medecins6"]
 position = Vector2(168, -82)
 shape = SubResource("RectangleShape2D_qiqbo")
+
+[node name="player_position" type="Marker2D" parent="."]
+position = Vector2(0, 103)
+
+[node name="player" parent="." instance=ExtResource("4_1g3ia")]
 
 [connection signal="body_entered" from="porte_medecins1" to="." method="_on_portes_medecin1_body_entered"]
 [connection signal="body_entered" from="porte_medecins2" to="." method="_on_porte_medecins_2_body_entered"]

@@ -3,7 +3,6 @@ extends map
 func _ready():
 	super._ready()
 
-
 func _on_portes_medecin1_body_entered(body):
 	if body.has_method("player"):
 		get_tree().change_scene_to_file("res://scenes/maps/porte_medecin_1.tscn")
