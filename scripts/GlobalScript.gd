@@ -1,7 +1,7 @@
 extends Node
 
 var player_name : String
-var player : Player = null
+var player : Player
 var current_map : Node2D
 var player_instance =  preload("res://scenes/player/player.tscn").instantiate()
 var hud : CanvasLayer
