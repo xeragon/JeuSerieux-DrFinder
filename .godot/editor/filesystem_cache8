@@ -1,8 +1,8 @@
 1f6e7d6f6d326d2351c0a2141d725277
-::res://::1698409424
+::res://::1698577360
 icon.svg::CompressedTexture2D::2206649096922879392::1695274840::1697200703::1::::<><>::
 README.md::TextFile::-1::1698407412::0::1::::<><>::
-ui_tel.tscn::PackedScene::1745329706422262512::1698409298::0::1::::<><>::
+ui_tel.tscn::PackedScene::1745329706422262512::1698410012::0::1::::<><>::
 ::res://addons/::1695714201
 ::res://addons/dialogue_manager/::1695714201
 constants.gd::GDScript::-1::1695714201::0::1::::<>Node<>::
@@ -56,7 +56,7 @@ main_view.gd::GDScript::-1::1695714201::0::1::::<>Control<>::
 main_view.tscn::PackedScene::4884668666408697448::1695714201::0::1::::<><>::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u
 settings_view.gd::GDScript::-1::1695714201::0::1::::<>TabContainer<>::
 settings_view.tscn::PackedScene::5839841081119266502::1695714201::0::1::::<><>::res://addons/dialogue_manager/views/settings_view.gd
-::res://assets/::1698409298
+::res://assets/::1698410012
 speech_bubble_animation-11x11.png::CompressedTexture2D::7557373278766150689::1697718676::1698408358::1::::<><>::
 tiny_speech_indicators-11x11.png::CompressedTexture2D::5617246297733002046::1697718676::1698408362::1::::<><>::
 ::res://assets/Modern tiles_Free/::1697200703
@@ -477,20 +477,20 @@ Modern_Exteriors_Characters_Swimmers_16x16.png::CompressedTexture2D::84445595755
 3_Buildings_16x16.png::CompressedTexture2D::1589047566683408639::1695047794::1697200703::1::::<><>::
 4_Villas_16x16.png::CompressedTexture2D::3769740446124363709::1695047794::1697200702::1::::<><>::
 5_Camping_16x16.png::CompressedTexture2D::3802533731199234130::1695047794::1697200702::1::::<><>::
-::res://assets/ui_assets/::1698409298
-Image_phone.png::CompressedTexture2D::3431652036314994813::1698409298::1698409298::1::::<><>::
+::res://assets/ui_assets/::1698410012
+Image_phone.png::CompressedTexture2D::3431652036314994813::1698410012::1698410012::1::::<><>::
 ::res://dialog/::1698408497
 DrZen.dialogue::Resource::7107946071542671187::1698408497::1697718676::1::::<><>::
 firstDoc.dialogue::Resource::653093807710440241::1697718676::1697718676::1::::<><>::
 main.dialogue::Resource::7386841853926687675::1698408299::1697718676::1::::<><>::
 test.dialogue::Resource::9047246146171212488::1698408299::1697718676::1::::<><>::
-::res://scenes/::1698409298
-main.tscn::PackedScene::3633514813071472721::1698409298::0::1::::<><>::uid://y2tl6wgrehux::::res://scenes/maps/map.tscn
-::res://scenes/maps/::1698409001
+::res://scenes/::1698410012
+main.tscn::PackedScene::3633514813071472721::1698410012::0::1::::<><>::uid://y2tl6wgrehux::::res://scenes/maps/map.tscn
+::res://scenes/maps/::1698409437
 acceuil_et_portes.gd::GDScript::-1::1698407978::0::1::::<>map<>::
 acceuil_et_portes.tscn::PackedScene::4584826581609848864::1698407978::0::1::::<><>::res://scenes/maps/acceuil_et_portes.gd<>uid://d3a745ni4nyjw
 map.gd::GDScript::-1::1698407978::0::1::::<>map<>::
-map.tscn::PackedScene::1741445375772955723::1698409001::0::1::::<><>::res://scenes/maps/map.gd<>uid://cn0si6461lw7o::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/2_City_Terrains_16x16.png<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://cxb3pupskgipk::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/4_Generic_Buildings_16x16.png<>uid://du62k3mlvoigk::::res://scenes/npc/npc_green_casket_reading.tscn
+map.tscn::PackedScene::1741445375772955723::1698409437::0::1::::<><>::res://scenes/maps/map.gd<>uid://cn0si6461lw7o::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/2_City_Terrains_16x16.png<>uid://c2e12uwd7qwk3::::res://scenes/player/player.tscn<>uid://cxb3pupskgipk::::res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/4_Generic_Buildings_16x16.png<>uid://du62k3mlvoigk::::res://scenes/npc/npc_green_casket_reading.tscn
 porte_medecin_1.gd::GDScript::-1::1698407412::0::1::::<>map<>::
 porte_medecin_1.tscn::PackedScene::2462616179849935603::1698407412::0::1::::<><>::res://scenes/maps/porte_medecin_1.gd<>uid://c2e12uwd7qwk3
 porte_medecin_2.gd::GDScript::-1::1698407412::0::1::::<>map<>::
@@ -506,9 +506,9 @@ porte_medecin_6.tscn::PackedScene::7960219586404160405::1698407412::0::1::::<><>
 ::res://scenes/npc/::1698408299
 npc_green_casket_reading.gd::GDScript::-1::1698408380::0::1::::<>npc<>::
 npc_green_casket_reading.tscn::PackedScene::8628693340679416854::1697718612::0::1::::<><>::res://scenes/npc/npc_green_casket_reading.gd<>uid://de5a8vragty4t
-::res://scenes/player/::1698409001
+::res://scenes/player/::1698409437
 player.gd::GDScript::-1::1698408983::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::6677825599509099560::1698409001::0::1::::<><>::res://scenes/player/player.gd<>uid://e0fjhhk6468h::::res://assets/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png<>uid://hyot0ek1foau::::res://assets/Modern tiles_Free/Characters_free/Alex_run_16x16.png<>uid://dfw33l26eea2l::::res://assets/speech_bubble_animation-11x11.png<>uid://cmbbhxcfyivw5::::res://assets/tiny_speech_indicators-11x11.png
+player.tscn::PackedScene::6677825599509099560::1698409437::0::1::::<><>::res://scenes/player/player.gd<>uid://e0fjhhk6468h::::res://assets/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png<>uid://hyot0ek1foau::::res://assets/Modern tiles_Free/Characters_free/Alex_run_16x16.png<>uid://dfw33l26eea2l::::res://assets/speech_bubble_animation-11x11.png<>uid://cmbbhxcfyivw5::::res://assets/tiny_speech_indicators-11x11.png
 player_hud.tscn::PackedScene::3179515186050833694::1697718676::0::1::::<><>::
 ::res://scripts/::1698408299
 GlobalScript.gd::GDScript::-1::1698408421::0::1::::<>Node<>::
