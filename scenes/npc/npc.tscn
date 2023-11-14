@@ -1,30 +1,30 @@
 [gd_scene load_steps=11 format=3 uid="uid://du62k3mlvoigk"]
 
-[ext_resource type="Script" path="res://scenes/npc/npc_green_casket_reading.gd" id="1_4xuu0"]
-[ext_resource type="Texture2D" uid="uid://de5a8vragty4t" path="res://assets/Modern_Exteriors_16x16/Character_Generator_Addons_16x16/Characters_16x16/Modern_Exteriors_Characters_Scout_16x16_1.png" id="2_84xpp"]
+[ext_resource type="Script" path="res://scenes/npc/npc_green_casket_reading.gd" id="1_6n2an"]
+[ext_resource type="Texture2D" uid="uid://de5a8vragty4t" path="res://assets/Modern_Exteriors_16x16/Character_Generator_Addons_16x16/Characters_16x16/Modern_Exteriors_Characters_Scout_16x16_1.png" id="2_k8xkk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_he3ll"]
-atlas = ExtResource("2_84xpp")
+atlas = ExtResource("2_k8xkk")
 region = Rect2(0, 224, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uiciu"]
-atlas = ExtResource("2_84xpp")
+atlas = ExtResource("2_k8xkk")
 region = Rect2(16, 224, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u6mwh"]
-atlas = ExtResource("2_84xpp")
+atlas = ExtResource("2_k8xkk")
 region = Rect2(32, 224, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jyyvo"]
-atlas = ExtResource("2_84xpp")
+atlas = ExtResource("2_k8xkk")
 region = Rect2(48, 224, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_63qke"]
-atlas = ExtResource("2_84xpp")
+atlas = ExtResource("2_k8xkk")
 region = Rect2(64, 224, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_507jw"]
-atlas = ExtResource("2_84xpp")
+atlas = ExtResource("2_k8xkk")
 region = Rect2(80, 224, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2pm23"]
@@ -56,8 +56,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5iupx"]
 radius = 4.0
 
-[node name="npc_green_casket_reading" type="CharacterBody2D"]
-script = ExtResource("1_4xuu0")
+[node name="npc" type="CharacterBody2D"]
+script = ExtResource("1_6n2an")
 npc_name = "john"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

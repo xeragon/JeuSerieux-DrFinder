@@ -1,4 +1,4 @@
 extends npc
 
 func interact():
-	pass
+	super._interact("DrZen");

@@ -1,9 +1,10 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_7rgv3"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_hnkna"]
 
 [resource]
-script = ExtResource("1_7rgv3")
+script = ExtResource("1_hnkna")
+using_states = PackedStringArray()
 titles = {
 "start": "2"
 }
@@ -21,6 +22,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "2",
 "next_id": "3",
+"tags": PackedStringArray(),
 "text": "Bonjour ! Comment allez vous ?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Bonjour ! Comment allez vous ?",
@@ -51,6 +53,7 @@ lines = {
 "next_id": "7",
 "next_id_after": "7",
 "responses": PackedStringArray("4", "6"),
+"tags": PackedStringArray(),
 "text": "*hausser les épaules*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*hausser les épaules*",
@@ -60,6 +63,7 @@ lines = {
 "id": "6",
 "next_id": "7",
 "next_id_after": "7",
+"tags": PackedStringArray(),
 "text": "*repondre que tout vas bien*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*repondre que tout vas bien*",
@@ -72,4 +76,4 @@ lines = {
 "type": "goto"
 }
 }
-metadata/dialogue_manager_version = "2.24.2"
+metadata/dialogue_manager_version = "2.28.0"

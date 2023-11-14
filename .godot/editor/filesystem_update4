@@ -1,4 +1,9 @@
+res://scenes/player/player.tscn
+res://scripts/GlobalScript.gd
 res://scenes/maps/porte_medecin_1.tscn
+res://scripts/map.gd
 res://scenes/main.tscn
 res://scenes/maps/map.tscn
-res://scenes/player/player.tscn
+res://scenes/npc/npc.tscn
+res://scenes/npc/dr_zen.tscn
+res://scenes/maps/fin_dialogue.tscn

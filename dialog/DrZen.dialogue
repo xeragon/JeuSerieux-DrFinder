@@ -1,16 +1,59 @@
 ~ start
+Dr.Zen: Hey man ca roule ? Alors dit moi qu'est ce qui t'amène ?.
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	do GlobalScript.modify_stress(20)
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation 
-	do GlobalScript.interaction_finished() 
-	=> END
-Nathan: For more information see the online documentation.
-do GlobalScript.interaction_finished()
+- *décrire vos symptomes* => symptome_simple
+- *faire une blague*
+	Dr.Zen: ahah pas mal celle la je la note !
+	do modify_stress(-5)
+	Dr.Zen: alors dites moi c'est quoi vos symptomes ?
+	- décrire vos symptomes => symptome_simple
+	- *chercher ses mots* => chercher_ses_mots
+
+- *chercher ses mots* => chercher_ses_mots
+
+~ symptome_simple
+Dr.Zen: ah ouai je vois, ma cousine à eu les même symptome en rentrant de vacances du mexique. 
+- ah et alors ça c'est vite soigner ? 
+	Dr.Zen : Ouai clairement tu verras, un peu de tisane et de repos et tu seras en forme d'ci 2-3 jours ! 
+	do modify_stress(-10)
+	
+- Elle était au mexique ? J'adore ce pays !
+	Dr.Zen : J'ai aussi fait un voyage la bas l'année dernière pour trouver un remède traditionnelle,  je vous le conseille.
+	- *tester le remède*
+	- *demander de quoi est fait le remède*
+		Dr.Zen: Ce remède est une tisane chaude a base de cannelle de camomille  de menthe verte de citron et de miel je vous le conseille fortement 
+		- *prendre le remede*
+			do modify_stress(-5)
+		- *ne pas prendre le remede* 
+			Dr.Zen: ah bon c'est vous qui voyez...
+=> fin
+
+~ chercher_ses_mots
+Dr.Zen: *Dr.Zen attend patiemment votre réponse*
+- mentir au médecin et dire que vous n'avez qu'un petit rhum
+	Dr.Zen: Parfait ! Une petite tisane avant de vous coucher et le tour est joué ! 
+	do modify_stress(-8)
+	do modify_sante(-5)
+- *décrire vos symptomes avec précision*
+	Dr.Zen: Waw man ca a l'air sérieux mais ne t'en fait pas je te prépare mon remède magique !
+	- *demander si cette maladie se guérit vite*
+		Dr.Zen: Avec mon remède magique d'ici une semaine tout est guérit
+		- *commencer le traitement* 
+			do modify_sante(-20)
+			
+		- *demander quelle est cette potion magique* => potion_magique
+	- *demander quelle est cette potion magique* => potion_magique
+=> fin
+
+~ potion_magique
+Dr.Zen: C'est de l'ayahuasca un breuvage des tribus d'Amazonie pour se relier au monde des esprits
+- *accepter le traitement* 
+	Dr.Zen: Aller bon rétablissement man !
+	do modify_sante(-20)
+- *refuser le traitement* 
+	Dr.Zen: Ah bon c'est toi qui voit man...
+=> fin
+
+~ fin
+do emit_interaction_finished()
 => END

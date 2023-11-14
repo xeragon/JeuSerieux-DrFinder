@@ -7,6 +7,6 @@ extends CharacterBody2D
 var player_in_range : bool
 var dialog_is_playing : bool
 
-func interact():
-	pass
+func _interact(dialogue : String):
+	DialogueManager.show_example_dialogue_balloon(load("res://dialog/"+ dialogue +".dialogue"),"start")
 
