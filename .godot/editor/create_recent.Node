@@ -1,9 +1,13 @@
-Label
-Control
+Marker2D
+AnimationPlayer
+PathFollow2D
+Path2D
+StaticBody2D
 CollisionShape2D
 Area2D
-Marker2D
 Timer
+Label
+Control
 AnimatedSprite2D
 HBoxContainer
 ProgressBar

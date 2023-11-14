@@ -8,10 +8,19 @@ var hud : CanvasLayer
 var player_sante : int
 var player_stress : int
 
+var current_map_top_right : Marker2D
+var current_map_bottom_left : Marker2D
 
-func interaction_finished():
-	player.interact_latency_timer.start()
+signal interaction_finished 
+func _ready():
+	player_sante = 50
+	player_stress = 50
 	
+#func interaction_finished():
+#	player.interact_latency_timer.start()
+
+func emit_interaction_finished():
+	emit_signal("interaction_finished")
 func modify_stress(value : int):
 	player.emote.visible = true
 	if value > 0:
@@ -36,3 +45,7 @@ func change_map(path_to_map : String):
 func load_player_stats():
 	player.sante.value = player_sante
 	player.stress.value = player_stress
+	player.camera.limit_top = current_map_top_right.y
+	player.camera.limit_right = current_map_top_right.x
+	player.camera.limit_botom = current_map_bottom_left.y
+	player.camera.limit_left = current_map_bottom_left.x

@@ -1,16 +1,10 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-<<<<<<< HEAD
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_a3vhb"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_tc4k0"]
 
 [resource]
-script = ExtResource("1_a3vhb")
-=======
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_iortq"]
-
-[resource]
-script = ExtResource("1_iortq")
->>>>>>> e05c7e4dff424c95d50f751145cd38fb8e110450
+script = ExtResource("1_tc4k0")
+using_states = PackedStringArray()
 titles = {
 "start": "3"
 }
@@ -29,6 +23,7 @@ lines = {
 "id": "10",
 "next_id": "11",
 "parent_id": "9",
+"tags": PackedStringArray(),
 "text": "Sait tu compter ?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Sait tu compter ?",
@@ -40,6 +35,7 @@ lines = {
 "next_id_after": "24",
 "parent_id": "9",
 "responses": PackedStringArray("11", "22"),
+"tags": PackedStringArray(),
 "text": "oui",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "oui",
@@ -51,6 +47,7 @@ lines = {
 "id": "12",
 "next_id": "13",
 "parent_id": "11",
+"tags": PackedStringArray(),
 "text": "Ah oui ? combien fait 1+1 ?.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ah oui ? combien fait 1+1 ?.",
@@ -62,6 +59,7 @@ lines = {
 "next_id_after": "24",
 "parent_id": "11",
 "responses": PackedStringArray("13", "18", "20"),
+"tags": PackedStringArray(),
 "text": "2",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "2",
@@ -73,6 +71,7 @@ lines = {
 "id": "14",
 "next_id": "15",
 "parent_id": "13",
+"tags": PackedStringArray(),
 "text": "Dommage c'est faux je te met 0 au ressource complémentaire....",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Dommage c'est faux je te met 0 au ressource complémentaire....",
@@ -84,6 +83,7 @@ lines = {
 "next_id_after": "24",
 "parent_id": "13",
 "responses": PackedStringArray("15", "17"),
+"tags": PackedStringArray(),
 "text": "Mais vous ne savez pas compter !",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Mais vous ne savez pas compter !",
@@ -95,6 +95,7 @@ lines = {
 "id": "16",
 "next_id": "24",
 "parent_id": "15",
+"tags": PackedStringArray(),
 "text": "Comment ca ! J'ai pourtant bien préciser que l'on parler de nombre en base 2 non ?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Comment ca ! J'ai pourtant bien préciser que l'on parler de nombre en base 2 non ?",
@@ -105,6 +106,7 @@ lines = {
 "next_id": "24",
 "next_id_after": "24",
 "parent_id": "13",
+"tags": PackedStringArray(),
 "text": "Oui je comprends ....",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Oui je comprends ....",
@@ -115,6 +117,7 @@ lines = {
 "next_id": "19",
 "next_id_after": "24",
 "parent_id": "11",
+"tags": PackedStringArray(),
 "text": "1",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "1",
@@ -126,6 +129,7 @@ lines = {
 "id": "19",
 "next_id": "24",
 "parent_id": "18",
+"tags": PackedStringArray(),
 "text": "Je ne peux plus rien pour toi ...",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Je ne peux plus rien pour toi ...",
@@ -136,6 +140,7 @@ lines = {
 "next_id": "21",
 "next_id_after": "24",
 "parent_id": "11",
+"tags": PackedStringArray(),
 "text": "3",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "3",
@@ -147,6 +152,7 @@ lines = {
 "id": "21",
 "next_id": "24",
 "parent_id": "20",
+"tags": PackedStringArray(),
 "text": "c'es bien mon enfant, je te met 3 au ressource complémentaires",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "c'es bien mon enfant, je te met 3 au ressource complémentaires",
@@ -157,6 +163,7 @@ lines = {
 "next_id": "23",
 "next_id_after": "24",
 "parent_id": "9",
+"tags": PackedStringArray(),
 "text": "non",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "non",
@@ -168,6 +175,7 @@ lines = {
 "id": "23",
 "next_id": "24",
 "parent_id": "22",
+"tags": PackedStringArray(),
 "text": "c'est bien ce que je pensais...",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "c'est bien ce que je pensais...",
@@ -201,6 +209,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
 "next_id": "4",
+"tags": PackedStringArray(),
 "text": "Voyons voir ....",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Voyons voir ....",
@@ -211,6 +220,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
 "next_id": "5",
+"tags": PackedStringArray(),
 "text": "Sait tu inverser une matrice ?",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Sait tu inverser une matrice ?",
@@ -221,6 +231,7 @@ lines = {
 "next_id": "6",
 "next_id_after": "24",
 "responses": PackedStringArray("5", "9"),
+"tags": PackedStringArray(),
 "text": "oui",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "oui",
@@ -253,6 +264,7 @@ lines = {
 "id": "7",
 "next_id": "8",
 "parent_id": "5",
+"tags": PackedStringArray(),
 "text": "menteur.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "menteur.",
@@ -269,10 +281,11 @@ lines = {
 "id": "9",
 "next_id": "10",
 "next_id_after": "24",
+"tags": PackedStringArray(),
 "text": "non",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "non",
 "type": "response"
 }
 }
-metadata/dialogue_manager_version = "2.24.2"
+metadata/dialogue_manager_version = "2.28.0"
