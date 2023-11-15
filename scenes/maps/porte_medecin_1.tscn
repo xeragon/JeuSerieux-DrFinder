@@ -7958,8 +7958,6 @@ libraries = {
 "": SubResource("AnimationLibrary_f87pn")
 }
 
-[node name="TopRight" type="Marker2D" parent="."]
-position = Vector2(103, -63)
-
-[node name="BottomLeft" type="Marker2D" parent="."]
-position = Vector2(-103, 87)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 12)
+zoom = Vector2(5, 5)

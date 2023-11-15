@@ -567,12 +567,7 @@ animations = [{
 y_sort_enabled = true
 script = ExtResource("1_jqxhe")
 move_speed = 100
-interacting = null
-is_sitting = null
-state = null
-move_direction = null
 friction = 500
-cutscene = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
@@ -585,6 +580,7 @@ offset = Vector2(0, -13)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
+editor_draw_limits = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_h3cel")
