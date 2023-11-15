@@ -28,6 +28,9 @@ func _ready():
 	emote.visible = false
 	$player_hud.visible = true
 	GlobalScript.interaction_finished.connect(_on_interaction_finished)
+	GlobalScript.current_map.focus_on_map.connect(_on_focus_on_map_received)
+	camera.enabled = true
+
 	
 func _physics_process(delta):
 	if not interacting:
@@ -48,7 +51,7 @@ func _physics_process(delta):
 			animate(State.MOVE)
 		else:
 			animate(State.IDLE)
-
+			
 		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down").normalized()
 		
 		if direction.length() > 0:
@@ -64,13 +67,10 @@ func _physics_process(delta):
 		state = State.SIT
 		
 	animate(state)
-
 	
-
 func animate(state : State):
 	var string_state: String 
 	var string_move_direction : String;
-	
 	
 	if state == State.MOVE:
 		string_state = "run"
@@ -95,7 +95,6 @@ func player():
 	
 	
 func _on_area_2d_body_entered(body):
-	print(body)
 	if body.has_method("interact"):
 		body_in_interact_range = body
 
@@ -112,6 +111,9 @@ func _on_emote_animation_finished():
 func _on_interact_latency_timeout():
 	interacting = false
 
+func _on_focus_on_map_received():
+	camera.enabled = false
+	
 func _on_interaction_finished():
 	#interact_latency_timer.start()
 	pass

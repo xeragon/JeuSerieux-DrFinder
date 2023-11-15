@@ -1,3 +1,4 @@
+Camera2D
 Marker2D
 AnimationPlayer
 PathFollow2D
@@ -25,4 +26,3 @@ Sprite2D
 CollisionPolygon2D
 npc
 CharacterBody2D
-Camera2D
