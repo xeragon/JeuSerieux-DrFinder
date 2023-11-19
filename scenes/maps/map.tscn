@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://y2tl6wgrehux"]
+[gd_scene load_steps=9 format=3 uid="uid://y2tl6wgrehux"]
 
 [ext_resource type="Script" path="res://scenes/maps/map.gd" id="1_7tonh"]
 [ext_resource type="Texture2D" uid="uid://cn0si6461lw7o" path="res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/2_City_Terrains_16x16.png" id="4_ajgv0"]
 [ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="4_chuom"]
 [ext_resource type="Texture2D" uid="uid://cxb3pupskgipk" path="res://assets/Modern_Exteriors_16x16/ME_Theme_Sorter_16x16/4_Generic_Buildings_16x16.png" id="5_s8i0q"]
-[ext_resource type="PackedScene" uid="uid://du62k3mlvoigk" path="res://scenes/npc/npc_green_casket_reading.tscn" id="6_xn6hn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8d543"]
 size = Vector2(27, 12)
@@ -15850,9 +15849,6 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="blue_building_door"]
 position = Vector2(1.5, -4)
 shape = SubResource("RectangleShape2D_8d543")
-
-[node name="npc_green_casket_reading" parent="." instance=ExtResource("6_xn6hn")]
-position = Vector2(73, -13)
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

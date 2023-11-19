@@ -2,16 +2,22 @@ extends Node
 
 var player_name : String
 var player : Player
-var current_map : Node2D
+var current_map : map
 var player_instance =  preload("res://scenes/player/player.tscn").instantiate()
 var hud : CanvasLayer
 var player_sante : int
 var player_stress : int
 
 
-func interaction_finished():
-	player.interact_latency_timer.start()
-	
+signal interaction_finished 
+
+func _ready():
+	player_sante = 50
+	player_stress = 50
+
+func emit_interaction_finished():
+	emit_signal("interaction_finished")
+
 func modify_stress(value : int):
 	player.emote.visible = true
 	if value > 0:
@@ -36,3 +42,4 @@ func change_map(path_to_map : String):
 func load_player_stats():
 	player.sante.value = player_sante
 	player.stress.value = player_stress
+

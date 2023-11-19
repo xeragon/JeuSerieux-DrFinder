@@ -17,3 +17,7 @@ theme_override_font_sizes/font_size = 70
 text = "Vous revenez voir le médecin"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

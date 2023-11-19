@@ -1,16 +1,10 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-<<<<<<< HEAD
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ai7yq"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_s7bqm"]
 
 [resource]
-script = ExtResource("1_ai7yq")
-=======
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_uhhwc"]
-
-[resource]
-script = ExtResource("1_uhhwc")
->>>>>>> e05c7e4dff424c95d50f751145cd38fb8e110450
+script = ExtResource("1_s7bqm")
+using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
 }
@@ -27,6 +21,7 @@ lines = {
 "id": "10",
 "next_id": "end",
 "next_id_after": "11",
+"tags": PackedStringArray(),
 "text": "End the conversation",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "End the conversation",
@@ -37,6 +32,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "11",
 "next_id": "13",
+"tags": PackedStringArray(),
 "text": "For more information see the online documentation.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "For more information see the online documentation.",
@@ -53,6 +49,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
 "next_id": "4",
+"tags": PackedStringArray(),
 "text": "[[Hi|Hello|Howdy]], this is some dialogue.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "[[Hi|Hello|Howdy]], this is some dialogue.",
@@ -63,6 +60,7 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
 "next_id": "5",
+"tags": PackedStringArray(),
 "text": "Here are some choices.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Here are some choices.",
@@ -73,6 +71,7 @@ lines = {
 "next_id": "6",
 "next_id_after": "11",
 "responses": PackedStringArray("5", "7", "9", "10"),
+"tags": PackedStringArray(),
 "text": "First one",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "First one",
@@ -84,6 +83,7 @@ lines = {
 "id": "6",
 "next_id": "11",
 "parent_id": "5",
+"tags": PackedStringArray(),
 "text": "You picked the first one.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "You picked the first one.",
@@ -93,6 +93,7 @@ lines = {
 "id": "7",
 "next_id": "8",
 "next_id_after": "11",
+"tags": PackedStringArray(),
 "text": "Second one",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Second one",
@@ -104,6 +105,7 @@ lines = {
 "id": "8",
 "next_id": "11",
 "parent_id": "7",
+"tags": PackedStringArray(),
 "text": "You picked the second one.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "You picked the second one.",
@@ -113,10 +115,11 @@ lines = {
 "id": "9",
 "next_id": "3",
 "next_id_after": "11",
+"tags": PackedStringArray(),
 "text": "Start again",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Start again",
 "type": "response"
 }
 }
-metadata/dialogue_manager_version = "2.24.2"
+metadata/dialogue_manager_version = "2.28.0"
