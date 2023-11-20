@@ -1,3 +1,5 @@
+Salles
+TileMap
 Camera2D
 Marker2D
 AnimationPlayer
@@ -21,7 +23,6 @@ Node
 Node2D
 RichTextLabel
 ColorRect
-TileMap
 Sprite2D
 CollisionPolygon2D
 npc

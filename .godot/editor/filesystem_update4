@@ -1,18 +1,10 @@
+res://scenes/maps/porte_medecin_3.tscn
+res://scenes/maps/salles.tres
+res://scenes/main.tscn
+res://scenes/player/player.tscn
 res://scenes/maps/porte_medecin_1.tscn
-<<<<<<< HEAD
-res://scenes/main.tscn
-res://scenes/maps/map.tscn
-res://scenes/player/player.tscn
+res://scenes/maps/porte_medecin_2.tscn
+res://scenes/maps/porte_medecin_4.tscn
+res://scenes/maps/porte_medecin_5.tscn
+res://scenes/maps/porte_medecin_6.tscn
 res://scenes/maps/acceuil_et_portes.tscn
-=======
-res://scripts/map.gd
-res://scenes/player/player.gd
-res://scenes/main.tscn
-res://scenes/maps/map.tscn
-res://scenes/player/player.tscn
-res://scenes/npc/npc.tscn
-res://scenes/npc/dr_zen.tscn
-res://scenes/maps/fin_dialogue.tscn
-res://scenes/maps/porte_medecin_1.gd
-res://scripts/GlobalScript.gd
->>>>>>> 6ce41df1e06237b1679d8be0f3910c1b2ef0ebb4
