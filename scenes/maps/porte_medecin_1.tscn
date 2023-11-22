@@ -1429,9 +1429,6 @@ texture = ExtResource("2_ox7q3")
 2:38/0 = 0
 2:38/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:38/0/physics_layer_0/angular_velocity = 0.0
-3:38/0 = 0
-3:38/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:38/0/physics_layer_0/angular_velocity = 0.0
 4:38/0 = 0
 4:38/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:38/0/physics_layer_0/angular_velocity = 0.0
@@ -1474,9 +1471,6 @@ texture = ExtResource("2_ox7q3")
 2:39/0 = 0
 2:39/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:39/0/physics_layer_0/angular_velocity = 0.0
-3:39/0 = 0
-3:39/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-3:39/0/physics_layer_0/angular_velocity = 0.0
 4:39/0 = 0
 4:39/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:39/0/physics_layer_0/angular_velocity = 0.0
@@ -3313,6 +3307,12 @@ texture = ExtResource("2_ox7q3")
 11:35/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:35/0/physics_layer_0/angular_velocity = 0.0
 11:35/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.684, -11.1362, 6.384, -11.6455, 7.22585, 13.8905, -6.7931, 13.5862)
+3:38/0 = 0
+3:38/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:38/0/physics_layer_0/angular_velocity = 0.0
+3:39/0 = 0
+3:39/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:39/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_orbjr"]
 texture = ExtResource("3_he34n")
@@ -7933,7 +7933,7 @@ layer_2/tile_data = PackedInt32Array(262138, 786432, 56, 196612, 851968, 44)
 
 [node name="dr_zen" parent="." instance=ExtResource("6_n2o4m")]
 z_index = -1
-position = Vector2(87, 14)
+position = Vector2(87, 15)
 
 [node name="chaise" type="StaticBody2D" parent="."]
 visible = false
