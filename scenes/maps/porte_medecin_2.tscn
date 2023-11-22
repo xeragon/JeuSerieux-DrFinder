@@ -1,15 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://csww4if6twwjn"]
+[gd_scene load_steps=6 format=3 uid="uid://csww4if6twwjn"]
 
 [ext_resource type="Script" path="res://scenes/maps/porte_medecin_2.gd" id="1_ws47t"]
 [ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="2_s31as"]
 [ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="3_mwhxe"]
+[ext_resource type="PackedScene" uid="uid://c5vk5i7xyppni" path="res://scenes/npc/dr_zen.tscn" id="4_gfi0d"]
+[ext_resource type="PackedScene" uid="uid://b5nb3mu7b4f5o" path="res://scenes/maps/rooms_anim.tscn" id="5_t3vye"]
 
-[node name="porte_medecin2" type="Node2D"]
+[node name="porte_medecin2" type="Node2D" node_paths=PackedStringArray("room_doc")]
 y_sort_enabled = true
 script = ExtResource("1_ws47t")
+room_doc = NodePath("dr_zen")
 
 [node name="player" parent="." instance=ExtResource("2_s31as")]
 position = Vector2(-1, 75)
+
+[node name="dr_zen" parent="." instance=ExtResource("4_gfi0d")]
+position = Vector2(-87, 14)
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -26,7 +32,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(-196604, 0, 45, -131075, 65536, 72, -196607, 524288, 66, -131077, 786432, 56, 196612, 655360, 44, 2, 196611, 57, 131067, 524288, 35, 131066, 458752, 35, 131068, 196608, 38, 196604, 196608, 39)
+layer_1/tile_data = PackedInt32Array(-196604, 0, 45, -131075, 65536, 72, -196607, 524288, 66, -131077, 786432, 56, 196612, 655360, 44, 2, 196611, 57, 65531, 524288, 35, 65532, 196608, 38, 131068, 196608, 39, 65530, 327680, 40, 131066, 327680, 41)
 layer_2/name = "Higher_elements"
 layer_2/enabled = true
 layer_2/modulate = Color(1, 1, 1, 1)
@@ -34,3 +40,21 @@ layer_2/y_sort_enabled = true
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array()
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 12)
+zoom = Vector2(5, 5)
+
+[node name="pos1" type="Marker2D" parent="."]
+position = Vector2(-33, 57)
+
+[node name="pos2" type="Marker2D" parent="."]
+position = Vector2(-58, 28)
+
+[node name="pos3" type="Marker2D" parent="."]
+position = Vector2(-56, 14)
+
+[node name="exit_pos" type="Marker2D" parent="."]
+position = Vector2(0, 81)
+
+[node name="rooms_anim" parent="." instance=ExtResource("5_t3vye")]

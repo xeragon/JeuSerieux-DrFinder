@@ -1,12 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpqd31iro82nu"]
+[gd_scene load_steps=6 format=3 uid="uid://dpqd31iro82nu"]
 
 [ext_resource type="Script" path="res://scenes/maps/porte_medecin_5.gd" id="1_sk0ip"]
 [ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="2_sap0l"]
+[ext_resource type="PackedScene" uid="uid://c5vk5i7xyppni" path="res://scenes/npc/dr_zen.tscn" id="2_sn8yy"]
 [ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="3_8ij4v"]
+[ext_resource type="PackedScene" uid="uid://b5nb3mu7b4f5o" path="res://scenes/maps/rooms_anim.tscn" id="5_ftvkj"]
 
-[node name="porte_medecin5" type="Node2D"]
+[node name="porte_medecin5" type="Node2D" node_paths=PackedStringArray("room_doc")]
 y_sort_enabled = true
 script = ExtResource("1_sk0ip")
+room_doc = NodePath("dr_zen")
+
+[node name="dr_zen" parent="." instance=ExtResource("2_sn8yy")]
+position = Vector2(-82, 31)
 
 [node name="player" parent="." instance=ExtResource("2_sap0l")]
 position = Vector2(-1, 75)
@@ -35,3 +41,21 @@ layer_2/y_sort_enabled = true
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array()
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 12)
+zoom = Vector2(5, 5)
+
+[node name="pos1" type="Marker2D" parent="."]
+position = Vector2(-33, 57)
+
+[node name="pos2" type="Marker2D" parent="."]
+position = Vector2(-55, 42)
+
+[node name="pos3" type="Marker2D" parent="."]
+position = Vector2(-55, 31)
+
+[node name="exit_pos" type="Marker2D" parent="."]
+position = Vector2(0, 81)
+
+[node name="rooms_anim" parent="." instance=ExtResource("5_ftvkj")]

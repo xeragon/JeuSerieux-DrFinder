@@ -1,220 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbc56tthcy6o2"]
+[gd_scene load_steps=6 format=3 uid="uid://bbc56tthcy6o2"]
 
 [ext_resource type="Script" path="res://scenes/maps/porte_medecin_1.gd" id="1_7vcm7"]
 [ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="1_floh6"]
 [ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="2_l0vmc"]
+[ext_resource type="PackedScene" uid="uid://b5nb3mu7b4f5o" path="res://scenes/maps/rooms_anim.tscn" id="5_2mwrh"]
 [ext_resource type="PackedScene" uid="uid://c5vk5i7xyppni" path="res://scenes/npc/dr_zen.tscn" id="6_n2o4m"]
-[ext_resource type="Script" path="res://scenes/maps/chaise.gd" id="7_qmqvo"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b1hv0"]
-radius = 7.72467
-height = 31.1063
-
-[sub_resource type="Animation" id="Animation_a40k6"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(57, 16)]
-}
-
-[sub_resource type="Animation" id="Animation_fyr6v"]
-resource_name = "entering_room"
-length = 3.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6, 1.4, 2.5, 3.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 73), Vector2(0, 73), Vector2(31, 69), Vector2(58, 25), Vector2(57, 16)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:move_direction")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.7, 1.4, 3.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": ["up", 1, 2, 1, 2]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("player:cutscene")
-tracks/2/interp = 0
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.7, 3.1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("dr_zen")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(3.1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"interact"
-}]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("player:interacting")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("player:is_sitting")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 3.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("player:state")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_em1dh"]
-resource_name = "quit_room"
-length = 3.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("player:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.7, 1.9, 2.5, 3.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(57, 16), Vector2(58, 25), Vector2(31, 69), Vector2(0, 73), Vector2(0, 73)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("player:move_direction")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.7, 1.4, 2.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [2, "right", "up", "right"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("player:cutscene")
-tracks/2/interp = 0
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("player:interacting")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("player:is_sitting")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("player:state")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 2.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 0]
-}
-tracks/6/type = "method"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath(".")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(3.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"exit_room"
-}]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_f87pn"]
-_data = {
-"RESET": SubResource("Animation_a40k6"),
-"entering_room": SubResource("Animation_fyr6v"),
-"quit_room": SubResource("Animation_em1dh")
-}
-
-[node name="porte_medecin1" type="Node2D"]
+[node name="porte_medecin1" type="Node2D" node_paths=PackedStringArray("room_doc")]
 y_sort_enabled = true
 script = ExtResource("1_7vcm7")
+room_doc = NodePath("dr_zen")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -230,7 +25,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 0
 layer_1/z_index = -1
-layer_1/tile_data = PackedInt32Array(-131072, 327683, 58, -131076, 393216, 67, -196604, 458752, 48, 4, 196608, 76, 131067, 524288, 35, 131066, 458752, 35, 131068, 196608, 38, 196604, 196608, 39)
+layer_1/tile_data = PackedInt32Array(-131072, 327683, 58, -131076, 393216, 67, -196604, 458752, 48, 4, 196608, 76, 131066, 327680, 41, 131068, 196608, 39, 65530, 327680, 40, 65531, 524288, 35, 65532, 196608, 38)
 layer_2/name = "Higher_elements"
 layer_2/enabled = true
 layer_2/modulate = Color(1, 1, 1, 1)
@@ -241,31 +36,29 @@ layer_2/tile_data = PackedInt32Array(196612, 851968, 44, 65541, 786432, 56)
 
 [node name="dr_zen" parent="." instance=ExtResource("6_n2o4m")]
 z_index = -1
-position = Vector2(87, 14)
-
-[node name="chaise" type="StaticBody2D" parent="."]
-visible = false
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("7_qmqvo")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="chaise"]
-position = Vector2(59, 13)
-scale = Vector2(0.776733, 0.964436)
-shape = SubResource("CapsuleShape2D_b1hv0")
+position = Vector2(-87, 14)
 
 [node name="player" parent="." instance=ExtResource("1_floh6")]
-position = Vector2(57, 16)
+position = Vector2(38.3636, 57)
 interacting = true
-is_sitting = true
 state = 1
-move_direction = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_f87pn")
-}
+move_direction = 1
+cutscene = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 12)
 zoom = Vector2(5, 5)
+
+[node name="pos1" type="Marker2D" parent="."]
+position = Vector2(-33, 57)
+
+[node name="pos2" type="Marker2D" parent="."]
+position = Vector2(-58, 28)
+
+[node name="pos3" type="Marker2D" parent="."]
+position = Vector2(-56, 14)
+
+[node name="exit_pos" type="Marker2D" parent="."]
+position = Vector2(0, 81)
+
+[node name="rooms_anim" parent="." instance=ExtResource("5_2mwrh")]

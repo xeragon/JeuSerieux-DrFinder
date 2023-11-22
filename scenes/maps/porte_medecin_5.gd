@@ -1,9 +1,7 @@
-extends map
+extends Room
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	super._ready()
-
-
+func _enter_tree():
+		super._enter_tree()
 
