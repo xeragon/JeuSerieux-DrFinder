@@ -1,3 +1,5 @@
+AnimationPlayer
+Marker2D
 VSeparator
 Label
 VBoxContainer
@@ -6,8 +8,6 @@ ProgressBar
 Button
 ColorRect
 Camera2D
-Marker2D
-AnimationPlayer
 PathFollow2D
 Path2D
 StaticBody2D
