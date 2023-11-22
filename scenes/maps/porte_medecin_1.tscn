@@ -11,10 +11,11 @@ radius = 7.72467
 height = 31.1063
 
 [sub_resource type="Animation" id="Animation_a40k6"]
+resource_name = "RESET"
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("player:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -230,7 +231,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 0
 layer_1/z_index = -1
-layer_1/tile_data = PackedInt32Array(-131072, 327683, 58, -131076, 393216, 67, -196604, 458752, 48, 4, 196608, 76, 131067, 524288, 35, 131066, 458752, 35, 131068, 196608, 38, 196604, 196608, 39)
+layer_1/tile_data = PackedInt32Array(-131072, 327683, 58, -131076, 393216, 67, -196604, 458752, 48, 4, 196608, 76, 131066, 327680, 41, 131068, 196608, 39, 65530, 327680, 40, 65531, 524288, 35, 65532, 196608, 38)
 layer_2/name = "Higher_elements"
 layer_2/enabled = true
 layer_2/modulate = Color(1, 1, 1, 1)
@@ -241,7 +242,7 @@ layer_2/tile_data = PackedInt32Array(196612, 851968, 44, 65541, 786432, 56)
 
 [node name="dr_zen" parent="." instance=ExtResource("6_n2o4m")]
 z_index = -1
-position = Vector2(87, 15)
+position = Vector2(-87, 14)
 
 [node name="chaise" type="StaticBody2D" parent="."]
 visible = false
@@ -255,11 +256,9 @@ scale = Vector2(0.776733, 0.964436)
 shape = SubResource("CapsuleShape2D_b1hv0")
 
 [node name="player" parent="." instance=ExtResource("1_floh6")]
-position = Vector2(57, 16)
+position = Vector2(0, 73)
 interacting = true
-is_sitting = true
-state = 1
-move_direction = 2
+move_direction = "up"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

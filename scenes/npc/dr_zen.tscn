@@ -1,18 +1,53 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5vk5i7xyppni"]
+[gd_scene load_steps=11 format=3 uid="uid://c5vk5i7xyppni"]
 
 [ext_resource type="PackedScene" uid="uid://du62k3mlvoigk" path="res://scenes/npc/npc.tscn" id="1_hoato"]
 [ext_resource type="Script" path="res://dr_zen.gd" id="2_s6pa1"]
-[ext_resource type="Texture2D" uid="uid://b3y4ojv03ksqy" path="res://assets/Modern tiles_Free/Characters_free/Adam_16x16.png" id="3_xp60p"]
+[ext_resource type="Texture2D" uid="uid://ddgcfc3ld4pff" path="res://assets/Modern tiles_Free/Characters_free/Adam_sit3_16x16.png" id="3_68mon"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h236u"]
-atlas = ExtResource("3_xp60p")
-region = Rect2(176, 160, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hslsk"]
+atlas = ExtResource("3_68mon")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07kqa"]
+atlas = ExtResource("3_68mon")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4127"]
+atlas = ExtResource("3_68mon")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyvwp"]
+atlas = ExtResource("3_68mon")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5wkn"]
+atlas = ExtResource("3_68mon")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0phk"]
+atlas = ExtResource("3_68mon")
+region = Rect2(80, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fir2d"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h236u")
+"texture": SubResource("AtlasTexture_hslsk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07kqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4127")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyvwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5wkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0phk")
 }],
 "loop": true,
 "name": &"default",
@@ -27,3 +62,4 @@ npc_name = ""
 [node name="AnimatedSprite2D" parent="." index="0"]
 y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_fir2d")
+frame_progress = 0.84626
