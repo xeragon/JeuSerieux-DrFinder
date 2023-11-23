@@ -1,23 +1,122 @@
-[gd_scene load_steps=2 format=3 uid="uid://dr84fp5s6bymk"]
+[gd_scene load_steps=3 format=3 uid="uid://dr84fp5s6bymk"]
 
 [ext_resource type="Script" path="res://scenes/maps/fin_dialogue.gd" id="1_7oohw"]
 
-[node name="fin_dialogue" type="Control"]
+[sub_resource type="SystemFont" id="SystemFont_cssfp"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="fin_dialogue" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
 script = ExtResource("1_7oohw")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 373.0
-offset_top = 230.0
-offset_right = 1595.0
-offset_bottom = 757.0
-theme_override_font_sizes/font_size = 70
-text = "Vous revenez voir le médecin"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="ColorRect" type="ColorRect" parent="fin_dialogue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00392157, 0.0117647, 0, 1)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="summary" type="RichTextLabel" parent="fin_dialogue/ColorRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 92.0
+offset_top = -142.0
+offset_right = 716.0
+offset_bottom = 128.0
+grow_vertical = 2
+theme_override_fonts/normal_font = SubResource("SystemFont_cssfp")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "Vous venez de terminer cette visite chez le médecin. 
+Cependant votre état de santé n'est pas encore optimal.
+Quelques temps plus tard vous décidez donc d'y retourner"
+visible_characters = 0
+visible_ratio = 0.0
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="continue" type="RichTextLabel" parent="fin_dialogue/ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -153.0
+offset_top = -74.0
+offset_right = 153.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 30
+text = "( space to continue )"
+
+[node name="Label" type="Label" parent="fin_dialogue/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.737
+anchor_right = 0.737
+offset_left = -126.024
+offset_top = 150.0
+offset_right = 192.976
+offset_bottom = 262.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Vos Statistiques "
+
+[node name="stress_bar" type="ProgressBar" parent="fin_dialogue/ColorRect"]
+self_modulate = Color(14.2, 14.79, 0, 1)
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.742
+anchor_top = 0.5
+anchor_right = 0.742
+anchor_bottom = 0.5
+offset_left = -78.7841
+offset_top = 32.0
+offset_right = 121.216
+offset_bottom = 62.0
+grow_horizontal = 0
+size_flags_horizontal = 0
+value = 50.0
+
+[node name="health_bar" type="ProgressBar" parent="fin_dialogue/ColorRect"]
+self_modulate = Color(8.87, 0, 0, 1)
+custom_minimum_size = Vector2(200, 30)
+layout_direction = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.261
+anchor_top = 0.5
+anchor_right = 0.261
+anchor_bottom = 0.5
+offset_left = -122.672
+offset_top = -76.0
+offset_right = 77.328
+offset_bottom = -46.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+value = 50.0
+fill_mode = 1
+
+[node name="Timer" type="Timer" parent="fin_dialogue"]
+
+[node name="affiche_text" type="Timer" parent="fin_dialogue"]
+wait_time = 0.025
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="fin_dialogue/Timer" to="fin_dialogue" method="_on_timer_timeout"]
+[connection signal="timeout" from="fin_dialogue/affiche_text" to="fin_dialogue" method="_on_affiche_text_timeout"]

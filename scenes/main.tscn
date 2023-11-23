@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://br1dpttqndamr"]
-
-[ext_resource type="PackedScene" uid="uid://y2tl6wgrehux" path="res://scenes/maps/map.tscn" id="1_gpqr6"]
-
-[node name="main" type="Node2D"]
-y_sort_enabled = true
-
-[node name="main_map" parent="." instance=ExtResource("1_gpqr6")]
-position = Vector2(5, 6)
