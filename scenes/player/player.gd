@@ -28,7 +28,9 @@ func _ready():
 	emote.visible = false
 	$player_hud.visible = true
 	GlobalScript.interaction_finished.connect(_on_interaction_finished)
+	
 	GlobalScript.current_map.focus_on_map.connect(_on_focus_on_map_received)
+	
 	camera.enabled = true
 
 	
@@ -92,8 +94,7 @@ func animate(state : State):
 	
 func player():
 	pass
-	
-	
+
 func _on_area_2d_body_entered(body):
 	if body.has_method("interact"):
 		body_in_interact_range = body

@@ -1,4 +1,4 @@
-res://scenes/maps/rooms_anim.tscn
+res://addons/dialogue_manager/example_balloon/example_balloon.tscn
 res://scenes/maps/salles.tres
 res://scenes/main.tscn
 res://scenes/maps/map.tscn
@@ -9,11 +9,8 @@ res://scenes/npc/dr_zen.tscn
 res://scenes/maps/fin_dialogue.tscn
 res://tuto.tscn
 res://scenes/maps/porte_medecin_2.tscn
+res://scenes/maps/rooms_anim.tscn
 res://scenes/maps/porte_medecin_3.tscn
 res://scenes/maps/porte_medecin_4.tscn
-res://scenes/maps/porte_medecin_4.gd
 res://scenes/maps/porte_medecin_5.tscn
-res://scenes/maps/porte_medecin_5.gd
 res://scenes/maps/porte_medecin_6.tscn
-res://scenes/maps/porte_medecin_6.gd
-res://addons/dialogue_manager/example_balloon/example_balloon.tscn
