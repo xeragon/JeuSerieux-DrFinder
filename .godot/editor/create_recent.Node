@@ -3,12 +3,10 @@ Panel
 AnimationPlayer
 Marker2D
 VSeparator
-Label
 VBoxContainer
 HBoxContainer
 ProgressBar
 Button
-ColorRect
 Camera2D
 PathFollow2D
 Path2D
@@ -19,11 +17,9 @@ Timer
 Control
 AnimatedSprite2D
 TextureProgressBar
-CanvasLayer
 CPUParticles2D
 Node
 Node2D
-RichTextLabel
 TileMap
 Sprite2D
 CollisionPolygon2D
