@@ -643,38 +643,155 @@ position = Vector2(8.5, 2)
 shape = SubResource("CircleShape2D_ptvl1")
 
 [node name="player_hud" type="CanvasLayer" parent="."]
-visible = false
 
-[node name="ui" type="Control" parent="player_hud"]
-layout_mode = 3
-anchors_preset = 10
+[node name="HBoxContainer" type="HBoxContainer" parent="player_hud"]
+anchors_preset = 15
 anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
 
-[node name="stress_bar" type="ProgressBar" parent="player_hud/ui"]
-self_modulate = Color(14.2, 14.79, 0, 1)
-custom_minimum_size = Vector2(200, 30)
+[node name="Phone" type="Control" parent="player_hud/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.78
+
+[node name="HBoxContainer" type="HBoxContainer" parent="player_hud/HBoxContainer/Phone"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="player_hud/HBoxContainer/Phone/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.29
+
+[node name="Btn_dr1" type="Button" parent="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Btn_dr2" type="Button" parent="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Btn_dr3" type="Button" parent="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Btn_dr4" type="Button" parent="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Btn_dr5" type="Button" parent="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Btn_dr6" type="Button" parent="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer_Info" type="PanelContainer" parent="player_hud/HBoxContainer/Phone/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Info_dr1" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info/Info_dr1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "salut 1feeeeeeeeeeeeeeeeeeeeeedsssssssssssseeeeeeeeeeeeeeeefffffffffffffff"
+
+[node name="Info_dr2" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info/Info_dr2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "2"
+
+[node name="Info_dr3" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info/Info_dr3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "docteur 3"
+
+[node name="Info_dr4" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info/Info_dr4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "docteur 4"
+
+[node name="Info_dr5" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info/Info_dr5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "docteur 5"
+
+[node name="Info_dr6" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info/Info_dr6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "docteur 6"
+
+[node name="ui" type="Control" parent="player_hud/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="player_hud/HBoxContainer/ui"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -100.0
-offset_bottom = 27.0
+offset_left = -200.0
+offset_bottom = 648.0
 grow_horizontal = 0
+
+[node name="stress_bar" type="ProgressBar" parent="player_hud/HBoxContainer/ui/VBoxContainer"]
+self_modulate = Color(14.2, 14.79, 0, 1)
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
 size_flags_horizontal = 0
 value = 50.0
 
-[node name="health_bar" type="ProgressBar" parent="player_hud/ui"]
+[node name="health_bar" type="ProgressBar" parent="player_hud/HBoxContainer/ui/VBoxContainer"]
 self_modulate = Color(8.87, 0, 0, 1)
 custom_minimum_size = Vector2(200, 30)
 layout_direction = 3
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -100.0
-offset_bottom = 27.0
-grow_horizontal = 0
+layout_mode = 2
 size_flags_horizontal = 8
 value = 50.0
 fill_mode = 1
@@ -693,5 +810,11 @@ one_shot = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer/Btn_dr1" to="." method="_on_btn_dr_1_pressed"]
+[connection signal="pressed" from="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer/Btn_dr2" to="." method="_on_btn_dr_2_pressed"]
+[connection signal="pressed" from="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer/Btn_dr3" to="." method="_on_btn_dr_3_pressed"]
+[connection signal="pressed" from="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer/Btn_dr4" to="." method="_on_btn_dr_4_pressed"]
+[connection signal="pressed" from="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer/Btn_dr5" to="." method="_on_btn_dr_5_pressed"]
+[connection signal="pressed" from="player_hud/HBoxContainer/Phone/HBoxContainer/VBoxContainer/Btn_dr6" to="." method="_on_btn_dr_6_pressed"]
 [connection signal="animation_finished" from="emote" to="." method="_on_emote_animation_finished"]
 [connection signal="timeout" from="interact_latency" to="." method="_on_interact_latency_timeout"]
