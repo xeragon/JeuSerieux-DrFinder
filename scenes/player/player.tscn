@@ -708,16 +708,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "salut 1feeeeeeeeeeeeeeeeeeeeeedsssssssssssseeeeeeeeeeeeeeeefffffffffffffff"
+text = "Docteur Zen (Barre de Sérénité +, Barre de Soins -) 
+   Le Docteur Zen est le professionnel de la santé le plus décontracté que vous rencontrerez. Son approche cool et apaisante augmente instantanément votre niveau de sérénité. Cependant, ses compétences médicales peuvent être un peu négligées, alors attendez-vous à une amélioration modeste de votre santé."
 
 [node name="Info_dr2" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
 layout_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info/Info_dr2"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-text = "2"
+offset_right = 730.0
+offset_bottom = 651.0
+text = "Docteur Moyen (Barre de Sérénité +, Barre de Soins +) 
+   Le Docteur Moyen offre un équilibre parfait entre réconfort et soins médicaux. Sa manière douce et rassurante élève votre sérénité, tandis que ses compétences médicales vous aident à récupérer. Un choix solide lorsque vous avez besoin d'un peu des deux."
 
 [node name="Info_dr3" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
 layout_mode = 2
@@ -729,7 +731,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "docteur 3"
+text = "Docteur Strict (Barre de Sérénité -, Barre de Soins +) 
+   Si vous cherchez une guérison rapide mais que vous pouvez supporter un ton plus formel, le Docteur Strict est là pour vous. Il peut augmenter votre santé de manière significative, mais son approche sérieuse peut diminuer votre niveau de sérénité."
 
 [node name="Info_dr4" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
 layout_mode = 2
@@ -741,7 +744,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "docteur 4"
+text = "Chirurgien Expert (Barre de Sérénité -, Barre de Soins +++) 
+   Le Chirurgien Expert est le maître incontesté des soins médicaux. Ses compétences chirurgicales sont incomparables, mais la procédure peut être stressante, entraînant une légère baisse de la sérénité. Si vous avez besoin d'une guérison rapide, c'est votre homme."
 
 [node name="Info_dr5" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
 layout_mode = 2
@@ -753,7 +757,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "docteur 5"
+text = "Psychologue Bienveillant (Barre de Sérénité +++, Barre de Soins -) 
+   Le Psychologue Bienveillant se concentre sur votre bien-être émotionnel. Grâce à des discussions apaisantes et à un soutien psychologique, il peut considérablement augmenter votre sérénité. Cependant, soyez prêt à sacrifier un peu de santé en cours de route."
 
 [node name="Info_dr6" type="Panel" parent="player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info"]
 layout_mode = 2
@@ -765,7 +770,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "docteur 6"
+text = "Médecin Généraliste Polyvalent (Barre de Sérénité/Soins variables) 
+   Le Médecin Généraliste est polyvalent et s'adapte à vos besoins. Les résultats varient en fonction de la discussion, offrant une approche équilibrée entre la sérénité et les soins. C'est le choix idéal lorsque vous n'êtes pas sûr de ce dont vous avez exactement besoin."
 
 [node name="ui" type="Control" parent="player_hud/HBoxContainer"]
 layout_mode = 2

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f1804063-8fa6-4a16-9ee9-5a27f877d151" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/script_editor_cache.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/script_editor_cache.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/imported/DrZen.dialogue-b4ac266b394b7cbb41df0a555d77ce68.md5" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/imported/DrZen.dialogue-b4ac266b394b7cbb41df0a555d77ce68.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/imported/DrZen.dialogue-b4ac266b394b7cbb41df0a555d77ce68.tres" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/imported/DrZen.dialogue-b4ac266b394b7cbb41df0a555d77ce68.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/imported/firstDoc.dialogue-9064a9ee540ac828ce609d7ab0dea856.md5" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/imported/firstDoc.dialogue-9064a9ee540ac828ce609d7ab0dea856.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/imported/firstDoc.dialogue-9064a9ee540ac828ce609d7ab0dea856.tres" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/imported/firstDoc.dialogue-9064a9ee540ac828ce609d7ab0dea856.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/imported/main.dialogue-2cd218e757125a1459383faea038b813.md5" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/imported/main.dialogue-2cd218e757125a1459383faea038b813.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/imported/main.dialogue-2cd218e757125a1459383faea038b813.tres" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/imported/main.dialogue-2cd218e757125a1459383faea038b813.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/imported/test.dialogue-02b819d3914497cbaf7a3e43ef393ef0.md5" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/imported/test.dialogue-02b819d3914497cbaf7a3e43ef393ef0.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/imported/test.dialogue-02b819d3914497cbaf7a3e43ef393ef0.tres" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/imported/test.dialogue-02b819d3914497cbaf7a3e43ef393ef0.tres" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2XqfX29RaPdqZVl6GbcydLa5ael" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Tomto/OneDrive/Documents/IUT/SEMESTRE_3/A31",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1804063-8fa6-4a16-9ee9-5a27f877d151" name="Changes" comment="" />
+      <created>1699361567564</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699361567564</updated>
+      <workItem from="1699361569188" duration="2366000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="projet/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
