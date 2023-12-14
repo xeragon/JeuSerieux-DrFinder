@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=14 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_4u26j"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Texture2D" uid="uid://dnrfxs1w4jvkr" path="res://assets/Complete_GUI_Essential_Pack_Free_Version/01_Basic_Collection/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat.png" id="2_mfwrc"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 [ext_resource type="Texture2D" uid="uid://bk7bl27csfq5d" path="res://assets/Complete_GUI_Essential_Pack_Free_Version/01_Basic_Collection/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat_Button_02.png" id="4_bk3ho"]
+[ext_resource type="StyleBox" uid="uid://cra034ypg2ftb" path="res://ressource/hover_focus_texture.tres" id="5_5b4b7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -64,19 +66,16 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mc0a7"]
+texture = ExtResource("2_mfwrc")
+region_rect = Rect2(32, 32, 96, 96)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nt4wy"]
 texture = ExtResource("4_bk3ho")
 texture_margin_left = 80.0
 texture_margin_right = 80.0
 region_rect = Rect2(0, 192, 96, 32)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o2cw6"]
-texture = ExtResource("4_bk3ho")
-texture_margin_left = 7.0
-texture_margin_top = 10.0
-texture_margin_right = 9.0
-texture_margin_bottom = 11.0
-region_rect = Rect2(192, 193, 96, 35)
+modulate_color = Color(0, 0.298039, 0.584314, 1)
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
@@ -84,6 +83,8 @@ script = ExtResource("1_4u26j")
 
 [node name="Balloon" type="Panel" parent="."]
 unique_name_in_owner = true
+self_modulate = Color(0.501961, 0.501961, 0.501961, 1)
+texture_filter = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_left = 18.0
@@ -93,6 +94,7 @@ offset_bottom = -202.0
 grow_vertical = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_qq3yp")
+theme_override_styles/panel = SubResource("StyleBoxTexture_mc0a7")
 
 [node name="Dialogue" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
@@ -121,11 +123,11 @@ layout_mode = 2
 text = "Dialogue..."
 
 [node name="Responses" type="MarginContainer" parent="."]
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = -1
+anchor_top = 0.843
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -31.0
+offset_top = 70.736
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -142,15 +144,12 @@ script = ExtResource("3_72ixx")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Responses/PanelContainer/ResponsesMenu"]
-custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 0
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxTexture_nt4wy")
-theme_override_styles/hover = SubResource("StyleBoxTexture_o2cw6")
+theme_override_styles/hover = ExtResource("5_5b4b7")
+theme_override_styles/focus = ExtResource("5_5b4b7")
 text = "Response example"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]

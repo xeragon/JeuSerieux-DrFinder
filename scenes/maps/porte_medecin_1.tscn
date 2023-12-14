@@ -39,6 +39,7 @@ position = Vector2(0, 73)
 interacting = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 position = Vector2(0, 33)
 zoom = Vector2(5, 5)
 

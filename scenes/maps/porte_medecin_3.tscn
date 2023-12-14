@@ -217,7 +217,7 @@ room_doc = NodePath("dr_zen")
 position = Vector2(-86, -1)
 
 [node name="player" parent="." instance=ExtResource("2_kdoi3")]
-position = Vector2(0, 73)
+position = Vector2(-4, 76)
 interacting = true
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -246,7 +246,7 @@ layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array()
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, 12)
+position = Vector2(0, 33)
 zoom = Vector2(5, 5)
 
 [node name="pos1" type="Marker2D" parent="."]
