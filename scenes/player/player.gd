@@ -16,10 +16,10 @@ var direction : Vector2
 var body_in_interact_range = null
 @export var friction = 300
 @export var cutscene = false
-@onready var stress = $player_hud/HBoxContainer/ui/VBoxContainer/stress_bar
-@onready var sante = $player_hud/HBoxContainer/ui/VBoxContainer/health_bar
+@onready var stress = $player_hud/ui/HBoxContainer/VBoxContainer/stress_bar
+@onready var sante = $player_hud/ui/HBoxContainer/VBoxContainer/health_bar
 @onready var player_hud = $player_hud
-@onready var phone = $player_hud/HBoxContainer/Phone
+@onready var phone = $player_hud/ui/HBoxContainer/Phone
 
 
 func _ready():
@@ -147,10 +147,10 @@ func _on_btn_dr_6_pressed():
 	visible_info_dr("Info_dr6")
 	
 func visible_info_dr(current_dr : String):
-	for child in $player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info.get_children():
+	for child in $player_hud/ui/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info.get_children():
 		if child is Panel:
 			child.visible=false
-	var node_path = "player_hud/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info/" + current_dr
+	var node_path = "player_hud/ui/HBoxContainer/Phone/HBoxContainer/PanelContainer_Info/" + current_dr
 	var target_node = get_node(node_path)
 	target_node.visible = true
 	
