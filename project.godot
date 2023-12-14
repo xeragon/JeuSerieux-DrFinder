@@ -31,6 +31,11 @@ dialogues_split_offset=215
 
 general/states=["GlobalScript"]
 
+[editor]
+
+movie_writer/movie_file="/home/xeragon/T3/movies/movie.avi"
+movie_writer/fps=15
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")

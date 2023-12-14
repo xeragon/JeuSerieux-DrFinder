@@ -16,10 +16,12 @@ var direction : Vector2
 var body_in_interact_range = null
 @export var friction = 300
 @export var cutscene = false
-@onready var stress = $player_hud/ui/stress_bar
-@onready var sante = $player_hud/ui/health_bar
+@onready var stress = $player_hud/ui/texture_serenity/serenity_bar
+@onready var stress_holder : TextureRect = $player_hud/ui/texture_serenity
+@onready var sante :  = $player_hud/ui/texture_health/health_bar 
+@onready var sante_holder :  = $player_hud/ui/texture_health
 @onready var player_hud = $player_hud
-
+@onready var ui : Control = $player_hud/ui
 
 func _ready():
 	GlobalScript.player_name = "alex"
@@ -28,13 +30,22 @@ func _ready():
 	emote.visible = false
 	$player_hud.visible = true
 	GlobalScript.interaction_finished.connect(_on_interaction_finished)
-	
+
 	GlobalScript.current_map.focus_on_map.connect(_on_focus_on_map_received)
 	
 	camera.enabled = true
 
 	
 func _physics_process(delta):
+	var s = DisplayServer.window_get_size()
+	
+	stress_holder.custom_minimum_size.x = s.y - s.y/4
+	sante_holder.custom_minimum_size.x = s.y - s.y/4
+	var ui_scale = s.y/1080.00
+	print(str(s.y))
+	print(str(ui_scale))
+	ui.scale = Vector2(ui_scale,ui_scale)
+	
 	if not interacting:
 		if body_in_interact_range and Input.is_action_just_pressed("ui_interact"):
 			interacting = true
