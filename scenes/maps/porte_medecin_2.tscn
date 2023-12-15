@@ -12,7 +12,8 @@ script = ExtResource("1_ws47t")
 room_doc = NodePath("dr_zen")
 
 [node name="player" parent="." instance=ExtResource("2_s31as")]
-position = Vector2(-1, 75)
+position = Vector2(0, 73)
+interacting = true
 
 [node name="dr_zen" parent="." instance=ExtResource("4_gfi0d")]
 position = Vector2(-87, 14)
