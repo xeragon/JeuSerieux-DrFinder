@@ -1,6 +1,7 @@
 class_name Room
 extends map
 @onready var animPlayer : AnimationPlayer = $rooms_anim
+@onready  var cam : Camera2D = $Camera2D
 @export var room_doc :  npc
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,7 +33,11 @@ func _ready():
 	animPlayer.play("entering_room")
 	GlobalScript.interaction_finished.connect(_on_interaction_finished)
 
-
+func _process(delta):
+	var s = DisplayServer.window_get_size()
+	cam.zoom.x = s.y/200
+	cam.zoom.y = s.y/200
+	
 func _enter_tree():
 	super._enter_tree()
 
