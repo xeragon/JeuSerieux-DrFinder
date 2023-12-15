@@ -651,29 +651,56 @@ shape = SubResource("CircleShape2D_ptvl1")
 
 [node name="player_hud" type="CanvasLayer" parent="."]
 
-[node name="ui" type="Control" parent="player_hud"]
+[node name="Phone" type="Control" parent="player_hud"]
+unique_name_in_owner = true
 layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -322.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 4.78
+
+[node name="phone_bg" type="ColorRect" parent="player_hud/Phone"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.387
+anchor_bottom = 1.0
+offset_right = -0.210083
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.294118, 0.294118, 0.294118, 0.819608)
+
+[node name="ui" type="Control" parent="player_hud/Phone"]
+unique_name_in_owner = true
+layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -42.0
-offset_right = -42.0
+offset_left = 327.0
+offset_right = 327.0
+offset_bottom = 648.0
 grow_horizontal = 0
 
-[node name="texture_serenity" type="TextureRect" parent="player_hud/ui"]
+[node name="texture_serenity" type="TextureRect" parent="player_hud/Phone/ui"]
+unique_name_in_owner = true
 self_modulate = Color(0.635294, 0.843137, 0.627451, 1)
 texture_filter = 1
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 1
-offset_left = 10.0023
-offset_top = -2.99951
-offset_right = 659.002
-offset_bottom = 147.0
+offset_left = -2.99786
+offset_top = -1.99951
+offset_right = 646.002
+offset_bottom = 148.0
 rotation = 1.5708
 texture = SubResource("AtlasTexture_7wg64")
 expand_mode = 2
 
-[node name="serenity_bar" type="ProgressBar" parent="player_hud/ui/texture_serenity"]
+[node name="serenity_bar" type="ProgressBar" parent="player_hud/Phone/ui/texture_serenity"]
+unique_name_in_owner = true
 self_modulate = Color(0, 1, 1, 1)
 layout_direction = 2
 layout_mode = 2
@@ -693,30 +720,30 @@ fill_mode = 1
 show_percentage = false
 metadata/_edit_use_anchors_ = true
 
-[node name="texture_health" type="TextureRect" parent="player_hud/ui"]
+[node name="texture_health" type="TextureRect" parent="player_hud/Phone/ui"]
+unique_name_in_owner = true
 modulate = Color(0.635294, 0.843137, 0.627451, 1)
 texture_filter = 1
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 1
-offset_left = -162.998
-offset_top = 0.000488281
-offset_right = 482.002
-offset_bottom = 150.0
+offset_left = -175.998
+offset_top = 1.00049
+offset_right = 469.002
+offset_bottom = 151.0
 rotation = 1.5708
 texture = SubResource("AtlasTexture_7wg64")
 expand_mode = 2
 
-[node name="health_bar" type="ProgressBar" parent="player_hud/ui/texture_health"]
+[node name="health_bar" type="ProgressBar" parent="player_hud/Phone/ui/texture_health"]
+unique_name_in_owner = true
 self_modulate = Color(0, 1, 0, 1)
 layout_direction = 2
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.098
-anchor_top = 0.36
-anchor_right = 0.905101
-anchor_bottom = 0.64
-offset_left = -0.210003
-offset_right = -1.79004
+anchor_left = 0.0992248
+anchor_top = 0.360001
+anchor_right = 0.900775
+anchor_bottom = 0.640002
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
@@ -725,6 +752,134 @@ value = 50.0
 fill_mode = 1
 show_percentage = false
 metadata/_edit_use_anchors_ = true
+
+[node name="phone" type="HBoxContainer" parent="player_hud/Phone"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="player_hud/Phone/phone"]
+layout_mode = 2
+
+[node name="Btn_dr1" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Btn_dr2" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Btn_dr3" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Btn_dr4" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Btn_dr5" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Btn_dr6" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer_Info" type="PanelContainer" parent="player_hud/Phone/phone"]
+layout_mode = 2
+
+[node name="Info_dr1" type="Panel" parent="player_hud/Phone/phone/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/Phone/phone/PanelContainer_Info/Info_dr1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 722.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Docteur Zen (Barre de Sérénité +, Barre de Soins -) 
+   Le Docteur Zen est le professionnel de la santé le plus décontracté que vous rencontrerez. Son approche cool et apaisante augmente instantanément votre niveau de sérénité. Cependant, ses compétences médicales peuvent être un peu négligées, alors attendez-vous à une amélioration modeste de votre santé."
+
+[node name="Info_dr2" type="Panel" parent="player_hud/Phone/phone/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/Phone/phone/PanelContainer_Info/Info_dr2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.027
+anchor_bottom = 1.0
+offset_top = -17.442
+offset_right = 719.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Docteur Moyen (Barre de Sérénité +, Barre de Soins +) 
+   Le Docteur Moyen offre un équilibre parfait entre réconfort et soins médicaux. Sa manière douce et rassurante élève votre sérénité, tandis que ses compétences médicales vous aident à récupérer. Un choix solide lorsque vous avez besoin d'un peu des deux."
+
+[node name="Info_dr3" type="Panel" parent="player_hud/Phone/phone/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/Phone/phone/PanelContainer_Info/Info_dr3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 722.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Docteur Strict (Barre de Sérénité -, Barre de Soins +) 
+   Si vous cherchez une guérison rapide mais que vous pouvez supporter un ton plus formel, le Docteur Strict est là pour vous. Il peut augmenter votre santé de manière significative, mais son approche sérieuse peut diminuer votre niveau de sérénité."
+
+[node name="Info_dr4" type="Panel" parent="player_hud/Phone/phone/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/Phone/phone/PanelContainer_Info/Info_dr4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 717.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Chirurgien Expert (Barre de Sérénité -, Barre de Soins +++) 
+   Le Chirurgien Expert est le maître incontesté des soins médicaux. Ses compétences chirurgicales sont incomparables, mais la procédure peut être stressante, entraînant une légère baisse de la sérénité. Si vous avez besoin d'une guérison rapide, c'est votre homme."
+
+[node name="Info_dr5" type="Panel" parent="player_hud/Phone/phone/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/Phone/phone/PanelContainer_Info/Info_dr5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 719.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "egabaeeeeeeeeeeeeeeeee"
+
+[node name="Info_dr6" type="Panel" parent="player_hud/Phone/phone/PanelContainer_Info"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player_hud/Phone/phone/PanelContainer_Info/Info_dr6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 716.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 
 [node name="emote" type="AnimatedSprite2D" parent="."]
 z_index = 1
@@ -740,5 +895,11 @@ one_shot = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr1" to="." method="_on_btn_dr_1_pressed"]
+[connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr2" to="." method="_on_btn_dr_2_pressed"]
+[connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr3" to="." method="_on_btn_dr_3_pressed"]
+[connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr4" to="." method="_on_btn_dr_4_pressed"]
+[connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr5" to="." method="_on_btn_dr_5_pressed"]
+[connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr6" to="." method="_on_btn_dr_6_pressed"]
 [connection signal="animation_finished" from="emote" to="." method="_on_emote_animation_finished"]
 [connection signal="timeout" from="interact_latency" to="." method="_on_interact_latency_timeout"]

@@ -13,3 +13,4 @@ res://scenes/maps/porte_medecin_4.tscn
 res://scenes/maps/porte_medecin_5.tscn
 res://scenes/maps/porte_medecin_6.tscn
 res://addons/dialogue_manager/example_balloon/example_balloon.tscn
+res://scenes/player/player.gd
