@@ -20,8 +20,8 @@ var body_in_interact_range = null
 @onready var stress_holder : TextureRect = %texture_serenity
 @onready var sante_holder =  %texture_health
 @onready var sante  = %health_bar
-@onready var player_hud = $player_hud
-@onready var phone = %Phone
+@onready var player_hud = $player_hudx	
+@onready var phone = %phone
 @onready var ui = %ui
 
 
@@ -36,8 +36,14 @@ func _ready():
 	GlobalScript.current_map.focus_on_map.connect(_on_focus_on_map_received)
 	
 	camera.enabled = true
+	
 	phone.visible = false
-
+	%phone_bg.visible = false
+	if get_parent() is Room:
+		%ui.visible = true
+	else:
+		%ui.visible = false
+		
 	
 func _physics_process(delta):
 	var s = DisplayServer.window_get_size()
@@ -45,10 +51,14 @@ func _physics_process(delta):
 	stress_holder.custom_minimum_size.x = s.y - s.y/4
 	sante_holder.custom_minimum_size.x = s.y - s.y/4
 	var ui_scale = s.y/1080.00
-	print(str(s.y))
-	print(str(ui_scale))
 	ui.scale = Vector2(ui_scale,ui_scale)
-	
+	if Input.is_action_pressed("open_interface"):
+		if interacting:
+			ui_visibility(false)
+		else:
+			await get_tree().create_timer(0.05).timeout 
+			ui_visibility(true)
+			
 	if not interacting:
 		if body_in_interact_range and Input.is_action_just_pressed("ui_interact"):
 			interacting = true
@@ -62,8 +72,7 @@ func _physics_process(delta):
 			move_direction = MoveDirection.UP
 		elif Input.is_action_pressed("ui_down"):
 			move_direction = MoveDirection.DOWN
-		elif Input.is_action_pressed("open_interface"):
-			switch_interface()
+
 		
 		if not (velocity == Vector2(0,0)):
 			animate(State.MOVE)
@@ -80,6 +89,7 @@ func _physics_process(delta):
 			velocity = velocity.move_toward(Vector2(0, 0), deceleration)
 			state = State.IDLE
 		move_and_slide()
+
 	if is_sitting:
 		state = State.SIT
 		
@@ -159,19 +169,21 @@ func _on_btn_dr_6_pressed():
 	visible_info_dr("Info_dr6")
 	
 func visible_info_dr(current_dr : String):
-	for child in $player_hud/Phone/HBoxContainer/PanelContainer_Info.get_children():
+	for child in $player_hud/Phone/phone/PanelContainer_Info.get_children():
 		if child is Panel:
 			child.visible=false
-	var node_path = "player_hud/Phone/HBoxContainer/PanelContainer_Info/" + current_dr
+	var node_path = "player_hud/Phone/phone/PanelContainer_Info/" + current_dr
 	var target_node = get_node(node_path)
 	target_node.visible = true
 	
-func switch_interface():
-	if phone.visible == true:
-		phone.visible = false
-		interacting = true
-		interact_latency_timer.start()
-	else:
+func ui_visibility(isVisible : bool):
+	if isVisible:
+		%phone_bg.visible = true
 		phone.visible = true
+		%ui.visible = true
 		interacting = true
+	else:
+		%phone_bg.visible = false
+		phone.visible = false
+		%ui.visible = false
 		interact_latency_timer.start()
