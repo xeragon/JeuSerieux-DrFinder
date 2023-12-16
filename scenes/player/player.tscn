@@ -677,40 +677,59 @@ color = Color(0.294118, 0.294118, 0.294118, 0.819608)
 [node name="ui" type="Control" parent="player_hud/Phone"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = 327.0
-offset_right = 327.0
-offset_bottom = 648.0
-grow_horizontal = 0
+anchor_left = 0.906
+anchor_top = 0.003
+anchor_right = 1.386
+anchor_bottom = 1.0
+offset_left = 79.02
+offset_top = 0.056
+offset_right = -0.380005
+offset_bottom = 5.0
 
-[node name="texture_serenity" type="TextureRect" parent="player_hud/Phone/ui"]
+[node name="VBoxContainer" type="VBoxContainer" parent="player_hud/Phone/ui"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.144
+anchor_top = -0.009
+anchor_right = 1.016
+anchor_bottom = 0.329
+offset_left = 278.064
+offset_top = 3.859
+offset_right = 503.896
+offset_bottom = 61.821
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+
+[node name="HSeparator2" type="HSeparator" parent="player_hud/Phone/ui/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="player_hud/Phone/ui/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="texture_serenity" type="TextureRect" parent="player_hud/Phone/ui/VBoxContainer/PanelContainer"]
 unique_name_in_owner = true
 self_modulate = Color(0.635294, 0.843137, 0.627451, 1)
 texture_filter = 1
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 1
-offset_left = -2.99786
-offset_top = -1.99951
-offset_right = 646.002
-offset_bottom = 148.0
-rotation = 1.5708
+layout_mode = 2
 texture = SubResource("AtlasTexture_7wg64")
 expand_mode = 2
 
-[node name="serenity_bar" type="ProgressBar" parent="player_hud/Phone/ui/texture_serenity"]
+[node name="serenity_bar" type="ProgressBar" parent="player_hud/Phone/ui/VBoxContainer/PanelContainer/texture_serenity"]
 unique_name_in_owner = true
 self_modulate = Color(0, 1, 1, 1)
 layout_direction = 2
 layout_mode = 2
-anchor_left = 0.103
-anchor_top = 0.373
-anchor_right = 0.9
-anchor_bottom = 0.626667
-offset_left = 0.152992
+anchor_left = 0.111357
+anchor_top = 0.373001
+anchor_right = 0.896572
+anchor_bottom = 0.627002
+offset_left = -0.270821
 offset_top = 0.0499954
-offset_right = -0.100037
+offset_right = 0.125
+offset_bottom = -0.049942
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
@@ -720,21 +739,23 @@ fill_mode = 1
 show_percentage = false
 metadata/_edit_use_anchors_ = true
 
-[node name="texture_health" type="TextureRect" parent="player_hud/Phone/ui"]
+[node name="HSeparator" type="HSeparator" parent="player_hud/Phone/ui/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="player_hud/Phone/ui/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="texture_health" type="TextureRect" parent="player_hud/Phone/ui/VBoxContainer/PanelContainer2"]
 unique_name_in_owner = true
 modulate = Color(0.635294, 0.843137, 0.627451, 1)
 texture_filter = 1
-custom_minimum_size = Vector2(400, 0)
-layout_mode = 1
-offset_left = -175.998
-offset_top = 1.00049
-offset_right = 469.002
-offset_bottom = 151.0
-rotation = 1.5708
+layout_mode = 2
 texture = SubResource("AtlasTexture_7wg64")
 expand_mode = 2
 
-[node name="health_bar" type="ProgressBar" parent="player_hud/Phone/ui/texture_health"]
+[node name="health_bar" type="ProgressBar" parent="player_hud/Phone/ui/VBoxContainer/PanelContainer2/texture_health"]
 unique_name_in_owner = true
 self_modulate = Color(0, 1, 0, 1)
 layout_direction = 2
@@ -756,9 +777,10 @@ metadata/_edit_use_anchors_ = true
 [node name="phone" type="HBoxContainer" parent="player_hud/Phone"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 1.391
 anchor_bottom = 1.0
+offset_right = -281.53
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -893,6 +915,11 @@ animation = &"happy"
 wait_time = 0.2
 one_shot = true
 
+[node name="phone_input_latency" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.2
+one_shot = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr1" to="." method="_on_btn_dr_1_pressed"]
@@ -903,3 +930,4 @@ one_shot = true
 [connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr6" to="." method="_on_btn_dr_6_pressed"]
 [connection signal="animation_finished" from="emote" to="." method="_on_emote_animation_finished"]
 [connection signal="timeout" from="interact_latency" to="." method="_on_interact_latency_timeout"]
+[connection signal="timeout" from="phone_input_latency" to="." method="_on_phone_input_latency_timeout"]

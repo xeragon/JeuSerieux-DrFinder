@@ -20,10 +20,11 @@ var body_in_interact_range = null
 @onready var stress_holder : TextureRect = %texture_serenity
 @onready var sante_holder =  %texture_health
 @onready var sante  = %health_bar
-@onready var player_hud = $player_hudx	
+@onready var player_hud = $player_hud
 @onready var phone = %phone
 @onready var ui = %ui
-
+@onready var phone_input_latency = %phone_input_latency
+@onready var can_input : bool = true
 
 func _ready():
 	GlobalScript.player_name = "alex"
@@ -40,23 +41,37 @@ func _ready():
 	phone.visible = false
 	%phone_bg.visible = false
 	if get_parent() is Room:
+		can_input = false
 		%ui.visible = true
 	else:
+		can_input = true
 		%ui.visible = false
 		
 	
 func _physics_process(delta):
 	var s = DisplayServer.window_get_size()
+	var ui_scale : float
+	#if get_parent() is Room:
+	#	stress_holder.custom_minimum_size.x = s.y - s.y/4
+	#	sante_holder.custom_minimum_size.x = s.y - s.y/4
+	#	ui_scale = s.y/1080.00
+	#else:
+	#	ui_scale = s.y/1080.00
+	#	stress_holder.custom_minimum_size.x = s.y
+	#	sante_holder.custom_minimum_size.x = s.y 
+		
+	#ui.scale = Vector2(ui_scale,ui_scale)
+
+
 	
-	stress_holder.custom_minimum_size.x = s.y - s.y/4
-	sante_holder.custom_minimum_size.x = s.y - s.y/4
-	var ui_scale = s.y/1080.00
-	ui.scale = Vector2(ui_scale,ui_scale)
 	if Input.is_action_pressed("open_interface"):
-		if interacting:
+		if interacting and can_input:
+			can_input = false
+			phone_input_latency.start()
 			ui_visibility(false)
-		else:
-			await get_tree().create_timer(0.05).timeout 
+		elif can_input:
+			can_input = false
+			phone_input_latency.start()
 			ui_visibility(true)
 			
 	if not interacting:
@@ -178,12 +193,19 @@ func visible_info_dr(current_dr : String):
 	
 func ui_visibility(isVisible : bool):
 	if isVisible:
-		%phone_bg.visible = true
 		phone.visible = true
+		%phone_bg.visible = true
 		%ui.visible = true
 		interacting = true
 	else:
+		print("zafezgzegze")
 		%phone_bg.visible = false
 		phone.visible = false
 		%ui.visible = false
 		interact_latency_timer.start()
+		
+
+
+
+func _on_phone_input_latency_timeout():
+	can_input = true
