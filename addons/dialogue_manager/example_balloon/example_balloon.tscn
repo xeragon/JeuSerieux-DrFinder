@@ -85,12 +85,13 @@ script = ExtResource("1_4u26j")
 unique_name_in_owner = true
 self_modulate = Color(0.501961, 0.501961, 0.501961, 1)
 texture_filter = 1
-anchors_preset = 9
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 0.247
+anchor_bottom = 0.787
 offset_left = 18.0
-offset_top = 20.0
-offset_right = 404.0
-offset_bottom = -202.0
+offset_top = 25.0
+offset_right = -30.544
+offset_bottom = 0.0239563
 grow_vertical = 2
 size_flags_horizontal = 0
 theme = SubResource("Theme_qq3yp")
@@ -101,6 +102,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 21.0
+offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -124,27 +127,28 @@ text = "Dialogue..."
 
 [node name="Responses" type="MarginContainer" parent="."]
 anchors_preset = -1
-anchor_top = 0.843
+anchor_top = 0.81
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 70.736
+offset_left = 2.0
+offset_top = 2.11993
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="Responses"]
 layout_mode = 2
-size_flags_vertical = 8
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Responses/PanelContainer" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 8
 theme_override_constants/separation = 2
 script = ExtResource("3_72ixx")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Responses/PanelContainer/ResponsesMenu"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/outline_size = 0
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxTexture_nt4wy")
