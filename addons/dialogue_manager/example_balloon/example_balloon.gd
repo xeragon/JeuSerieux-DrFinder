@@ -66,8 +66,11 @@ var dialogue_line: DialogueLine:
 
 func _ready() -> void:
 	balloon.hide()
+	get_tree().root.size_changed.connect(_on_screen_size_changed)
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
+func _on_screen_size_changed():
+	pass
 
 func _unhandled_input(_event: InputEvent) -> void:
 	# Only the balloon is allowed to handle input while it's showing
@@ -121,3 +124,5 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
+
+
