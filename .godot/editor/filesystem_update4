@@ -1,7 +1,7 @@
-res://scenes/npc/npc.tscn
-res://scenes/maps/salles.tres
-res://scenes/npc/dr_zen.tscn
 res://scenes/maps/fin_dialogue.tscn
+res://scenes/npc/npc.tscn
+res://scenes/npc/dr_zen.tscn
 res://tuto.tscn
 res://scenes/maps/rooms_anim.tscn
 res://addons/dialogue_manager/example_balloon/example_balloon.tscn
+res://scenes/player/player.tscn
