@@ -1,9 +1,14 @@
+Timer
+ColorRect
+Button
+AnimationPlayer
+AnimationTree
+Sprite2D
+CharacterBody2D
 HSeparator
 VBoxContainer
 HBoxContainer
 PanelContainer
-Timer
-ColorRect
 VSeparator
 Label
 Control
@@ -12,10 +17,8 @@ CenterContainer
 TextureRect
 Panel
 TextureProgressBar
-AnimationPlayer
 Marker2D
 ProgressBar
-Button
 Camera2D
 PathFollow2D
 Path2D
@@ -27,6 +30,3 @@ CPUParticles2D
 Node
 Node2D
 TileMap
-Sprite2D
-CollisionPolygon2D
-npc

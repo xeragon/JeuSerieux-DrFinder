@@ -43,7 +43,7 @@ func _enter_tree():
 
 
 func exit_room():
-	GlobalScript.change_map("res://scenes/maps/fin_dialogue.tscn")
+	GlobalScript.next_round()
 
 func _on_interaction_finished():
 	animPlayer.play("quit_room")

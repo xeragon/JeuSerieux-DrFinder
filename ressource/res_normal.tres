@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://b8ct3vgs4lmv5"]
+
+[ext_resource type="Texture2D" uid="uid://bk7bl27csfq5d" path="res://assets/Complete_GUI_Essential_Pack_Free_Version/01_Basic_Collection/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat_Button_02.png" id="1_o3t58"]
+
+[resource]
+texture = ExtResource("1_o3t58")
+texture_margin_left = 80.0
+texture_margin_right = 80.0
+region_rect = Rect2(0, 192, 96, 32)
+modulate_color = Color(0, 0.298039, 0.584314, 1)

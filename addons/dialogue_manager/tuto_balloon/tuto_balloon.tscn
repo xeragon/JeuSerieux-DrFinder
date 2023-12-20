@@ -1,11 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=13 format=3 uid="uid://2j7pik3lhyvu"]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_4u26j"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Texture2D" uid="uid://dnrfxs1w4jvkr" path="res://assets/Complete_GUI_Essential_Pack_Free_Version/01_Basic_Collection/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat.png" id="2_mfwrc"]
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
-[ext_resource type="StyleBox" uid="uid://b8ct3vgs4lmv5" path="res://ressource/res_normal.tres" id="5_4hkxe"]
-[ext_resource type="StyleBox" uid="uid://cra034ypg2ftb" path="res://ressource/hover_focus_texture.tres" id="5_5b4b7"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/tuto_balloon/tuto_balloon.gd" id="1_wpqod"]
+[ext_resource type="Texture2D" uid="uid://dnrfxs1w4jvkr" path="res://assets/Complete_GUI_Essential_Pack_Free_Version/01_Basic_Collection/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat.png" id="2_yhjnv"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="3_p5agx"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="4_kc1lx"]
+[ext_resource type="StyleBox" uid="uid://b8ct3vgs4lmv5" path="res://ressource/res_normal.tres" id="5_sfr34"]
+[ext_resource type="StyleBox" uid="uid://cra034ypg2ftb" path="res://ressource/hover_focus_texture.tres" id="6_w4ypa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -67,32 +67,37 @@ MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mc0a7"]
-texture = ExtResource("2_mfwrc")
+texture = ExtResource("2_yhjnv")
+texture_margin_left = 2.0
+texture_margin_right = 2.0
 region_rect = Rect2(32, 32, 96, 96)
 
-[node name="ExampleBalloon" type="CanvasLayer"]
+[node name="tuto_balloon" type="CanvasLayer"]
 layer = 100
-script = ExtResource("1_4u26j")
+script = ExtResource("1_wpqod")
 
 [node name="Balloon" type="Panel" parent="."]
 unique_name_in_owner = true
 self_modulate = Color(0.501961, 0.501961, 0.501961, 1)
 texture_filter = 1
 anchors_preset = -1
-anchor_right = 0.247
-anchor_bottom = 0.787
-offset_left = 18.0
-offset_top = 25.0
-offset_right = -30.544
-offset_bottom = 0.0239563
-grow_vertical = 2
+anchor_left = 0.007
+anchor_top = 1.0
+anchor_right = 0.99
+anchor_bottom = 1.0
+offset_left = -0.0640001
+offset_top = -187.0
+offset_right = -0.480103
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
 size_flags_horizontal = 0
 theme = SubResource("Theme_qq3yp")
 theme_override_styles/panel = SubResource("StyleBoxTexture_mc0a7")
 
 [node name="Dialogue" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = 21.0
@@ -113,41 +118,42 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/Dialogue/VBoxContainer" instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/Dialogue/VBoxContainer" instance=ExtResource("3_p5agx")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Dialogue..."
 
 [node name="Responses" type="MarginContainer" parent="."]
 anchors_preset = -1
-anchor_top = 0.81
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 2.11993
-offset_bottom = 1.0
+anchor_left = 0.007
+anchor_top = 0.904
+anchor_right = 0.989
+anchor_bottom = 0.988
+offset_left = -0.0640001
+offset_top = 0.207947
+offset_right = -0.328003
+offset_bottom = -0.223999
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="Responses"]
 layout_mode = 2
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Responses/PanelContainer" node_paths=PackedStringArray("response_template")]
+[node name="ResponsesMenu" type="VBoxContainer" parent="Responses/PanelContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 2
-script = ExtResource("3_72ixx")
-response_template = NodePath("ResponseExample")
+script = ExtResource("4_kc1lx")
 
 [node name="ResponseExample" type="Button" parent="Responses/PanelContainer/ResponsesMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/outline_size = 0
 theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = ExtResource("5_4hkxe")
-theme_override_styles/hover = ExtResource("5_5b4b7")
-theme_override_styles/focus = ExtResource("5_5b4b7")
+theme_override_styles/normal = ExtResource("5_sfr34")
+theme_override_styles/hover = ExtResource("6_w4ypa")
+theme_override_styles/focus = ExtResource("6_w4ypa")
 text = "Response example"
 
-[connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
-[connection signal="response_selected" from="Responses/PanelContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
+[connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input" flags=18]
+[connection signal="response_selected" from="Responses/PanelContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected" flags=18]

@@ -49,21 +49,6 @@ func _ready():
 		
 	
 func _physics_process(delta):
-	var s = DisplayServer.window_get_size()
-	var ui_scale : float
-	#if get_parent() is Room:
-	#	stress_holder.custom_minimum_size.x = s.y - s.y/4
-	#	sante_holder.custom_minimum_size.x = s.y - s.y/4
-	#	ui_scale = s.y/1080.00
-	#else:
-	#	ui_scale = s.y/1080.00
-	#	stress_holder.custom_minimum_size.x = s.y
-	#	sante_holder.custom_minimum_size.x = s.y 
-		
-	#ui.scale = Vector2(ui_scale,ui_scale)
-
-
-	
 	if Input.is_action_pressed("open_interface"):
 		if interacting and can_input:
 			can_input = false
@@ -156,8 +141,7 @@ func _on_focus_on_map_received():
 	camera.enabled = false
 	
 func _on_interaction_finished():
-	#interact_latency_timer.start()
-	pass
+	interact_latency_timer.start()
 
 
 func _on_btn_dr_1_pressed():

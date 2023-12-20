@@ -650,6 +650,7 @@ position = Vector2(8.5, 2)
 shape = SubResource("CircleShape2D_ptvl1")
 
 [node name="player_hud" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Phone" type="Control" parent="player_hud"]
 unique_name_in_owner = true

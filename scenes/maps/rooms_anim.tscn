@@ -206,6 +206,7 @@ _data = {
 }
 
 [node name="rooms_anim" type="AnimationPlayer"]
+speed_scale = 3.0
 libraries = {
 "": SubResource("AnimationLibrary_f87pn")
 }
