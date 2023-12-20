@@ -27,6 +27,7 @@ var body_in_interact_range = null
 @onready var can_input : bool = true
 
 func _ready():
+	interacting = false
 	GlobalScript.player_name = "alex"
 	GlobalScript.player = self
 	GlobalScript.load_player_stats()
@@ -146,24 +147,14 @@ func _on_interaction_finished():
 
 func _on_btn_dr_1_pressed():
 	visible_info_dr("Info_dr1")
-
-
 func _on_btn_dr_2_pressed():
 	visible_info_dr("Info_dr2")
-
-
 func _on_btn_dr_3_pressed():
 	visible_info_dr("Info_dr3")
-
-
 func _on_btn_dr_4_pressed():
 	visible_info_dr("Info_dr4")
-
-
 func _on_btn_dr_5_pressed():
 	visible_info_dr("Info_dr5")
-
-
 func _on_btn_dr_6_pressed():
 	visible_info_dr("Info_dr6")
 	
