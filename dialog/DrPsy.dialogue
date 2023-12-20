@@ -1,64 +1,68 @@
 ~ start
 Dr.Psy: Bonjour Mr comment puis-je vous aider aujourd'hui ?
-- *Dire que vous venez car les mauvaises expériences avec les médecins sont trop stressantes* => explique
-- *être trop craintif et avoir du mal a s'éxprimer*  => crains
-	
-
-
-~ explique
-Dr.Psy: Ah je vois en effet cela peut être un problème si les médecins ne sont pas assez compréhensifs avec vous. Comment étaient-ils précisément? 
-- Décrire précisément le comportement des médecins
-	Dr.Psy: Hmmm je vois effectivement c'est plutôt complexe
-	 	- Demander comment faire pour soigner sa maladie dans ce cas 
+- *Dire que vous venez car les mauvaises expériences avec les médecins sont trop stressantes* 
+	Dr.Psy: Ah je vois en effet cela peut être un problème si les médecins ne sont pas assez compréhensifs avec vous. Comment étaient-ils précisément? 
+	- Décrire précisément le comportement des médecins
+		Dr.Psy: Hmmm je vois effectivement c'est plutôt complexe
+		 - Demander comment faire pour soigner sa maladie dans ce cas 
 			Dr.Psy: Vous pourriez essayer de changer de médecin pour en trouver un a votre convenance .
-			do modify_sante(2)
+			do modify_stress(20)
 		- Attendre une réponse 
 			Dr.Psy: Je comprend votre point de vue mais vous devriez faire plus attention à votre approche de la conversation 
+			do modify_stress(20)
+	- *Survoler vaguement le comportement *
+		=> situation
 
-- *Survoler vaguement le comportement * => situation
-	
-=> fin
-
-
-~ crains
-Dr.Psy : Pas de problème, prenez votre temps. Essayez de décrire ce que vous ressentez
-do modify_sante(2)
-- * Toujours avoir trop peur et hésiter a se confier *
-	Dr.Psy: Je vais avoir besoin de votre participation pour vous aider
-	- *S'excuser et raconter timidement*
-		Dr.Psy: Ne vous inquiétez pas il n'y a pas de problèmes. Certains médecins peuvent être compliqués .
-		-*être d'accord avec le spécialiste*
-		-*Dire que vous pensez que c'est de votre faute*
-			Dr.Psy: Mais non voyons je suis sur que vous n'êtes pas la cause principale du problème. Si vous pensez que c'est la cas alors essayez d'avoir une approche plus amicale .
-				do modify_sante(3)
+- *être trop craintif et avoir du mal a s'éxprimer* 
+	Dr.Psy : Pas de problème, prenez votre temps. Essayez de décrire ce que vous ressentez
+	do modify_stress(20)
+	- * Toujours avoir trop peur et hésiter a se confier *
+		Dr.Psy: Je vais avoir besoin de votre participation pour vous aider
+		- *S'excuser et raconter timidement*
+			Dr.Psy: Ne vous inquiétez pas il n'y a pas de problèmes. Certains médecins peuvent être compliqués.
+			- *être d'accord avec le spécialiste*
+				do modify_stress(20)
+				=> fin
+			- *Dire que vous pensez que c'est de votre faute*
+				Dr.Psy: Mais non voyons je suis sur que vous n'êtes pas la cause principale du problème. Si vous pensez que c'est la cas alors essayez d'avoir une approche plus amicale .
+				do modify_stress(30)
 				- *Je vais essayer merci*
+			
+		- *Attendre encore *
+			Dr.Psy: Si vous ne souhaitez pas me parler vous pourrez revenir plus tard pas de soucis
+			do modify_stress(20)
 		
-	- *Attendre encore *
-		Dr.Psy: Si vous ne souhaitez pas me parler vous pourrez revenir plus tard pas de soucis
-		do modify_sante(2)
-	
-- *Reprendre votre calme et décrire la situation*=> situation
+	- *Reprendre votre calme et décrire la situation*
+		=> situation
+ 
 => fin
+
+
 
 
 ~ situation
 Dr.Psy : Je peux bien m'imaginer que cela représente un problème
 - *Remercier de la compréhension*
 		Dr.Psy: C'est bien normal voyons. En espérant avoir pu vous être utile.
-		do modify_sante(2)
+		do modify_stress(20)
 		- *Oui merci bien au revoir*
+			=> fin
 		- *Pas autant que j'aurais pu l'espérer mais je vous remercie tout de même
+			=> fin
 - *Demander si il connaît une solution*
 		Dr.Psy: A part de la persévérance et de la patience il n'y a pas grand-chose à faire
-		do modify_sante(1)
+		do modify_stress(20)
 		- *S'en contenter*
+			=> fin
 		- *Demander plus de détail*
-			Dr.Psy: Je suis désolé mais c'est a vous de travailler maintenant .		
+			Dr.Psy: Je suis désolé mais c'est a vous de travailler maintenant .
+			do modify_stress(10)
 
 => fin
 
 
 ~ fin
+do modify_sante(-10)
 do emit_interaction_finished()
 
 => END
