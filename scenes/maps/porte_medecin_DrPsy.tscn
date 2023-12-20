@@ -1,27 +1,27 @@
 [gd_scene load_steps=6 format=3 uid="uid://ygcnf7ysvwcr"]
 
-[ext_resource type="Script" path="res://scenes/maps/porte_medecin_4.gd" id="1_n7lu2"]
-[ext_resource type="PackedScene" uid="uid://c5vk5i7xyppni" path="res://scenes/npc/dr_zen.tscn" id="2_bhdo4"]
-[ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="2_ndaam"]
-[ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="3_3mwgf"]
-[ext_resource type="PackedScene" uid="uid://b5nb3mu7b4f5o" path="res://scenes/maps/rooms_anim.tscn" id="4_s01wo"]
+[ext_resource type="Script" path="res://scenes/maps/porte_medecin_4.gd" id="1_vsq2g"]
+[ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="2_uu8ye"]
+[ext_resource type="PackedScene" uid="uid://cqfnb575uh3u6" path="res://scenes/npc/dr_psy.tscn" id="3_2dkug"]
+[ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="4_su00x"]
+[ext_resource type="PackedScene" uid="uid://b5nb3mu7b4f5o" path="res://scenes/maps/rooms_anim.tscn" id="5_tk68g"]
 
 [node name="porte_medecin4" type="Node2D" node_paths=PackedStringArray("room_doc")]
 y_sort_enabled = true
-script = ExtResource("1_n7lu2")
-room_doc = NodePath("dr_zen")
+script = ExtResource("1_vsq2g")
+room_doc = NodePath("dr_psy")
 
-[node name="dr_zen" parent="." instance=ExtResource("2_bhdo4")]
-position = Vector2(-83, -1)
-
-[node name="player" parent="." instance=ExtResource("2_ndaam")]
+[node name="player" parent="." instance=ExtResource("2_uu8ye")]
 position = Vector2(-1, 75)
+
+[node name="dr_psy" parent="." instance=ExtResource("3_2dkug")]
+position = Vector2(-87, -2)
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1, 0)
-tile_set = ExtResource("3_3mwgf")
+tile_set = ExtResource("4_su00x")
 format = 2
 layer_0/name = "Ground"
 layer_0/y_sort_enabled = true
@@ -33,7 +33,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(196613, 786432, 56, 196603, 589824, 80, -131077, 851968, 44, -131073, 0, 45, -196604, 851968, 44, -196606, 524288, 69, 3, 196611, 57, 131071, 196608, 42, -5, 524288, 35, -6, 458752, 35, -4, 196608, 38, 65532, 196608, 39)
+layer_1/tile_data = PackedInt32Array(196613, 786432, 56, 196603, 589824, 80, -131077, 851968, 44, -131073, 0, 45, -196604, 851968, 44, -196606, 524288, 69, 3, 196611, 57, 131071, 196608, 42, -5, 524288, 35, -4, 196608, 38, 65532, 196608, 39, -6, 327680, 40, 65530, 327680, 41)
 layer_2/name = "Higher_elements"
 layer_2/enabled = true
 layer_2/modulate = Color(1, 1, 1, 1)
@@ -58,4 +58,4 @@ position = Vector2(-54, -2)
 [node name="exit_pos" type="Marker2D" parent="."]
 position = Vector2(0, 81)
 
-[node name="rooms_anim" parent="." instance=ExtResource("4_s01wo")]
+[node name="rooms_anim" parent="." instance=ExtResource("5_tk68g")]

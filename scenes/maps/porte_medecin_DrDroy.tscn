@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://dxnlb6m65p34h"]
 
-[ext_resource type="Script" path="res://scenes/maps/porte_medecin_3.gd" id="1_7o86s"]
-[ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="2_kdoi3"]
-[ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="3_sr1nh"]
-[ext_resource type="PackedScene" uid="uid://c5vk5i7xyppni" path="res://scenes/npc/dr_zen.tscn" id="5_jhfsw"]
+[ext_resource type="Script" path="res://scenes/maps/porte_medecin_3.gd" id="1_swy1b"]
+[ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="2_b541q"]
+[ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="3_sam2l"]
+[ext_resource type="PackedScene" uid="uid://cru0cetrjtmmk" path="res://scenes/npc/dr_droy.tscn" id="4_0hv3d"]
 
 [sub_resource type="Animation" id="Animation_a40k6"]
 resource_name = "RESET"
@@ -210,13 +210,10 @@ _data = {
 
 [node name="porte_medecin3" type="Node2D" node_paths=PackedStringArray("room_doc")]
 y_sort_enabled = true
-script = ExtResource("1_7o86s")
-room_doc = NodePath("dr_zen")
+script = ExtResource("1_swy1b")
+room_doc = NodePath("dr_droy")
 
-[node name="dr_zen" parent="." instance=ExtResource("5_jhfsw")]
-position = Vector2(-86, -1)
-
-[node name="player" parent="." instance=ExtResource("2_kdoi3")]
+[node name="player" parent="." instance=ExtResource("2_b541q")]
 position = Vector2(-4, 76)
 interacting = true
 
@@ -224,7 +221,7 @@ interacting = true
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1, 0)
-tile_set = ExtResource("3_sr1nh")
+tile_set = ExtResource("3_sam2l")
 format = 2
 layer_0/name = "Ground"
 layer_0/y_sort_enabled = true
@@ -265,3 +262,6 @@ position = Vector2(0, 81)
 libraries = {
 "": SubResource("AnimationLibrary_f87pn")
 }
+
+[node name="dr_droy" parent="." instance=ExtResource("4_0hv3d")]
+position = Vector2(-87, -3)
