@@ -1,0 +1,61 @@
+~ start
+Dr.ZimZim: Bonjour Mr comment puis-je vous aider aujourd'hui ?
+- *expliquer vos symptômes que vous ressentez* => explique
+- *Essayer de faire une blague pour remonter le moral*
+	Dr.ZimZim : Vous avez vraiment un très bon sens de l'humour, mais j'aimerais que nous nous concentrions sur vos symptômes pour trouver le remède adéquat à votre maladie.
+	- décrire vos symptomes => explique
+	- *bugguer sur les mots pour expliquer ce qui ne va pas * => stresse
+
+
+~ explique
+Dr.ZimZim: Ah okey j'ai compris , j'avais un cas pareil  la semaine derniere avec un autre patient , il a mangé dans le meme restaurant et il a eu les meme symptomes    .
+- Du coup il a pris quoi comme medicaments ?
+	Dr.ZimZim : Ne vous inquietez pas je vais vous préscrire les médicaments nécessaire
+
+- *C'est quoi le nom du restaurant *
+	Dr.ZimZim : Ye Doy , c'est un restau Indien , il fait aussi des soupes traditionelle , il peuvent etre un remède a ta maladie
+	- *tester le remede *
+	- *Demander les compositions de la soupe*
+		Dr.ZimZim: Cette soupes est composé de  bouillon de poulet , des carottes , d'herbes et de l'huile d'olive
+
+		- *Tester la soupe*
+			Dr.Chepaki: parfait !
+			do modify_stress(-5)
+		- *Ne pas tester la soupe*
+			Dr.ZimZim : ah bon c'est vous qui voyez...
+=> fin
+~ stresse
+Dr.ZimZim : Pas de problème, prenez votre temps. Essayez de décrire ce que vous ressentez
+- * demander l'ensemble du processus médical, y compris les coûts, les risques et les avantages*
+	Dr.ZimZim : Vous pouvez allongez sur le lit pour que je fasse les différents testes
+	- *Allonger et faire le nécessaire*
+	do modify_stress(-8)
+	do modify_sante(-5)
+
+
+- *Décrire comment vous ressentez et le differentes symptomes que vous avez*
+	Dr.ZimZim : Ah D'accord , Il a l'air critique votre maladie mais j'ai une solution efficace
+	- *Demander si y 'a un remède pharmaceutique pour ça  *
+		Dr.ZimZim: Oui je te fais une note , normalement dans une semaine t'auras plus rrien
+		- *commencer le traitement*
+			do modify_sante(-20)
+
+		- *demander est ce qu'il y a une solution magique * => sol_mag
+	- *demander est ce qu'il y a une solution magique * => sol_mag
+=> fin
+
+~ sol_mag
+Dr.ZimZim: C'est l'ahwaganda , c'est un melange de l'urine de la tortue et des epices du brézil
+- *Prendre le traitement*
+	Dr.ZimZim : Cava bientot guérire !
+	do modify_sante(-20)
+- *Refuser le traitement*
+	Dr.ZimZim : comme vous voulez ...
+
+=> fin
+
+
+~ fin
+do emit_interaction_finished()
+
+=> END
