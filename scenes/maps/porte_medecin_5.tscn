@@ -2,20 +2,19 @@
 
 [ext_resource type="Script" path="res://scenes/maps/porte_medecin_5.gd" id="1_sk0ip"]
 [ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="2_sap0l"]
-[ext_resource type="PackedScene" uid="uid://c5vk5i7xyppni" path="res://scenes/npc/dr_zen.tscn" id="2_sn8yy"]
 [ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="3_8ij4v"]
+[ext_resource type="PackedScene" uid="uid://chgeu654sfoac" path="res://scenes/npc/dr_chirurgien.tscn" id="3_vwbnp"]
 [ext_resource type="PackedScene" uid="uid://b5nb3mu7b4f5o" path="res://scenes/maps/rooms_anim.tscn" id="5_ftvkj"]
 
 [node name="porte_medecin5" type="Node2D" node_paths=PackedStringArray("room_doc")]
 y_sort_enabled = true
 script = ExtResource("1_sk0ip")
-room_doc = NodePath("dr_zen")
-
-[node name="dr_zen" parent="." instance=ExtResource("2_sn8yy")]
-position = Vector2(-82, 31)
+room_doc = NodePath("dr_chirurgien")
 
 [node name="player" parent="." instance=ExtResource("2_sap0l")]
 position = Vector2(-1, 75)
+
+[node name="dr_chirurgien" parent="." instance=ExtResource("3_vwbnp")]
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
