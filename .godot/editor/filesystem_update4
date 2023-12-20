@@ -13,3 +13,9 @@ res://scenes/maps/fin_dialogue.tscn
 res://scenes/maps/the_end.tscn
 res://scenes/maps/porte_medecin_6.tscn
 res://scenes/maps/acceuil_et_portes.gd
+res://scenes/maps/porte_medecin_DrFamille.tscn
+res://scenes/maps/porte_medecin_DrChirugien.tscn
+res://scenes/maps/porte_medecin_DrZimZim.tscn
+res://scenes/maps/porte_medecin_DrPsy.tscn
+res://scenes/maps/porte_medecin_DrDroy.tscn
+res://scenes/player/player.gd

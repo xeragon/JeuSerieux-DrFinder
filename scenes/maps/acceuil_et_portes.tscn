@@ -94,7 +94,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qiqbo"]
-size = Vector2(16, 7.5625)
+size = Vector2(16, 11)
 
 [sub_resource type="LabelSettings" id="LabelSettings_spnq7"]
 font_color = Color(0, 0, 0, 1)
@@ -158,9 +158,9 @@ libraries = {
 
 [node name="porte_DrZen" type="Area2D" parent="."]
 position = Vector2(-168, -85)
-metadata/_edit_group_ = true
 
 [node name="DrZen" type="CollisionShape2D" parent="porte_DrZen"]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_qiqbo")
 
 [node name="panneau" type="Sprite2D" parent="porte_DrZen"]
@@ -188,14 +188,11 @@ label_settings = SubResource("LabelSettings_spnq7")
 
 [node name="porte_DrDroy" type="Area2D" parent="."]
 position = Vector2(-120, -85)
-metadata/_edit_group_ = true
 
 [node name="DrDroy" type="CollisionShape2D" parent="porte_DrDroy"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="porte_DrDroy"]
-
-[node name="panneau" type="Sprite2D" parent="porte_DrDroy/StaticBody2D"]
+[node name="panneau" type="Sprite2D" parent="porte_DrDroy"]
 position = Vector2(16, -10.25)
 scale = Vector2(0.333333, 0.25)
 texture = ExtResource("5_x8riy")
@@ -203,7 +200,7 @@ region_enabled = true
 region_rect = Rect2(1043, 86, 30, 26)
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="porte_DrDroy/StaticBody2D/panneau"]
+[node name="Label" type="Label" parent="porte_DrDroy/panneau"]
 texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -248,14 +245,14 @@ grow_vertical = 2
 text = "10"
 label_settings = SubResource("LabelSettings_spnq7")
 
-[node name="porte_DrChirugien" type="Area2D" parent="."]
+[node name="porte_DrChirurgien" type="Area2D" parent="."]
 position = Vector2(72, -84)
 metadata/_edit_group_ = true
 
-[node name="DrChirugien" type="CollisionShape2D" parent="porte_DrChirugien"]
+[node name="DrChirugien" type="CollisionShape2D" parent="porte_DrChirurgien"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
-[node name="panneau" type="Sprite2D" parent="porte_DrChirugien"]
+[node name="panneau" type="Sprite2D" parent="porte_DrChirurgien"]
 position = Vector2(-16, -11.5)
 scale = Vector2(0.333333, 0.269231)
 texture = ExtResource("5_x8riy")
@@ -263,7 +260,7 @@ region_enabled = true
 region_rect = Rect2(1043, 86, 30, 26)
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="porte_DrChirugien/panneau"]
+[node name="Label" type="Label" parent="porte_DrChirurgien/panneau"]
 texture_filter = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -380,7 +377,7 @@ one_shot = true
 [connection signal="body_entered" from="porte_DrZen" to="." method="_on_porte_dr_zen_body_entered"]
 [connection signal="body_entered" from="porte_DrDroy" to="." method="_on_porte_dr_droy_body_entered"]
 [connection signal="body_entered" from="porte_DrZimZim" to="." method="_on_porte_dr_zim_zim_body_entered"]
-[connection signal="body_entered" from="porte_DrChirugien" to="." method="_on_porte_dr_chirugien_body_entered"]
+[connection signal="body_entered" from="porte_DrChirurgien" to="." method="_on_porte_dr_chirugien_body_entered"]
 [connection signal="body_entered" from="porte_DrPsy" to="." method="_on_porte_dr_psy_body_entered"]
 [connection signal="body_entered" from="porte_DrFamille" to="." method="_on_porte_dr_famille_body_entered"]
 [connection signal="timeout" from="fondu_timer" to="." method="_on_fondu_timer_timeout"]

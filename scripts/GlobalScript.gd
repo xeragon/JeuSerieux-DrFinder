@@ -1,6 +1,7 @@
 extends Node
 
-const BASE_STAT = 10
+const BASE_STAT = 30
+const WANTED_TOTAL_QUEUE = 50
 var str : String
 var player_name : String
 var player : Player
@@ -40,17 +41,16 @@ func emit_interaction_finished():
 func modify_stress(value : int):
 	player.emote.visible = true
 	if value > 0:
-		player.emote.play("sad")
-	else:
 		player.emote.play("happy")
+	else:
+		player.emote.play("sad")
 	player.stress.value += value
-	
 func modify_sante(value : int):
 	player.emote.visible = true
 	if value > 0:
-		player.emote.play("sad")
-	else:
 		player.emote.play("happy")
+	else:
+		player.emote.play("sad")
 	player.sante.value += value
 	
 func change_map(path_to_map : String):
@@ -74,12 +74,47 @@ func next_round():
 		change_map("res://scenes/maps/fin_dialogue.tscn")
 		round_count += 1;
 	set_docs_queue()
-	
-	
+
+func apply_queue_debuff(doc_key : String):
+	modify_stress(-(docs_queue[doc_key]))
+
 func set_docs_queue():
+
+	var total : int
+	var n : int 
+	
 	for x in docs_queue:
-		docs_queue[x] = rng.randi_range(0,10)
+		n = rng.randi_range(0,25)
+		docs_queue[x] = n
+		total += n
+	
+	if total > WANTED_TOTAL_QUEUE:
+		pump_down_queues(total)
+	elif total < WANTED_TOTAL_QUEUE:
+		pump_up_queues(total)
+	
 	print(docs_queue)
+	
+func pump_up_queues(total : int ):
+	var current_total = total
+	var min_doc : String = "DrZen"
+	while  current_total < WANTED_TOTAL_QUEUE:
+		for x in docs_queue:
+			if docs_queue[x] < docs_queue[min_doc]:
+				min_doc = x
+		docs_queue[min_doc] += 1
+		current_total += 1 
+		
+func pump_down_queues(total : int ):
+	var current_total = total
+	var max_doc : String = "DrZen"
+	while  current_total > WANTED_TOTAL_QUEUE:
+		for x in docs_queue:
+			if docs_queue[x] > docs_queue[max_doc]:
+				max_doc = x
+		docs_queue[max_doc] -= 1
+		current_total -= 1
+
 func get_round_start_str():
 	return "Visite " + str(round_count)
 
