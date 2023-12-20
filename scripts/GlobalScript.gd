@@ -1,6 +1,6 @@
 extends Node
 
-const BASE_STAT = 50
+const BASE_STAT = 10
 var str : String
 var player_name : String
 var player : Player
@@ -10,17 +10,29 @@ var hud : CanvasLayer
 var player_sante : int
 var player_stress : int
 var is_game_start : bool = true 
-var round_count = 0;
+var round_count = 1;
 var end_speech : String
-signal interaction_finished 
 
+var rng = RandomNumberGenerator.new()
+
+var docs_queue : Dictionary  = {
+	"DrZen" : 0,
+	"DrDroy" : 0,
+	"DrZimZim" : 0,
+	"DrChirurgien" : 0,
+	"DrPsy" : 0,
+	"DrFamille" : 0
+	}
+
+
+signal interaction_finished 
 func reset_player_stat():
 	player_sante = BASE_STAT
 	player_stress = BASE_STAT
 	
 func _ready():
-	player_sante = BASE_STAT
-	player_stress = BASE_STAT
+	reset_player_stat()
+	set_docs_queue()
 
 func emit_interaction_finished():
 	emit_signal("interaction_finished")
@@ -51,7 +63,7 @@ func load_player_stats():
 	player.stress.value = player_stress
 
 func replay():
-	round_count = 0;
+	round_count = 1;
 	reset_player_stat()
 	get_tree().change_scene_to_file("res://scenes/maps/acceuil_et_portes.tscn")
 	
@@ -61,6 +73,16 @@ func next_round():
 	else:
 		change_map("res://scenes/maps/fin_dialogue.tscn")
 		round_count += 1;
+	set_docs_queue()
+	
+	
+func set_docs_queue():
+	for x in docs_queue:
+		docs_queue[x] = rng.randi_range(0,10)
+	print(docs_queue)
+func get_round_start_str():
+	return "Visite " + str(round_count)
+
 
 func get_end_speech():
 	var r = "";

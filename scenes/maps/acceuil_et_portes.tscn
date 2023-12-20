@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6k6ooc3nqlqe"]
+[gd_scene load_steps=12 format=3 uid="uid://b6k6ooc3nqlqe"]
 
 [ext_resource type="Script" path="res://scenes/maps/acceuil_et_portes.gd" id="1_y5okk"]
 [ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="2_awixh"]
 [ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="4_1g3ia"]
 [ext_resource type="PackedScene" uid="uid://bh0hqw7l3ih45" path="res://scenes/npc/secretaire.tscn" id="4_wt7sr"]
+[ext_resource type="Texture2D" uid="uid://b3kyrbsljuhpq" path="res://assets/Modern tiles_Free/free_overview.png" id="5_x8riy"]
 
 [sub_resource type="Animation" id="Animation_buagh"]
 length = 0.001
@@ -56,10 +57,10 @@ tracks/2/path = NodePath("player:interacting")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [true, true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -94,6 +95,13 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qiqbo"]
 size = Vector2(16, 7.5625)
+
+[sub_resource type="LabelSettings" id="LabelSettings_spnq7"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nyt17"]
+font_size = 128
+font_color = Color(0.290645, 0.539624, 0.634306, 1)
 
 [node name="acceuil_et_portes" type="Node2D"]
 y_sort_enabled = true
@@ -139,7 +147,8 @@ position = Vector2(22, -67)
 [node name="player" parent="." instance=ExtResource("4_1g3ia")]
 position = Vector2(0, 105)
 interacting = true
-move_direction = 2
+state = 1
+move_direction = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
@@ -147,51 +156,232 @@ libraries = {
 "": SubResource("AnimationLibrary_4cc1t")
 }
 
-[node name="porte_medecins1" type="Area2D" parent="."]
+[node name="porte_DrZen" type="Area2D" parent="."]
+position = Vector2(-168, -85)
+metadata/_edit_group_ = true
 
-[node name="medecin1" type="CollisionShape2D" parent="porte_medecins1"]
-position = Vector2(-168, -81)
+[node name="DrZen" type="CollisionShape2D" parent="porte_DrZen"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
-[node name="porte_medecins2" type="Area2D" parent="."]
+[node name="panneau" type="Sprite2D" parent="porte_DrZen"]
+position = Vector2(16, -10.5)
+scale = Vector2(0.333333, 0.269231)
+texture = ExtResource("5_x8riy")
+region_enabled = true
+region_rect = Rect2(1043, 86, 30, 26)
+metadata/_edit_group_ = true
 
-[node name="medecin2" type="CollisionShape2D" parent="porte_medecins2"]
-position = Vector2(-120, -81.7813)
+[node name="Label" type="Label" parent="porte_DrZen/panneau"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_spnq7")
+
+[node name="porte_DrDroy" type="Area2D" parent="."]
+position = Vector2(-120, -85)
+metadata/_edit_group_ = true
+
+[node name="DrDroy" type="CollisionShape2D" parent="porte_DrDroy"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
-[node name="porte_medecins3" type="Area2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="porte_DrDroy"]
 
-[node name="medecin3" type="CollisionShape2D" parent="porte_medecins3"]
-position = Vector2(-72, -82)
+[node name="panneau" type="Sprite2D" parent="porte_DrDroy/StaticBody2D"]
+position = Vector2(16, -10.25)
+scale = Vector2(0.333333, 0.25)
+texture = ExtResource("5_x8riy")
+region_enabled = true
+region_rect = Rect2(1043, 86, 30, 26)
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="porte_DrDroy/StaticBody2D/panneau"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_spnq7")
+
+[node name="porte_DrZimZim" type="Area2D" parent="."]
+position = Vector2(-72, -85)
+metadata/_edit_group_ = true
+
+[node name="DrZimZim" type="CollisionShape2D" parent="porte_DrZimZim"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
-[node name="porte_medecins4" type="Area2D" parent="."]
+[node name="panneau" type="Sprite2D" parent="porte_DrZimZim"]
+position = Vector2(16, -10.5)
+scale = Vector2(0.333333, 0.269231)
+texture = ExtResource("5_x8riy")
+region_enabled = true
+region_rect = Rect2(1043, 86, 30, 26)
+metadata/_edit_group_ = true
 
-[node name="medecin4" type="CollisionShape2D" parent="porte_medecins4"]
-position = Vector2(72, -82)
+[node name="Label" type="Label" parent="porte_DrZimZim/panneau"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_spnq7")
+
+[node name="porte_DrChirugien" type="Area2D" parent="."]
+position = Vector2(72, -84)
+metadata/_edit_group_ = true
+
+[node name="DrChirugien" type="CollisionShape2D" parent="porte_DrChirugien"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
-[node name="porte_medecins5" type="Area2D" parent="."]
+[node name="panneau" type="Sprite2D" parent="porte_DrChirugien"]
+position = Vector2(-16, -11.5)
+scale = Vector2(0.333333, 0.269231)
+texture = ExtResource("5_x8riy")
+region_enabled = true
+region_rect = Rect2(1043, 86, 30, 26)
+metadata/_edit_group_ = true
 
-[node name="medecin5" type="CollisionShape2D" parent="porte_medecins5"]
-position = Vector2(120, -82)
+[node name="Label" type="Label" parent="porte_DrChirugien/panneau"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_spnq7")
+
+[node name="porte_DrPsy" type="Area2D" parent="."]
+position = Vector2(120, -84)
+metadata/_edit_group_ = true
+
+[node name="DrPsy" type="CollisionShape2D" parent="porte_DrPsy"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
-[node name="porte_medecins6" type="Area2D" parent="."]
+[node name="panneau" type="Sprite2D" parent="porte_DrPsy"]
+position = Vector2(-16, -11.5)
+scale = Vector2(0.333333, 0.269231)
+texture = ExtResource("5_x8riy")
+region_enabled = true
+region_rect = Rect2(1043, 86, 30, 26)
+metadata/_edit_group_ = true
 
-[node name="medecin6" type="CollisionShape2D" parent="porte_medecins6"]
-position = Vector2(168, -82)
+[node name="Label" type="Label" parent="porte_DrPsy/panneau"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_spnq7")
+
+[node name="porte_DrFamille" type="Area2D" parent="."]
+position = Vector2(168, -84)
+
+[node name="DrFamille" type="CollisionShape2D" parent="porte_DrFamille"]
 shape = SubResource("RectangleShape2D_qiqbo")
+
+[node name="panneau" type="Sprite2D" parent="porte_DrFamille"]
+position = Vector2(-16, -11.5)
+scale = Vector2(0.333333, 0.269231)
+texture = ExtResource("5_x8riy")
+region_enabled = true
+region_rect = Rect2(1043, 86, 30, 26)
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="porte_DrFamille/panneau"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+label_settings = SubResource("LabelSettings_spnq7")
 
 [node name="fondu_timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 0.01
 one_shot = true
 
-[connection signal="body_entered" from="porte_medecins1" to="." method="_on_portes_medecin1_body_entered"]
-[connection signal="body_entered" from="porte_medecins2" to="." method="_on_porte_medecins_2_body_entered"]
-[connection signal="body_entered" from="porte_medecins3" to="." method="_on_porte_medecins_3_body_entered"]
-[connection signal="body_entered" from="porte_medecins4" to="." method="_on_porte_medecins_4_body_entered"]
-[connection signal="body_entered" from="porte_medecins5" to="." method="_on_porte_medecins_5_body_entered"]
-[connection signal="body_entered" from="porte_medecins6" to="." method="_on_porte_medecins_6_body_entered"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="round_label" type="Label" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -429.0
+offset_right = 429.0
+offset_bottom = 61.0
+grow_horizontal = 2
+text = "aaabebeabeabbdqbdbdqsbdbdqbqdb"
+label_settings = SubResource("LabelSettings_nyt17")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+text_direction = 1
+
+[node name="fondu_label" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.01
+one_shot = true
+
+[connection signal="body_entered" from="porte_DrZen" to="." method="_on_porte_dr_zen_body_entered"]
+[connection signal="body_entered" from="porte_DrDroy" to="." method="_on_porte_dr_droy_body_entered"]
+[connection signal="body_entered" from="porte_DrZimZim" to="." method="_on_porte_dr_zim_zim_body_entered"]
+[connection signal="body_entered" from="porte_DrChirugien" to="." method="_on_porte_dr_chirugien_body_entered"]
+[connection signal="body_entered" from="porte_DrPsy" to="." method="_on_porte_dr_psy_body_entered"]
+[connection signal="body_entered" from="porte_DrFamille" to="." method="_on_porte_dr_famille_body_entered"]
 [connection signal="timeout" from="fondu_timer" to="." method="_on_fondu_timer_timeout"]
+[connection signal="timeout" from="fondu_label" to="." method="_on_fondu_label_timeout"]
