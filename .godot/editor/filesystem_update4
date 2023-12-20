@@ -1,14 +1,11 @@
+res://scenes/npc/dr_psy.tscn
 res://scenes/maps/salles.tres
-res://scenes/npc/dr_chirurgien.tscn
-res://scenes/npc/dr_chirurgien.gd
-res://scenes/npc/dr_famille.tscn
-res://scenes/npc/dr_famille.gd
-res://scenes/npc/dr_zen.tscn
+res://scenes/npc/dr_zimzim.gd
 res://scenes/npc/npc.tscn
+res://scenes/npc/dr_zen.tscn
 res://tuto.tscn
 res://scenes/maps/rooms_anim.tscn
 res://scenes/maps/fin_dialogue.tscn
-res://scenes/npc/dr_psy.tscn
 res://scenes/npc/dr_zimzim.tscn
 res://scenes/maps/porte_medecin_4.tscn
 res://scenes/maps/porte_medecin_2.tscn
@@ -17,3 +14,5 @@ res://scenes/npc/dr_droy.tscn
 res://scenes/maps/porte_medecin_3.tscn
 res://scenes/maps/porte_medecin_5.tscn
 res://scenes/maps/porte_medecin_6.tscn
+res://scenes/npc/dr_chirurgien.tscn
+res://scenes/npc/dr_famille.tscn

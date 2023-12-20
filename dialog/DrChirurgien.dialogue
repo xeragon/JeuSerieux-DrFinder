@@ -2,82 +2,91 @@
 Dr.Chirugien: Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabinet? 
 - *Dire que vous venez sur recommandation du médecin *
 	Dr.Chirugien : *D'accord je vois vous avez effectivement besoins de soins plutôt lourds * 
-	- *Demander plus d'informations en étant intimidé * => oklm
-	- *Demander plus d'informations et rester serein* => info
-	- *Acquiescer simplement * => simple
+	- *Demander plus d'informations en étant intimidé * 
+		Dr.Chirugien : Ne vous inquiétez pas vous ne risquez rien c'est une opération très courante.
+		- * Vous tombez des nues et avez du mal à envisager une telle opération *
+			do modify_stress(-10)
+			Dr.Chirugien: Vous n'avez pas a vous inquiéter j'ai l'habitude de ces opérations et je comprend que cela peut sembler compliqué
+			- *rester retissant* 
+				do modify_stress(10)
+				=> retissant 
+		- * Vous arrivez a garder votre calme * 
+			Dr.Chirugien: Je comprend que cela peut être difficile à avaler mais je suis content de votre réaction et votre maturité
+			do modify_stress(10)
+			- *accepter de prendre rendez-vous*
+				=> remerciement
+	- *Demander plus d'informations et rester serein* 
+		Dr.Chirugien : Bien sûr je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale .
+		- *Comprendre la situation et n'y voir aucun problème*
+			Dr.Chirugien : J'apprécie votre coopération cela va simplifier beaucoup de choses 
+			- *Montrer au spécialiste que vous ne craignez pas l'opération*
+					Dr.Chirugien: Et bien c'est pas tous les jours que les patients sont si enthousiastes
+					do modify_sante(30)
+					- *Le médecin demandera son verre de rhum au moment de vous endormir *
+						do modify_stress(-20)
+						=> fin
+			- * Accepter de prendre rendez-vous * => remerciement
+					
+		- * Vous vous étiez préparé a cela mais vous n'êtes pas enchantés*
+					Dr.Chirugien: C'est pour votre bien, c'est le moyen le plus efficace pour vous soigner 
+					- *rester rétissant*
+						do modify_stress(10)
+						=> retissant
+		 		  
+	- *Acquiescer simplement *
+		Dr.Chirugien : Je vois que vous comprenez ce que ça implique. Vous allez devoir subir une opération pour vous soigner
+		- *Demander le type de  l'opération *
+			Dr.Chirugien : Ce sera une anesthésie générale mais les risques sont extrêmement faibles de nos jours
+			do modify_stress(10)
+			- *Demander une anesthésie locale *
+				Dr.Chirugien: Vous êtes sûr? cela risque d'être compliqué et le contrecoup sera plus dur
+				- *Oui, faire en anesthésie locale*
+					do modify_sante(20)
+				- *Non faire l'anesthésie générale*
+					do modify_sante(20)
+					do modify_stress(-10)
+			- * Demander la durée de l'opération * => op_duree
+				
+		- *Demander les risques de l'opérations* 
+				Dr.Chirugien: C'est une opération classique, elle ne comporte quasiment aucun risques
+				do modify_stress(10)
+			- * Demander la durée de l'opération * => op_duree
+			- *Demander si il peut y avoir des effets secondaires indésirables*
+				Dr.Chirugien: C'est possible mais rien d'insurmontable
+				do modify_stress(-10)
+				 - *Très bien fixons un rendez-vous *
+					do modify_sante(30)
+	
 
-
-~ oklm
-Dr.Chirugien : Ne vous inquiétez pas vous ne risquez rien c'est une opération très courante.
-- * Vous tombez des nues et avez du mal à envisager une telle opération *
-	do modify_stress(-1)
-	Dr.Chirugien: Vous n'avez pas a vous inquiéter j'ai l'habitude de ces opérations et je comprend que cela peut sembler compliqué => Continue1
 => fin
 
-~ Continue1
-- *rester retissant* 
-	do modify_stress(1)
-	Dr.Chirugien: Vous allez bien devoir y passer alors autant y mettre du votre
-	- * Prendre rendez-vous en repoussant l'échéance au maximum*
-	do modify_sante(2)
-	do modify_sante(-1)
-	- *Se résigner et prendre rendez-vous *
-	do modify_sante(3)
-	do modify_sante(-1)
-- * Vous arrivez a garder votre calme * 
-	Dr.Chirugien: Je comprend que cela peut être difficile à avaler mais je suis content de votre réaction et votre maturité => remerciement
-	do modify_sante(1)
+~ retissant
+
+Dr.Chirugien: Vous allez bien devoir y passer alors autant y mettre du votre
+- * Prendre rendez-vous en repoussant l'échéance au maximum*
+	do modify_sante(20)
+	do modify_stress(-10)
+- *Se résigner et prendre rendez-vous *
+	do modify_sante(30)
+	do modify_stress(-10)
+
+	 => remerciement
 => fin 
 
-~ info
-Dr.Chirugien : Bien sûr je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale .
-- *Comprendre la situation et n'y voir aucun problème*
-	Dr.Chirugien : J'apprécie votre coopération cela va simplifier beaucoup de choses 
-	- *Montrer au spécialiste que vous ne craignez pas l'opération*
-			Dr.Chirugien: Et bien c'est pas tous les jours que les patients sont si enthousiastes
-			do modify_sante(3)
-			- *Le médecin demandera son verre de rhum au moment de vous endormir *
-	- * Accepter de prendre rendez-vous * => remerciement
-			
-- * Vous vous étiez préparé a cela mais vous n'êtes pas enchantés*
-			Dr.Chirugien: C'est pour votre bien, c'est le moyen le plus efficace pour vous soigner => Continue1
-		 		  
-=> fin
 
 ~ remerciement
 Dr.Chirugien: Bien merci et à bientôt
-do modify_sante(3)
+do modify_sante(30)
+
 => fin 
 
 
-~ simple
-Dr.Chirugien : Je vois que vous comprenez ce que ça implique. Vous allez devoir subir une opération pour vous soigner
-- *Demander le type de  l'opération *
-	Dr.Chirugien : Ce sera une anesthésie générale mais les risques sont extrêmement faibles de nos jours
-	do modify_stress(1)
-	- *Demander une anesthésie locale *
-		Dr.Chirugien: Vous êtes sûr? cela risque d'être compliqué et le contrecoup sera plus dur
-		- *Oui, faire en anesthésie locale*
-		do modify_sante(2)
-		- *Non faire l'anesthésie générale*
-		do modify_sante(2)
-		do modify_stress(-1)
-		
-		
-- * Demander les risques de l'opérations* 
-		Dr.Chirugien: C'est une opération classique, elle ne comporte quasiment aucun risques
-		do modify_stress(1)
-	- * Demander la durée de l'opération *
-			Dr.Chirugien: L'opération reste lourde et va donc demander un peu de temps
-			do modify_stress(1)
-			- *Très bien fixons un rendez-vous *
-	- *Demander si il peut y avoir des effets secondaires indésirables*
-		Dr.Chirugien: C'est possible mais rien d'insurmontable
-		do modify_stress(-1)
-		 - *Très bien fixons un rendez-vous *
-		do modify_sante(3)
-		
-	
+~ op_duree
+
+Dr.Chirugien: L'opération reste lourde et va donc demander un peu de temps
+do modify_stress(10)
+- *Très bien fixons un rendez-vous *
+	do modify_sante(30)
 => fin
 
 
