@@ -5,8 +5,8 @@ var wait=0
 func _ready():
 	$Timer.start(0.3) 
 	$ColorRect/summary.visible_ratio=0
-	$ColorRect/health_bar.value=GlobalScript.player_sante
-	$ColorRect/stress_bar.value=GlobalScript.player_stress
+	$ColorRect/VBoxContainer/PanelContainer2/texture_health/health_bar.value=GlobalScript.player_sante
+	$ColorRect/VBoxContainer/PanelContainer/texture_serenity/serenity_bar.value=GlobalScript.player_stress
 	
 	
 

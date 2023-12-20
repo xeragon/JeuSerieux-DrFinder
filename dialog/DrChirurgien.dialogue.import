@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dbxk0ry27hjjm"
+path="res://.godot/imported/DrChirurgien.dialogue-d37989713d4dadf823382cc1af490394.tres"
+
+[deps]
+
+source_file="res://dialog/DrChirurgien.dialogue"
+dest_files=["res://.godot/imported/DrChirurgien.dialogue-d37989713d4dadf823382cc1af490394.tres"]
+
+[params]
+
+defaults=true
