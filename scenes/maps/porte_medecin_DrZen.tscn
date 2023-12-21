@@ -1,10 +1,213 @@
-[gd_scene load_steps=6 format=3 uid="uid://hy2aki5c1155"]
+[gd_scene load_steps=10 format=3 uid="uid://hy2aki5c1155"]
 
 [ext_resource type="Script" path="res://scenes/maps/porte_medecin_1.gd" id="1_c0ype"]
 [ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="2_eq6pj"]
 [ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="3_owugp"]
-[ext_resource type="PackedScene" uid="uid://b5nb3mu7b4f5o" path="res://scenes/maps/rooms_anim.tscn" id="4_5we42"]
+[ext_resource type="Script" path="res://scenes/maps/rooms_anim.gd" id="4_5pea4"]
 [ext_resource type="PackedScene" uid="uid://c5vk5i7xyppni" path="res://scenes/npc/dr_zen.tscn" id="5_w7pg1"]
+
+[sub_resource type="Animation" id="Animation_a40k6"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(57, 16)]
+}
+
+[sub_resource type="Animation" id="Animation_fyr6v"]
+resource_name = "entering_room"
+length = 3.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.4, 2.5, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 73), Vector2(0, 73), Vector2(31, 69), Vector2(58, 25), Vector2(57, 16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player:move_direction")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.7, 1.4, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": ["up", 1, 3, 1, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player:cutscene")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player:interacting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("player:is_sitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("player:state")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("rooms_anim")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"interact"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_em1dh"]
+resource_name = "quit_room"
+length = 3.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.7, 2.5, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(57, 16), Vector2(58, 25), Vector2(31, 69), Vector2(0, 73), Vector2(0, 73)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player:move_direction")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [2, "right", "up", "right"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player:cutscene")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player:interacting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("player:is_sitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("player:state")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 1, 1]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"exit_room"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f87pn"]
+_data = {
+"RESET": SubResource("Animation_a40k6"),
+"entering_room": SubResource("Animation_fyr6v"),
+"quit_room": SubResource("Animation_em1dh")
+}
 
 [node name="porte_medecin1" type="Node2D" node_paths=PackedStringArray("room_doc")]
 y_sort_enabled = true
@@ -35,8 +238,11 @@ layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(196612, 851968, 44, 65541, 786432, 56)
 
 [node name="player" parent="." instance=ExtResource("3_owugp")]
-position = Vector2(0, 73)
+position = Vector2(57, 16)
 interacting = true
+state = 2
+move_direction = 2
+cutscene = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
@@ -55,7 +261,11 @@ position = Vector2(-56, 14)
 [node name="exit_pos" type="Marker2D" parent="."]
 position = Vector2(0, 81)
 
-[node name="rooms_anim" parent="." instance=ExtResource("4_5we42")]
+[node name="rooms_anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f87pn")
+}
+script = ExtResource("4_5pea4")
 
 [node name="dr_zen" parent="." instance=ExtResource("5_w7pg1")]
 position = Vector2(-87, 14)

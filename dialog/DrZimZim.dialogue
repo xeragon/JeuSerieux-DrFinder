@@ -1,56 +1,63 @@
 ~ start
-Dr.ZimZim: Bonjour Mr comment puis-je vous aider aujourd'hui ?
-- *expliquer vos symptômes que vous ressentez* => explique
-- *Essayer de faire une blague pour remonter le moral*
+[speed=5] [next=auto]
+Dr.ZimZim: Bonjour, comment puis-je vous aider aujourd'hui ?
+- *décrire vos symptômes* => explique
+- *Faire une blague*
 	Dr.ZimZim : Vous avez vraiment un très bon sens de l'humour, mais j'aimerais que nous nous concentrions sur vos symptômes pour trouver le remède adéquat à votre maladie.
-	- décrire vos symptomes => explique
-	- *bugguer sur les mots pour expliquer ce qui ne va pas * => stresse
-
+	- *décrire vos symptomes* => explique
+	- *chercher ses mots* => stresse
+- *chercher ses mots* => stresse
+=> fin
 
 ~ explique
-Dr.ZimZim: Ah okey j'ai compris , j'avais un cas pareil  la semaine derniere avec un autre patient , il a mangé dans le meme restaurant et il a eu les meme symptomes    .
-- Du coup il a pris quoi comme medicaments ?
-	Dr.ZimZim : Ne vous inquietez pas je vais vous préscrire les médicaments nécessaire
-
-- *C'est quoi le nom du restaurant *
-	Dr.ZimZim : Ye Doy , c'est un restau Indien , il fait aussi des soupes traditionelle , il peuvent etre un remède a ta maladie
-	- *tester le remede *
-	- *Demander les compositions de la soupe*
-		Dr.ZimZim: Cette soupes est composé de  bouillon de poulet , des carottes , d'herbes et de l'huile d'olive
-
-		- *Tester la soupe*
-			Dr.Chepaki: parfait !
-			do modify_stress(-5)
-		- *Ne pas tester la soupe*
-			Dr.ZimZim : ah bon c'est vous qui voyez...
+Dr.ZimZim: Hmmm intéressant *passe la main dans sa barbe*
+- *Attendre une réponse*
+	do modify_stress(-10)
+	Dr.ZimZim: *Il réfléchit toujours vous commencer à vous poser des questions*
+	- *Attendre encore vous avez le temps*
+		Dr.ZimZim: Alors j'ai bien réfléchi, je sais ce que c'est je vais vous donner,j'ai le traitement adéquat
+		do modify_sante(25)
+		do modify_stress(25)
+		=> fin
+	- *S'impatienter et demander s'il compte vous aider*
+		do modify_stress(-10)
+		Dr.ZimZim: Oui un peu de calme s'il vous plaît ça vient.
+		do modify_sante(25)
+		Dr.ZimZim: Je vous donne ce traitement, prenez le jusqu'à ce que ça aille mieux
+- *Demander si il peut vous aider*
+	Dr.ZimZim: Oui je pense mais je vais devoir faire les tests d'usages d'abord 
+	- *Faire les test et prendre le traitement*
+		do modify_sante(10)
+	- *Demander plus d'informations sur les test
+		do modify_stress(10)
+		Dr.ZimZim: Oh c'est trois fois rien la tension, le rythme cardiaque, la routine quoi
+		- *Faire les test et prendre le traitement*
+			do modify_sante(20)
 => fin
 ~ stresse
-Dr.ZimZim : Pas de problème, prenez votre temps. Essayez de décrire ce que vous ressentez
-- * demander l'ensemble du processus médical, y compris les coûts, les risques et les avantages*
-	Dr.ZimZim : Vous pouvez allongez sur le lit pour que je fasse les différents testes
-	- *Allonger et faire le nécessaire*
-	do modify_stress(-8)
-	do modify_sante(-5)
-
-
-- *Décrire comment vous ressentez et le differentes symptomes que vous avez*
-	Dr.ZimZim : Ah D'accord , Il a l'air critique votre maladie mais j'ai une solution efficace
-	- *Demander si y 'a un remède pharmaceutique pour ça  *
-		Dr.ZimZim: Oui je te fais une note , normalement dans une semaine t'auras plus rrien
-		- *commencer le traitement*
-			do modify_sante(-20)
-
-		- *demander est ce qu'il y a une solution magique * => sol_mag
-	- *demander est ce qu'il y a une solution magique * => sol_mag
+Dr.ZimZim : *Dr.ZimZim attend patiemment votre réponse*
+- * Dire que vous ressentez une simple douleur de façon occasionnelle *
+	Dr.ZimZim : Vous êtes sûr? A première vu ça me semble plus sérieux
+	- *Être sûr de soi*
+		do modify_sante(10)
+		do modify_stress(10)
+		Dr.ZimZim: Bien prenez ces anti-douleurs alors
+	- *Dire que vous avez mangé un fruit qui vous a rendu malade*
+		=> fruit
+- *Dire que vous avez mangé un fruit qui vous a rendu malade*
+	=> fruit
 => fin
 
-~ sol_mag
-Dr.ZimZim: C'est l'ahwaganda , c'est un melange de l'urine de la tortue et des epices du brézil
-- *Prendre le traitement*
-	Dr.ZimZim : Cava bientot guérire !
-	do modify_sante(-20)
-- *Refuser le traitement*
-	Dr.ZimZim : comme vous voulez ...
+~ fruit
+Dr.ZimZim: Ohhh non mais vous avez mangé des Red berries, je reconnais ces symptômes.
+- *Affirmer que non ça s'apparentait plus à une myrtille  *
+	do modify_sante(10)
+	do modify_stress(10)
+	Dr.ZimZim : D'accord ça doit être autre chose alors je vais vous donner ce qu'il faut
+- *Dire que c'est sûrement ce fruit *
+	do modify_stress(25)
+	do modify_sante(25)
+	Dr.ZimZim : Je ne peux pas croire que malgré la prévention des gens en mangent encore. Bon je vais vous donner ce qu'il faut et ça ira mieux très vite !
 
 => fin
 

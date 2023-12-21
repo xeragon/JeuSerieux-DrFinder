@@ -13,8 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://dj4wsa3iyc8lt" path="res://assets/Modern tiles_Free/Characters_free/Chirurgien_idle_16x16-export.png" id="9_ikxbv"]
 [ext_resource type="Texture2D" uid="uid://jdvgc16uyquv" path="res://assets/Modern tiles_Free/Characters_free/Amelia_idle_16x16.png" id="9_qb1f4"]
 [ext_resource type="Texture2D" uid="uid://dg8x3ienmtgyw" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_16x16.png" id="10_dcnpk"]
-[ext_resource type="PackedScene" uid="uid://dik8lb331awb5" path="res://texture_progress_bar.tscn" id="10_ppdp2"]
-[ext_resource type="PackedScene" uid="uid://dwnqhvbw6f7im" path="res://texture_progress_bar_coeur_serenite.tscn" id="11_ndhpj"]
+[ext_resource type="PackedScene" uid="uid://dik8lb331awb5" path="res://scenes/player/texture_progress_bar.tscn" id="10_ppdp2"]
+[ext_resource type="PackedScene" uid="uid://dwnqhvbw6f7im" path="res://scenes/player/texture_progress_bar_coeur_serenite.tscn" id="11_ndhpj"]
 [ext_resource type="Texture2D" uid="uid://mceey4aykcpk" path="res://assets/ui_assets/Pointdinterogation.png" id="12_cx6wp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m0wob"]
@@ -493,8 +493,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_h3cel"]
 radius = 4.47214
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ptvl1"]
-radius = 20.025
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpt3i"]
+size = Vector2(25, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7wg64"]
 atlas = ExtResource("5_nevcw")
@@ -509,19 +509,19 @@ bg_color = Color(0.584314, 0.6, 0.65098, 1)
 atlas = ExtResource("6_idq3u")
 region = Rect2(47.9453, 7.28437, 15.1346, 16.2157)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcq3t"]
-bg_color = Color(1, 0.533333, 0.345098, 1)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_reak6"]
-atlas = ExtResource("7_p8kdr")
-region = Rect2(47.862, 8.99881, 15.4049, 15.8103)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07xtc"]
 bg_color = Color(0.211765, 0.552941, 0.627451, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3gum"]
 atlas = ExtResource("8_e6egt")
 region = Rect2(48.2155, 9.44646, 16.0805, 16.0805)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcq3t"]
+bg_color = Color(1, 0.533333, 0.345098, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_reak6"]
+atlas = ExtResource("7_p8kdr")
+region = Rect2(47.862, 8.99881, 15.4049, 15.8103)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgf6b"]
 bg_color = Color(0.933333, 0.717647, 0.431373, 1)
@@ -698,7 +698,8 @@ collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_ptvl1")
+position = Vector2(-0.5, -7)
+shape = SubResource("RectangleShape2D_lpt3i")
 
 [node name="player_hud" type="CanvasLayer" parent="."]
 visible = false
@@ -850,18 +851,6 @@ icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
-[node name="Btn_dr2" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
-texture_filter = 1
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_pcq3t")
-text = "Dr Zimzim"
-icon = SubResource("AtlasTexture_reak6")
-icon_alignment = 1
-vertical_icon_alignment = 0
-expand_icon = true
-
 [node name="Btn_dr3" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
 texture_filter = 1
 custom_minimum_size = Vector2(150, 0)
@@ -870,6 +859,18 @@ size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_07xtc")
 text = "Dr Droy"
 icon = SubResource("AtlasTexture_e3gum")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Btn_dr2" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_pcq3t")
+text = "Dr Zimzim"
+icon = SubResource("AtlasTexture_reak6")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
@@ -1374,8 +1375,8 @@ one_shot = true
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr1" to="." method="_on_btn_dr_1_pressed"]
-[connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr2" to="." method="_on_btn_dr_2_pressed"]
 [connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr3" to="." method="_on_btn_dr_3_pressed"]
+[connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr2" to="." method="_on_btn_dr_2_pressed"]
 [connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr4" to="." method="_on_btn_dr_4_pressed"]
 [connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr5" to="." method="_on_btn_dr_5_pressed"]
 [connection signal="pressed" from="player_hud/Phone/phone/VBoxContainer/Btn_dr6" to="." method="_on_btn_dr_6_pressed"]

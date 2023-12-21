@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ai4ir"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_chvi2"]
 
 [resource]
-script = ExtResource("1_ai4ir")
+script = ExtResource("1_chvi2")
 using_states = PackedStringArray()
 titles = {
-"fin": "56",
-"oklm": "11",
-"poigne_main": "27",
-"rem_immed": "45",
+"antibios": "60",
+"cherche_mots": "35",
+"description": "13",
+"fin": "70",
 "start": "2"
 }
 character_names = PackedStringArray("Dr.Droy")
@@ -23,243 +23,243 @@ lines = {
 },
 "10": {
 "id": "10",
-"next_id": "11",
-"text": "oklm",
-"type": "title"
-},
-"11": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
-"id": "11",
-"next_id": "12",
+"next_id": "35",
+"next_id_after": "13",
 "tags": PackedStringArray(),
-"text": "Je suis désolé d'entendre que vous ne vous sentez pas bien. Ces symptômes peuvent avoir différentes causes, mais je vais examiner cela de plus près. Parlons-en davantage. Avez-vous remarqué si ces symptômes surviennent dans des situations particulières ou s'ils sont constants ?",
+"text": "*chercher ses mots*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Je suis désolé d'entendre que vous ne vous sentez pas bien. Ces symptômes peuvent avoir différentes causes, mais je vais examiner cela de plus près. Parlons-en davantage. Avez-vous remarqué si ces symptômes surviennent dans des situations particulières ou s'ils sont constants ?",
-"type": "dialogue"
+"translation_key": "*chercher ses mots*",
+"type": "response"
 },
 "12": {
 "id": "12",
 "next_id": "13",
-"next_id_after": "25",
-"responses": PackedStringArray("12", "15"),
-"tags": PackedStringArray(),
-"text": "*Décrire mieux les symptomes et expliquer que ces symptomes surviennent constamment*",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*Décrire mieux les symptomes et expliquer que ces symptomes surviennent constamment*",
-"type": "response"
+"text": "description",
+"type": "title"
 },
 "13": {
 "character": "Dr.Droy",
 "character_replacements": Array[Dictionary]([]),
 "id": "13",
-"next_id": "25",
-"parent_id": "12",
+"next_id": "14",
 "tags": PackedStringArray(),
-"text": "J'ai compris de quoi tu souffre , c'est a cause de l'hypertension , faut que tu fait du sport et de vous détendre et il faut surement que vous mangez bien",
+"text": "Très bien j'ai ma petite idée sur ce que ça peut être mais nous allons quand même procéder à un examen complet pour voir ce qui se passe",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "J'ai compris de quoi tu souffre , c'est a cause de l'hypertension , faut que tu fait du sport et de vous détendre et il faut surement que vous mangez bien",
+"translation_key": "Très bien j'ai ma petite idée sur ce que ça peut être mais nous allons quand même procéder à un examen complet pour voir ce qui se passe",
 "type": "dialogue"
+},
+"14": {
+"id": "14",
+"next_id": "15",
+"next_id_after": "33",
+"responses": PackedStringArray("14", "21"),
+"tags": PackedStringArray(),
+"text": "*Dire que vous préfèreriez éviter l'examen complet si possible*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Dire que vous préfèreriez éviter l'examen complet si possible*",
+"type": "response"
 },
 "15": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "15",
 "next_id": "16",
-"next_id_after": "25",
+"parent_id": "14",
 "tags": PackedStringArray(),
-"text": "*Expliquer que ces symptomes viennent que quand je suis dans le milieu du travail .*",
+"text": "Ecoutez cela simplifierait les choses pour tout le monde si vous cessiez vos jérémiades",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Expliquer que ces symptomes viennent que quand je suis dans le milieu du travail .*",
-"type": "response"
+"translation_key": "Ecoutez cela simplifierait les choses pour tout le monde si vous cessiez vos jérémiades",
+"type": "dialogue"
 },
 "16": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "16",
-"next_id": "17",
-"parent_id": "15",
-"tags": PackedStringArray(),
-"text": "Je vais vous prendre  la pression artérielle et je vais vous faire un examen physique , faillait juste détendre et s'allonger sur le banc",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Je vais vous prendre  la pression artérielle et je vais vous faire un examen physique , faillait juste détendre et s'allonger sur le banc",
-"type": "dialogue"
-},
-"17": {
-"id": "17",
-"next_id": "25",
-"next_id_after": "25",
-"parent_id": "15",
-"responses": PackedStringArray("17", "18"),
-"tags": PackedStringArray(),
-"text": "*Allonger et faire le nécessaire *",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*Allonger et faire le nécessaire *",
-"type": "response"
-},
-"18": {
-"id": "18",
-"next_id": "19",
-"next_id_after": "25",
-"parent_id": "15",
-"tags": PackedStringArray(),
-"text": "*Demander c'est quoi la solution éfficace*",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*Demander c'est quoi la solution éfficace*",
-"type": "response"
-},
-"19": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
-"id": "19",
-"next_id": "20",
-"parent_id": "18",
-"tags": PackedStringArray(),
-"text": "Votre pression artérielle est élevée, ce qui peut contribuer aux symptômes que vous avez décrits. Pour commencer, je recommande quelques changements de mode de vie, notamment une alimentation plus saine, une augmentation de l'activité physique, et la réduction du sel dans votre alimentation. De plus, je vais vous prescrire un médicament pour aider à contrôler votre pression artérielle",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Votre pression artérielle est élevée, ce qui peut contribuer aux symptômes que vous avez décrits. Pour commencer, je recommande quelques changements de mode de vie, notamment une alimentation plus saine, une augmentation de l'activité physique, et la réduction du sel dans votre alimentation. De plus, je vais vous prescrire un médicament pour aider à contrôler votre pression artérielle",
-"type": "dialogue"
-},
-"2": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
-"id": "2",
-"next_id": "3",
-"tags": PackedStringArray(),
-"text": "Bonjour, vous pouvez vous installer !",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Bonjour, vous pouvez vous installer !",
-"type": "dialogue"
-},
-"20": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
-"id": "20",
-"next_id": "21",
-"parent_id": "18",
-"tags": PackedStringArray(),
-"text": "Votre cas est un peu critique , je vous conseille de changer votre métier car c'est lui la cause primordiale de votre pression artérielle élevée et aussi de changer votre rythme de vie",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Votre cas est un peu critique , je vous conseille de changer votre métier car c'est lui la cause primordiale de votre pression artérielle élevée et aussi de changer votre rythme de vie",
-"type": "dialogue"
-},
-"21": {
-"id": "21",
-"next_id": "22",
-"next_id_after": "25",
-"parent_id": "18",
-"responses": PackedStringArray("21", "23"),
-"tags": PackedStringArray(),
-"text": "*Quitter le taffe*",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*Quitter le taffe*",
-"type": "response"
-},
-"22": {
-"id": "22",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": -5
+"value": -10
 }])])
 }])
 },
-"next_id": "25",
-"parent_id": "21",
+"next_id": "17",
+"parent_id": "14",
 "type": "mutation"
+},
+"17": {
+"id": "17",
+"next_id": "18",
+"next_id_after": "33",
+"parent_id": "14",
+"responses": PackedStringArray("17", "19"),
+"tags": PackedStringArray(),
+"text": "*Dire que vous avez encore le droit de faire ce que vous voulez et partir*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Dire que vous avez encore le droit de faire ce que vous voulez et partir*",
+"type": "response"
+},
+"18": {
+"id": "18",
+"is_snippet": false,
+"next_id": "70",
+"parent_id": "17",
+"type": "goto"
+},
+"19": {
+"id": "19",
+"next_id": "20",
+"next_id_after": "33",
+"parent_id": "14",
+"tags": PackedStringArray(),
+"text": "*S'excuser et faire les tests correctement*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*S'excuser et faire les tests correctement*",
+"type": "response"
+},
+"2": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"tags": PackedStringArray(),
+"text": "[speed=5] [next=auto]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[speed=5] [next=auto]",
+"type": "dialogue"
+},
+"20": {
+"id": "20",
+"is_snippet": false,
+"next_id": "60",
+"parent_id": "19",
+"type": "goto"
+},
+"21": {
+"id": "21",
+"next_id": "22",
+"next_id_after": "33",
+"tags": PackedStringArray(),
+"text": "*Accepter l'examen sans rechigner*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Accepter l'examen sans rechigner*",
+"type": "response"
+},
+"22": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "Je vais prendre votre pression artérielle et je vais vous faire un examen physique , détendez vous et allongez vous sur le banc",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Je vais prendre votre pression artérielle et je vais vous faire un examen physique , détendez vous et allongez vous sur le banc",
+"type": "dialogue"
 },
 "23": {
 "id": "23",
-"next_id": "24",
-"next_id_after": "25",
-"parent_id": "18",
+"next_id": "33",
+"next_id_after": "33",
+"parent_id": "21",
+"responses": PackedStringArray("23", "24"),
 "tags": PackedStringArray(),
-"text": "*Garder le meme taffe*",
+"text": "*S'allonger et faire le nécessaire*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Garder le meme taffe*",
+"translation_key": "*S'allonger et faire le nécessaire*",
 "type": "response"
 },
 "24": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "24",
 "next_id": "25",
-"parent_id": "23",
+"next_id_after": "33",
+"parent_id": "21",
 "tags": PackedStringArray(),
-"text": "ah bon c'est vous qui voyez...",
+"text": "*Demander quel est la solution la plus efficace*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "ah bon c'est vous qui voyez...",
-"type": "dialogue"
+"translation_key": "*Demander quel est la solution la plus efficace*",
+"type": "response"
 },
 "25": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "25",
-"is_snippet": false,
-"next_id": "56",
-"type": "goto"
+"next_id": "26",
+"parent_id": "24",
+"tags": PackedStringArray(),
+"text": "Bien je vous laisse vous mettre a l'aise pour les tests",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bien je vous laisse vous mettre a l'aise pour les tests",
+"type": "dialogue"
 },
 "26": {
 "id": "26",
 "next_id": "27",
-"text": "poigne_main",
-"type": "title"
+"next_id_after": "33",
+"parent_id": "24",
+"responses": PackedStringArray("26", "28"),
+"tags": PackedStringArray(),
+"text": "*Faire ce que dit le médecin et se préparer*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Faire ce que dit le médecin et se préparer*",
+"type": "response"
 },
 "27": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "27",
-"next_id": "28",
-"tags": PackedStringArray(),
-"text": "Veuillez-vous asseoir s'il vous plaît. Comment puis-je vous aider aujourd'hui ?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Veuillez-vous asseoir s'il vous plaît. Comment puis-je vous aider aujourd'hui ?",
-"type": "dialogue"
+"is_snippet": false,
+"next_id": "60",
+"parent_id": "26",
+"type": "goto"
 },
 "28": {
 "id": "28",
 "next_id": "29",
-"next_id_after": "42",
-"responses": PackedStringArray("28"),
+"next_id_after": "33",
+"parent_id": "24",
 "tags": PackedStringArray(),
-"text": "*Ignorer completement les symptomes et expliquer aux medcin que vous etes ici que pour unr consultation genérale*",
+"text": "*Mettre les pieds sur le bureau et se mettre vraiment à l'aise*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Ignorer completement les symptomes et expliquer aux medcin que vous etes ici que pour unr consultation genérale*",
+"translation_key": "*Mettre les pieds sur le bureau et se mettre vraiment à l'aise*",
 "type": "response"
 },
 "29": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "29",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 10
+}])])
+}])
+},
 "next_id": "30",
 "parent_id": "28",
-"tags": PackedStringArray(),
-"text": "Vous pouvez allongez sur le lit pour que je fasse les differents testes",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Vous pouvez allongez sur le lit pour que je fasse les differents testes",
-"type": "dialogue"
+"type": "mutation"
 },
 "3": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "3",
-"next_id": "11",
-"next_id_after": "11",
-"responses": PackedStringArray("3", "4"),
+"next_id": "4",
 "tags": PackedStringArray(),
-"text": "*S'asseoire*",
+"text": "Bonjour, vous pouvez vous installer !",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*S'asseoire*",
-"type": "response"
+"translation_key": "Bonjour, vous pouvez vous installer !",
+"type": "dialogue"
 },
 "30": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "30",
 "next_id": "31",
-"next_id_after": "31",
 "parent_id": "28",
-"responses": PackedStringArray("30"),
 "tags": PackedStringArray(),
-"text": "*Allonger et faire le nécessaire *",
+"text": "[shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Allonger et faire le nécessaire *",
-"type": "response"
+"translation_key": "[shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]",
+"type": "dialogue"
 },
 "31": {
 "id": "31",
@@ -269,7 +269,7 @@ lines = {
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": -8
+"value": -30
 }])])
 }])
 },
@@ -285,7 +285,7 @@ lines = {
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": -5
+"value": 10
 }])])
 }])
 },
@@ -295,157 +295,193 @@ lines = {
 },
 "33": {
 "id": "33",
-"next_id": "34",
-"next_id_after": "34",
-"parent_id": "28",
-"responses": PackedStringArray("33"),
-"tags": PackedStringArray(),
-"text": "*Décrire l'ensemble des symptomes que vous ressentez ; Maux de tête fréquents , Essoufflemen et probleme de vision *",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*Décrire l'ensemble des symptomes que vous ressentez ; Maux de tête fréquents , Essoufflemen et probleme de vision *",
-"type": "response"
+"is_snippet": false,
+"next_id": "70",
+"type": "goto"
 },
 "34": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "34",
 "next_id": "35",
-"parent_id": "28",
-"tags": PackedStringArray(),
-"text": "je suis prèsque sure de ce que vous avez , mais pour etre bien sure je dois vous prendre  la pression artérielle après je vais vous faire un examen physique",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "je suis prèsque sure de ce que vous avez , mais pour etre bien sure je dois vous prendre  la pression artérielle après je vais vous faire un examen physique",
-"type": "dialogue"
+"text": "cherche_mots",
+"type": "title"
 },
 "35": {
-"id": "35",
-"next_id": "36",
-"next_id_after": "42",
-"parent_id": "28",
-"responses": PackedStringArray("35", "41"),
-"tags": PackedStringArray(),
-"text": "*Allonger la main et laisser le medcin faire le nécessaire*",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*Allonger la main et laisser le medcin faire le nécessaire*",
-"type": "response"
-},
-"36": {
 "character": "Dr.Droy",
 "character_replacements": Array[Dictionary]([]),
-"id": "36",
-"next_id": "37",
-"parent_id": "35",
+"id": "35",
+"next_id": "36",
 "tags": PackedStringArray(),
-"text": "Je vais vous donner des médicaments antihypertenseurs , et il faut aussi que vous réduisez la consommation de l'alcool et manger equilibré",
+"text": "Bon écoutez vous allez devoir m'aider je n'y arriverais pas si vous ne me décrivez pas vos symptomes !",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Je vais vous donner des médicaments antihypertenseurs , et il faut aussi que vous réduisez la consommation de l'alcool et manger equilibré",
+"translation_key": "Bon écoutez vous allez devoir m'aider je n'y arriverais pas si vous ne me décrivez pas vos symptomes !",
 "type": "dialogue"
+},
+"36": {
+"id": "36",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": -10
+}])])
+}])
+},
+"next_id": "37",
+"type": "mutation"
 },
 "37": {
 "id": "37",
 "next_id": "38",
-"next_id_after": "42",
-"parent_id": "35",
-"responses": PackedStringArray("37", "40"),
+"next_id_after": "56",
+"responses": PackedStringArray("37", "41"),
 "tags": PackedStringArray(),
-"text": "*commencer le traitement*",
+"text": "*Dire que vous ressentez occasionelement une legere douleur*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*commencer le traitement*",
+"translation_key": "*Dire que vous ressentez occasionelement une legere douleur*",
 "type": "response"
 },
 "38": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "38",
+"next_id": "39",
+"parent_id": "37",
+"tags": PackedStringArray(),
+"text": "Seulement ? Je vais vous prescrire des dolipranes alors",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Seulement ? Je vais vous prescrire des dolipranes alors",
+"type": "dialogue"
+},
+"39": {
+"id": "39",
+"next_id": "40",
+"next_id_after": "56",
+"parent_id": "37",
+"responses": PackedStringArray("39"),
+"tags": PackedStringArray(),
+"text": "*Les prendre et partir*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Les prendre et partir*",
+"type": "response"
+},
+"4": {
+"id": "4",
+"next_id": "13",
+"next_id_after": "13",
+"responses": PackedStringArray("4", "5", "10"),
+"tags": PackedStringArray(),
+"text": "*Decrire vos symptomes*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Decrire vos symptomes*",
+"type": "response"
+},
+"40": {
+"id": "40",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": -20
+"value": 10
 }])])
 }])
 },
-"next_id": "42",
-"parent_id": "37",
+"next_id": "56",
+"parent_id": "39",
 "type": "mutation"
-},
-"4": {
-"id": "4",
-"next_id": "5",
-"next_id_after": "11",
-"tags": PackedStringArray(),
-"text": "*faire une blague*",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*faire une blague*",
-"type": "response"
-},
-"40": {
-"id": "40",
-"next_id": "45",
-"next_id_after": "42",
-"parent_id": "35",
-"tags": PackedStringArray(),
-"text": "*demander si y a un remède immediat  *",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*demander si y a un remède immediat  *",
-"type": "response"
 },
 "41": {
 "id": "41",
-"next_id": "45",
-"next_id_after": "42",
-"parent_id": "28",
+"next_id": "42",
+"next_id_after": "56",
 "tags": PackedStringArray(),
-"text": "*demander si y a un remède immediat  *",
+"text": "*Décrire l'ensemble des symptomes que vous ressentez*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*demander si y a un remède immediat  *",
+"translation_key": "*Décrire l'ensemble des symptomes que vous ressentez*",
 "type": "response"
 },
 "42": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "42",
-"is_snippet": false,
-"next_id": "56",
-"type": "goto"
+"next_id": "43",
+"parent_id": "41",
+"tags": PackedStringArray(),
+"text": "Merci pour ces précisions utiles, je vais réaliser quelques test afin de déterminer ce que vous avez.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Merci pour ces précisions utiles, je vais réaliser quelques test afin de déterminer ce que vous avez.",
+"type": "dialogue"
+},
+"43": {
+"id": "43",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 10
+}])])
+}])
+},
+"next_id": "44",
+"parent_id": "41",
+"type": "mutation"
 },
 "44": {
 "id": "44",
 "next_id": "45",
-"text": "rem_immed",
-"type": "title"
+"next_id_after": "56",
+"parent_id": "41",
+"responses": PackedStringArray("44", "49"),
+"tags": PackedStringArray(),
+"text": "*Coopérer directement*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Coopérer directement*",
+"type": "response"
 },
 "45": {
 "character": "Dr.Droy",
 "character_replacements": Array[Dictionary]([]),
 "id": "45",
 "next_id": "46",
+"parent_id": "44",
 "tags": PackedStringArray(),
-"text": "le remède immédiat c'est de faire du sport et changer votre style de vie en moins stressant possible",
+"text": "Bien ces tests sont plutôt concluants, je vais être en mesure de vous aider comme il se doit",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "le remède immédiat c'est de faire du sport et changer votre style de vie en moins stressant possible",
+"translation_key": "Bien ces tests sont plutôt concluants, je vais être en mesure de vous aider comme il se doit",
 "type": "dialogue"
 },
 "46": {
 "id": "46",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 10
+}])])
+}])
+},
 "next_id": "47",
-"next_id_after": "52",
-"responses": PackedStringArray("46", "49"),
-"tags": PackedStringArray(),
-"text": "*Prendre le traitement*",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*Prendre le traitement*",
-"type": "response"
+"parent_id": "44",
+"type": "mutation"
 },
 "47": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "47",
 "next_id": "48",
-"parent_id": "46",
+"next_id_after": "56",
+"parent_id": "44",
+"responses": PackedStringArray("47"),
 "tags": PackedStringArray(),
-"text": "Allez bon Rétablissement !",
+"text": "*Commencer le traitement*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Allez bon Rétablissement !",
-"type": "dialogue"
+"translation_key": "*Commencer le traitement*",
+"type": "response"
 },
 "48": {
 "id": "48",
@@ -455,62 +491,232 @@ lines = {
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": -20
+"value": 20
 }])])
 }])
 },
-"next_id": "52",
-"parent_id": "46",
+"next_id": "56",
+"parent_id": "47",
 "type": "mutation"
 },
 "49": {
 "id": "49",
 "next_id": "50",
-"next_id_after": "52",
+"next_id_after": "56",
+"parent_id": "41",
 "tags": PackedStringArray(),
-"text": "*Refuser le traitement*",
+"text": "*demander si les tests sont obligatoires",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Refuser le traitement*",
+"translation_key": "*demander si les tests sont obligatoires",
 "type": "response"
 },
 "5": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
-"parent_id": "4",
+"next_id_after": "13",
+"tags": PackedStringArray(),
+"text": "*faire une blague*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*faire une blague*",
+"type": "response"
+},
+"50": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
+"id": "50",
+"next_id": "51",
+"parent_id": "49",
+"tags": PackedStringArray(),
+"text": "Si vous voulez savoir ce que vous avez, oui ils le sont",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Si vous voulez savoir ce que vous avez, oui ils le sont",
+"type": "dialogue"
+},
+"51": {
+"id": "51",
+"next_id": "52",
+"next_id_after": "56",
+"parent_id": "49",
+"responses": PackedStringArray("51", "54"),
+"tags": PackedStringArray(),
+"text": "*Faire les tests*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Faire les tests*",
+"type": "response"
+},
+"52": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
+"id": "52",
+"next_id": "53",
+"parent_id": "51",
+"tags": PackedStringArray(),
+"text": "Nous allons maintenant pouvoir commencer votre traitement je vous remercie",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nous allons maintenant pouvoir commencer votre traitement je vous remercie",
+"type": "dialogue"
+},
+"53": {
+"id": "53",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 30
+}])])
+}])
+},
+"next_id": "56",
+"parent_id": "51",
+"type": "mutation"
+},
+"54": {
+"id": "54",
+"next_id": "55",
+"next_id_after": "56",
+"parent_id": "49",
+"tags": PackedStringArray(),
+"text": "*Demander simplement des anti-douleurs*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Demander simplement des anti-douleurs*",
+"type": "response"
+},
+"55": {
+"id": "55",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 10
+}])])
+}])
+},
+"next_id": "56",
+"parent_id": "54",
+"type": "mutation"
+},
+"56": {
+"id": "56",
+"is_snippet": false,
+"next_id": "70",
+"type": "goto"
+},
+"59": {
+"id": "59",
+"next_id": "60",
+"text": "antibios",
+"type": "title"
+},
+"6": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"parent_id": "5",
 "tags": PackedStringArray(),
 "text": "Asseyez-vous s'il vous plaît. Veuillez noter que je préfère que nous restions concentrés sur votre consultation médicale. Les blagues ne sont pas appropriées dans ce contexte. Maintenant, expliquez-moi vos symptômes et la raison de votre visite aujourd'hui .",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Asseyez-vous s'il vous plaît. Veuillez noter que je préfère que nous restions concentrés sur votre consultation médicale. Les blagues ne sont pas appropriées dans ce contexte. Maintenant, expliquez-moi vos symptômes et la raison de votre visite aujourd'hui .",
 "type": "dialogue"
 },
-"50": {
+"60": {
 "character": "Dr.Droy",
 "character_replacements": Array[Dictionary]([]),
-"id": "50",
-"next_id": "52",
-"parent_id": "49",
+"id": "60",
+"next_id": "61",
 "tags": PackedStringArray(),
-"text": "A vous de choisir ! ...",
+"text": "Après vous avoir bien analysé je peux dire que vous avez besoin de prendre les antibiotiques que je vais vous prescrire",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "A vous de choisir ! ...",
+"translation_key": "Après vous avoir bien analysé je peux dire que vous avez besoin de prendre les antibiotiques que je vais vous prescrire",
 "type": "dialogue"
 },
-"52": {
-"id": "52",
+"61": {
+"id": "61",
+"next_id": "62",
+"next_id_after": "67",
+"responses": PackedStringArray("61", "64"),
+"tags": PackedStringArray(),
+"text": "*être contre les antibiotiques et se soigner naturellement*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*être contre les antibiotiques et se soigner naturellement*",
+"type": "response"
+},
+"62": {
+"id": "62",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 10
+}])])
+}])
+},
+"next_id": "67",
+"parent_id": "61",
+"type": "mutation"
+},
+"64": {
+"id": "64",
+"next_id": "65",
+"next_id_after": "67",
+"tags": PackedStringArray(),
+"text": "*les prendre*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*les prendre*",
+"type": "response"
+},
+"65": {
+"id": "65",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 30
+}])])
+}])
+},
+"next_id": "67",
+"parent_id": "64",
+"type": "mutation"
+},
+"67": {
+"id": "67",
 "is_snippet": false,
-"next_id": "56",
+"next_id": "70",
 "type": "goto"
 },
-"55": {
-"id": "55",
-"next_id": "56",
+"69": {
+"id": "69",
+"next_id": "70",
 "text": "fin",
 "type": "title"
 },
-"56": {
-"id": "56",
+"7": {
+"id": "7",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": -10
+}])])
+}])
+},
+"next_id": "8",
+"parent_id": "5",
+"type": "mutation"
+},
+"70": {
+"id": "70",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "emit_interaction_finished",
@@ -518,36 +724,36 @@ lines = {
 "value": Array[Array]([])
 }])
 },
-"next_id": "58",
+"next_id": "72",
 "type": "mutation"
 },
-"58": {
-"id": "58",
+"72": {
+"id": "72",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
-"6": {
-"id": "6",
-"next_id": "11",
-"next_id_after": "11",
-"parent_id": "4",
-"responses": PackedStringArray("6", "7"),
+"8": {
+"id": "8",
+"next_id": "13",
+"next_id_after": "13",
+"parent_id": "5",
+"responses": PackedStringArray("8", "9"),
 "tags": PackedStringArray(),
 "text": "*décrire vos symptomes *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*décrire vos symptomes *",
 "type": "response"
 },
-"7": {
-"id": "7",
-"next_id": "27",
-"next_id_after": "11",
-"parent_id": "4",
+"9": {
+"id": "9",
+"next_id": "35",
+"next_id_after": "13",
+"parent_id": "5",
 "tags": PackedStringArray(),
-"text": "*tenter une poignée de main*",
+"text": "*chercher ses mots*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*tenter une poignée de main*",
+"translation_key": "*chercher ses mots*",
 "type": "response"
 }
 }

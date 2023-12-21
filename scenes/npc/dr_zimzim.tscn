@@ -1,31 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://igo07tuqx82m"]
+[gd_scene load_steps=6 format=3 uid="uid://igo07tuqx82m"]
 
 [ext_resource type="Script" path="res://scenes/npc/dr_zimzim.gd" id="1_pdbay"]
-[ext_resource type="Texture2D" uid="uid://d13j7xryn64bg" path="res://assets/Modern tiles_Free/Characters_free/Alex_sit3_16x16.png" id="2_mj3it"]
+[ext_resource type="Texture2D" uid="uid://738km4u7rp7s" path="res://assets/Modern tiles_Free/Characters_free/Bob_sit3_chauve_16x16-export.png" id="2_mpjav"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3c7yh"]
-atlas = ExtResource("2_mj3it")
-region = Rect2(0, 0, 17, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vye31"]
-atlas = ExtResource("2_mj3it")
-region = Rect2(17, 0, 17, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wtfr8"]
-atlas = ExtResource("2_mj3it")
-region = Rect2(34, 0, 17, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vut4q"]
+atlas = ExtResource("2_mpjav")
+region = Rect2(2, 0, 15, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1uryn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3c7yh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vye31")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wtfr8")
+"texture": SubResource("AtlasTexture_vut4q")
 }],
 "loop": true,
 "name": &"default",

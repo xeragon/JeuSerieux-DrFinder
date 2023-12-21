@@ -62,7 +62,7 @@ func _on_fondu_fini():
 
 func _on_fondu_timer_timeout():
 	if not %fondu.color.a < 0:
-		%fondu.color.a -= 0.005
+		%fondu.color.a -= 0.01
 		%fondu_timer.start()
 	else:
 		emit_signal("fondu_fini")

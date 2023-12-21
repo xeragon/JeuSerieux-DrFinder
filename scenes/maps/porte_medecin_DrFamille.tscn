@@ -30,7 +30,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(-131076, 917504, 71, -196605, 524288, 66, -196603, 655360, 44, -196609, 655360, 66, -262144, 720896, 66, -196608, 720896, 67, -131073, 655360, 67, 131076, 458752, 80, 196613, 786432, 56, -65534, 327683, 58, 131067, 524288, 35, 131066, 458752, 35, 131068, 196608, 38, 196604, 196608, 39)
+layer_1/tile_data = PackedInt32Array(-131076, 917504, 71, -196605, 524288, 66, -196603, 655360, 44, -196609, 655360, 66, -262144, 720896, 66, -196608, 720896, 67, -131073, 655360, 67, 131076, 458752, 80, 196613, 786432, 56, -65534, 327683, 58, 131068, 196608, 38, 131067, 524288, 35, 196604, 196608, 39, 131066, 327680, 40, 196602, 327680, 41)
 layer_2/name = "Higher_elements"
 layer_2/enabled = true
 layer_2/modulate = Color(1, 1, 1, 1)
@@ -58,4 +58,4 @@ position = Vector2(0, 81)
 [node name="rooms_anim" parent="." instance=ExtResource("5_otv0f")]
 
 [node name="dr_famille" parent="." instance=ExtResource("3_iinsg")]
-position = Vector2(-81, 31)
+position = Vector2(-86, 30)

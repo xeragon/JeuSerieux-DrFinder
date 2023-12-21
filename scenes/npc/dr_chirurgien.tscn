@@ -1,31 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://chgeu654sfoac"]
+[gd_scene load_steps=6 format=3 uid="uid://chgeu654sfoac"]
 
 [ext_resource type="Script" path="res://scenes/npc/dr_chirurgien.gd" id="1_evvgs"]
-[ext_resource type="Texture2D" uid="uid://ckuqvfgnkx2xt" path="res://assets/Modern tiles_Free/Characters_free/Amelia_sit3_16x16.png" id="2_0k13i"]
+[ext_resource type="Texture2D" uid="uid://drq5ob4ui21sc" path="res://assets/Modern tiles_Free/Characters_free/Chirurgien_sit3_16x16-export.png" id="2_ddeuv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dt6kq"]
-atlas = ExtResource("2_0k13i")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wefnh"]
-atlas = ExtResource("2_0k13i")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xi5fs"]
-atlas = ExtResource("2_0k13i")
-region = Rect2(64, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a3oh"]
+atlas = ExtResource("2_ddeuv")
+region = Rect2(2, 0, 15, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_14o6i"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dt6kq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wefnh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xi5fs")
+"texture": SubResource("AtlasTexture_7a3oh")
 }],
 "loop": true,
 "name": &"default",

@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_y4uma"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_4su3o"]
 
 [resource]
-script = ExtResource("1_y4uma")
+script = ExtResource("1_4su3o")
 using_states = PackedStringArray()
 titles = {
-"fin": "65",
-"situation": "44",
+"fin": "66",
+"situation": "45",
 "start": "2"
 }
 character_names = PackedStringArray("Dr.Psy")
@@ -21,29 +21,45 @@ lines = {
 },
 "10": {
 "id": "10",
-"next_id": "11",
-"next_id_after": "38",
-"parent_id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 20
+}])])
+}])
+},
+"next_id": "39",
+"parent_id": "8",
+"type": "mutation"
+},
+"11": {
+"id": "11",
+"next_id": "12",
+"next_id_after": "39",
+"parent_id": "6",
 "tags": PackedStringArray(),
 "text": "Attendre une réponse",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Attendre une réponse",
 "type": "response"
 },
-"11": {
+"12": {
 "character": "Dr.Psy",
 "character_replacements": Array[Dictionary]([]),
-"id": "11",
-"next_id": "12",
-"parent_id": "10",
+"id": "12",
+"next_id": "13",
+"parent_id": "11",
 "tags": PackedStringArray(),
 "text": "Je comprend votre point de vue mais vous devriez faire plus attention à votre approche de la conversation",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Je comprend votre point de vue mais vous devriez faire plus attention à votre approche de la conversation",
 "type": "dialogue"
 },
-"12": {
-"id": "12",
+"13": {
+"id": "13",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -54,52 +70,52 @@ lines = {
 }])])
 }])
 },
-"next_id": "38",
-"parent_id": "10",
+"next_id": "39",
+"parent_id": "11",
 "type": "mutation"
 },
-"13": {
-"id": "13",
-"next_id": "14",
-"next_id_after": "38",
-"parent_id": "3",
+"14": {
+"id": "14",
+"next_id": "15",
+"next_id_after": "39",
+"parent_id": "4",
 "tags": PackedStringArray(),
 "text": "*Survoler vaguement le comportement *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Survoler vaguement le comportement *",
 "type": "response"
 },
-"14": {
-"id": "14",
+"15": {
+"id": "15",
 "is_snippet": false,
-"next_id": "44",
-"parent_id": "13",
+"next_id": "45",
+"parent_id": "14",
 "type": "goto"
 },
-"16": {
-"id": "16",
-"next_id": "17",
-"next_id_after": "38",
-"tags": PackedStringArray(),
-"text": "*être trop craintif et avoir du mal a s'éxprimer*",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*être trop craintif et avoir du mal a s'éxprimer*",
-"type": "response"
-},
 "17": {
-"character": "Dr.Psy",
-"character_replacements": Array[Dictionary]([]),
 "id": "17",
 "next_id": "18",
-"parent_id": "16",
+"next_id_after": "39",
+"tags": PackedStringArray(),
+"text": "*S'exprimer intimement, au risque de paraître vulnérable*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*S'exprimer intimement, au risque de paraître vulnérable*",
+"type": "response"
+},
+"18": {
+"character": "Dr.Psy",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"parent_id": "17",
 "tags": PackedStringArray(),
 "text": "Pas de problème, prenez votre temps. Essayez de décrire ce que vous ressentez",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Pas de problème, prenez votre temps. Essayez de décrire ce que vous ressentez",
 "type": "dialogue"
 },
-"18": {
-"id": "18",
+"19": {
+"id": "19",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -110,83 +126,83 @@ lines = {
 }])])
 }])
 },
-"next_id": "19",
-"parent_id": "16",
+"next_id": "20",
+"parent_id": "17",
 "type": "mutation"
 },
-"19": {
-"id": "19",
-"next_id": "20",
-"next_id_after": "38",
-"parent_id": "16",
-"responses": PackedStringArray("19", "35"),
+"2": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"tags": PackedStringArray(),
+"text": "[speed=5] [next=auto]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[speed=5] [next=auto]",
+"type": "dialogue"
+},
+"20": {
+"id": "20",
+"next_id": "21",
+"next_id_after": "39",
+"parent_id": "17",
+"responses": PackedStringArray("20", "36"),
 "tags": PackedStringArray(),
 "text": "* Toujours avoir trop peur et hésiter a se confier *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "* Toujours avoir trop peur et hésiter a se confier *",
 "type": "response"
 },
-"2": {
+"21": {
 "character": "Dr.Psy",
 "character_replacements": Array[Dictionary]([]),
-"id": "2",
-"next_id": "3",
-"tags": PackedStringArray(),
-"text": "Bonjour Mr comment puis-je vous aider aujourd'hui ?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Bonjour Mr comment puis-je vous aider aujourd'hui ?",
-"type": "dialogue"
-},
-"20": {
-"character": "Dr.Psy",
-"character_replacements": Array[Dictionary]([]),
-"id": "20",
-"next_id": "21",
-"parent_id": "19",
+"id": "21",
+"next_id": "22",
+"parent_id": "20",
 "tags": PackedStringArray(),
 "text": "Je vais avoir besoin de votre participation pour vous aider",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Je vais avoir besoin de votre participation pour vous aider",
 "type": "dialogue"
 },
-"21": {
-"id": "21",
-"next_id": "22",
-"next_id_after": "38",
-"parent_id": "19",
-"responses": PackedStringArray("21", "31"),
+"22": {
+"id": "22",
+"next_id": "23",
+"next_id_after": "39",
+"parent_id": "20",
+"responses": PackedStringArray("22", "32"),
 "tags": PackedStringArray(),
 "text": "*S'excuser et raconter timidement*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*S'excuser et raconter timidement*",
 "type": "response"
 },
-"22": {
+"23": {
 "character": "Dr.Psy",
 "character_replacements": Array[Dictionary]([]),
-"id": "22",
-"next_id": "23",
-"parent_id": "21",
+"id": "23",
+"next_id": "24",
+"parent_id": "22",
 "tags": PackedStringArray(),
 "text": "Ne vous inquiétez pas il n'y a pas de problèmes. Certains médecins peuvent être compliqués.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ne vous inquiétez pas il n'y a pas de problèmes. Certains médecins peuvent être compliqués.",
 "type": "dialogue"
 },
-"23": {
-"id": "23",
-"next_id": "24",
-"next_id_after": "38",
-"parent_id": "21",
-"responses": PackedStringArray("23", "26"),
+"24": {
+"id": "24",
+"next_id": "25",
+"next_id_after": "39",
+"parent_id": "22",
+"responses": PackedStringArray("24", "27"),
 "tags": PackedStringArray(),
 "text": "*être d'accord avec le spécialiste*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*être d'accord avec le spécialiste*",
 "type": "response"
 },
-"24": {
-"id": "24",
+"25": {
+"id": "25",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -197,42 +213,42 @@ lines = {
 }])])
 }])
 },
-"next_id": "25",
-"parent_id": "23",
+"next_id": "26",
+"parent_id": "24",
 "type": "mutation"
-},
-"25": {
-"id": "25",
-"is_snippet": false,
-"next_id": "65",
-"parent_id": "23",
-"type": "goto"
 },
 "26": {
 "id": "26",
-"next_id": "27",
-"next_id_after": "38",
-"parent_id": "21",
+"is_snippet": false,
+"next_id": "66",
+"parent_id": "24",
+"type": "goto"
+},
+"27": {
+"id": "27",
+"next_id": "28",
+"next_id_after": "39",
+"parent_id": "22",
 "tags": PackedStringArray(),
 "text": "*Dire que vous pensez que c'est de votre faute*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Dire que vous pensez que c'est de votre faute*",
 "type": "response"
 },
-"27": {
+"28": {
 "character": "Dr.Psy",
 "character_replacements": Array[Dictionary]([]),
-"id": "27",
-"next_id": "28",
-"parent_id": "26",
+"id": "28",
+"next_id": "29",
+"parent_id": "27",
 "tags": PackedStringArray(),
 "text": "Mais non voyons je suis sur que vous n'êtes pas la cause principale du problème. Si vous pensez que c'est la cas alors essayez d'avoir une approche plus amicale .",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Mais non voyons je suis sur que vous n'êtes pas la cause principale du problème. Si vous pensez que c'est la cas alors essayez d'avoir une approche plus amicale .",
 "type": "dialogue"
 },
-"28": {
-"id": "28",
+"29": {
+"id": "29",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -243,58 +259,58 @@ lines = {
 }])])
 }])
 },
-"next_id": "29",
-"parent_id": "26",
+"next_id": "30",
+"parent_id": "27",
 "type": "mutation"
 },
-"29": {
-"id": "29",
-"next_id": "38",
-"next_id_after": "38",
-"parent_id": "26",
-"responses": PackedStringArray("29"),
+"3": {
+"character": "Dr.Psy",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "Bonjour Mr comment puis-je vous aider aujourd'hui ?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bonjour Mr comment puis-je vous aider aujourd'hui ?",
+"type": "dialogue"
+},
+"30": {
+"id": "30",
+"next_id": "39",
+"next_id_after": "39",
+"parent_id": "27",
+"responses": PackedStringArray("30"),
 "tags": PackedStringArray(),
 "text": "*Je vais essayer merci*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Je vais essayer merci*",
 "type": "response"
 },
-"3": {
-"id": "3",
-"next_id": "4",
-"next_id_after": "38",
-"responses": PackedStringArray("3", "16"),
-"tags": PackedStringArray(),
-"text": "*Dire que vous venez car les mauvaises expériences avec les médecins sont trop stressantes*",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*Dire que vous venez car les mauvaises expériences avec les médecins sont trop stressantes*",
-"type": "response"
-},
-"31": {
-"id": "31",
-"next_id": "32",
-"next_id_after": "38",
-"parent_id": "19",
+"32": {
+"id": "32",
+"next_id": "33",
+"next_id_after": "39",
+"parent_id": "20",
 "tags": PackedStringArray(),
 "text": "*Attendre encore *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Attendre encore *",
 "type": "response"
 },
-"32": {
+"33": {
 "character": "Dr.Psy",
 "character_replacements": Array[Dictionary]([]),
-"id": "32",
-"next_id": "33",
-"parent_id": "31",
+"id": "33",
+"next_id": "34",
+"parent_id": "32",
 "tags": PackedStringArray(),
 "text": "Si vous ne souhaitez pas me parler vous pourrez revenir plus tard pas de soucis",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Si vous ne souhaitez pas me parler vous pourrez revenir plus tard pas de soucis",
 "type": "dialogue"
 },
-"33": {
-"id": "33",
+"34": {
+"id": "34",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -305,88 +321,87 @@ lines = {
 }])])
 }])
 },
-"next_id": "38",
-"parent_id": "31",
+"next_id": "39",
+"parent_id": "32",
 "type": "mutation"
 },
-"35": {
-"id": "35",
-"next_id": "36",
-"next_id_after": "38",
-"parent_id": "16",
+"36": {
+"id": "36",
+"next_id": "37",
+"next_id_after": "39",
+"parent_id": "17",
 "tags": PackedStringArray(),
 "text": "*Reprendre votre calme et décrire la situation*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Reprendre votre calme et décrire la situation*",
 "type": "response"
 },
-"36": {
-"id": "36",
+"37": {
+"id": "37",
 "is_snippet": false,
-"next_id": "44",
-"parent_id": "35",
+"next_id": "45",
+"parent_id": "36",
 "type": "goto"
 },
-"38": {
-"id": "38",
+"39": {
+"id": "39",
 "is_snippet": false,
-"next_id": "65",
+"next_id": "66",
 "type": "goto"
 },
 "4": {
-"character": "Dr.Psy",
-"character_replacements": Array[Dictionary]([]),
 "id": "4",
 "next_id": "5",
-"parent_id": "3",
+"next_id_after": "39",
+"responses": PackedStringArray("4", "17"),
 "tags": PackedStringArray(),
-"text": "Ah je vois en effet cela peut être un problème si les médecins ne sont pas assez compréhensifs avec vous. Comment étaient-ils précisément?",
+"text": "*Dire que vous venez car les mauvaises expériences avec les médecins sont trop stressantes*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ah je vois en effet cela peut être un problème si les médecins ne sont pas assez compréhensifs avec vous. Comment étaient-ils précisément?",
-"type": "dialogue"
+"translation_key": "*Dire que vous venez car les mauvaises expériences avec les médecins sont trop stressantes*",
+"type": "response"
 },
-"43": {
-"id": "43",
-"next_id": "44",
+"44": {
+"id": "44",
+"next_id": "45",
 "text": "situation",
 "type": "title"
 },
-"44": {
+"45": {
 "character": "Dr.Psy",
 "character_replacements": Array[Dictionary]([]),
-"id": "44",
-"next_id": "45",
+"id": "45",
+"next_id": "46",
 "tags": PackedStringArray(),
 "text": "Je peux bien m'imaginer que cela représente un problème",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Je peux bien m'imaginer que cela représente un problème",
 "type": "dialogue"
 },
-"45": {
-"id": "45",
-"next_id": "46",
-"next_id_after": "61",
-"responses": PackedStringArray("45", "52"),
+"46": {
+"id": "46",
+"next_id": "47",
+"next_id_after": "62",
+"responses": PackedStringArray("46", "53"),
 "tags": PackedStringArray(),
 "text": "*Remercier de la compréhension*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Remercier de la compréhension*",
 "type": "response"
 },
-"46": {
+"47": {
 "character": "Dr.Psy",
 "character_replacements": Array[Dictionary]([]),
-"id": "46",
-"next_id": "47",
-"parent_id": "45",
+"id": "47",
+"next_id": "48",
+"parent_id": "46",
 "tags": PackedStringArray(),
 "text": "C'est bien normal voyons. En espérant avoir pu vous être utile.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "C'est bien normal voyons. En espérant avoir pu vous être utile.",
 "type": "dialogue"
 },
-"47": {
-"id": "47",
+"48": {
+"id": "48",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -397,83 +412,83 @@ lines = {
 }])])
 }])
 },
-"next_id": "48",
-"parent_id": "45",
+"next_id": "49",
+"parent_id": "46",
 "type": "mutation"
 },
-"48": {
-"id": "48",
-"next_id": "49",
-"next_id_after": "61",
-"parent_id": "45",
-"responses": PackedStringArray("48", "50"),
+"49": {
+"id": "49",
+"next_id": "50",
+"next_id_after": "62",
+"parent_id": "46",
+"responses": PackedStringArray("49", "51"),
 "tags": PackedStringArray(),
 "text": "*Oui merci bien au revoir*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Oui merci bien au revoir*",
 "type": "response"
 },
-"49": {
-"id": "49",
-"is_snippet": false,
-"next_id": "65",
-"parent_id": "48",
-"type": "goto"
-},
 "5": {
+"character": "Dr.Psy",
+"character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
-"next_id_after": "38",
-"parent_id": "3",
-"responses": PackedStringArray("5", "13"),
+"parent_id": "4",
 "tags": PackedStringArray(),
-"text": "Décrire précisément le comportement des médecins",
+"text": "Ah je vois en effet cela peut être un problème si les médecins ne sont pas assez compréhensifs avec vous. Comment étaient-ils précisément?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Décrire précisément le comportement des médecins",
-"type": "response"
+"translation_key": "Ah je vois en effet cela peut être un problème si les médecins ne sont pas assez compréhensifs avec vous. Comment étaient-ils précisément?",
+"type": "dialogue"
 },
 "50": {
 "id": "50",
-"next_id": "51",
-"next_id_after": "61",
-"parent_id": "48",
+"is_snippet": false,
+"next_id": "66",
+"parent_id": "49",
+"type": "goto"
+},
+"51": {
+"id": "51",
+"next_id": "52",
+"next_id_after": "62",
+"parent_id": "46",
 "tags": PackedStringArray(),
 "text": "*Pas autant que j'aurais pu l'espérer mais je vous remercie tout de même",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Pas autant que j'aurais pu l'espérer mais je vous remercie tout de même",
 "type": "response"
 },
-"51": {
-"id": "51",
-"is_snippet": false,
-"next_id": "65",
-"parent_id": "50",
-"type": "goto"
-},
 "52": {
 "id": "52",
-"next_id": "53",
-"next_id_after": "61",
+"is_snippet": false,
+"next_id": "66",
+"parent_id": "51",
+"type": "goto"
+},
+"53": {
+"id": "53",
+"next_id": "54",
+"next_id_after": "62",
 "tags": PackedStringArray(),
 "text": "*Demander si il connaît une solution*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Demander si il connaît une solution*",
 "type": "response"
 },
-"53": {
+"54": {
 "character": "Dr.Psy",
 "character_replacements": Array[Dictionary]([]),
-"id": "53",
-"next_id": "54",
-"parent_id": "52",
+"id": "54",
+"next_id": "55",
+"parent_id": "53",
 "tags": PackedStringArray(),
 "text": "A part de la persévérance et de la patience il n'y a pas grand-chose à faire",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "A part de la persévérance et de la patience il n'y a pas grand-chose à faire",
 "type": "dialogue"
 },
-"54": {
-"id": "54",
+"55": {
+"id": "55",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -484,94 +499,94 @@ lines = {
 }])])
 }])
 },
-"next_id": "55",
-"parent_id": "52",
+"next_id": "56",
+"parent_id": "53",
 "type": "mutation"
 },
-"55": {
-"id": "55",
-"next_id": "56",
-"next_id_after": "61",
-"parent_id": "52",
-"responses": PackedStringArray("55", "57"),
+"56": {
+"id": "56",
+"next_id": "57",
+"next_id_after": "62",
+"parent_id": "53",
+"responses": PackedStringArray("56", "58"),
 "tags": PackedStringArray(),
 "text": "*S'en contenter*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*S'en contenter*",
 "type": "response"
 },
-"56": {
-"id": "56",
-"is_snippet": false,
-"next_id": "65",
-"parent_id": "55",
-"type": "goto"
-},
 "57": {
 "id": "57",
-"next_id": "58",
-"next_id_after": "61",
-"parent_id": "55",
+"is_snippet": false,
+"next_id": "66",
+"parent_id": "56",
+"type": "goto"
+},
+"58": {
+"id": "58",
+"next_id": "59",
+"next_id_after": "62",
+"parent_id": "56",
 "tags": PackedStringArray(),
 "text": "*Demander plus de détail*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Demander plus de détail*",
 "type": "response"
 },
-"58": {
+"59": {
 "character": "Dr.Psy",
 "character_replacements": Array[Dictionary]([]),
-"id": "58",
-"next_id": "59",
-"parent_id": "57",
+"id": "59",
+"next_id": "60",
+"parent_id": "58",
 "tags": PackedStringArray(),
 "text": "Je suis désolé mais c'est a vous de travailler maintenant .",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Je suis désolé mais c'est a vous de travailler maintenant .",
 "type": "dialogue"
 },
-"59": {
-"id": "59",
+"6": {
+"id": "6",
+"next_id": "7",
+"next_id_after": "39",
+"parent_id": "4",
+"responses": PackedStringArray("6", "14"),
+"tags": PackedStringArray(),
+"text": "Décrire précisément le comportement des médecins",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Décrire précisément le comportement des médecins",
+"type": "response"
+},
+"60": {
+"id": "60",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": 10
+"value": -10
 }])])
 }])
 },
-"next_id": "61",
-"parent_id": "57",
+"next_id": "62",
+"parent_id": "58",
 "type": "mutation"
 },
-"6": {
-"character": "Dr.Psy",
-"character_replacements": Array[Dictionary]([]),
-"id": "6",
-"next_id": "7",
-"parent_id": "5",
-"tags": PackedStringArray(),
-"text": "Hmmm je vois effectivement c'est plutôt complexe",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Hmmm je vois effectivement c'est plutôt complexe",
-"type": "dialogue"
-},
-"61": {
-"id": "61",
+"62": {
+"id": "62",
 "is_snippet": false,
-"next_id": "65",
+"next_id": "66",
 "type": "goto"
-},
-"64": {
-"id": "64",
-"next_id": "65",
-"text": "fin",
-"type": "title"
 },
 "65": {
 "id": "65",
+"next_id": "66",
+"text": "fin",
+"type": "title"
+},
+"66": {
+"id": "66",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -582,11 +597,11 @@ lines = {
 }])])
 }])
 },
-"next_id": "66",
+"next_id": "67",
 "type": "mutation"
 },
-"66": {
-"id": "66",
+"67": {
+"id": "67",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "emit_interaction_finished",
@@ -594,54 +609,50 @@ lines = {
 "value": Array[Array]([])
 }])
 },
-"next_id": "68",
+"next_id": "69",
 "type": "mutation"
 },
-"68": {
-"id": "68",
+"69": {
+"id": "69",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
 "7": {
+"character": "Dr.Psy",
+"character_replacements": Array[Dictionary]([]),
 "id": "7",
 "next_id": "8",
-"next_id_after": "38",
-"parent_id": "5",
-"responses": PackedStringArray("7", "10"),
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Hmmm je vois effectivement c'est plutôt complexe",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hmmm je vois effectivement c'est plutôt complexe",
+"type": "dialogue"
+},
+"8": {
+"id": "8",
+"next_id": "9",
+"next_id_after": "39",
+"parent_id": "6",
+"responses": PackedStringArray("8", "11"),
 "tags": PackedStringArray(),
 "text": "Demander comment faire pour soigner sa maladie dans ce cas",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Demander comment faire pour soigner sa maladie dans ce cas",
 "type": "response"
 },
-"8": {
+"9": {
 "character": "Dr.Psy",
 "character_replacements": Array[Dictionary]([]),
-"id": "8",
-"next_id": "9",
-"parent_id": "7",
+"id": "9",
+"next_id": "10",
+"parent_id": "8",
 "tags": PackedStringArray(),
 "text": "Vous pourriez essayer de changer de médecin pour en trouver un a votre convenance .",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Vous pourriez essayer de changer de médecin pour en trouver un a votre convenance .",
 "type": "dialogue"
-},
-"9": {
-"id": "9",
-"mutation": {
-"expression": Array[Dictionary]([{
-"function": "modify_stress",
-"type": "function",
-"value": Array[Array]([Array[Dictionary]([{
-"type": "number",
-"value": 20
-}])])
-}])
-},
-"next_id": "38",
-"parent_id": "7",
-"type": "mutation"
 }
 }
 metadata/dialogue_manager_version = "2.28.0"

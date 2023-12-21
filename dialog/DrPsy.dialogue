@@ -1,4 +1,5 @@
 ~ start
+[speed=5] [next=auto]
 Dr.Psy: Bonjour Mr comment puis-je vous aider aujourd'hui ?
 - *Dire que vous venez car les mauvaises expériences avec les médecins sont trop stressantes* 
 	Dr.Psy: Ah je vois en effet cela peut être un problème si les médecins ne sont pas assez compréhensifs avec vous. Comment étaient-ils précisément? 
@@ -13,7 +14,7 @@ Dr.Psy: Bonjour Mr comment puis-je vous aider aujourd'hui ?
 	- *Survoler vaguement le comportement *
 		=> situation
 
-- *être trop craintif et avoir du mal a s'éxprimer* 
+- *S'exprimer intimement, au risque de paraître vulnérable* 
 	Dr.Psy : Pas de problème, prenez votre temps. Essayez de décrire ce que vous ressentez
 	do modify_stress(20)
 	- * Toujours avoir trop peur et hésiter a se confier *
@@ -43,12 +44,12 @@ Dr.Psy: Bonjour Mr comment puis-je vous aider aujourd'hui ?
 ~ situation
 Dr.Psy : Je peux bien m'imaginer que cela représente un problème
 - *Remercier de la compréhension*
-		Dr.Psy: C'est bien normal voyons. En espérant avoir pu vous être utile.
-		do modify_stress(20)
-		- *Oui merci bien au revoir*
-			=> fin
-		- *Pas autant que j'aurais pu l'espérer mais je vous remercie tout de même
-			=> fin
+	Dr.Psy: C'est bien normal voyons. En espérant avoir pu vous être utile.
+	do modify_stress(20)
+	- *Oui merci bien au revoir*
+		=> fin
+	- *Pas autant que j'aurais pu l'espérer mais je vous remercie tout de même
+		=> fin
 - *Demander si il connaît une solution*
 		Dr.Psy: A part de la persévérance et de la patience il n'y a pas grand-chose à faire
 		do modify_stress(20)
@@ -56,7 +57,7 @@ Dr.Psy : Je peux bien m'imaginer que cela représente un problème
 			=> fin
 		- *Demander plus de détail*
 			Dr.Psy: Je suis désolé mais c'est a vous de travailler maintenant .
-			do modify_stress(10)
+			do modify_stress(-10)
 
 => fin
 
