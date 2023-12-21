@@ -13,7 +13,7 @@ Dr.Chirugien: Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabine
 		- * Vous arrivez a garder votre calme * 
 			Dr.Chirugien: Je comprend que cela peut être difficile à avaler mais je suis content de votre réaction et votre maturité
 			do modify_stress(10)
-			- *accepter de prendre rendez-vous*
+			- *accepter l'opération*
 				=> remerciement
 	- *Demander plus d'informations et rester serein* 
 		Dr.Chirugien : Bien sûr je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale .
@@ -25,13 +25,13 @@ Dr.Chirugien: Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabine
 					- *Le médecin demandera son verre de rhum au moment de vous endormir *
 						do modify_stress(-20)
 						=> fin
-			- * Accepter de prendre rendez-vous * => remerciement
+			- * Accepter l'opération * => remerciement
 					
 		- * Vous vous étiez préparé a cela mais vous n'êtes pas enchantés*
-					Dr.Chirugien: C'est pour votre bien, c'est le moyen le plus efficace pour vous soigner 
-					- *rester rétissant*
-						do modify_stress(10)
-						=> retissant
+			Dr.Chirugien: C'est pour votre bien, c'est le moyen le plus efficace pour vous soigner 
+			- *rester rétissant*
+				do modify_stress(10)
+				=> retissant
 		 		  
 	- *Acquiescer simplement *
 		Dr.Chirugien : Je vois que vous comprenez ce que ça implique. Vous allez devoir subir une opération pour vous soigner
@@ -48,13 +48,13 @@ Dr.Chirugien: Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabine
 			- * Demander la durée de l'opération * => op_duree
 				
 		- *Demander les risques de l'opérations* 
-				Dr.Chirugien: C'est une opération classique, elle ne comporte quasiment aucun risques
-				do modify_stress(10)
+			Dr.Chirugien: C'est une opération classique, elle ne comporte quasiment aucun risques
+			do modify_stress(10)
 			- * Demander la durée de l'opération * => op_duree
 			- *Demander si il peut y avoir des effets secondaires indésirables*
 				Dr.Chirugien: C'est possible mais rien d'insurmontable
-				do modify_stress(-10)
-				 - *Très bien fixons un rendez-vous *
+				do modify_stress(10)
+				 - *Très bien passons à l'opération *
 					do modify_sante(30)
 	
 
@@ -63,10 +63,10 @@ Dr.Chirugien: Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabine
 ~ retissant
 
 Dr.Chirugien: Vous allez bien devoir y passer alors autant y mettre du votre
-- * Prendre rendez-vous en repoussant l'échéance au maximum*
+- * repousser l'échéance au maximum*
 	do modify_sante(20)
 	do modify_stress(-10)
-- *Se résigner et prendre rendez-vous *
+- *Se résigner passer à l'opération *
 	do modify_sante(30)
 	do modify_stress(-10)
 
@@ -85,7 +85,7 @@ do modify_sante(30)
 
 Dr.Chirugien: L'opération reste lourde et va donc demander un peu de temps
 do modify_stress(10)
-- *Très bien fixons un rendez-vous *
+- *Très bien passons à l'opération*
 	do modify_sante(30)
 => fin
 
