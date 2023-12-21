@@ -1,6 +1,5 @@
 res://scenes/npc/dr_psy.tscn
 res://scenes/maps/salles.tres
-res://scenes/npc/dr_zimzim.gd
 res://scenes/npc/npc.tscn
 res://scenes/npc/dr_zen.tscn
 res://tuto.tscn
