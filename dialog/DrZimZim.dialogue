@@ -1,34 +1,36 @@
 ~ start
+[speed=5] [next=auto]
 Dr.ZimZim: Bonjour, comment puis-je vous aider aujourd'hui ?
 - *décrire vos symptômes* => explique
 - *Faire une blague*
 	Dr.ZimZim : Vous avez vraiment un très bon sens de l'humour, mais j'aimerais que nous nous concentrions sur vos symptômes pour trouver le remède adéquat à votre maladie.
-	- décrire vos symptomes => explique
+	- *décrire vos symptomes* => explique
 	- *chercher ses mots* => stresse
 - *chercher ses mots* => stresse
 => fin
 
 ~ explique
-Dr.ZimZim: Hmmm intéressant (passe la main dans sa barbe
+Dr.ZimZim: Hmmm intéressant *passe la main dans sa barbe*
 - *Attendre une réponse*
-	Dr.ZimZim: Il réfléchit toujours vous commencer à vous poser des questions
 	do modify_stress(-10)
+	Dr.ZimZim: *Il réfléchit toujours vous commencer à vous poser des questions*
 	- *Attendre encore vous avez le temps*
 		Dr.ZimZim: Alors j'ai bien réfléchi, je sais ce que c'est je vais vous donner,j'ai le traitement adéquat
-		do modify_sante(30)
+		do modify_sante(25)
+		do modify_stress(25)
 		=> fin
 	- *S'impatienter et demander s'il compte vous aider*
+		do modify_stress(-10)
 		Dr.ZimZim: Oui un peu de calme s'il vous plaît ça vient.
-		do modify_stress(-20)
+		do modify_sante(25)
 		Dr.ZimZim: Je vous donne ce traitement, prenez le jusqu'à ce que ça aille mieux
-		do modify_sante(20)
 - *Demander si il peut vous aider*
 	Dr.ZimZim: Oui je pense mais je vais devoir faire les tests d'usages d'abord 
 	- *Faire les test et prendre le traitement*
 		do modify_sante(10)
 	- *Demander plus d'informations sur les test
-		Dr.ZimZim: Oh c'est trois fois rien la tension, le rythme cardiaque, la routine quoi
 		do modify_stress(10)
+		Dr.ZimZim: Oh c'est trois fois rien la tension, le rythme cardiaque, la routine quoi
 		- *Faire les test et prendre le traitement*
 			do modify_sante(20)
 => fin
@@ -37,8 +39,9 @@ Dr.ZimZim : *Dr.ZimZim attend patiemment votre réponse*
 - * Dire que vous ressentez une simple douleur de façon occasionnelle *
 	Dr.ZimZim : Vous êtes sûr? A première vu ça me semble plus sérieux
 	- *Être sûr de soi*
-		Dr.ZimZim: Bien prenez ces anti-douleurs alors
 		do modify_sante(10)
+		do modify_stress(10)
+		Dr.ZimZim: Bien prenez ces anti-douleurs alors
 	- *Dire que vous avez mangé un fruit qui vous a rendu malade*
 		=> fruit
 - *Dire que vous avez mangé un fruit qui vous a rendu malade*
@@ -48,12 +51,13 @@ Dr.ZimZim : *Dr.ZimZim attend patiemment votre réponse*
 ~ fruit
 Dr.ZimZim: Ohhh non mais vous avez mangé des Red berries, je reconnais ces symptômes.
 - *Affirmer que non ça s'apparentait plus à une myrtille  *
-	Dr.ZimZim : D'accord ça doit être autre chose alors je vais vous donner ce qu'il faut
 	do modify_sante(10)
-- *Dire que c'est sûrement ce fruit *
-	Dr.ZimZim : Je ne peux pas croire que malgré la prévention des gens en mangent encore. Bon je vais vous donner ce qu'il faut et ça ira mieux
 	do modify_stress(10)
-	do modify_sante(20)
+	Dr.ZimZim : D'accord ça doit être autre chose alors je vais vous donner ce qu'il faut
+- *Dire que c'est sûrement ce fruit *
+	do modify_stress(25)
+	do modify_sante(25)
+	Dr.ZimZim : Je ne peux pas croire que malgré la prévention des gens en mangent encore. Bon je vais vous donner ce qu'il faut et ça ira mieux très vite !
 
 => fin
 

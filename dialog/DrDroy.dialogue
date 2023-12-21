@@ -1,8 +1,10 @@
 ~ start
+[speed=5] [next=auto]
 Dr.Droy: Bonjour, vous pouvez vous installer !
 - *Decrire vos symptomes* => description
 - *faire une blague*
 	Dr.Droy: Asseyez-vous s'il vous plaît. Veuillez noter que je préfère que nous restions concentrés sur votre consultation médicale. Les blagues ne sont pas appropriées dans ce contexte. Maintenant, expliquez-moi vos symptômes et la raison de votre visite aujourd'hui .
+	do modify_stress(-10)
 	- *décrire vos symptomes * => description
 	- *chercher ses mots* => cherche_mots
 - *chercher ses mots* => cherche_mots
@@ -10,30 +12,29 @@ Dr.Droy: Bonjour, vous pouvez vous installer !
 ~ description
 Dr.Droy: Très bien j'ai ma petite idée sur ce que ça peut être mais nous allons quand même procéder à un examen complet pour voir ce qui se passe
 - *Dire que vous préfèreriez éviter l'examen complet si possible*
-	Dr.Droy : Ecoutez cela simplifierait les choses pour tout le monde si vous ne faisiez pas tant de jérémiades
-	do modify_stress(10)
-	- *Dire que vous avez encore le droit de faire ce que vous voulez et partir *
+	Dr.Droy : Ecoutez cela simplifierait les choses pour tout le monde si vous cessiez vos jérémiades
+	do modify_stress(-10)
+	- *Dire que vous avez encore le droit de faire ce que vous voulez et partir*
 		=> fin
 	- *S'excuser et faire les tests correctement*
 		=> antibios
 - *Accepter l'examen sans rechigner*
-	Dr.Droy : Je vais vous prendre  la pression artérielle et je vais vous faire un examen physique , faillait juste détendre et s'allonger sur le banc
-	- *Allonger et faire le nécessaire *
-	- *Demander c'est quoi la solution éfficace*
+	Dr.Droy : Je vais prendre votre pression artérielle et je vais vous faire un examen physique , détendez vous et allongez vous sur le banc
+	- *S'allonger et faire le nécessaire*
+	- *Demander quel est la solution la plus efficace*
 		Dr.Droy: Bien je vous laisse vous mettre a l'aise pour les tests
 		- *Faire ce que dit le médecin et se préparer*
 			=> antibios
 		- *Mettre les pieds sur le bureau et se mettre vraiment à l'aise*
 			do modify_stress(10)
-		- *Garder le meme taffe*
-			Dr.Droy: Non mais vous vous croyez chez vous ici ? (s/o TchouTchou) dégagez de mon cabinet et ne revenez plus me voir !
+			Dr.Droy: [shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]
 			do modify_stress(-30)
 			do modify_sante(10)
 => fin
 ~ cherche_mots
-Dr.Droy : Bon écoutez vous allez devoir m'aider je n'y arriverais pas si vous ne me dites pas vos sensations
+Dr.Droy : Bon écoutez vous allez devoir m'aider je n'y arriverais pas si vous ne me décrivez pas vos symptomes !
 do modify_stress(-10)
-- *Dire que vous ressentez une simple douleur de façon occasionnelle *
+- *Dire que vous ressentez occasionelement une legere douleur*
 	Dr.Droy : Seulement ? Je vais vous prescrire des dolipranes alors
 	- *Les prendre et partir*
 		do modify_sante(10)
@@ -58,7 +59,7 @@ do modify_stress(-10)
 ~ antibios
 Dr.Droy: Après vous avoir bien analysé je peux dire que vous avez besoin de prendre les antibiotiques que je vais vous prescrire 
 - *être contre les antibiotiques et se soigner naturellement*
-	do modifiy_sante(10)
+	do modify_sante(10)
 
 - *les prendre*
 	do modify_sante(30)

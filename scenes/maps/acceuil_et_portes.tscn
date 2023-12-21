@@ -190,9 +190,9 @@ label_settings = SubResource("LabelSettings_spnq7")
 
 [node name="filter" type="ColorRect" parent="porte_DrZen"]
 modulate = Color(0.827451, 0.454902, 0.827451, 0)
-offset_left = -8.0
-offset_top = -24.0
-offset_right = 8.0
+offset_left = -7.0
+offset_top = -16.0
+offset_right = 7.0
 offset_bottom = 5.0
 
 [node name="porte_DrDroy" type="Area2D" parent="."]
@@ -227,9 +227,9 @@ label_settings = SubResource("LabelSettings_spnq7")
 
 [node name="filter" type="ColorRect" parent="porte_DrDroy"]
 modulate = Color(0.827451, 0.454902, 0.827451, 0)
-offset_left = -8.0
-offset_top = -24.0
-offset_right = 8.0
+offset_left = -7.0
+offset_top = -16.0
+offset_right = 6.0
 offset_bottom = 5.0
 
 [node name="porte_DrZimZim" type="Area2D" parent="."]
@@ -264,9 +264,9 @@ label_settings = SubResource("LabelSettings_spnq7")
 
 [node name="filter" type="ColorRect" parent="porte_DrZimZim"]
 modulate = Color(0.827451, 0.454902, 0.827451, 0)
-offset_left = -8.0
-offset_top = -24.0
-offset_right = 8.0
+offset_left = -7.0
+offset_top = -16.0
+offset_right = 7.0
 offset_bottom = 5.0
 
 [node name="porte_DrChirurgien" type="Area2D" parent="."]
@@ -301,10 +301,10 @@ label_settings = SubResource("LabelSettings_spnq7")
 
 [node name="filter" type="ColorRect" parent="porte_DrChirurgien"]
 modulate = Color(0.827451, 0.454902, 0.827451, 0)
-offset_left = -8.0
-offset_top = -24.0
-offset_right = 8.0
-offset_bottom = 5.0
+offset_left = -7.0
+offset_top = -17.0
+offset_right = 7.0
+offset_bottom = 4.0
 
 [node name="porte_DrPsy" type="Area2D" parent="."]
 position = Vector2(120, -84)
@@ -338,10 +338,10 @@ label_settings = SubResource("LabelSettings_spnq7")
 
 [node name="filter" type="ColorRect" parent="porte_DrPsy"]
 modulate = Color(0.827451, 0.454902, 0.827451, 0)
-offset_left = -8.0
-offset_top = -24.0
-offset_right = 8.0
-offset_bottom = 5.0
+offset_left = -7.0
+offset_top = -17.0
+offset_right = 7.0
+offset_bottom = 4.0
 
 [node name="porte_DrFamille" type="Area2D" parent="."]
 position = Vector2(168, -84)
@@ -375,10 +375,10 @@ label_settings = SubResource("LabelSettings_spnq7")
 
 [node name="filter" type="ColorRect" parent="porte_DrFamille"]
 modulate = Color(0.827451, 0.454902, 0.827451, 0)
-offset_left = -8.0
-offset_top = -24.0
-offset_right = 8.0
-offset_bottom = 5.0
+offset_left = -7.0
+offset_top = -17.0
+offset_right = 7.0
+offset_bottom = 4.0
 
 [node name="fondu_timer" type="Timer" parent="."]
 unique_name_in_owner = true

@@ -1,4 +1,5 @@
 ~ start
+[speed=5] [next=auto]
 Dr.Psy: Bonjour Mr comment puis-je vous aider aujourd'hui ?
 - *Dire que vous venez car les mauvaises expériences avec les médecins sont trop stressantes* 
 	Dr.Psy: Ah je vois en effet cela peut être un problème si les médecins ne sont pas assez compréhensifs avec vous. Comment étaient-ils précisément? 
@@ -56,7 +57,7 @@ Dr.Psy : Je peux bien m'imaginer que cela représente un problème
 			=> fin
 		- *Demander plus de détail*
 			Dr.Psy: Je suis désolé mais c'est a vous de travailler maintenant .
-			do modify_stress(10)
+			do modify_stress(-10)
 
 => fin
 

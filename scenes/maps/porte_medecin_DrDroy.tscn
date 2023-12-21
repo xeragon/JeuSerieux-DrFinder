@@ -264,4 +264,4 @@ libraries = {
 }
 
 [node name="dr_droy" parent="." instance=ExtResource("4_0hv3d")]
-position = Vector2(-87, -3)
+position = Vector2(-85, -2)

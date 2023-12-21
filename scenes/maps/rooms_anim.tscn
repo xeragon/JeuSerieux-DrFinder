@@ -178,10 +178,10 @@ tracks/5/path = NodePath("player:state")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 2.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [1, 0]
+"values": [2, 1, 1]
 }
 tracks/6/type = "method"
 tracks/6/imported = false
@@ -206,7 +206,6 @@ _data = {
 }
 
 [node name="rooms_anim" type="AnimationPlayer"]
-speed_scale = 3.0
 libraries = {
 "": SubResource("AnimationLibrary_f87pn")
 }

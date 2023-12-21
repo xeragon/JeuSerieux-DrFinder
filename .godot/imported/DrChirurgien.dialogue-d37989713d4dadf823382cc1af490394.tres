@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_6g7f8"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_adtud"]
 
 [resource]
-script = ExtResource("1_6g7f8")
+script = ExtResource("1_adtud")
 using_states = PackedStringArray()
 titles = {
-"fin": "94",
-"op_duree": "86",
-"remerciement": "78",
-"retissant": "65",
+"fin": "95",
+"op_duree": "87",
+"remerciement": "79",
+"retissant": "66",
 "start": "2"
 }
 character_names = PackedStringArray("Dr.Chirugien")
@@ -22,19 +22,31 @@ lines = {
 "type": "title"
 },
 "10": {
+"character": "Dr.Chirugien",
+"character_replacements": Array[Dictionary]([]),
 "id": "10",
 "next_id": "11",
-"next_id_after": "61",
-"parent_id": "7",
-"responses": PackedStringArray("10"),
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "Vous n'avez pas a vous inquiéter j'ai l'habitude de ces opérations et je comprend que cela peut sembler compliqué",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vous n'avez pas a vous inquiéter j'ai l'habitude de ces opérations et je comprend que cela peut sembler compliqué",
+"type": "dialogue"
+},
+"11": {
+"id": "11",
+"next_id": "12",
+"next_id_after": "62",
+"parent_id": "8",
+"responses": PackedStringArray("11"),
 "tags": PackedStringArray(),
 "text": "*rester retissant*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*rester retissant*",
 "type": "response"
 },
-"11": {
-"id": "11",
+"12": {
+"id": "12",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -45,42 +57,42 @@ lines = {
 }])])
 }])
 },
-"next_id": "12",
-"parent_id": "10",
+"next_id": "13",
+"parent_id": "11",
 "type": "mutation"
-},
-"12": {
-"id": "12",
-"is_snippet": false,
-"next_id": "65",
-"parent_id": "10",
-"type": "goto"
 },
 "13": {
 "id": "13",
-"next_id": "14",
-"next_id_after": "61",
-"parent_id": "5",
+"is_snippet": false,
+"next_id": "66",
+"parent_id": "11",
+"type": "goto"
+},
+"14": {
+"id": "14",
+"next_id": "15",
+"next_id_after": "62",
+"parent_id": "6",
 "tags": PackedStringArray(),
 "text": "* Vous arrivez a garder votre calme *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "* Vous arrivez a garder votre calme *",
 "type": "response"
 },
-"14": {
+"15": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "14",
-"next_id": "15",
-"parent_id": "13",
+"id": "15",
+"next_id": "16",
+"parent_id": "14",
 "tags": PackedStringArray(),
 "text": "Je comprend que cela peut être difficile à avaler mais je suis content de votre réaction et votre maturité",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Je comprend que cela peut être difficile à avaler mais je suis content de votre réaction et votre maturité",
 "type": "dialogue"
 },
-"15": {
-"id": "15",
+"16": {
+"id": "16",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -91,113 +103,113 @@ lines = {
 }])])
 }])
 },
-"next_id": "16",
-"parent_id": "13",
+"next_id": "17",
+"parent_id": "14",
 "type": "mutation"
 },
-"16": {
-"id": "16",
-"next_id": "17",
-"next_id_after": "61",
-"parent_id": "13",
-"responses": PackedStringArray("16"),
+"17": {
+"id": "17",
+"next_id": "18",
+"next_id_after": "62",
+"parent_id": "14",
+"responses": PackedStringArray("17"),
 "tags": PackedStringArray(),
 "text": "*accepter l'opération*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*accepter l'opération*",
 "type": "response"
 },
-"17": {
-"id": "17",
-"is_snippet": false,
-"next_id": "78",
-"parent_id": "16",
-"type": "goto"
-},
 "18": {
 "id": "18",
-"next_id": "19",
-"next_id_after": "61",
-"parent_id": "3",
+"is_snippet": false,
+"next_id": "79",
+"parent_id": "17",
+"type": "goto"
+},
+"19": {
+"id": "19",
+"next_id": "20",
+"next_id_after": "62",
+"parent_id": "4",
 "tags": PackedStringArray(),
 "text": "*Demander plus d'informations et rester serein*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Demander plus d'informations et rester serein*",
 "type": "response"
 },
-"19": {
+"2": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"tags": PackedStringArray(),
+"text": "[speed=5] [next=auto]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[speed=5] [next=auto]",
+"type": "dialogue"
+},
+"20": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "19",
-"next_id": "20",
-"parent_id": "18",
+"id": "20",
+"next_id": "21",
+"parent_id": "19",
 "tags": PackedStringArray(),
 "text": "Bien sûr je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale .",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Bien sûr je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale .",
 "type": "dialogue"
 },
-"2": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
-"id": "2",
-"next_id": "3",
-"tags": PackedStringArray(),
-"text": "Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabinet?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabinet?",
-"type": "dialogue"
-},
-"20": {
-"id": "20",
-"next_id": "21",
-"next_id_after": "61",
-"parent_id": "18",
-"responses": PackedStringArray("20", "30"),
+"21": {
+"id": "21",
+"next_id": "22",
+"next_id_after": "62",
+"parent_id": "19",
+"responses": PackedStringArray("21", "31"),
 "tags": PackedStringArray(),
 "text": "*Comprendre la situation et n'y voir aucun problème*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Comprendre la situation et n'y voir aucun problème*",
 "type": "response"
 },
-"21": {
+"22": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "21",
-"next_id": "22",
-"parent_id": "20",
+"id": "22",
+"next_id": "23",
+"parent_id": "21",
 "tags": PackedStringArray(),
 "text": "J'apprécie votre coopération cela va simplifier beaucoup de choses",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "J'apprécie votre coopération cela va simplifier beaucoup de choses",
 "type": "dialogue"
 },
-"22": {
-"id": "22",
-"next_id": "23",
-"next_id_after": "61",
-"parent_id": "20",
-"responses": PackedStringArray("22", "28"),
+"23": {
+"id": "23",
+"next_id": "24",
+"next_id_after": "62",
+"parent_id": "21",
+"responses": PackedStringArray("23", "29"),
 "tags": PackedStringArray(),
 "text": "*Montrer au spécialiste que vous ne craignez pas l'opération*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Montrer au spécialiste que vous ne craignez pas l'opération*",
 "type": "response"
 },
-"23": {
+"24": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "23",
-"next_id": "24",
-"parent_id": "22",
+"id": "24",
+"next_id": "25",
+"parent_id": "23",
 "tags": PackedStringArray(),
 "text": "Et bien c'est pas tous les jours que les patients sont si enthousiastes",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Et bien c'est pas tous les jours que les patients sont si enthousiastes",
 "type": "dialogue"
 },
-"24": {
-"id": "24",
+"25": {
+"id": "25",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -208,24 +220,24 @@ lines = {
 }])])
 }])
 },
-"next_id": "25",
-"parent_id": "22",
+"next_id": "26",
+"parent_id": "23",
 "type": "mutation"
 },
-"25": {
-"id": "25",
-"next_id": "26",
-"next_id_after": "61",
-"parent_id": "22",
-"responses": PackedStringArray("25"),
+"26": {
+"id": "26",
+"next_id": "27",
+"next_id_after": "62",
+"parent_id": "23",
+"responses": PackedStringArray("26"),
 "tags": PackedStringArray(),
 "text": "*Le médecin demandera son verre de rhum au moment de vous endormir *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Le médecin demandera son verre de rhum au moment de vous endormir *",
 "type": "response"
 },
-"26": {
-"id": "26",
+"27": {
+"id": "27",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -236,22 +248,22 @@ lines = {
 }])])
 }])
 },
-"next_id": "27",
-"parent_id": "25",
+"next_id": "28",
+"parent_id": "26",
 "type": "mutation"
-},
-"27": {
-"id": "27",
-"is_snippet": false,
-"next_id": "94",
-"parent_id": "25",
-"type": "goto"
 },
 "28": {
 "id": "28",
-"next_id": "78",
-"next_id_after": "61",
-"parent_id": "20",
+"is_snippet": false,
+"next_id": "95",
+"parent_id": "26",
+"type": "goto"
+},
+"29": {
+"id": "29",
+"next_id": "79",
+"next_id_after": "62",
+"parent_id": "21",
 "tags": PackedStringArray(),
 "text": "* Accepter l'opération *",
 "text_replacements": Array[Dictionary]([]),
@@ -259,53 +271,53 @@ lines = {
 "type": "response"
 },
 "3": {
+"character": "Dr.Chirugien",
+"character_replacements": Array[Dictionary]([]),
 "id": "3",
 "next_id": "4",
-"next_id_after": "61",
-"responses": PackedStringArray("3"),
 "tags": PackedStringArray(),
-"text": "*Dire que vous venez sur recommandation du médecin *",
+"text": "Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabinet?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Dire que vous venez sur recommandation du médecin *",
-"type": "response"
+"translation_key": "Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabinet?",
+"type": "dialogue"
 },
-"30": {
-"id": "30",
-"next_id": "31",
-"next_id_after": "61",
-"parent_id": "18",
+"31": {
+"id": "31",
+"next_id": "32",
+"next_id_after": "62",
+"parent_id": "19",
 "tags": PackedStringArray(),
 "text": "* Vous vous étiez préparé a cela mais vous n'êtes pas enchantés*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "* Vous vous étiez préparé a cela mais vous n'êtes pas enchantés*",
 "type": "response"
 },
-"31": {
+"32": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "31",
-"next_id": "32",
-"parent_id": "30",
+"id": "32",
+"next_id": "33",
+"parent_id": "31",
 "tags": PackedStringArray(),
 "text": "C'est pour votre bien, c'est le moyen le plus efficace pour vous soigner",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "C'est pour votre bien, c'est le moyen le plus efficace pour vous soigner",
 "type": "dialogue"
 },
-"32": {
-"id": "32",
-"next_id": "33",
-"next_id_after": "61",
-"parent_id": "30",
-"responses": PackedStringArray("32"),
+"33": {
+"id": "33",
+"next_id": "34",
+"next_id_after": "62",
+"parent_id": "31",
+"responses": PackedStringArray("33"),
 "tags": PackedStringArray(),
 "text": "*rester rétissant*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*rester rétissant*",
 "type": "response"
 },
-"33": {
-"id": "33",
+"34": {
+"id": "34",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -316,78 +328,77 @@ lines = {
 }])])
 }])
 },
-"next_id": "34",
-"parent_id": "32",
+"next_id": "35",
+"parent_id": "33",
 "type": "mutation"
 },
-"34": {
-"id": "34",
+"35": {
+"id": "35",
 "is_snippet": false,
-"next_id": "65",
-"parent_id": "32",
+"next_id": "66",
+"parent_id": "33",
 "type": "goto"
 },
-"36": {
-"id": "36",
-"next_id": "37",
-"next_id_after": "61",
-"parent_id": "3",
+"37": {
+"id": "37",
+"next_id": "38",
+"next_id_after": "62",
+"parent_id": "4",
 "tags": PackedStringArray(),
 "text": "*Acquiescer simplement *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Acquiescer simplement *",
 "type": "response"
 },
-"37": {
+"38": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "37",
-"next_id": "38",
-"parent_id": "36",
+"id": "38",
+"next_id": "39",
+"parent_id": "37",
 "tags": PackedStringArray(),
 "text": "Je vois que vous comprenez ce que ça implique. Vous allez devoir subir une opération pour vous soigner",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Je vois que vous comprenez ce que ça implique. Vous allez devoir subir une opération pour vous soigner",
 "type": "dialogue"
 },
-"38": {
-"id": "38",
-"next_id": "39",
-"next_id_after": "61",
-"parent_id": "36",
-"responses": PackedStringArray("38", "50"),
+"39": {
+"id": "39",
+"next_id": "40",
+"next_id_after": "62",
+"parent_id": "37",
+"responses": PackedStringArray("39", "51"),
 "tags": PackedStringArray(),
 "text": "*Demander le type de  l'opération *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Demander le type de  l'opération *",
 "type": "response"
 },
-"39": {
+"4": {
+"id": "4",
+"next_id": "5",
+"next_id_after": "62",
+"responses": PackedStringArray("4"),
+"tags": PackedStringArray(),
+"text": "*Dire que vous venez sur recommandation du médecin *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Dire que vous venez sur recommandation du médecin *",
+"type": "response"
+},
+"40": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "39",
-"next_id": "40",
-"parent_id": "38",
+"id": "40",
+"next_id": "41",
+"parent_id": "39",
 "tags": PackedStringArray(),
 "text": "Ce sera une anesthésie générale mais les risques sont extrêmement faibles de nos jours",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Ce sera une anesthésie générale mais les risques sont extrêmement faibles de nos jours",
 "type": "dialogue"
 },
-"4": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
-"id": "4",
-"next_id": "5",
-"parent_id": "3",
-"tags": PackedStringArray(),
-"text": "*D'accord je vois vous avez effectivement besoins de soins plutôt lourds *",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*D'accord je vois vous avez effectivement besoins de soins plutôt lourds *",
-"type": "dialogue"
-},
-"40": {
-"id": "40",
+"41": {
+"id": "41",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -398,48 +409,48 @@ lines = {
 }])])
 }])
 },
-"next_id": "41",
-"parent_id": "38",
+"next_id": "42",
+"parent_id": "39",
 "type": "mutation"
 },
-"41": {
-"id": "41",
-"next_id": "42",
-"next_id_after": "61",
-"parent_id": "38",
-"responses": PackedStringArray("41", "48"),
+"42": {
+"id": "42",
+"next_id": "43",
+"next_id_after": "62",
+"parent_id": "39",
+"responses": PackedStringArray("42", "49"),
 "tags": PackedStringArray(),
 "text": "*Demander une anesthésie locale *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Demander une anesthésie locale *",
 "type": "response"
 },
-"42": {
+"43": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "42",
-"next_id": "43",
-"parent_id": "41",
+"id": "43",
+"next_id": "44",
+"parent_id": "42",
 "tags": PackedStringArray(),
 "text": "Vous êtes sûr? cela risque d'être compliqué et le contrecoup sera plus dur",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Vous êtes sûr? cela risque d'être compliqué et le contrecoup sera plus dur",
 "type": "dialogue"
 },
-"43": {
-"id": "43",
-"next_id": "44",
-"next_id_after": "61",
-"parent_id": "41",
-"responses": PackedStringArray("43", "45"),
+"44": {
+"id": "44",
+"next_id": "45",
+"next_id_after": "62",
+"parent_id": "42",
+"responses": PackedStringArray("44", "46"),
 "tags": PackedStringArray(),
 "text": "*Oui, faire en anesthésie locale*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Oui, faire en anesthésie locale*",
 "type": "response"
 },
-"44": {
-"id": "44",
+"45": {
+"id": "45",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -450,23 +461,23 @@ lines = {
 }])])
 }])
 },
-"next_id": "61",
-"parent_id": "43",
+"next_id": "62",
+"parent_id": "44",
 "type": "mutation"
 },
-"45": {
-"id": "45",
-"next_id": "46",
-"next_id_after": "61",
-"parent_id": "41",
+"46": {
+"id": "46",
+"next_id": "47",
+"next_id_after": "62",
+"parent_id": "42",
 "tags": PackedStringArray(),
 "text": "*Non faire l'anesthésie générale*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Non faire l'anesthésie générale*",
 "type": "response"
 },
-"46": {
-"id": "46",
+"47": {
+"id": "47",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -477,12 +488,12 @@ lines = {
 }])])
 }])
 },
-"next_id": "47",
-"parent_id": "45",
+"next_id": "48",
+"parent_id": "46",
 "type": "mutation"
 },
-"47": {
-"id": "47",
+"48": {
+"id": "48",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -493,15 +504,15 @@ lines = {
 }])])
 }])
 },
-"next_id": "61",
-"parent_id": "45",
+"next_id": "62",
+"parent_id": "46",
 "type": "mutation"
 },
-"48": {
-"id": "48",
-"next_id": "86",
-"next_id_after": "61",
-"parent_id": "38",
+"49": {
+"id": "49",
+"next_id": "87",
+"next_id_after": "62",
+"parent_id": "39",
 "tags": PackedStringArray(),
 "text": "* Demander la durée de l'opération *",
 "text_replacements": Array[Dictionary]([]),
@@ -509,42 +520,42 @@ lines = {
 "type": "response"
 },
 "5": {
+"character": "Dr.Chirugien",
+"character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
-"next_id_after": "61",
-"parent_id": "3",
-"responses": PackedStringArray("5", "18", "36"),
+"parent_id": "4",
 "tags": PackedStringArray(),
-"text": "*Demander plus d'informations en étant intimidé *",
+"text": "*D'accord je vois vous avez effectivement besoins de soins plutôt lourds *",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Demander plus d'informations en étant intimidé *",
-"type": "response"
+"translation_key": "*D'accord je vois vous avez effectivement besoins de soins plutôt lourds *",
+"type": "dialogue"
 },
-"50": {
-"id": "50",
-"next_id": "51",
-"next_id_after": "61",
-"parent_id": "36",
+"51": {
+"id": "51",
+"next_id": "52",
+"next_id_after": "62",
+"parent_id": "37",
 "tags": PackedStringArray(),
 "text": "*Demander les risques de l'opérations*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Demander les risques de l'opérations*",
 "type": "response"
 },
-"51": {
+"52": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "51",
-"next_id": "52",
-"parent_id": "50",
+"id": "52",
+"next_id": "53",
+"parent_id": "51",
 "tags": PackedStringArray(),
 "text": "C'est une opération classique, elle ne comporte quasiment aucun risques",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "C'est une opération classique, elle ne comporte quasiment aucun risques",
 "type": "dialogue"
 },
-"52": {
-"id": "52",
+"53": {
+"id": "53",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -555,47 +566,47 @@ lines = {
 }])])
 }])
 },
-"next_id": "53",
-"parent_id": "50",
+"next_id": "54",
+"parent_id": "51",
 "type": "mutation"
 },
-"53": {
-"id": "53",
-"next_id": "86",
-"next_id_after": "61",
-"parent_id": "50",
-"responses": PackedStringArray("53", "54"),
+"54": {
+"id": "54",
+"next_id": "87",
+"next_id_after": "62",
+"parent_id": "51",
+"responses": PackedStringArray("54", "55"),
 "tags": PackedStringArray(),
 "text": "* Demander la durée de l'opération *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "* Demander la durée de l'opération *",
 "type": "response"
 },
-"54": {
-"id": "54",
-"next_id": "55",
-"next_id_after": "61",
-"parent_id": "50",
+"55": {
+"id": "55",
+"next_id": "56",
+"next_id_after": "62",
+"parent_id": "51",
 "tags": PackedStringArray(),
 "text": "*Demander si il peut y avoir des effets secondaires indésirables*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Demander si il peut y avoir des effets secondaires indésirables*",
 "type": "response"
 },
-"55": {
+"56": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "55",
-"next_id": "56",
-"parent_id": "54",
+"id": "56",
+"next_id": "57",
+"parent_id": "55",
 "tags": PackedStringArray(),
 "text": "C'est possible mais rien d'insurmontable",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "C'est possible mais rien d'insurmontable",
 "type": "dialogue"
 },
-"56": {
-"id": "56",
+"57": {
+"id": "57",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -606,24 +617,24 @@ lines = {
 }])])
 }])
 },
-"next_id": "57",
-"parent_id": "54",
+"next_id": "58",
+"parent_id": "55",
 "type": "mutation"
 },
-"57": {
-"id": "57",
-"next_id": "58",
-"next_id_after": "61",
-"parent_id": "54",
-"responses": PackedStringArray("57"),
+"58": {
+"id": "58",
+"next_id": "59",
+"next_id_after": "62",
+"parent_id": "55",
+"responses": PackedStringArray("58"),
 "tags": PackedStringArray(),
 "text": "*Très bien passons à l'opération *",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Très bien passons à l'opération *",
 "type": "response"
 },
-"58": {
-"id": "58",
+"59": {
+"id": "59",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -634,58 +645,58 @@ lines = {
 }])])
 }])
 },
-"next_id": "61",
-"parent_id": "57",
+"next_id": "62",
+"parent_id": "58",
 "type": "mutation"
 },
 "6": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
 "id": "6",
 "next_id": "7",
-"parent_id": "5",
+"next_id_after": "62",
+"parent_id": "4",
+"responses": PackedStringArray("6", "19", "37"),
 "tags": PackedStringArray(),
-"text": "Ne vous inquiétez pas vous ne risquez rien c'est une opération très courante.",
+"text": "*Demander plus d'informations en étant intimidé *",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ne vous inquiétez pas vous ne risquez rien c'est une opération très courante.",
-"type": "dialogue"
+"translation_key": "*Demander plus d'informations en étant intimidé *",
+"type": "response"
 },
-"61": {
-"id": "61",
+"62": {
+"id": "62",
 "is_snippet": false,
-"next_id": "94",
+"next_id": "95",
 "type": "goto"
 },
-"63": {
-"id": "63",
-"next_id": "65",
+"64": {
+"id": "64",
+"next_id": "66",
 "text": "retissant",
 "type": "title"
 },
-"65": {
+"66": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "65",
-"next_id": "66",
+"id": "66",
+"next_id": "67",
 "tags": PackedStringArray(),
 "text": "Vous allez bien devoir y passer alors autant y mettre du votre",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Vous allez bien devoir y passer alors autant y mettre du votre",
 "type": "dialogue"
 },
-"66": {
-"id": "66",
-"next_id": "67",
-"next_id_after": "74",
-"responses": PackedStringArray("66", "69"),
+"67": {
+"id": "67",
+"next_id": "68",
+"next_id_after": "75",
+"responses": PackedStringArray("67", "70"),
 "tags": PackedStringArray(),
 "text": "* repousser l'échéance au maximum*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "* repousser l'échéance au maximum*",
 "type": "response"
 },
-"67": {
-"id": "67",
+"68": {
+"id": "68",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -696,12 +707,66 @@ lines = {
 }])])
 }])
 },
-"next_id": "68",
-"parent_id": "66",
+"next_id": "69",
+"parent_id": "67",
 "type": "mutation"
 },
-"68": {
-"id": "68",
+"69": {
+"id": "69",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": -10
+}])])
+}])
+},
+"next_id": "75",
+"parent_id": "67",
+"type": "mutation"
+},
+"7": {
+"character": "Dr.Chirugien",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Ne vous inquiétez pas vous ne risquez rien c'est une opération très courante.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ne vous inquiétez pas vous ne risquez rien c'est une opération très courante.",
+"type": "dialogue"
+},
+"70": {
+"id": "70",
+"next_id": "71",
+"next_id_after": "75",
+"tags": PackedStringArray(),
+"text": "*Se résigner passer à l'opération *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Se résigner passer à l'opération *",
+"type": "response"
+},
+"71": {
+"id": "71",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 30
+}])])
+}])
+},
+"next_id": "72",
+"parent_id": "70",
+"type": "mutation"
+},
+"72": {
+"id": "72",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -713,95 +778,53 @@ lines = {
 }])
 },
 "next_id": "74",
-"parent_id": "66",
+"parent_id": "70",
 "type": "mutation"
-},
-"69": {
-"id": "69",
-"next_id": "70",
-"next_id_after": "74",
-"tags": PackedStringArray(),
-"text": "*Se résigner passer à l'opération *",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*Se résigner passer à l'opération *",
-"type": "response"
-},
-"7": {
-"id": "7",
-"next_id": "8",
-"next_id_after": "61",
-"parent_id": "5",
-"responses": PackedStringArray("7", "13"),
-"tags": PackedStringArray(),
-"text": "* Vous tombez des nues et avez du mal à envisager une telle opération *",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "* Vous tombez des nues et avez du mal à envisager une telle opération *",
-"type": "response"
-},
-"70": {
-"id": "70",
-"mutation": {
-"expression": Array[Dictionary]([{
-"function": "modify_sante",
-"type": "function",
-"value": Array[Array]([Array[Dictionary]([{
-"type": "number",
-"value": 30
-}])])
-}])
-},
-"next_id": "71",
-"parent_id": "69",
-"type": "mutation"
-},
-"71": {
-"id": "71",
-"mutation": {
-"expression": Array[Dictionary]([{
-"function": "modify_stress",
-"type": "function",
-"value": Array[Array]([Array[Dictionary]([{
-"type": "number",
-"value": -10
-}])])
-}])
-},
-"next_id": "73",
-"parent_id": "69",
-"type": "mutation"
-},
-"73": {
-"id": "73",
-"is_snippet": false,
-"next_id": "78",
-"parent_id": "69",
-"type": "goto"
 },
 "74": {
 "id": "74",
 "is_snippet": false,
-"next_id": "94",
+"next_id": "79",
+"parent_id": "70",
 "type": "goto"
 },
-"77": {
-"id": "77",
-"next_id": "78",
+"75": {
+"id": "75",
+"is_snippet": false,
+"next_id": "95",
+"type": "goto"
+},
+"78": {
+"id": "78",
+"next_id": "79",
 "text": "remerciement",
 "type": "title"
 },
-"78": {
+"79": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "78",
-"next_id": "79",
+"id": "79",
+"next_id": "80",
 "tags": PackedStringArray(),
 "text": "Bien merci et à bientôt",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Bien merci et à bientôt",
 "type": "dialogue"
 },
-"79": {
-"id": "79",
+"8": {
+"id": "8",
+"next_id": "9",
+"next_id_after": "62",
+"parent_id": "6",
+"responses": PackedStringArray("8", "14"),
+"tags": PackedStringArray(),
+"text": "* Vous tombez des nues et avez du mal à envisager une telle opération *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* Vous tombez des nues et avez du mal à envisager une telle opération *",
+"type": "response"
+},
+"80": {
+"id": "80",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -812,50 +835,34 @@ lines = {
 }])])
 }])
 },
-"next_id": "81",
+"next_id": "82",
 "type": "mutation"
 },
-"8": {
-"id": "8",
-"mutation": {
-"expression": Array[Dictionary]([{
-"function": "modify_stress",
-"type": "function",
-"value": Array[Array]([Array[Dictionary]([{
-"type": "number",
-"value": -10
-}])])
-}])
-},
-"next_id": "9",
-"parent_id": "7",
-"type": "mutation"
-},
-"81": {
-"id": "81",
+"82": {
+"id": "82",
 "is_snippet": false,
-"next_id": "94",
+"next_id": "95",
 "type": "goto"
 },
-"84": {
-"id": "84",
-"next_id": "86",
+"85": {
+"id": "85",
+"next_id": "87",
 "text": "op_duree",
 "type": "title"
 },
-"86": {
+"87": {
 "character": "Dr.Chirugien",
 "character_replacements": Array[Dictionary]([]),
-"id": "86",
-"next_id": "87",
+"id": "87",
+"next_id": "88",
 "tags": PackedStringArray(),
 "text": "L'opération reste lourde et va donc demander un peu de temps",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "L'opération reste lourde et va donc demander un peu de temps",
 "type": "dialogue"
 },
-"87": {
-"id": "87",
+"88": {
+"id": "88",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -866,22 +873,38 @@ lines = {
 }])])
 }])
 },
-"next_id": "88",
+"next_id": "89",
 "type": "mutation"
 },
-"88": {
-"id": "88",
-"next_id": "89",
-"next_id_after": "90",
-"responses": PackedStringArray("88"),
+"89": {
+"id": "89",
+"next_id": "90",
+"next_id_after": "91",
+"responses": PackedStringArray("89"),
 "tags": PackedStringArray(),
 "text": "*Très bien passons à l'opération*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Très bien passons à l'opération*",
 "type": "response"
 },
-"89": {
-"id": "89",
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": -10
+}])])
+}])
+},
+"next_id": "10",
+"parent_id": "8",
+"type": "mutation"
+},
+"90": {
+"id": "90",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -892,36 +915,24 @@ lines = {
 }])])
 }])
 },
-"next_id": "90",
-"parent_id": "88",
+"next_id": "91",
+"parent_id": "89",
 "type": "mutation"
 },
-"9": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
-"id": "9",
-"next_id": "10",
-"parent_id": "7",
-"tags": PackedStringArray(),
-"text": "Vous n'avez pas a vous inquiéter j'ai l'habitude de ces opérations et je comprend que cela peut sembler compliqué",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Vous n'avez pas a vous inquiéter j'ai l'habitude de ces opérations et je comprend que cela peut sembler compliqué",
-"type": "dialogue"
-},
-"90": {
-"id": "90",
+"91": {
+"id": "91",
 "is_snippet": false,
-"next_id": "94",
+"next_id": "95",
 "type": "goto"
-},
-"93": {
-"id": "93",
-"next_id": "94",
-"text": "fin",
-"type": "title"
 },
 "94": {
 "id": "94",
+"next_id": "95",
+"text": "fin",
+"type": "title"
+},
+"95": {
+"id": "95",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "emit_interaction_finished",
@@ -929,11 +940,11 @@ lines = {
 "value": Array[Array]([])
 }])
 },
-"next_id": "96",
+"next_id": "97",
 "type": "mutation"
 },
-"96": {
-"id": "96",
+"97": {
+"id": "97",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
