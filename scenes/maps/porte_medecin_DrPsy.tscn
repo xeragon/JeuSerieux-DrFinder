@@ -1,26 +1,24 @@
 [gd_scene load_steps=6 format=3 uid="uid://dln8whsr0t5kb"]
 
-[ext_resource type="Script" path="res://scenes/maps/porte_medecin_6.gd" id="1_tqrtq"]
-[ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="2_iuyhb"]
-[ext_resource type="PackedScene" uid="uid://cmtj8otg6lxi1" path="res://scenes/npc/dr_famille.tscn" id="3_gavb5"]
-[ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="3_tj58d"]
-[ext_resource type="PackedScene" uid="uid://b5nb3mu7b4f5o" path="res://scenes/maps/rooms_anim.tscn" id="5_2ault"]
+[ext_resource type="Script" path="res://scenes/maps/porte_medecin_6.gd" id="1_rdmt7"]
+[ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="2_uu8ye"]
+[ext_resource type="PackedScene" uid="uid://cqfnb575uh3u6" path="res://scenes/npc/dr_psy.tscn" id="3_2dkug"]
+[ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="4_su00x"]
+[ext_resource type="PackedScene" uid="uid://b5nb3mu7b4f5o" path="res://scenes/maps/rooms_anim.tscn" id="5_tk68g"]
 
 [node name="porte_medecin6" type="Node2D" node_paths=PackedStringArray("room_doc")]
 y_sort_enabled = true
-script = ExtResource("1_tqrtq")
-room_doc = NodePath("dr_famille")
+script = ExtResource("1_rdmt7")
+room_doc = NodePath("dr_psy")
 
-[node name="player" parent="." instance=ExtResource("2_iuyhb")]
+[node name="player" parent="." instance=ExtResource("2_uu8ye")]
 position = Vector2(-1, 75)
-
-[node name="dr_famille" parent="." instance=ExtResource("3_gavb5")]
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1, 0)
-tile_set = ExtResource("3_tj58d")
+tile_set = ExtResource("4_su00x")
 format = 2
 layer_0/name = "Ground"
 layer_0/y_sort_enabled = true
@@ -57,4 +55,7 @@ position = Vector2(-56, 14)
 [node name="exit_pos" type="Marker2D" parent="."]
 position = Vector2(0, 81)
 
-[node name="rooms_anim" parent="." instance=ExtResource("5_2ault")]
+[node name="rooms_anim" parent="." instance=ExtResource("5_tk68g")]
+
+[node name="dr_psy" parent="." instance=ExtResource("3_2dkug")]
+position = Vector2(-86, 15)

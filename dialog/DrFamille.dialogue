@@ -1,0 +1,61 @@
+~ start
+Dr.Famille: Salut ! ça fait un bail. qu'est-ce qui t'amène aujourd'hui ,
+- *Dire que vous ne vous sentez pas très bien.*
+	Dr.Famille: Dit moi ce qu'il ne vas pas.
+	- * Décrire vos symptômes  en insistant sur ce que vous ressentez mentalement * 
+	Dr.Famille :  C'est intéressant nous allons développer ce sujet je pense que ca vous aidera à guérir 
+	- *Dire que vous avez effectivement besoin d'aide sur le plan psychologique*
+	do modify_stress(-10)
+	do modify_sante(20)
+	Dr.Famille : Pour ça j'ai besoin que vous me détaillez votre ressenti, l'impacte que cette maladie a sur vous et les effets du traitement sur votre santé mental . 
+	- * Décrire votre ressenti en exagérant vos symptômes *
+		do modify_stress(20)
+		Dr.Famille: D'accord c'est vraiment serieux ce que t'as
+		- *Demander si y a un remède immediat* => reme
+		Dr.Famille: Je comprendre votre préoccupation. parfois, la guérison prend du temps. Nous travaillerons ensemble pour un plan efficace => reme
+		
+		
+		- *Demander le processus du traitement*
+			Dr.Famille: Ne vous inquietez pas , je vais vous préscrire les médicaments nécessaire 
+			- * Merci Docteur , à la prochaine *
+	- * Décrire votre ressenti en minimisant vos symptômes*
+		do modify_sante(10)
+		Dr.Famille: il est essentiel que nous comprenions pleinement ce que vous ressentez
+		- * Continuer a minimiser *
+		do modify_stress(20)
+		Dr.Famille: Je vois toujours pas c'est quoi le problème , mais on va continuer a discuter
+		- *expliquer en detail  * => reme
+		
+	
+
+- * Décrire vos symptômes en insistant sur les effets physiques qu'ils impliquent *
+		Dr.Famille: Cela est très utile pour comprendre l'impact de votre état sur votre corps. 
+		- *dire que vous préférez vous concentrer sur vos problèmes physiques *
+		Dr.Famille: Je vois je peux vous conseiller d'aller faire des testes médicaux
+		 - *dire que vous préférez ne pas faire tous ces tests*
+			Dr.Famille: C'est votre choix mais au vue de vos antécédents familiaux ce serait plus sur de faire c'est tests
+			do modify_stress(10)
+			- *Aller faire les tests a contre cœur *
+			do modify_stress(10)
+			do modify_sante(10)
+			Dr.Famille: parfait , la prochaine fois on va profiter de ces résultats pour savoir c'est quoi le soucis
+			- *Maintenir votre position et ne pas faire de tests*
+			Dr.Famille: Alors dans ce cas on va proceder a faire des examens physiques sur ce lit  
+		- *Aller faire des testes médicaux *
+		do modify_stress(10)
+		do modify_sante(20)
+		Dr.Famille: Les tests médicaux nous aideront à mieux comprendre votre état de santé
+		- *D'accord, je vous contacterai dès que j'aurai les résultats. *
+=> fin
+
+~ reme
+Dr.Famille: Je comprendre votre préoccupation. parfois, la guérison prend du temps. Nous travaillerons ensemble pour un plan efficace
+- *Merci a vous , aurevoir *
+=> fin
+
+
+
+
+~ fin
+do emit_interaction_finished()
+=> END

@@ -1,0 +1,201 @@
+[gd_scene load_steps=6 format=3 uid="uid://xxw8r8ankhvi"]
+
+[ext_resource type="Script" path="res://scenes/maps/the_end.gd" id="1_bimvq"]
+[ext_resource type="Texture2D" uid="uid://cuhbywg8ndecf" path="res://assets/Complete_GUI_Essential_Pack_Free_Version/01_Basic_Collection/01_Flat_Theme/Sprites/UI_Flat_Fillbar_01_Hollow.png" id="2_wjmdw"]
+
+[sub_resource type="SystemFont" id="SystemFont_cssfp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1kwm"]
+atlas = ExtResource("2_wjmdw")
+region = Rect2(0, 10, 32, 12)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jwa4p"]
+
+[node name="the_end" type="CanvasLayer"]
+
+[node name="the_end" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+script = ExtResource("1_bimvq")
+
+[node name="ColorRect" type="ColorRect" parent="the_end"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00392157, 0.0117647, 0, 1)
+
+[node name="result" type="RichTextLabel" parent="the_end/ColorRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 92.0
+offset_top = -142.0
+offset_right = 716.0
+offset_bottom = 128.0
+grow_vertical = 2
+theme_override_fonts/normal_font = SubResource("SystemFont_cssfp")
+theme_override_font_sizes/normal_font_size = 30
+bbcode_enabled = true
+text = "    "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label" type="Label" parent="the_end/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.788
+anchor_top = 0.253
+anchor_right = 1.0
+anchor_bottom = 0.31
+offset_left = -156.776
+offset_top = -36.944
+offset_right = -87.0
+offset_bottom = 0.119995
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Vos Statistiques "
+
+[node name="ui" type="Control" parent="the_end/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.655
+anchor_top = 0.306
+anchor_right = 0.868
+anchor_bottom = 0.761
+offset_left = -51.56
+offset_top = 8.71199
+offset_right = -213.936
+offset_bottom = 146.872
+
+[node name="VBoxContainer" type="VBoxContainer" parent="the_end/ColorRect/ui"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.033
+anchor_top = -0.009
+anchor_right = 3.494
+anchor_bottom = 0.689
+offset_left = 204.261
+offset_top = 3.897
+offset_right = 297.998
+offset_bottom = -90.337
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5708
+
+[node name="HSeparator2" type="HSeparator" parent="the_end/ColorRect/ui/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="the_end/ColorRect/ui/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="texture_serenity" type="TextureRect" parent="the_end/ColorRect/ui/VBoxContainer/PanelContainer"]
+self_modulate = Color(0.635294, 0.843137, 0.627451, 1)
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_x1kwm")
+expand_mode = 2
+
+[node name="serenity_bar" type="ProgressBar" parent="the_end/ColorRect/ui/VBoxContainer/PanelContainer/texture_serenity"]
+unique_name_in_owner = true
+self_modulate = Color(0, 1, 1, 1)
+layout_direction = 2
+layout_mode = 2
+anchor_left = 0.111357
+anchor_top = 0.373001
+anchor_right = 0.896572
+anchor_bottom = 0.627002
+offset_left = -0.270821
+offset_top = 0.0499954
+offset_right = 0.125
+offset_bottom = -0.049942
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+theme_override_styles/background = SubResource("StyleBoxEmpty_jwa4p")
+value = 50.0
+fill_mode = 1
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="HSeparator" type="HSeparator" parent="the_end/ColorRect/ui/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="the_end/ColorRect/ui/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="texture_health" type="TextureRect" parent="the_end/ColorRect/ui/VBoxContainer/PanelContainer2"]
+modulate = Color(0.635294, 0.843137, 0.627451, 1)
+texture_filter = 1
+layout_mode = 2
+texture = SubResource("AtlasTexture_x1kwm")
+expand_mode = 2
+
+[node name="health_bar" type="ProgressBar" parent="the_end/ColorRect/ui/VBoxContainer/PanelContainer2/texture_health"]
+unique_name_in_owner = true
+self_modulate = Color(0, 1, 0, 1)
+layout_direction = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0992248
+anchor_top = 0.360001
+anchor_right = 0.900775
+anchor_bottom = 0.640002
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+theme_override_styles/background = SubResource("StyleBoxEmpty_jwa4p")
+value = 50.0
+fill_mode = 1
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="affiche_text" type="Timer" parent="the_end"]
+wait_time = 0.001
+one_shot = true
+autostart = true
+
+[node name="replay" type="Button" parent="the_end"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.034
+anchor_top = 0.838
+anchor_right = 0.204
+anchor_bottom = 0.965
+offset_left = -0.168003
+offset_top = -0.0240479
+offset_right = -0.00801086
+offset_bottom = -0.320007
+text = "rejouer"
+
+[node name="Button" type="Button" parent="the_end"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.279
+anchor_top = 0.838
+anchor_right = 0.445
+anchor_bottom = 0.972
+offset_left = -0.40802
+offset_top = -0.0240479
+offset_right = 0.359985
+offset_bottom = 2.14398
+text = "quit
+"
+
+[connection signal="timeout" from="the_end/affiche_text" to="the_end" method="_on_affiche_text_timeout" flags=18]
+[connection signal="pressed" from="the_end/replay" to="the_end" method="_on_replay_pressed"]
+[connection signal="pressed" from="the_end/Button" to="the_end" method="_on_button_pressed"]

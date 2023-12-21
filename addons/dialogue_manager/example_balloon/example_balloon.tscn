@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=13 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_4u26j"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Texture2D" uid="uid://dnrfxs1w4jvkr" path="res://assets/Complete_GUI_Essential_Pack_Free_Version/01_Basic_Collection/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat.png" id="2_mfwrc"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
-[ext_resource type="Texture2D" uid="uid://bk7bl27csfq5d" path="res://assets/Complete_GUI_Essential_Pack_Free_Version/01_Basic_Collection/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat_Button_02.png" id="4_bk3ho"]
+[ext_resource type="StyleBox" uid="uid://b8ct3vgs4lmv5" path="res://ressource/res_normal.tres" id="5_4hkxe"]
 [ext_resource type="StyleBox" uid="uid://cra034ypg2ftb" path="res://ressource/hover_focus_texture.tres" id="5_5b4b7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -69,13 +69,6 @@ Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mc0a7"]
 texture = ExtResource("2_mfwrc")
 region_rect = Rect2(32, 32, 96, 96)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nt4wy"]
-texture = ExtResource("4_bk3ho")
-texture_margin_left = 80.0
-texture_margin_right = 80.0
-region_rect = Rect2(0, 192, 96, 32)
-modulate_color = Color(0, 0.298039, 0.584314, 1)
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
@@ -151,7 +144,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/outline_size = 0
 theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxTexture_nt4wy")
+theme_override_styles/normal = ExtResource("5_4hkxe")
 theme_override_styles/hover = ExtResource("5_5b4b7")
 theme_override_styles/focus = ExtResource("5_5b4b7")
 text = "Response example"

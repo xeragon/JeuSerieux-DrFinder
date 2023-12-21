@@ -273,7 +273,21 @@ func show_example_dialogue_balloon(resource: DialogueResource, title: String = "
 	return balloon
 
 
+func show_tuto_balloon(resource: DialogueResource, title: String = "", extra_game_states: Array = [])-> CanvasLayer:
+	var ExampleBalloonScene = load("res://addons/dialogue_manager/tuto_balloon/tuto_balloon.tscn")
+	var balloon: Node = ExampleBalloonScene.instantiate()
+	get_current_scene.call().add_child(balloon)
+	balloon.start(resource, title, extra_game_states)
+	return balloon
+	
+func show_reserve_balloon(resource: DialogueResource, title: String = "", extra_game_states: Array = [])-> CanvasLayer:
+	var ExampleBalloonScene = load("res://addons/dialogue_manager/reserve_balloon/reserve_balloon.tscn")
+	var balloon: Node = ExampleBalloonScene.instantiate()
+	get_current_scene.call().add_child(balloon)
+	balloon.start(resource, title, extra_game_states)
+	return balloon
 ### Dotnet bridge
+
 
 
 func _bridge_get_next_dialogue_line(resource: DialogueResource, key: String, extra_game_states: Array = []) -> void:

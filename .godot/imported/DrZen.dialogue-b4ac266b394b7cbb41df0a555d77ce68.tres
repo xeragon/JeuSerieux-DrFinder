@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3r2rf"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_g5xi3"]
 
 [resource]
-script = ExtResource("1_3r2rf")
+script = ExtResource("1_g5xi3")
 using_states = PackedStringArray()
 titles = {
 "chercher_ses_mots": "32",
@@ -90,7 +90,7 @@ lines = {
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": -10
+"value": 10
 }])])
 }])
 },
@@ -186,7 +186,7 @@ lines = {
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": -5
+"value": 5
 }])])
 }])
 },
@@ -271,7 +271,7 @@ lines = {
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": -8
+"value": 8
 }])])
 }])
 },
@@ -546,7 +546,7 @@ lines = {
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": -5
+"value": 5
 }])])
 }])
 },
