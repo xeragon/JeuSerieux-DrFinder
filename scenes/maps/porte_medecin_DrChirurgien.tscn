@@ -15,6 +15,7 @@ room_doc = NodePath("dr_chirurgien")
 position = Vector2(-1, 75)
 
 [node name="dr_chirurgien" parent="." instance=ExtResource("3_tgur6")]
+position = Vector2(-82, 31)
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

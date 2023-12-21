@@ -153,7 +153,6 @@ move_direction = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
-speed_scale = 9.6
 libraries = {
 "": SubResource("AnimationLibrary_4cc1t")
 }
