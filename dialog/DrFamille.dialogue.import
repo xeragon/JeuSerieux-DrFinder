@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dd10q3jq2xvpf"
+path="res://.godot/imported/DrFamille.dialogue-02176b42822e59b078ee48598de76529.tres"
+
+[deps]
+
+source_file="res://dialog/DrFamille.dialogue"
+dest_files=["res://.godot/imported/DrFamille.dialogue-02176b42822e59b078ee48598de76529.tres"]
+
+[params]
+
+defaults=true

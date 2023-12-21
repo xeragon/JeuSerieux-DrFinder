@@ -104,7 +104,6 @@ func set_docs_queue():
 		n = rng.randi_range(10,20)
 		docs_queue[x] = n
 		total_spe += n
-	
 	pump_up_queues(total,DocType.DOC)
 	pump_up_queues(total_spe,DocType.SPE_DOC)
 	pump_down_queues(total,DocType.DOC)
@@ -144,7 +143,7 @@ func pump_down_queues(total : int, doc_type : DocType ):
 				docs_queue[doc_key] -= 1
 				current_total -= 1
 	else:
-		while  current_total > WANTED_TOTAL_QUEUE:
+		while  current_total > WANTED_TOTAL_QUEUE_SPE:
 			doc_key = spe_docs_queue.keys()[rng.randi_range(0,spe_docs_queue.size()-1)]
 			if spe_docs_queue[doc_key] - 1 > 0:
 				spe_docs_queue[doc_key] -= 1
