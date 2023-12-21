@@ -1,3 +1,6 @@
+ColorRect
+CollisionShape2D
+Area2D
 Label
 Sprite2D
 StaticBody2D
@@ -5,7 +8,6 @@ Timer
 RichTextLabel
 Control
 CanvasLayer
-ColorRect
 Button
 AnimationPlayer
 AnimationTree
@@ -25,8 +27,6 @@ ProgressBar
 Camera2D
 PathFollow2D
 Path2D
-CollisionShape2D
-Area2D
 AnimatedSprite2D
 CPUParticles2D
 Node

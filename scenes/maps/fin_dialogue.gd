@@ -8,7 +8,6 @@ func _ready():
 	$ColorRect/VBoxContainer/PanelContainer2/texture_health/health_bar.value=GlobalScript.player_sante
 	$ColorRect/VBoxContainer/PanelContainer/texture_serenity/serenity_bar.value=GlobalScript.player_stress
 	
-	
 
 func _process(delta):
 	if Input.is_action_pressed("ui_accept") and listening:

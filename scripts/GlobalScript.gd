@@ -1,7 +1,10 @@
 extends Node
 
 const BASE_STAT = 30
-const WANTED_TOTAL_QUEUE = 50
+const WANTED_TOTAL_QUEUE = 25
+const WANTED_TOTAL_QUEUE_SPE = 45
+var is_reservation_used = false
+var reserved_doc : String  
 var str : String
 var player_name : String
 var player : Player
@@ -13,20 +16,25 @@ var player_stress : int
 var is_game_start : bool = true 
 var round_count = 1;
 var end_speech : String
+var is_reservation_over = false
 
 var rng = RandomNumberGenerator.new()
-
+enum DocType {DOC, SPE_DOC}
 var docs_queue : Dictionary  = {
 	"DrZen" : 0,
 	"DrDroy" : 0,
 	"DrZimZim" : 0,
-	"DrChirurgien" : 0,
-	"DrPsy" : 0,
 	"DrFamille" : 0
+	}
+	
+var spe_docs_queue : Dictionary  = {
+	"DrChirurgien" : 0,
+	"DrPsy" : 0
 	}
 
 
 signal interaction_finished 
+
 func reset_player_stat():
 	player_sante = BASE_STAT
 	player_stress = BASE_STAT
@@ -34,7 +42,9 @@ func reset_player_stat():
 func _ready():
 	reset_player_stat()
 	set_docs_queue()
-
+func reserve_doc(doc : String):
+	reserved_doc = doc
+	is_reservation_used = true
 func emit_interaction_finished():
 	emit_signal("interaction_finished")
 
@@ -64,6 +74,8 @@ func load_player_stats():
 
 func replay():
 	round_count = 1;
+	is_reservation_over = false
+	is_reservation_used = false
 	reset_player_stat()
 	get_tree().change_scene_to_file("res://scenes/maps/acceuil_et_portes.tscn")
 	
@@ -77,43 +89,68 @@ func next_round():
 
 func apply_queue_debuff(doc_key : String):
 	modify_stress(-(docs_queue[doc_key]))
+	modify_sante(-(docs_queue[doc_key]))
 
 func set_docs_queue():
-
-	var total : int
+	var total : int = 0
+	var total_spe : int = 0
 	var n : int 
-	
 	for x in docs_queue:
-		n = rng.randi_range(0,25)
+		n = rng.randi_range(0,10)
 		docs_queue[x] = n
 		total += n
-	
-	if total > WANTED_TOTAL_QUEUE:
-		pump_down_queues(total)
-	elif total < WANTED_TOTAL_QUEUE:
-		pump_up_queues(total)
-	
-	print(docs_queue)
-	
-func pump_up_queues(total : int ):
-	var current_total = total
-	var min_doc : String = "DrZen"
-	while  current_total < WANTED_TOTAL_QUEUE:
-		for x in docs_queue:
-			if docs_queue[x] < docs_queue[min_doc]:
-				min_doc = x
-		docs_queue[min_doc] += 1
-		current_total += 1 
 		
-func pump_down_queues(total : int ):
+	for x in spe_docs_queue:
+		n = rng.randi_range(10,20)
+		docs_queue[x] = n
+		total_spe += n
+	
+	pump_up_queues(total,DocType.DOC)
+	pump_up_queues(total_spe,DocType.SPE_DOC)
+	pump_down_queues(total,DocType.DOC)
+	pump_down_queues(total_spe,DocType.SPE_DOC)
+	if is_reservation_used and not is_reservation_over:
+		if docs_queue.has(reserved_doc):
+			docs_queue[reserved_doc] = 0
+		else:
+			spe_docs_queue[reserved_doc] = 0
+	
+	
+func pump_up_queues(total : int , doc_type : DocType):
 	var current_total = total
-	var max_doc : String = "DrZen"
-	while  current_total > WANTED_TOTAL_QUEUE:
-		for x in docs_queue:
-			if docs_queue[x] > docs_queue[max_doc]:
-				max_doc = x
-		docs_queue[max_doc] -= 1
-		current_total -= 1
+	var doc_key : String
+	var doc_dico : Dictionary
+
+	if doc_type == DocType.DOC:
+		while  current_total < WANTED_TOTAL_QUEUE:
+			doc_key = docs_queue.keys()[rng.randi_range(0,docs_queue.size()-1)]
+			docs_queue[doc_key] += 1
+			current_total += 1
+	else:
+		while  current_total < WANTED_TOTAL_QUEUE_SPE:
+			doc_key = spe_docs_queue.keys()[rng.randi_range(0,spe_docs_queue.size()-1)]
+			spe_docs_queue[doc_key] += 1
+			current_total += 1
+		
+func pump_down_queues(total : int, doc_type : DocType ):
+	var current_total = total
+	var doc_key : String
+	var doc_dico : Dictionary
+
+	if doc_type == DocType.DOC:
+		while  current_total > WANTED_TOTAL_QUEUE:
+			doc_key = docs_queue.keys()[rng.randi_range(0,docs_queue.size()-1)]
+			if docs_queue[doc_key] - 1 > 0:
+				docs_queue[doc_key] -= 1
+				current_total -= 1
+	else:
+		while  current_total > WANTED_TOTAL_QUEUE:
+			doc_key = spe_docs_queue.keys()[rng.randi_range(0,spe_docs_queue.size()-1)]
+			if spe_docs_queue[doc_key] - 1 > 0:
+				spe_docs_queue[doc_key] -= 1
+				current_total -= 1
+
+
 
 func get_round_start_str():
 	return "Visite " + str(round_count)

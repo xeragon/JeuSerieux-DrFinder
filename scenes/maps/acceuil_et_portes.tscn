@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6k6ooc3nqlqe"]
+[gd_scene load_steps=13 format=3 uid="uid://b6k6ooc3nqlqe"]
 
 [ext_resource type="Script" path="res://scenes/maps/acceuil_et_portes.gd" id="1_y5okk"]
 [ext_resource type="TileSet" uid="uid://bvixruinodwkl" path="res://scenes/maps/salles.tres" id="2_awixh"]
 [ext_resource type="PackedScene" uid="uid://c2e12uwd7qwk3" path="res://scenes/player/player.tscn" id="4_1g3ia"]
 [ext_resource type="PackedScene" uid="uid://bh0hqw7l3ih45" path="res://scenes/npc/secretaire.tscn" id="4_wt7sr"]
 [ext_resource type="Texture2D" uid="uid://b3kyrbsljuhpq" path="res://assets/Modern tiles_Free/free_overview.png" id="5_x8riy"]
+[ext_resource type="PackedScene" uid="uid://u02rpxkw284m" path="res://scenes/npc/reservation_secretaire.tscn" id="6_a50yp"]
 
 [sub_resource type="Animation" id="Animation_buagh"]
 length = 0.001
@@ -152,6 +153,7 @@ move_direction = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
+speed_scale = 9.6
 libraries = {
 "": SubResource("AnimationLibrary_4cc1t")
 }
@@ -159,7 +161,7 @@ libraries = {
 [node name="porte_DrZen" type="Area2D" parent="."]
 position = Vector2(-168, -85)
 
-[node name="DrZen" type="CollisionShape2D" parent="porte_DrZen"]
+[node name="collision" type="CollisionShape2D" parent="porte_DrZen"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_qiqbo")
 
@@ -186,10 +188,17 @@ grow_vertical = 2
 text = "10"
 label_settings = SubResource("LabelSettings_spnq7")
 
+[node name="filter" type="ColorRect" parent="porte_DrZen"]
+modulate = Color(0.827451, 0.454902, 0.827451, 0)
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = 5.0
+
 [node name="porte_DrDroy" type="Area2D" parent="."]
 position = Vector2(-120, -85)
 
-[node name="DrDroy" type="CollisionShape2D" parent="porte_DrDroy"]
+[node name="collision" type="CollisionShape2D" parent="porte_DrDroy"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
 [node name="panneau" type="Sprite2D" parent="porte_DrDroy"]
@@ -215,11 +224,18 @@ grow_vertical = 2
 text = "10"
 label_settings = SubResource("LabelSettings_spnq7")
 
+[node name="filter" type="ColorRect" parent="porte_DrDroy"]
+modulate = Color(0.827451, 0.454902, 0.827451, 0)
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = 5.0
+
 [node name="porte_DrZimZim" type="Area2D" parent="."]
 position = Vector2(-72, -85)
 metadata/_edit_group_ = true
 
-[node name="DrZimZim" type="CollisionShape2D" parent="porte_DrZimZim"]
+[node name="collision" type="CollisionShape2D" parent="porte_DrZimZim"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
 [node name="panneau" type="Sprite2D" parent="porte_DrZimZim"]
@@ -245,11 +261,18 @@ grow_vertical = 2
 text = "10"
 label_settings = SubResource("LabelSettings_spnq7")
 
+[node name="filter" type="ColorRect" parent="porte_DrZimZim"]
+modulate = Color(0.827451, 0.454902, 0.827451, 0)
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = 5.0
+
 [node name="porte_DrChirurgien" type="Area2D" parent="."]
 position = Vector2(72, -84)
 metadata/_edit_group_ = true
 
-[node name="DrChirugien" type="CollisionShape2D" parent="porte_DrChirurgien"]
+[node name="collision" type="CollisionShape2D" parent="porte_DrChirurgien"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
 [node name="panneau" type="Sprite2D" parent="porte_DrChirurgien"]
@@ -275,11 +298,18 @@ grow_vertical = 2
 text = "10"
 label_settings = SubResource("LabelSettings_spnq7")
 
+[node name="filter" type="ColorRect" parent="porte_DrChirurgien"]
+modulate = Color(0.827451, 0.454902, 0.827451, 0)
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = 5.0
+
 [node name="porte_DrPsy" type="Area2D" parent="."]
 position = Vector2(120, -84)
 metadata/_edit_group_ = true
 
-[node name="DrPsy" type="CollisionShape2D" parent="porte_DrPsy"]
+[node name="collision" type="CollisionShape2D" parent="porte_DrPsy"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
 [node name="panneau" type="Sprite2D" parent="porte_DrPsy"]
@@ -305,10 +335,17 @@ grow_vertical = 2
 text = "10"
 label_settings = SubResource("LabelSettings_spnq7")
 
+[node name="filter" type="ColorRect" parent="porte_DrPsy"]
+modulate = Color(0.827451, 0.454902, 0.827451, 0)
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = 5.0
+
 [node name="porte_DrFamille" type="Area2D" parent="."]
 position = Vector2(168, -84)
 
-[node name="DrFamille" type="CollisionShape2D" parent="porte_DrFamille"]
+[node name="collision" type="CollisionShape2D" parent="porte_DrFamille"]
 shape = SubResource("RectangleShape2D_qiqbo")
 
 [node name="panneau" type="Sprite2D" parent="porte_DrFamille"]
@@ -334,13 +371,19 @@ grow_vertical = 2
 text = "10"
 label_settings = SubResource("LabelSettings_spnq7")
 
+[node name="filter" type="ColorRect" parent="porte_DrFamille"]
+modulate = Color(0.827451, 0.454902, 0.827451, 0)
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = 5.0
+
 [node name="fondu_timer" type="Timer" parent="."]
 unique_name_in_owner = true
 wait_time = 0.01
 one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -373,6 +416,9 @@ text_direction = 1
 unique_name_in_owner = true
 wait_time = 0.01
 one_shot = true
+
+[node name="reservation_secretaire" parent="." instance=ExtResource("6_a50yp")]
+position = Vector2(-24, -68)
 
 [connection signal="body_entered" from="porte_DrZen" to="." method="_on_porte_dr_zen_body_entered"]
 [connection signal="body_entered" from="porte_DrDroy" to="." method="_on_porte_dr_droy_body_entered"]
