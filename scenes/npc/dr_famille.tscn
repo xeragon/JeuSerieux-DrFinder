@@ -1,31 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmtj8otg6lxi1"]
+[gd_scene load_steps=6 format=3 uid="uid://cmtj8otg6lxi1"]
 
-[ext_resource type="Texture2D" uid="uid://ckuqvfgnkx2xt" path="res://assets/Modern tiles_Free/Characters_free/Amelia_sit3_16x16.png" id="1_mil4h"]
 [ext_resource type="Script" path="res://scenes/npc/dr_famille.gd" id="1_ofux2"]
+[ext_resource type="Texture2D" uid="uid://d3h4rtydint05" path="res://assets/Modern tiles_Free/Characters_free/Bob_sit3_16x16.png" id="2_6mb82"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dt6kq"]
-atlas = ExtResource("1_mil4h")
-region = Rect2(0, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wefnh"]
-atlas = ExtResource("1_mil4h")
-region = Rect2(16, 0, 16, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xi5fs"]
-atlas = ExtResource("1_mil4h")
-region = Rect2(64, 0, 16, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_empun"]
+atlas = ExtResource("2_6mb82")
+region = Rect2(2, 0, 15, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jvdn4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dt6kq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wefnh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xi5fs")
+"texture": SubResource("AtlasTexture_empun")
 }],
 "loop": true,
 "name": &"default",

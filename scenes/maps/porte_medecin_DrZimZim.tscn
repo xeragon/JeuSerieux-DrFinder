@@ -12,8 +12,11 @@ script = ExtResource("1_x2283")
 room_doc = NodePath("dr_zimzim")
 
 [node name="player" parent="." instance=ExtResource("2_jkux8")]
-position = Vector2(0, 73)
+position = Vector2(57, 16)
 interacting = true
+state = 2
+move_direction = 2
+cutscene = true
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
