@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://c5vk5i7xyppni"]
 
 [ext_resource type="PackedScene" uid="uid://du62k3mlvoigk" path="res://scenes/npc/npc.tscn" id="1_hoato"]
-[ext_resource type="Script" path="res://dr_zen.gd" id="2_s6pa1"]
+[ext_resource type="Script" path="res://scenes/npc/dr_zen.gd" id="2_ia5y1"]
 [ext_resource type="Texture2D" uid="uid://ddgcfc3ld4pff" path="res://assets/Modern tiles_Free/Characters_free/Adam_sit3_16x16.png" id="3_68mon"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hslsk"]
@@ -56,7 +56,7 @@ animations = [{
 
 [node name="dr_zen" instance=ExtResource("1_hoato")]
 y_sort_enabled = true
-script = ExtResource("2_s6pa1")
+script = ExtResource("2_ia5y1")
 npc_name = ""
 
 [node name="AnimatedSprite2D" parent="." index="0"]
