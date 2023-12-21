@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://c2e12uwd7qwk3"]
+[gd_scene load_steps=111 format=3 uid="uid://c2e12uwd7qwk3"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_jqxhe"]
 [ext_resource type="Texture2D" uid="uid://e0fjhhk6468h" path="res://assets/Modern tiles_Free/Characters_free/Alex_idle_anim_16x16.png" id="2_qigia"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://cmbbhxcfyivw5" path="res://assets/tiny_speech_indicators-11x11.png" id="5_4n7fl"]
 [ext_resource type="Texture2D" uid="uid://cuhbywg8ndecf" path="res://assets/Complete_GUI_Essential_Pack_Free_Version/01_Basic_Collection/01_Flat_Theme/Sprites/UI_Flat_Fillbar_01_Hollow.png" id="5_nevcw"]
 [ext_resource type="Texture2D" uid="uid://dvrvfgo3acwp1" path="res://assets/Modern tiles_Free/Characters_free/Adam_idle_16x16.png" id="6_idq3u"]
-[ext_resource type="Texture2D" uid="uid://ctrem0h3n5xtg" path="res://assets/Modern tiles_Free/Characters_free/Alex_idle_16x16.png" id="8_28a1p"]
+[ext_resource type="Texture2D" uid="uid://dip75ejlbkbkd" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_chauve_16x16-export.png" id="7_p8kdr"]
+[ext_resource type="Texture2D" uid="uid://dptt01xiqdkfa" path="res://assets/Modern tiles_Free/Characters_free/Dr_Oy_idle_16x16-export.png" id="8_e6egt"]
+[ext_resource type="Texture2D" uid="uid://dj4wsa3iyc8lt" path="res://assets/Modern tiles_Free/Characters_free/Chirurgien_idle_16x16-export.png" id="9_ikxbv"]
 [ext_resource type="Texture2D" uid="uid://jdvgc16uyquv" path="res://assets/Modern tiles_Free/Characters_free/Amelia_idle_16x16.png" id="9_qb1f4"]
 [ext_resource type="Texture2D" uid="uid://dg8x3ienmtgyw" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_16x16.png" id="10_dcnpk"]
 [ext_resource type="PackedScene" uid="uid://dik8lb331awb5" path="res://texture_progress_bar.tscn" id="10_ppdp2"]
@@ -509,15 +511,23 @@ region = Rect2(47.9453, 7.28437, 15.1346, 16.2157)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcq3t"]
 bg_color = Color(1, 0.533333, 0.345098, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lircr"]
-atlas = ExtResource("8_28a1p")
-region = Rect2(49.6264, 9.43485, 13.4894, 14.9283)
+[sub_resource type="AtlasTexture" id="AtlasTexture_reak6"]
+atlas = ExtResource("7_p8kdr")
+region = Rect2(47.862, 8.99881, 15.4049, 15.8103)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07xtc"]
 bg_color = Color(0.211765, 0.552941, 0.627451, 1)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3gum"]
+atlas = ExtResource("8_e6egt")
+region = Rect2(48.2155, 9.44646, 16.0805, 16.0805)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgf6b"]
 bg_color = Color(0.933333, 0.717647, 0.431373, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6i321"]
+atlas = ExtResource("9_ikxbv")
+region = Rect2(48.6209, 8.36541, 14.7292, 15.8103)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1odja"]
 bg_color = Color(0.67451, 0.482353, 1, 1)
@@ -846,27 +856,34 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_pcq3t")
 text = "Dr Zimzim"
-icon = SubResource("AtlasTexture_lircr")
+icon = SubResource("AtlasTexture_reak6")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
 [node name="Btn_dr3" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_07xtc")
 text = "Dr Roy"
+icon = SubResource("AtlasTexture_e3gum")
 icon_alignment = 1
 vertical_icon_alignment = 0
 expand_icon = true
 
 [node name="Btn_dr4" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
+texture_filter = 1
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_xgf6b")
 text = "chirurgien"
+icon = SubResource("AtlasTexture_6i321")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
 
 [node name="Btn_dr5" type="Button" parent="player_hud/Phone/phone/VBoxContainer"]
 texture_filter = 1

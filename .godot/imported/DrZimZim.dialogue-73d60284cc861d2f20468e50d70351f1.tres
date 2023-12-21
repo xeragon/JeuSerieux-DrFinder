@@ -1,0 +1,552 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_8gxdy"]
+
+[resource]
+script = ExtResource("1_8gxdy")
+using_states = PackedStringArray()
+titles = {
+"explique": "11",
+"fin": "59",
+"sol_mag": "48",
+"start": "2",
+"stresse": "28"
+}
+character_names = PackedStringArray("Dr.ZimZim", "Dr.Chepaki")
+first_title = "2"
+lines = {
+"1": {
+"id": "1",
+"next_id": "2",
+"text": "start",
+"type": "title"
+},
+"10": {
+"id": "10",
+"next_id": "11",
+"text": "explique",
+"type": "title"
+},
+"11": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"tags": PackedStringArray(),
+"text": "Ah okey j'ai compris , j'avais un cas pareil  la semaine derniere avec un autre patient , il a mangé dans le meme restaurant et il a eu les meme symptomes    .",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ah okey j'ai compris , j'avais un cas pareil  la semaine derniere avec un autre patient , il a mangé dans le meme restaurant et il a eu les meme symptomes    .",
+"type": "dialogue"
+},
+"12": {
+"id": "12",
+"next_id": "13",
+"next_id_after": "26",
+"responses": PackedStringArray("12", "15"),
+"tags": PackedStringArray(),
+"text": "Du coup il a pris quoi comme medicaments ?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Du coup il a pris quoi comme medicaments ?",
+"type": "response"
+},
+"13": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "26",
+"parent_id": "12",
+"tags": PackedStringArray(),
+"text": "Ne vous inquietez pas je vais vous préscrire les médicaments nécessaire",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ne vous inquietez pas je vais vous préscrire les médicaments nécessaire",
+"type": "dialogue"
+},
+"15": {
+"id": "15",
+"next_id": "16",
+"next_id_after": "26",
+"tags": PackedStringArray(),
+"text": "*C'est quoi le nom du restaurant *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*C'est quoi le nom du restaurant *",
+"type": "response"
+},
+"16": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "Ye Doy , c'est un restau Indien , il fait aussi des soupes traditionelle , il peuvent etre un remède a ta maladie",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ye Doy , c'est un restau Indien , il fait aussi des soupes traditionelle , il peuvent etre un remède a ta maladie",
+"type": "dialogue"
+},
+"17": {
+"id": "17",
+"next_id": "26",
+"next_id_after": "26",
+"parent_id": "15",
+"responses": PackedStringArray("17", "18"),
+"tags": PackedStringArray(),
+"text": "*tester le remede *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*tester le remede *",
+"type": "response"
+},
+"18": {
+"id": "18",
+"next_id": "19",
+"next_id_after": "26",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "*Demander les compositions de la soupe*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Demander les compositions de la soupe*",
+"type": "response"
+},
+"19": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "21",
+"parent_id": "18",
+"tags": PackedStringArray(),
+"text": "Cette soupes est composé de  bouillon de poulet , des carottes , d'herbes et de l'huile d'olive",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Cette soupes est composé de  bouillon de poulet , des carottes , d'herbes et de l'huile d'olive",
+"type": "dialogue"
+},
+"2": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "2",
+"next_id": "3",
+"tags": PackedStringArray(),
+"text": "Bonjour Mr comment puis-je vous aider aujourd'hui ?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bonjour Mr comment puis-je vous aider aujourd'hui ?",
+"type": "dialogue"
+},
+"21": {
+"id": "21",
+"next_id": "22",
+"next_id_after": "26",
+"parent_id": "18",
+"responses": PackedStringArray("21", "24"),
+"tags": PackedStringArray(),
+"text": "*Tester la soupe*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Tester la soupe*",
+"type": "response"
+},
+"22": {
+"character": "Dr.Chepaki",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"parent_id": "21",
+"tags": PackedStringArray(),
+"text": "parfait !",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "parfait !",
+"type": "dialogue"
+},
+"23": {
+"id": "23",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": -5
+}])])
+}])
+},
+"next_id": "26",
+"parent_id": "21",
+"type": "mutation"
+},
+"24": {
+"id": "24",
+"next_id": "25",
+"next_id_after": "26",
+"parent_id": "18",
+"tags": PackedStringArray(),
+"text": "*Ne pas tester la soupe*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Ne pas tester la soupe*",
+"type": "response"
+},
+"25": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"parent_id": "24",
+"tags": PackedStringArray(),
+"text": "ah bon c'est vous qui voyez...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "ah bon c'est vous qui voyez...",
+"type": "dialogue"
+},
+"26": {
+"id": "26",
+"is_snippet": false,
+"next_id": "59",
+"type": "goto"
+},
+"27": {
+"id": "27",
+"next_id": "28",
+"text": "stresse",
+"type": "title"
+},
+"28": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "29",
+"tags": PackedStringArray(),
+"text": "Pas de problème, prenez votre temps. Essayez de décrire ce que vous ressentez",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Pas de problème, prenez votre temps. Essayez de décrire ce que vous ressentez",
+"type": "dialogue"
+},
+"29": {
+"id": "29",
+"next_id": "30",
+"next_id_after": "45",
+"responses": PackedStringArray("29", "36"),
+"tags": PackedStringArray(),
+"text": "* demander l'ensemble du processus médical, y compris les coûts, les risques et les avantages*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* demander l'ensemble du processus médical, y compris les coûts, les risques et les avantages*",
+"type": "response"
+},
+"3": {
+"id": "3",
+"next_id": "11",
+"next_id_after": "11",
+"responses": PackedStringArray("3", "4"),
+"tags": PackedStringArray(),
+"text": "*expliquer vos symptômes que vous ressentez*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*expliquer vos symptômes que vous ressentez*",
+"type": "response"
+},
+"30": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "31",
+"parent_id": "29",
+"tags": PackedStringArray(),
+"text": "Vous pouvez allongez sur le lit pour que je fasse les différents testes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vous pouvez allongez sur le lit pour que je fasse les différents testes",
+"type": "dialogue"
+},
+"31": {
+"id": "31",
+"next_id": "32",
+"next_id_after": "32",
+"parent_id": "29",
+"responses": PackedStringArray("31"),
+"tags": PackedStringArray(),
+"text": "*Allonger et faire le nécessaire*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Allonger et faire le nécessaire*",
+"type": "response"
+},
+"32": {
+"id": "32",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": -8
+}])])
+}])
+},
+"next_id": "33",
+"parent_id": "29",
+"type": "mutation"
+},
+"33": {
+"id": "33",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": -5
+}])])
+}])
+},
+"next_id": "45",
+"parent_id": "29",
+"type": "mutation"
+},
+"36": {
+"id": "36",
+"next_id": "37",
+"next_id_after": "45",
+"tags": PackedStringArray(),
+"text": "*Décrire comment vous ressentez et le differentes symptomes que vous avez*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Décrire comment vous ressentez et le differentes symptomes que vous avez*",
+"type": "response"
+},
+"37": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "37",
+"next_id": "38",
+"parent_id": "36",
+"tags": PackedStringArray(),
+"text": "Ah D'accord , Il a l'air critique votre maladie mais j'ai une solution efficace",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ah D'accord , Il a l'air critique votre maladie mais j'ai une solution efficace",
+"type": "dialogue"
+},
+"38": {
+"id": "38",
+"next_id": "39",
+"next_id_after": "45",
+"parent_id": "36",
+"responses": PackedStringArray("38", "44"),
+"tags": PackedStringArray(),
+"text": "*Demander si y 'a un remède pharmaceutique pour ça  *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Demander si y 'a un remède pharmaceutique pour ça  *",
+"type": "response"
+},
+"39": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "39",
+"next_id": "40",
+"parent_id": "38",
+"tags": PackedStringArray(),
+"text": "Oui je te fais une note , normalement dans une semaine t'auras plus rrien",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oui je te fais une note , normalement dans une semaine t'auras plus rrien",
+"type": "dialogue"
+},
+"4": {
+"id": "4",
+"next_id": "5",
+"next_id_after": "11",
+"tags": PackedStringArray(),
+"text": "*Essayer de faire une blague pour remonter le moral*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Essayer de faire une blague pour remonter le moral*",
+"type": "response"
+},
+"40": {
+"id": "40",
+"next_id": "41",
+"next_id_after": "45",
+"parent_id": "38",
+"responses": PackedStringArray("40", "43"),
+"tags": PackedStringArray(),
+"text": "*commencer le traitement*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*commencer le traitement*",
+"type": "response"
+},
+"41": {
+"id": "41",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": -20
+}])])
+}])
+},
+"next_id": "45",
+"parent_id": "40",
+"type": "mutation"
+},
+"43": {
+"id": "43",
+"next_id": "48",
+"next_id_after": "45",
+"parent_id": "38",
+"tags": PackedStringArray(),
+"text": "*demander est ce qu'il y a une solution magique *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*demander est ce qu'il y a une solution magique *",
+"type": "response"
+},
+"44": {
+"id": "44",
+"next_id": "48",
+"next_id_after": "45",
+"parent_id": "36",
+"tags": PackedStringArray(),
+"text": "*demander est ce qu'il y a une solution magique *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*demander est ce qu'il y a une solution magique *",
+"type": "response"
+},
+"45": {
+"id": "45",
+"is_snippet": false,
+"next_id": "59",
+"type": "goto"
+},
+"47": {
+"id": "47",
+"next_id": "48",
+"text": "sol_mag",
+"type": "title"
+},
+"48": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "48",
+"next_id": "49",
+"tags": PackedStringArray(),
+"text": "C'est l'ahwaganda , c'est un melange de l'urine de la tortue et des epices du brézil",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "C'est l'ahwaganda , c'est un melange de l'urine de la tortue et des epices du brézil",
+"type": "dialogue"
+},
+"49": {
+"id": "49",
+"next_id": "50",
+"next_id_after": "55",
+"responses": PackedStringArray("49", "52"),
+"tags": PackedStringArray(),
+"text": "*Prendre le traitement*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Prendre le traitement*",
+"type": "response"
+},
+"5": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Vous avez vraiment un très bon sens de l'humour, mais j'aimerais que nous nous concentrions sur vos symptômes pour trouver le remède adéquat à votre maladie.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vous avez vraiment un très bon sens de l'humour, mais j'aimerais que nous nous concentrions sur vos symptômes pour trouver le remède adéquat à votre maladie.",
+"type": "dialogue"
+},
+"50": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "50",
+"next_id": "51",
+"parent_id": "49",
+"tags": PackedStringArray(),
+"text": "Cava bientot guérire !",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Cava bientot guérire !",
+"type": "dialogue"
+},
+"51": {
+"id": "51",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": -20
+}])])
+}])
+},
+"next_id": "55",
+"parent_id": "49",
+"type": "mutation"
+},
+"52": {
+"id": "52",
+"next_id": "53",
+"next_id_after": "55",
+"tags": PackedStringArray(),
+"text": "*Refuser le traitement*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Refuser le traitement*",
+"type": "response"
+},
+"53": {
+"character": "Dr.ZimZim",
+"character_replacements": Array[Dictionary]([]),
+"id": "53",
+"next_id": "55",
+"parent_id": "52",
+"tags": PackedStringArray(),
+"text": "comme vous voulez ...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "comme vous voulez ...",
+"type": "dialogue"
+},
+"55": {
+"id": "55",
+"is_snippet": false,
+"next_id": "59",
+"type": "goto"
+},
+"58": {
+"id": "58",
+"next_id": "59",
+"text": "fin",
+"type": "title"
+},
+"59": {
+"id": "59",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit_interaction_finished",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "61",
+"type": "mutation"
+},
+"6": {
+"id": "6",
+"next_id": "11",
+"next_id_after": "11",
+"parent_id": "4",
+"responses": PackedStringArray("6", "7"),
+"tags": PackedStringArray(),
+"text": "décrire vos symptomes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "décrire vos symptomes",
+"type": "response"
+},
+"61": {
+"id": "61",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"7": {
+"id": "7",
+"next_id": "28",
+"next_id_after": "11",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "*bugguer sur les mots pour expliquer ce qui ne va pas *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*bugguer sur les mots pour expliquer ce qui ne va pas *",
+"type": "response"
+}
+}
+metadata/dialogue_manager_version = "2.28.0"
