@@ -1,58 +1,71 @@
 ~ start
 Dr.Droy: Bonjour, vous pouvez vous installer !
-- *S'asseoire* => oklm
+- *Decrire vos symptomes* => description
 - *faire une blague*
 	Dr.Droy: Asseyez-vous s'il vous plaît. Veuillez noter que je préfère que nous restions concentrés sur votre consultation médicale. Les blagues ne sont pas appropriées dans ce contexte. Maintenant, expliquez-moi vos symptômes et la raison de votre visite aujourd'hui .
-	- *décrire vos symptomes * => oklm
-	- *tenter une poignée de main* => poigne_main
+	- *décrire vos symptomes * => description
+	- *chercher ses mots* => cherche_mots
+- *chercher ses mots* => cherche_mots
 
-
-~ oklm
-Dr.Droy: Je suis désolé d'entendre que vous ne vous sentez pas bien. Ces symptômes peuvent avoir différentes causes, mais je vais examiner cela de plus près. Parlons-en davantage. Avez-vous remarqué si ces symptômes surviennent dans des situations particulières ou s'ils sont constants ?
-- *Décrire mieux les symptomes et expliquer que ces symptomes surviennent constamment*
-	Dr.Droy : J'ai compris de quoi tu souffre , c'est a cause de l'hypertension , faut que tu fait du sport et de vous détendre et il faut surement que vous mangez bien
-
-- *Expliquer que ces symptomes viennent que quand je suis dans le milieu du travail .*
+~ description
+Dr.Droy: Très bien j'ai ma petite idée sur ce que ça peut être mais nous allons quand même procéder à un examen complet pour voir ce qui se passe
+- *Dire que vous préfèreriez éviter l'examen complet si possible*
+	Dr.Droy : Ecoutez cela simplifierait les choses pour tout le monde si vous ne faisiez pas tant de jérémiades
+	do modify_stress(10)
+	- *Dire que vous avez encore le droit de faire ce que vous voulez et partir *
+		=> fin
+	- *S'excuser et faire les tests correctement*
+		=> antibios
+- *Accepter l'examen sans rechigner*
 	Dr.Droy : Je vais vous prendre  la pression artérielle et je vais vous faire un examen physique , faillait juste détendre et s'allonger sur le banc
 	- *Allonger et faire le nécessaire *
 	- *Demander c'est quoi la solution éfficace*
-		Dr.Droy: Votre pression artérielle est élevée, ce qui peut contribuer aux symptômes que vous avez décrits. Pour commencer, je recommande quelques changements de mode de vie, notamment une alimentation plus saine, une augmentation de l'activité physique, et la réduction du sel dans votre alimentation. De plus, je vais vous prescrire un médicament pour aider à contrôler votre pression artérielle
-		Dr.Droy: Votre cas est un peu critique , je vous conseille de changer votre métier car c'est lui la cause primordiale de votre pression artérielle élevée et aussi de changer votre rythme de vie
-		- *Quitter le taffe*
-			do modify_stress(-5)
+		Dr.Droy: Bien je vous laisse vous mettre a l'aise pour les tests
+		- *Faire ce que dit le médecin et se préparer*
+			=> antibios
+		- *Mettre les pieds sur le bureau et se mettre vraiment à l'aise*
+			do modify_stress(10)
 		- *Garder le meme taffe*
-			Dr.Droy: ah bon c'est vous qui voyez...
+			Dr.Droy: Non mais vous vous croyez chez vous ici ? (s/o TchouTchou) dégagez de mon cabinet et ne revenez plus me voir !
+			do modify_stress(-30)
+			do modify_sante(10)
 => fin
-~ poigne_main
-Dr.Droy : Veuillez-vous asseoir s'il vous plaît. Comment puis-je vous aider aujourd'hui ?
-- *Ignorer completement les symptomes et expliquer aux medcin que vous etes ici que pour unr consultation genérale*
-	Dr.Droy : Vous pouvez allongez sur le lit pour que je fasse les differents testes
-	- *Allonger et faire le nécessaire *
-	do modify_stress(-8)
-	do modify_sante(-5)
-	- *Décrire l'ensemble des symptomes que vous ressentez ; Maux de tête fréquents , Essoufflemen et probleme de vision *
-	  Dr.Droy : je suis prèsque sure de ce que vous avez , mais pour etre bien sure je dois vous prendre  la pression artérielle après je vais vous faire un examen physique
-	- *Allonger la main et laisser le medcin faire le nécessaire*
-		Dr.Droy: Je vais vous donner des médicaments antihypertenseurs , et il faut aussi que vous réduisez la consommation de l'alcool et manger equilibré
-		- *commencer le traitement*
-			do modify_sante(-20)
-
-		- *demander si y a un remède immediat  * => rem_immed
-	- *demander si y a un remède immediat  * => rem_immed
-=> fin
-
-~ rem_immed
-Dr.Droy : le remède immédiat c'est de faire du sport et changer votre style de vie en moins stressant possible
-- *Prendre le traitement*
-	Dr.Droy : Allez bon Rétablissement !
-	do modify_sante(-20)
-- *Refuser le traitement*
-	Dr.Droy : A vous de choisir ! ...
-
+~ cherche_mots
+Dr.Droy : Bon écoutez vous allez devoir m'aider je n'y arriverais pas si vous ne me dites pas vos sensations
+do modify_stress(-10)
+- *Dire que vous ressentez une simple douleur de façon occasionnelle *
+	Dr.Droy : Seulement ? Je vais vous prescrire des dolipranes alors
+	- *Les prendre et partir*
+		do modify_sante(10)
+- *Décrire l'ensemble des symptomes que vous ressentez*
+	Dr.Droy: Merci pour ces précisions utiles, je vais réaliser quelques test afin de déterminer ce que vous avez.
+	do modify_stress(10)
+	- *Coopérer directement*
+		Dr.Droy: Bien ces tests sont plutôt concluants, je vais être en mesure de vous aider comme il se doit
+		do modify_stress(10)
+		- *Commencer le traitement*
+			do modify_sante(20)
+	- *demander si les tests sont obligatoires
+		Dr.Droy: Si vous voulez savoir ce que vous avez, oui ils le sont
+		- *Faire les tests*
+			Dr.Droy: Nous allons maintenant pouvoir commencer votre traitement je vous remercie
+			do modify_sante(30)
+		- *Demander simplement des anti-douleurs*
+			do modify_sante(10)
 => fin
 
+
+~ antibios
+Dr.Droy: Après vous avoir bien analysé je peux dire que vous avez besoin de prendre les antibiotiques que je vais vous prescrire 
+- *être contre les antibiotiques et se soigner naturellement*
+	do modifiy_sante(10)
+
+- *les prendre*
+	do modify_sante(30)
+	
+=> fin
 
 ~ fin
 do emit_interaction_finished()
-=> END
 
+=> END

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_800sv"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_6g7f8"]
 
 [resource]
-script = ExtResource("1_800sv")
+script = ExtResource("1_6g7f8")
 using_states = PackedStringArray()
 titles = {
 "fin": "94",
@@ -102,9 +102,9 @@ lines = {
 "parent_id": "13",
 "responses": PackedStringArray("16"),
 "tags": PackedStringArray(),
-"text": "*accepter de prendre rendez-vous*",
+"text": "*accepter l'opération*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*accepter de prendre rendez-vous*",
+"translation_key": "*accepter l'opération*",
 "type": "response"
 },
 "17": {
@@ -253,9 +253,9 @@ lines = {
 "next_id_after": "61",
 "parent_id": "20",
 "tags": PackedStringArray(),
-"text": "* Accepter de prendre rendez-vous *",
+"text": "* Accepter l'opération *",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "* Accepter de prendre rendez-vous *",
+"translation_key": "* Accepter l'opération *",
 "type": "response"
 },
 "3": {
@@ -407,7 +407,7 @@ lines = {
 "next_id": "42",
 "next_id_after": "61",
 "parent_id": "38",
-"responses": PackedStringArray("41", "48", "53", "54"),
+"responses": PackedStringArray("41", "48"),
 "tags": PackedStringArray(),
 "text": "*Demander une anesthésie locale *",
 "text_replacements": Array[Dictionary]([]),
@@ -555,7 +555,7 @@ lines = {
 }])])
 }])
 },
-"next_id": "61",
+"next_id": "53",
 "parent_id": "50",
 "type": "mutation"
 },
@@ -564,6 +564,7 @@ lines = {
 "next_id": "86",
 "next_id_after": "61",
 "parent_id": "50",
+"responses": PackedStringArray("53", "54"),
 "tags": PackedStringArray(),
 "text": "* Demander la durée de l'opération *",
 "text_replacements": Array[Dictionary]([]),
@@ -601,7 +602,7 @@ lines = {
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": -10
+"value": 10
 }])])
 }])
 },
@@ -616,9 +617,9 @@ lines = {
 "parent_id": "54",
 "responses": PackedStringArray("57"),
 "tags": PackedStringArray(),
-"text": "*Très bien fixons un rendez-vous *",
+"text": "*Très bien passons à l'opération *",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Très bien fixons un rendez-vous *",
+"translation_key": "*Très bien passons à l'opération *",
 "type": "response"
 },
 "58": {
@@ -678,9 +679,9 @@ lines = {
 "next_id_after": "74",
 "responses": PackedStringArray("66", "69"),
 "tags": PackedStringArray(),
-"text": "* Prendre rendez-vous en repoussant l'échéance au maximum*",
+"text": "* repousser l'échéance au maximum*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "* Prendre rendez-vous en repoussant l'échéance au maximum*",
+"translation_key": "* repousser l'échéance au maximum*",
 "type": "response"
 },
 "67": {
@@ -720,9 +721,9 @@ lines = {
 "next_id": "70",
 "next_id_after": "74",
 "tags": PackedStringArray(),
-"text": "*Se résigner et prendre rendez-vous *",
+"text": "*Se résigner passer à l'opération *",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Se résigner et prendre rendez-vous *",
+"translation_key": "*Se résigner passer à l'opération *",
 "type": "response"
 },
 "7": {
@@ -874,9 +875,9 @@ lines = {
 "next_id_after": "90",
 "responses": PackedStringArray("88"),
 "tags": PackedStringArray(),
-"text": "*Très bien fixons un rendez-vous *",
+"text": "*Très bien passons à l'opération*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Très bien fixons un rendez-vous *",
+"translation_key": "*Très bien passons à l'opération*",
 "type": "response"
 },
 "89": {

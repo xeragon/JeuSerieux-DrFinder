@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_hnm2i"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_cgp5n"]
 
 [resource]
-script = ExtResource("1_hnm2i")
+script = ExtResource("1_cgp5n")
 using_states = PackedStringArray()
 titles = {
 "fin": "65",
@@ -81,9 +81,9 @@ lines = {
 "next_id": "17",
 "next_id_after": "38",
 "tags": PackedStringArray(),
-"text": "*être trop craintif et avoir du mal a s'éxprimer*",
+"text": "*S'exprimer intimement, au risque de paraître vulnérable*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*être trop craintif et avoir du mal a s'éxprimer*",
+"translation_key": "*S'exprimer intimement, au risque de paraître vulnérable*",
 "type": "response"
 },
 "17": {
@@ -436,7 +436,7 @@ lines = {
 "id": "50",
 "next_id": "51",
 "next_id_after": "61",
-"parent_id": "48",
+"parent_id": "45",
 "tags": PackedStringArray(),
 "text": "*Pas autant que j'aurais pu l'espérer mais je vous remercie tout de même",
 "text_replacements": Array[Dictionary]([]),
