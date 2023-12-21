@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqfnb575uh3u6"]
+
+[ext_resource type="Script" path="res://scenes/npc/dr_psy.gd" id="1_hefu1"]
+[ext_resource type="Texture2D" uid="uid://ckuqvfgnkx2xt" path="res://assets/Modern tiles_Free/Characters_free/Amelia_sit3_16x16.png" id="2_heuu5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt6kq"]
+atlas = ExtResource("2_heuu5")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wefnh"]
+atlas = ExtResource("2_heuu5")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi5fs"]
+atlas = ExtResource("2_heuu5")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vvy1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt6kq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wefnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi5fs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8eg1b"]
+radius = 4.0
+
+[node name="dr_psy" type="CharacterBody2D"]
+script = ExtResource("1_hefu1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_3vvy1")
+offset = Vector2(0, -13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8eg1b")

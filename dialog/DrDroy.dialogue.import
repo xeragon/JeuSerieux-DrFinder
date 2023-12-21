@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bi6v4i0g6bl0q"
+path="res://.godot/imported/DrDroy.dialogue-5418a8f10bb7c6a174124758b0852910.tres"
+
+[deps]
+
+source_file="res://dialog/DrDroy.dialogue"
+dest_files=["res://.godot/imported/DrDroy.dialogue-5418a8f10bb7c6a174124758b0852910.tres"]
+
+[params]
+
+defaults=true
