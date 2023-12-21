@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bk7bl27csfq5d" path="res://assets/Complete_GUI_Essential_Pack_Free_Version/01_Basic_Collection/01_Flat_Theme/Spritesheets/Spritesheet_UI_Flat_Button_02.png" id="1_o3t58"]
 
 [resource]
+resource_local_to_scene = true
+resource_name = "a"
 texture = ExtResource("1_o3t58")
 texture_margin_left = 80.0
 texture_margin_right = 80.0

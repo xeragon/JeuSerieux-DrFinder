@@ -844,7 +844,7 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_iewia")
-text = "Dr Wemmert"
+text = "Dr Zen"
 icon = SubResource("AtlasTexture_nm7je")
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -868,7 +868,7 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_07xtc")
-text = "Dr Roy"
+text = "Dr Droy"
 icon = SubResource("AtlasTexture_e3gum")
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -928,7 +928,7 @@ offset_top = -0.12797
 offset_bottom = -0.0799866
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 30
-text = "Dr Wemmert  
+text = "Dr Zen
 
 Le Docteur Wemmert est le professionnel de la santé le plus décontracté que vous rencontrerez. Son approche cool et apaisante augmente instantanément votre niveau de sérénité. Cependant, ses compétences médicales peuvent être un peu négligées, alors attendez-vous à une amélioration modeste de votre santé."
 
@@ -1087,7 +1087,7 @@ offset_right = 6.0
 offset_bottom = -222.0
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 30
-text = "Dr Oy
+text = "Dr Droy
 
 Si vous cherchez une guérison rapide mais que vous pouvez supporter un ton plus formel, la Docteur Oy est là pour vous. Il peut augmenter votre santé de manière significative, mais son approche sérieuse peut diminuer votre niveau de sérénité."
 
