@@ -32,3 +32,7 @@ Pour gagner une partie il faut que le cumul de vos stats soit supérieur à .
 
 Pour installer le jeu il faut aller dans la branch installer sur git et installer le fichier qui correspond a votre os.
 Dans ce dossier vous trouverez un README qui vous donnera les démarches a suivre pour l'installation.
+
+## pour voir le cahier des charges que nous avons suivi
+
+https://docs.google.com/document/d/1MeZboWsl7xQpSpyEGff4Rmh8DSYyTV1TTsQhMQJQV5Y/edit#heading=h.p1l7u12dgulp
