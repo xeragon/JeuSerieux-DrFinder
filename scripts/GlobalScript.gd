@@ -169,8 +169,9 @@ func get_end_speech():
 			r += "[color=green]Pfiouu ! vous voila totalement rassuré, le reste de votre maladie s'effacera d'elle pas de quoi s'inquiter ! [/color]" 
 		else:
 			r += "[color=orange]Bon... vous êtes serein. C'est bien mais ca ne vous sauvera pas du cancer...[/color]"
-	elif (player_sante + player_stress) == 150:
+	elif (player_sante + player_stress) >= 150:
 		r = "[color=green]Bien jouer votre état de santé moyen est plus que correct ![/color]"
 	else:
 		r = "[color=red]Bon... vous ferez mieux la prochaine fois...[/color]"
+	print(player_sante + player_stress)
 	return r
