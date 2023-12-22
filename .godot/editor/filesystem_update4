@@ -1,8 +1,7 @@
-res://scenes/maps/porte_medecin_DrZen.tscn
+res://scenes/maps/rooms_anim.tscn
 res://scenes/maps/salles.tres
 res://ressource/res_normal.tres
 res://ressource/hover_focus_texture.tres
-res://scenes/maps/rooms_anim.tscn
 res://scenes/maps/acceuil_et_portes.tscn
 res://scenes/npc/npc.tscn
 res://addons/dialogue_manager/reserve_balloon/reserve_balloon.tscn
@@ -16,9 +15,11 @@ res://scenes/maps/porte_medecin_DrPsy.tscn
 res://scenes/maps/porte_medecin_DrZimZim.tscn
 res://scenes/npc/reservation_secretaire.tscn
 res://addons/dialogue_manager/tuto_balloon/tuto_balloon.tscn
+res://scenes/maps/porte_medecin_DrZen.tscn
 res://scenes/maps/the_end.tscn
 res://scenes/player/player.tscn
 res://scenes/npc/dr_chirurgien.tscn
 res://scenes/npc/dr_famille.tscn
 res://scenes/npc/dr_zimzim.tscn
 res://scenes/npc/dr_droy.tscn
+res://scripts/GlobalScript.gd

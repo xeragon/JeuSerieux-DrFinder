@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_adtud"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_0xc6d"]
 
 [resource]
-script = ExtResource("1_adtud")
+script = ExtResource("1_0xc6d")
 using_states = PackedStringArray()
 titles = {
 "fin": "95",
@@ -12,7 +12,7 @@ titles = {
 "retissant": "66",
 "start": "2"
 }
-character_names = PackedStringArray("Dr.Chirugien")
+character_names = PackedStringArray("Dr.Chirurgien")
 first_title = "2"
 lines = {
 "1": {
@@ -22,15 +22,15 @@ lines = {
 "type": "title"
 },
 "10": {
-"character": "Dr.Chirugien",
+"character": "Dr.Chirurgien",
 "character_replacements": Array[Dictionary]([]),
 "id": "10",
 "next_id": "11",
 "parent_id": "8",
 "tags": PackedStringArray(),
-"text": "Vous n'avez pas a vous inquiéter j'ai l'habitude de ces opérations et je comprend que cela peut sembler compliqué",
+"text": "Vous n'avez pas à vous inquiéter, j'ai l'habitude de ces opérations et je comprends que cela puisse sembler compliqué",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Vous n'avez pas a vous inquiéter j'ai l'habitude de ces opérations et je comprend que cela peut sembler compliqué",
+"translation_key": "Vous n'avez pas à vous inquiéter, j'ai l'habitude de ces opérations et je comprends que cela puisse sembler compliqué",
 "type": "dialogue"
 },
 "11": {
@@ -40,9 +40,9 @@ lines = {
 "parent_id": "8",
 "responses": PackedStringArray("11"),
 "tags": PackedStringArray(),
-"text": "*rester retissant*",
+"text": "*rester réticent*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*rester retissant*",
+"translation_key": "*rester réticent*",
 "type": "response"
 },
 "12": {
@@ -74,25 +74,13 @@ lines = {
 "next_id_after": "62",
 "parent_id": "6",
 "tags": PackedStringArray(),
-"text": "* Vous arrivez a garder votre calme *",
+"text": "*Vous arrivez à garder votre calme *",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "* Vous arrivez a garder votre calme *",
+"translation_key": "*Vous arrivez à garder votre calme *",
 "type": "response"
 },
 "15": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
 "id": "15",
-"next_id": "16",
-"parent_id": "14",
-"tags": PackedStringArray(),
-"text": "Je comprend que cela peut être difficile à avaler mais je suis content de votre réaction et votre maturité",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Je comprend que cela peut être difficile à avaler mais je suis content de votre réaction et votre maturité",
-"type": "dialogue"
-},
-"16": {
-"id": "16",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -103,9 +91,21 @@ lines = {
 }])])
 }])
 },
-"next_id": "17",
+"next_id": "16",
 "parent_id": "14",
 "type": "mutation"
+},
+"16": {
+"character": "Dr.Chirurgien",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"parent_id": "14",
+"tags": PackedStringArray(),
+"text": "Je comprends que cela peut être difficile à avaler, mais je suis content de votre réaction et de votre maturité",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Je comprends que cela peut être difficile à avaler, mais je suis content de votre réaction et de votre maturité",
+"type": "dialogue"
 },
 "17": {
 "id": "17",
@@ -149,15 +149,15 @@ lines = {
 "type": "dialogue"
 },
 "20": {
-"character": "Dr.Chirugien",
+"character": "Dr.Chirurgien",
 "character_replacements": Array[Dictionary]([]),
 "id": "20",
 "next_id": "21",
 "parent_id": "19",
 "tags": PackedStringArray(),
-"text": "Bien sûr je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale .",
+"text": "Bien sûr, je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Bien sûr je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale .",
+"translation_key": "Bien sûr, je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale.",
 "type": "dialogue"
 },
 "21": {
@@ -173,15 +173,15 @@ lines = {
 "type": "response"
 },
 "22": {
-"character": "Dr.Chirugien",
+"character": "Dr.Chirurgien",
 "character_replacements": Array[Dictionary]([]),
 "id": "22",
 "next_id": "23",
 "parent_id": "21",
 "tags": PackedStringArray(),
-"text": "J'apprécie votre coopération cela va simplifier beaucoup de choses",
+"text": "J'apprécie votre coopération, cela va simplifier beaucoup de choses",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "J'apprécie votre coopération cela va simplifier beaucoup de choses",
+"translation_key": "J'apprécie votre coopération, cela va simplifier beaucoup de choses",
 "type": "dialogue"
 },
 "23": {
@@ -197,19 +197,7 @@ lines = {
 "type": "response"
 },
 "24": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
 "id": "24",
-"next_id": "25",
-"parent_id": "23",
-"tags": PackedStringArray(),
-"text": "Et bien c'est pas tous les jours que les patients sont si enthousiastes",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Et bien c'est pas tous les jours que les patients sont si enthousiastes",
-"type": "dialogue"
-},
-"25": {
-"id": "25",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -220,9 +208,21 @@ lines = {
 }])])
 }])
 },
-"next_id": "26",
+"next_id": "25",
 "parent_id": "23",
 "type": "mutation"
+},
+"25": {
+"character": "Dr.Chirurgien",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"parent_id": "23",
+"tags": PackedStringArray(),
+"text": "Et bien, ce n'est pas tous les jours que les patients sont si enthousiastes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Et bien, ce n'est pas tous les jours que les patients sont si enthousiastes",
+"type": "dialogue"
 },
 "26": {
 "id": "26",
@@ -265,20 +265,20 @@ lines = {
 "next_id_after": "62",
 "parent_id": "21",
 "tags": PackedStringArray(),
-"text": "* Accepter l'opération *",
+"text": "*Accepter l'opération *",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "* Accepter l'opération *",
+"translation_key": "*Accepter l'opération *",
 "type": "response"
 },
 "3": {
-"character": "Dr.Chirugien",
+"character": "Dr.Chirurgien",
 "character_replacements": Array[Dictionary]([]),
 "id": "3",
 "next_id": "4",
 "tags": PackedStringArray(),
-"text": "Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabinet?",
+"text": "Bonjour, alors dites-moi qu'est-ce qui vous amène dans mon cabinet?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabinet?",
+"translation_key": "Bonjour, alors dites-moi qu'est-ce qui vous amène dans mon cabinet?",
 "type": "dialogue"
 },
 "31": {
@@ -287,13 +287,13 @@ lines = {
 "next_id_after": "62",
 "parent_id": "19",
 "tags": PackedStringArray(),
-"text": "* Vous vous étiez préparé a cela mais vous n'êtes pas enchantés*",
+"text": "*Vous vous étiez préparé à cela, mais vous n'êtes pas enchanté*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "* Vous vous étiez préparé a cela mais vous n'êtes pas enchantés*",
+"translation_key": "*Vous vous étiez préparé à cela, mais vous n'êtes pas enchanté*",
 "type": "response"
 },
 "32": {
-"character": "Dr.Chirugien",
+"character": "Dr.Chirurgien",
 "character_replacements": Array[Dictionary]([]),
 "id": "32",
 "next_id": "33",
@@ -311,9 +311,9 @@ lines = {
 "parent_id": "31",
 "responses": PackedStringArray("33"),
 "tags": PackedStringArray(),
-"text": "*rester rétissant*",
+"text": "*rester réticent*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*rester rétissant*",
+"translation_key": "*rester réticent*",
 "type": "response"
 },
 "34": {
@@ -351,7 +351,7 @@ lines = {
 "type": "response"
 },
 "38": {
-"character": "Dr.Chirugien",
+"character": "Dr.Chirurgien",
 "character_replacements": Array[Dictionary]([]),
 "id": "38",
 "next_id": "39",
@@ -369,9 +369,9 @@ lines = {
 "parent_id": "37",
 "responses": PackedStringArray("39", "51"),
 "tags": PackedStringArray(),
-"text": "*Demander le type de  l'opération *",
+"text": "*Demander le type de l'opération*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Demander le type de  l'opération *",
+"translation_key": "*Demander le type de l'opération*",
 "type": "response"
 },
 "4": {
@@ -386,19 +386,7 @@ lines = {
 "type": "response"
 },
 "40": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
 "id": "40",
-"next_id": "41",
-"parent_id": "39",
-"tags": PackedStringArray(),
-"text": "Ce sera une anesthésie générale mais les risques sont extrêmement faibles de nos jours",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ce sera une anesthésie générale mais les risques sont extrêmement faibles de nos jours",
-"type": "dialogue"
-},
-"41": {
-"id": "41",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -409,9 +397,21 @@ lines = {
 }])])
 }])
 },
-"next_id": "42",
+"next_id": "41",
 "parent_id": "39",
 "type": "mutation"
+},
+"41": {
+"character": "Dr.Chirurgien",
+"character_replacements": Array[Dictionary]([]),
+"id": "41",
+"next_id": "42",
+"parent_id": "39",
+"tags": PackedStringArray(),
+"text": "Ce sera une anesthésie générale, mais les risques sont extrêmement faibles de nos jours",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ce sera une anesthésie générale, mais les risques sont extrêmement faibles de nos jours",
+"type": "dialogue"
 },
 "42": {
 "id": "42",
@@ -420,13 +420,13 @@ lines = {
 "parent_id": "39",
 "responses": PackedStringArray("42", "49"),
 "tags": PackedStringArray(),
-"text": "*Demander une anesthésie locale *",
+"text": "*Demander une anesthésie locale*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Demander une anesthésie locale *",
+"translation_key": "*Demander une anesthésie locale*",
 "type": "response"
 },
 "43": {
-"character": "Dr.Chirugien",
+"character": "Dr.Chirurgien",
 "character_replacements": Array[Dictionary]([]),
 "id": "43",
 "next_id": "44",
@@ -514,21 +514,21 @@ lines = {
 "next_id_after": "62",
 "parent_id": "39",
 "tags": PackedStringArray(),
-"text": "* Demander la durée de l'opération *",
+"text": "*Demander la durée de l'opération*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "* Demander la durée de l'opération *",
+"translation_key": "*Demander la durée de l'opération*",
 "type": "response"
 },
 "5": {
-"character": "Dr.Chirugien",
+"character": "Dr.Chirurgien",
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
 "parent_id": "4",
 "tags": PackedStringArray(),
-"text": "*D'accord je vois vous avez effectivement besoins de soins plutôt lourds *",
+"text": "*D'accord, je vois vous avez effectivement besoin de soins plutôt lourds *",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*D'accord je vois vous avez effectivement besoins de soins plutôt lourds *",
+"translation_key": "*D'accord, je vois vous avez effectivement besoin de soins plutôt lourds *",
 "type": "dialogue"
 },
 "51": {
@@ -537,25 +537,13 @@ lines = {
 "next_id_after": "62",
 "parent_id": "37",
 "tags": PackedStringArray(),
-"text": "*Demander les risques de l'opérations*",
+"text": "*Demander les risques de l'opération*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Demander les risques de l'opérations*",
+"translation_key": "*Demander les risques de l'opération*",
 "type": "response"
 },
 "52": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
 "id": "52",
-"next_id": "53",
-"parent_id": "51",
-"tags": PackedStringArray(),
-"text": "C'est une opération classique, elle ne comporte quasiment aucun risques",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "C'est une opération classique, elle ne comporte quasiment aucun risques",
-"type": "dialogue"
-},
-"53": {
-"id": "53",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -566,9 +554,21 @@ lines = {
 }])])
 }])
 },
-"next_id": "54",
+"next_id": "53",
 "parent_id": "51",
 "type": "mutation"
+},
+"53": {
+"character": "Dr.Chirurgien",
+"character_replacements": Array[Dictionary]([]),
+"id": "53",
+"next_id": "54",
+"parent_id": "51",
+"tags": PackedStringArray(),
+"text": "C'est une opération classique, elle ne comporte quasiment aucun risque",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "C'est une opération classique, elle ne comporte quasiment aucun risque",
+"type": "dialogue"
 },
 "54": {
 "id": "54",
@@ -588,25 +588,13 @@ lines = {
 "next_id_after": "62",
 "parent_id": "51",
 "tags": PackedStringArray(),
-"text": "*Demander si il peut y avoir des effets secondaires indésirables*",
+"text": "*Demander s'il peut y avoir des effets secondaires indésirables*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Demander si il peut y avoir des effets secondaires indésirables*",
+"translation_key": "*Demander s'il peut y avoir des effets secondaires indésirables*",
 "type": "response"
 },
 "56": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
 "id": "56",
-"next_id": "57",
-"parent_id": "55",
-"tags": PackedStringArray(),
-"text": "C'est possible mais rien d'insurmontable",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "C'est possible mais rien d'insurmontable",
-"type": "dialogue"
-},
-"57": {
-"id": "57",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -617,9 +605,21 @@ lines = {
 }])])
 }])
 },
-"next_id": "58",
+"next_id": "57",
 "parent_id": "55",
 "type": "mutation"
+},
+"57": {
+"character": "Dr.Chirurgien",
+"character_replacements": Array[Dictionary]([]),
+"id": "57",
+"next_id": "58",
+"parent_id": "55",
+"tags": PackedStringArray(),
+"text": "C'est possible, mais rien d'insurmontable",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "C'est possible, mais rien d'insurmontable",
+"type": "dialogue"
 },
 "58": {
 "id": "58",
@@ -674,14 +674,14 @@ lines = {
 "type": "title"
 },
 "66": {
-"character": "Dr.Chirugien",
+"character": "Dr.Chirurgien",
 "character_replacements": Array[Dictionary]([]),
 "id": "66",
 "next_id": "67",
 "tags": PackedStringArray(),
-"text": "Vous allez bien devoir y passer alors autant y mettre du votre",
+"text": "Vous allez bien devoir y passer alors autant y mettre du vôtre",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Vous allez bien devoir y passer alors autant y mettre du votre",
+"translation_key": "Vous allez bien devoir y passer alors autant y mettre du vôtre",
 "type": "dialogue"
 },
 "67": {
@@ -728,15 +728,15 @@ lines = {
 "type": "mutation"
 },
 "7": {
-"character": "Dr.Chirugien",
+"character": "Dr.Chirurgien",
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
 "next_id": "8",
 "parent_id": "6",
 "tags": PackedStringArray(),
-"text": "Ne vous inquiétez pas vous ne risquez rien c'est une opération très courante.",
+"text": "Ne vous inquiétez pas, vous ne risquez rien, c'est une opération très courante.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ne vous inquiétez pas vous ne risquez rien c'est une opération très courante.",
+"translation_key": "Ne vous inquiétez pas, vous ne risquez rien, c'est une opération très courante.",
 "type": "dialogue"
 },
 "70": {
@@ -801,30 +801,7 @@ lines = {
 "type": "title"
 },
 "79": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
 "id": "79",
-"next_id": "80",
-"tags": PackedStringArray(),
-"text": "Bien merci et à bientôt",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Bien merci et à bientôt",
-"type": "dialogue"
-},
-"8": {
-"id": "8",
-"next_id": "9",
-"next_id_after": "62",
-"parent_id": "6",
-"responses": PackedStringArray("8", "14"),
-"tags": PackedStringArray(),
-"text": "* Vous tombez des nues et avez du mal à envisager une telle opération *",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "* Vous tombez des nues et avez du mal à envisager une telle opération *",
-"type": "response"
-},
-"80": {
-"id": "80",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -835,8 +812,31 @@ lines = {
 }])])
 }])
 },
-"next_id": "82",
+"next_id": "80",
 "type": "mutation"
+},
+"8": {
+"id": "8",
+"next_id": "9",
+"next_id_after": "62",
+"parent_id": "6",
+"responses": PackedStringArray("8", "14"),
+"tags": PackedStringArray(),
+"text": "*Vous tombez des nues et avez du mal à envisager une telle opération *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Vous tombez des nues et avez du mal à envisager une telle opération *",
+"type": "response"
+},
+"80": {
+"character": "Dr.Chirurgien",
+"character_replacements": Array[Dictionary]([]),
+"id": "80",
+"next_id": "82",
+"tags": PackedStringArray(),
+"text": "Bien merci et à bientôt",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bien merci et à bientôt",
+"type": "dialogue"
 },
 "82": {
 "id": "82",
@@ -851,30 +851,30 @@ lines = {
 "type": "title"
 },
 "87": {
-"character": "Dr.Chirugien",
-"character_replacements": Array[Dictionary]([]),
 "id": "87",
-"next_id": "88",
-"tags": PackedStringArray(),
-"text": "L'opération reste lourde et va donc demander un peu de temps",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "L'opération reste lourde et va donc demander un peu de temps",
-"type": "dialogue"
-},
-"88": {
-"id": "88",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
 "type": "number",
-"value": 10
+"value": -10
 }])])
 }])
 },
-"next_id": "89",
+"next_id": "88",
 "type": "mutation"
+},
+"88": {
+"character": "Dr.Chirurgien",
+"character_replacements": Array[Dictionary]([]),
+"id": "88",
+"next_id": "89",
+"tags": PackedStringArray(),
+"text": "L'opération reste lourde et va donc demander un peu de temps",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "L'opération reste lourde et va donc demander un peu de temps",
+"type": "dialogue"
 },
 "89": {
 "id": "89",
