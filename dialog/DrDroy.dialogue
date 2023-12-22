@@ -1,66 +1,66 @@
 ~ start
 [speed=5] [next=auto]
 Dr.Droy: Bonjour, vous pouvez vous installer !
-- *Decrire vos symptomes* => description
-- *faire une blague*
-	Dr.Droy: Asseyez-vous s'il vous plaît. Veuillez noter que je préfère que nous restions concentrés sur votre consultation médicale. Les blagues ne sont pas appropriées dans ce contexte. Maintenant, expliquez-moi vos symptômes et la raison de votre visite aujourd'hui .
+- *Décrire vos symptômes* => description
+- *Faire une blague*
 	do modify_stress(-10)
-	- *décrire vos symptomes * => description
-	- *chercher ses mots* => cherche_mots
-- *chercher ses mots* => cherche_mots
+	Dr.Droy: Asseyez-vous s'il vous plaît. Veuillez noter que je préfère que nous restions concentrés sur votre consultation médicale. Les blagues ne sont pas appropriées dans ce contexte. Maintenant, expliquez-moi vos symptômes et la raison de votre visite aujourd'hui.
+	- *Décrire vos symptômes* => description
+	- *Chercher ses mots* => cherche_mots
+- *Chercher ses mots* => cherche_mots
 
 ~ description
-Dr.Droy: Très bien j'ai ma petite idée sur ce que ça peut être mais nous allons quand même procéder à un examen complet pour voir ce qui se passe
-- *Dire que vous préfèreriez éviter l'examen complet si possible*
-	Dr.Droy : Ecoutez cela simplifierait les choses pour tout le monde si vous cessiez vos jérémiades
+Dr.Droy: Très bien, j'ai ma petite idée sur ce que ça peut être, mais nous allons quand même procéder à un examen complet pour voir ce qui se passe.
+- *Dire que vous préféreriez éviter l'examen complet si possible*
 	do modify_stress(-10)
+	Dr.Droy: Écoutez, cela simplifierait les choses pour tout le monde si vous cessiez vos jérémiades.
 	- *Dire que vous avez encore le droit de faire ce que vous voulez et partir*
 		=> fin
 	- *S'excuser et faire les tests correctement*
 		=> antibios
 - *Accepter l'examen sans rechigner*
-	Dr.Droy: Bien je vous laisse vous mettre a l'aise pour les tests
+	Dr.Droy: Bien, je vous laisse vous mettre à l'aise pour les tests.
 	- *Faire ce que dit le médecin et se préparer*
 		=> antibios
 	- *Mettre les pieds sur le bureau et se mettre vraiment à l'aise*
 		do modify_stress(10)
-		Dr.Droy: [shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]
 		do modify_stress(-30)
 		do modify_sante(10)
+		Dr.Droy: [shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? Dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]
 => fin
+
 ~ cherche_mots
-Dr.Droy : Bon écoutez vous allez devoir m'aider je n'y arriverais pas si vous ne me décrivez pas vos symptomes !
 do modify_stress(-10)
-- *Dire que vous ressentez occasionelement une legere douleur*
-	Dr.Droy : Seulement ? Je vais vous prescrire des dolipranes alors
+Dr.Droy : Bon écoutez, vous allez devoir m'aider, je n'y arriverai pas si vous ne me décrivez pas vos symptômes !
+- *Dire que vous ressentez occasionnellement une légère douleur*
+	Dr.Droy : Seulement ? Je vais vous prescrire des dolipranes alors.
 	- *Les prendre et partir*
 		do modify_sante(10)
-- *Décrire l'ensemble des symptomes que vous ressentez*
-	Dr.Droy: Merci pour ces précisions utiles, je vais réaliser quelques test afin de déterminer ce que vous avez.
+- *Décrire l'ensemble des symptômes que vous ressentez*
 	do modify_stress(10)
+	Dr.Droy: Merci pour ces précisions utiles, je vais réaliser quelques tests afin de déterminer ce que vous avez.
 	- *Coopérer directement*
-		Dr.Droy: Bien ces tests sont plutôt concluants, je vais être en mesure de vous aider comme il se doit
 		do modify_stress(10)
+		Dr.Droy: Bien, ces tests sont plutôt concluants, je vais être en mesure de vous aider comme il se doit.
 		- *Commencer le traitement*
 			do modify_sante(20)
-	- *demander si les tests sont obligatoires
-		Dr.Droy: Si vous voulez savoir ce que vous avez, oui ils le sont
+	- *Demander si les tests sont obligatoires*
+		Dr.Droy: Si vous voulez savoir ce que vous avez, oui, ils le sont.
 		- *Faire les tests*
-			Dr.Droy: Nous allons maintenant pouvoir commencer votre traitement je vous remercie
 			do modify_sante(30)
+			Dr.Droy: Nous allons maintenant pouvoir commencer votre traitement, je vous remercie.
 		- *Demander simplement des anti-douleurs*
 			do modify_sante(10)
 => fin
 
-
 ~ antibios
-Dr.Droy: Après vous avoir bien analysé je peux dire que vous avez besoin de prendre les antibiotiques que je vais vous prescrire 
-- *être contre les antibiotiques et se soigner naturellement*
+Dr.Droy: Après vous avoir bien analysé, je peux dire que vous avez besoin de prendre les antibiotiques que je vais vous prescrire.
+- *Être contre les antibiotiques et se soigner naturellement*
 	do modify_sante(10)
 
-- *les prendre*
+- *Les prendre*
 	do modify_sante(30)
-	
+
 => fin
 
 ~ fin

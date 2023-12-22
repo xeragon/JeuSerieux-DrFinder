@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_0e5nc"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_7lmui"]
 
 [resource]
-script = ExtResource("1_0e5nc")
+script = ExtResource("1_7lmui")
 using_states = PackedStringArray()
 titles = {
 "antibios": "57",
-"cherche_mots": "32",
+"cherche_mots": "33",
 "description": "13",
 "fin": "67",
 "start": "2"
@@ -23,12 +23,12 @@ lines = {
 },
 "10": {
 "id": "10",
-"next_id": "32",
+"next_id": "33",
 "next_id_after": "13",
 "tags": PackedStringArray(),
-"text": "*chercher ses mots*",
+"text": "*Chercher ses mots*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*chercher ses mots*",
+"translation_key": "*Chercher ses mots*",
 "type": "response"
 },
 "12": {
@@ -43,9 +43,9 @@ lines = {
 "id": "13",
 "next_id": "14",
 "tags": PackedStringArray(),
-"text": "Très bien j'ai ma petite idée sur ce que ça peut être mais nous allons quand même procéder à un examen complet pour voir ce qui se passe",
+"text": "Très bien, j'ai ma petite idée sur ce que ça peut être, mais nous allons quand même procéder à un examen complet pour voir ce qui se passe.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Très bien j'ai ma petite idée sur ce que ça peut être mais nous allons quand même procéder à un examen complet pour voir ce qui se passe",
+"translation_key": "Très bien, j'ai ma petite idée sur ce que ça peut être, mais nous allons quand même procéder à un examen complet pour voir ce qui se passe.",
 "type": "dialogue"
 },
 "14": {
@@ -54,25 +54,13 @@ lines = {
 "next_id_after": "30",
 "responses": PackedStringArray("14", "21"),
 "tags": PackedStringArray(),
-"text": "*Dire que vous préfèreriez éviter l'examen complet si possible*",
+"text": "*Dire que vous préféreriez éviter l'examen complet si possible*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Dire que vous préfèreriez éviter l'examen complet si possible*",
+"translation_key": "*Dire que vous préféreriez éviter l'examen complet si possible*",
 "type": "response"
 },
 "15": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "15",
-"next_id": "16",
-"parent_id": "14",
-"tags": PackedStringArray(),
-"text": "Ecoutez cela simplifierait les choses pour tout le monde si vous cessiez vos jérémiades",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Ecoutez cela simplifierait les choses pour tout le monde si vous cessiez vos jérémiades",
-"type": "dialogue"
-},
-"16": {
-"id": "16",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -83,9 +71,21 @@ lines = {
 }])])
 }])
 },
-"next_id": "17",
+"next_id": "16",
 "parent_id": "14",
 "type": "mutation"
+},
+"16": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"parent_id": "14",
+"tags": PackedStringArray(),
+"text": "Écoutez, cela simplifierait les choses pour tout le monde si vous cessiez vos jérémiades.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Écoutez, cela simplifierait les choses pour tout le monde si vous cessiez vos jérémiades.",
+"type": "dialogue"
 },
 "17": {
 "id": "17",
@@ -152,9 +152,9 @@ lines = {
 "next_id": "23",
 "parent_id": "21",
 "tags": PackedStringArray(),
-"text": "Bien je vous laisse vous mettre a l'aise pour les tests",
+"text": "Bien, je vous laisse vous mettre à l'aise pour les tests.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Bien je vous laisse vous mettre a l'aise pour les tests",
+"translation_key": "Bien, je vous laisse vous mettre à l'aise pour les tests.",
 "type": "dialogue"
 },
 "23": {
@@ -204,19 +204,7 @@ lines = {
 "type": "mutation"
 },
 "27": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "27",
-"next_id": "28",
-"parent_id": "25",
-"tags": PackedStringArray(),
-"text": "[shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "[shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]",
-"type": "dialogue"
-},
-"28": {
-"id": "28",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_stress",
@@ -227,12 +215,12 @@ lines = {
 }])])
 }])
 },
-"next_id": "29",
+"next_id": "28",
 "parent_id": "25",
 "type": "mutation"
 },
-"29": {
-"id": "29",
+"28": {
+"id": "28",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -243,9 +231,21 @@ lines = {
 }])])
 }])
 },
-"next_id": "30",
+"next_id": "29",
 "parent_id": "25",
 "type": "mutation"
+},
+"29": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "[shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? Dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? Dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]",
+"type": "dialogue"
 },
 "3": {
 "character": "Dr.Droy",
@@ -264,22 +264,11 @@ lines = {
 "next_id": "67",
 "type": "goto"
 },
-"31": {
-"id": "31",
-"next_id": "32",
-"text": "cherche_mots",
-"type": "title"
-},
 "32": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "32",
 "next_id": "33",
-"tags": PackedStringArray(),
-"text": "Bon écoutez vous allez devoir m'aider je n'y arriverais pas si vous ne me décrivez pas vos symptomes !",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Bon écoutez vous allez devoir m'aider je n'y arriverais pas si vous ne me décrivez pas vos symptomes !",
-"type": "dialogue"
+"text": "cherche_mots",
+"type": "title"
 },
 "33": {
 "id": "33",
@@ -297,38 +286,101 @@ lines = {
 "type": "mutation"
 },
 "34": {
-"id": "34",
-"next_id": "35",
-"next_id_after": "53",
-"responses": PackedStringArray("34", "38"),
-"tags": PackedStringArray(),
-"text": "*Dire que vous ressentez occasionelement une legere douleur*",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*Dire que vous ressentez occasionelement une legere douleur*",
-"type": "response"
-},
-"35": {
 "character": "Dr.Droy",
 "character_replacements": Array[Dictionary]([]),
-"id": "35",
-"next_id": "36",
-"parent_id": "34",
+"id": "34",
+"next_id": "35",
 "tags": PackedStringArray(),
-"text": "Seulement ? Je vais vous prescrire des dolipranes alors",
+"text": "Bon écoutez, vous allez devoir m'aider, je n'y arriverai pas si vous ne me décrivez pas vos symptômes !",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Seulement ? Je vais vous prescrire des dolipranes alors",
+"translation_key": "Bon écoutez, vous allez devoir m'aider, je n'y arriverai pas si vous ne me décrivez pas vos symptômes !",
 "type": "dialogue"
 },
+"35": {
+"id": "35",
+"next_id": "36",
+"next_id_after": "54",
+"responses": PackedStringArray("35", "39"),
+"tags": PackedStringArray(),
+"text": "*Dire que vous ressentez occasionnellement une légère douleur*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Dire que vous ressentez occasionnellement une légère douleur*",
+"type": "response"
+},
 "36": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "36",
 "next_id": "37",
-"next_id_after": "53",
-"parent_id": "34",
-"responses": PackedStringArray("36"),
+"parent_id": "35",
+"tags": PackedStringArray(),
+"text": "Seulement ? Je vais vous prescrire des dolipranes alors.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Seulement ? Je vais vous prescrire des dolipranes alors.",
+"type": "dialogue"
+},
+"37": {
+"id": "37",
+"next_id": "38",
+"next_id_after": "54",
+"parent_id": "35",
+"responses": PackedStringArray("37"),
 "tags": PackedStringArray(),
 "text": "*Les prendre et partir*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Les prendre et partir*",
+"type": "response"
+},
+"38": {
+"id": "38",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 10
+}])])
+}])
+},
+"next_id": "54",
+"parent_id": "37",
+"type": "mutation"
+},
+"39": {
+"id": "39",
+"next_id": "40",
+"next_id_after": "54",
+"tags": PackedStringArray(),
+"text": "*Décrire l'ensemble des symptômes que vous ressentez*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Décrire l'ensemble des symptômes que vous ressentez*",
+"type": "response"
+},
+"38": {
+"id": "38",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 10
+}])])
+}])
+},
+"next_id": "54",
+"parent_id": "37",
+"type": "mutation"
+},
+"39": {
+"id": "39",
+"next_id": "40",
+"next_id_after": "54",
+"tags": PackedStringArray(),
+"text": "*Décrire l'ensemble des symptômes que vous ressentez*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Décrire l'ensemble des symptômes que vous ressentez*",
 "type": "response"
 },
 "37": {
@@ -375,9 +427,9 @@ lines = {
 "next_id_after": "13",
 "responses": PackedStringArray("4", "5", "10"),
 "tags": PackedStringArray(),
-"text": "*Decrire vos symptomes*",
+"text": "*Décrire vos symptômes*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*Decrire vos symptomes*",
+"translation_key": "*Décrire vos symptômes*",
 "type": "response"
 },
 "40": {
@@ -393,32 +445,32 @@ lines = {
 }])
 },
 "next_id": "41",
-"parent_id": "38",
+"parent_id": "39",
 "type": "mutation"
 },
 "41": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "41",
 "next_id": "42",
-"next_id_after": "53",
-"parent_id": "38",
-"responses": PackedStringArray("41", "46"),
+"parent_id": "39",
+"tags": PackedStringArray(),
+"text": "Merci pour ces précisions utiles, je vais réaliser quelques tests afin de déterminer ce que vous avez.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Merci pour ces précisions utiles, je vais réaliser quelques tests afin de déterminer ce que vous avez.",
+"type": "dialogue"
+},
+"42": {
+"id": "42",
+"next_id": "43",
+"next_id_after": "54",
+"parent_id": "39",
+"responses": PackedStringArray("42", "47"),
 "tags": PackedStringArray(),
 "text": "*Coopérer directement*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Coopérer directement*",
 "type": "response"
-},
-"42": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
-"id": "42",
-"next_id": "43",
-"parent_id": "41",
-"tags": PackedStringArray(),
-"text": "Bien ces tests sont plutôt concluants, je vais être en mesure de vous aider comme il se doit",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Bien ces tests sont plutôt concluants, je vais être en mesure de vous aider comme il se doit",
-"type": "dialogue"
 },
 "43": {
 "id": "43",
@@ -433,23 +485,35 @@ lines = {
 }])
 },
 "next_id": "44",
-"parent_id": "41",
+"parent_id": "42",
 "type": "mutation"
 },
 "44": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "44",
 "next_id": "45",
-"next_id_after": "53",
-"parent_id": "41",
-"responses": PackedStringArray("44"),
+"parent_id": "42",
+"tags": PackedStringArray(),
+"text": "Bien, ces tests sont plutôt concluants, je vais être en mesure de vous aider comme il se doit.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bien, ces tests sont plutôt concluants, je vais être en mesure de vous aider comme il se doit.",
+"type": "dialogue"
+},
+"45": {
+"id": "45",
+"next_id": "46",
+"next_id_after": "54",
+"parent_id": "42",
+"responses": PackedStringArray("45"),
 "tags": PackedStringArray(),
 "text": "*Commencer le traitement*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Commencer le traitement*",
 "type": "response"
 },
-"45": {
-"id": "45",
+"46": {
+"id": "46",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -460,65 +524,53 @@ lines = {
 }])])
 }])
 },
-"next_id": "53",
-"parent_id": "44",
+"next_id": "54",
+"parent_id": "45",
 "type": "mutation"
 },
-"46": {
-"id": "46",
-"next_id": "47",
-"next_id_after": "53",
-"parent_id": "38",
-"tags": PackedStringArray(),
-"text": "*demander si les tests sont obligatoires",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "*demander si les tests sont obligatoires",
-"type": "response"
-},
 "47": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "47",
 "next_id": "48",
-"parent_id": "46",
+"next_id_after": "54",
+"parent_id": "39",
 "tags": PackedStringArray(),
-"text": "Si vous voulez savoir ce que vous avez, oui ils le sont",
+"text": "*Demander si les tests sont obligatoires*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Si vous voulez savoir ce que vous avez, oui ils le sont",
-"type": "dialogue"
+"translation_key": "*Demander si les tests sont obligatoires*",
+"type": "response"
 },
 "48": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "48",
 "next_id": "49",
-"next_id_after": "53",
-"parent_id": "46",
-"responses": PackedStringArray("48", "51"),
+"parent_id": "47",
+"tags": PackedStringArray(),
+"text": "Si vous voulez savoir ce que vous avez, oui, ils le sont.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Si vous voulez savoir ce que vous avez, oui, ils le sont.",
+"type": "dialogue"
+},
+"49": {
+"id": "49",
+"next_id": "50",
+"next_id_after": "54",
+"parent_id": "47",
+"responses": PackedStringArray("49", "52"),
 "tags": PackedStringArray(),
 "text": "*Faire les tests*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Faire les tests*",
 "type": "response"
 },
-"49": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
-"id": "49",
-"next_id": "50",
-"parent_id": "48",
-"tags": PackedStringArray(),
-"text": "Nous allons maintenant pouvoir commencer votre traitement je vous remercie",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Nous allons maintenant pouvoir commencer votre traitement je vous remercie",
-"type": "dialogue"
-},
 "5": {
 "id": "5",
 "next_id": "6",
 "next_id_after": "13",
 "tags": PackedStringArray(),
-"text": "*faire une blague*",
+"text": "*Faire une blague*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*faire une blague*",
+"translation_key": "*Faire une blague*",
 "type": "response"
 },
 "50": {
@@ -533,23 +585,35 @@ lines = {
 }])])
 }])
 },
-"next_id": "53",
-"parent_id": "48",
+"next_id": "51",
+"parent_id": "49",
 "type": "mutation"
 },
 "51": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
 "id": "51",
-"next_id": "52",
-"next_id_after": "53",
-"parent_id": "46",
+"next_id": "54",
+"parent_id": "49",
+"tags": PackedStringArray(),
+"text": "Nous allons maintenant pouvoir commencer votre traitement, je vous remercie.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nous allons maintenant pouvoir commencer votre traitement, je vous remercie.",
+"type": "dialogue"
+},
+"52": {
+"id": "52",
+"next_id": "53",
+"next_id_after": "54",
+"parent_id": "47",
 "tags": PackedStringArray(),
 "text": "*Demander simplement des anti-douleurs*",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "*Demander simplement des anti-douleurs*",
 "type": "response"
 },
-"52": {
-"id": "52",
+"53": {
+"id": "53",
 "mutation": {
 "expression": Array[Dictionary]([{
 "function": "modify_sante",
@@ -560,12 +624,12 @@ lines = {
 }])])
 }])
 },
-"next_id": "53",
-"parent_id": "51",
+"next_id": "54",
+"parent_id": "52",
 "type": "mutation"
 },
-"53": {
-"id": "53",
+"54": {
+"id": "54",
 "is_snippet": false,
 "next_id": "67",
 "type": "goto"
@@ -582,9 +646,9 @@ lines = {
 "id": "57",
 "next_id": "58",
 "tags": PackedStringArray(),
-"text": "Après vous avoir bien analysé je peux dire que vous avez besoin de prendre les antibiotiques que je vais vous prescrire",
+"text": "Après vous avoir bien analysé, je peux dire que vous avez besoin de prendre les antibiotiques que je vais vous prescrire.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Après vous avoir bien analysé je peux dire que vous avez besoin de prendre les antibiotiques que je vais vous prescrire",
+"translation_key": "Après vous avoir bien analysé, je peux dire que vous avez besoin de prendre les antibiotiques que je vais vous prescrire.",
 "type": "dialogue"
 },
 "58": {
@@ -593,9 +657,9 @@ lines = {
 "next_id_after": "64",
 "responses": PackedStringArray("58", "61"),
 "tags": PackedStringArray(),
-"text": "*être contre les antibiotiques et se soigner naturellement*",
+"text": "*Être contre les antibiotiques et se soigner naturellement*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*être contre les antibiotiques et se soigner naturellement*",
+"translation_key": "*Être contre les antibiotiques et se soigner naturellement*",
 "type": "response"
 },
 "59": {
@@ -615,25 +679,29 @@ lines = {
 "type": "mutation"
 },
 "6": {
-"character": "Dr.Droy",
-"character_replacements": Array[Dictionary]([]),
 "id": "6",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_stress",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": -10
+}])])
+}])
+},
 "next_id": "7",
 "parent_id": "5",
-"tags": PackedStringArray(),
-"text": "Asseyez-vous s'il vous plaît. Veuillez noter que je préfère que nous restions concentrés sur votre consultation médicale. Les blagues ne sont pas appropriées dans ce contexte. Maintenant, expliquez-moi vos symptômes et la raison de votre visite aujourd'hui .",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Asseyez-vous s'il vous plaît. Veuillez noter que je préfère que nous restions concentrés sur votre consultation médicale. Les blagues ne sont pas appropriées dans ce contexte. Maintenant, expliquez-moi vos symptômes et la raison de votre visite aujourd'hui .",
-"type": "dialogue"
+"type": "mutation"
 },
 "61": {
 "id": "61",
 "next_id": "62",
 "next_id_after": "64",
 "tags": PackedStringArray(),
-"text": "*les prendre*",
+"text": "*Les prendre*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*les prendre*",
+"translation_key": "*Les prendre*",
 "type": "response"
 },
 "62": {
@@ -682,21 +750,35 @@ lines = {
 "next_id": "end",
 "type": "goto"
 },
-"7": {
-"id": "7",
+"67": {
+"id": "67",
 "mutation": {
 "expression": Array[Dictionary]([{
-"function": "modify_stress",
+"function": "emit_interaction_finished",
 "type": "function",
-"value": Array[Array]([Array[Dictionary]([{
-"type": "number",
-"value": -10
-}])])
+"value": Array[Array]([])
 }])
 },
+"next_id": "69",
+"type": "mutation"
+},
+"69": {
+"id": "69",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"7": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
 "next_id": "8",
 "parent_id": "5",
-"type": "mutation"
+"tags": PackedStringArray(),
+"text": "Asseyez-vous s'il vous plaît. Veuillez noter que je préfère que nous restions concentrés sur votre consultation médicale. Les blagues ne sont pas appropriées dans ce contexte. Maintenant, expliquez-moi vos symptômes et la raison de votre visite aujourd'hui.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Asseyez-vous s'il vous plaît. Veuillez noter que je préfère que nous restions concentrés sur votre consultation médicale. Les blagues ne sont pas appropriées dans ce contexte. Maintenant, expliquez-moi vos symptômes et la raison de votre visite aujourd'hui.",
+"type": "dialogue"
 },
 "8": {
 "id": "8",
@@ -705,20 +787,20 @@ lines = {
 "parent_id": "5",
 "responses": PackedStringArray("8", "9"),
 "tags": PackedStringArray(),
-"text": "*décrire vos symptomes *",
+"text": "*Décrire vos symptômes*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*décrire vos symptomes *",
+"translation_key": "*Décrire vos symptômes*",
 "type": "response"
 },
 "9": {
 "id": "9",
-"next_id": "32",
+"next_id": "33",
 "next_id_after": "13",
 "parent_id": "5",
 "tags": PackedStringArray(),
-"text": "*chercher ses mots*",
+"text": "*Chercher ses mots*",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "*chercher ses mots*",
+"translation_key": "*Chercher ses mots*",
 "type": "response"
 }
 }

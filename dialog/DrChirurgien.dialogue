@@ -1,60 +1,60 @@
 ~ start
 [speed=5] [next=auto]
-Dr.Chirugien: Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabinet? 
+Dr.Chirurgien: Bonjour, alors dites-moi qu'est-ce qui vous amène dans mon cabinet? 
 - *Dire que vous venez sur recommandation du médecin *
-	Dr.Chirugien : *D'accord je vois vous avez effectivement besoins de soins plutôt lourds * 
+	Dr.Chirurgien : *D'accord, je vois vous avez effectivement besoin de soins plutôt lourds * 
 	- *Demander plus d'informations en étant intimidé * 
-		Dr.Chirugien : Ne vous inquiétez pas vous ne risquez rien c'est une opération très courante.
-		- * Vous tombez des nues et avez du mal à envisager une telle opération *
+		Dr.Chirurgien : Ne vous inquiétez pas, vous ne risquez rien, c'est une opération très courante.
+		- *Vous tombez des nues et avez du mal à envisager une telle opération *
 			do modify_stress(-10)
-			Dr.Chirugien: Vous n'avez pas a vous inquiéter j'ai l'habitude de ces opérations et je comprend que cela peut sembler compliqué
-			- *rester retissant* 
+			Dr.Chirurgien: Vous n'avez pas à vous inquiéter, j'ai l'habitude de ces opérations et je comprends que cela puisse sembler compliqué
+			- *rester réticent* 
 				do modify_stress(10)
 				=> retissant 
-		- * Vous arrivez a garder votre calme * 
-			Dr.Chirugien: Je comprend que cela peut être difficile à avaler mais je suis content de votre réaction et votre maturité
+		- *Vous arrivez à garder votre calme * 
 			do modify_stress(10)
+			Dr.Chirurgien: Je comprends que cela peut être difficile à avaler, mais je suis content de votre réaction et de votre maturité
 			- *accepter l'opération*
 				=> remerciement
 	- *Demander plus d'informations et rester serein* 
-		Dr.Chirugien : Bien sûr je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale .
+		Dr.Chirurgien : Bien sûr, je vais tout vous expliquer. Vous allez devoir être opéré en anesthésie générale.
 		- *Comprendre la situation et n'y voir aucun problème*
-			Dr.Chirugien : J'apprécie votre coopération cela va simplifier beaucoup de choses 
+			Dr.Chirurgien : J'apprécie votre coopération, cela va simplifier beaucoup de choses 
 			- *Montrer au spécialiste que vous ne craignez pas l'opération*
-					Dr.Chirugien: Et bien c'est pas tous les jours que les patients sont si enthousiastes
 					do modify_sante(30)
+					Dr.Chirurgien: Et bien, ce n'est pas tous les jours que les patients sont si enthousiastes
 					- *Le médecin demandera son verre de rhum au moment de vous endormir *
 						do modify_stress(-20)
 						=> fin
-			- * Accepter l'opération * => remerciement
+			- *Accepter l'opération * => remerciement
 					
-		- * Vous vous étiez préparé a cela mais vous n'êtes pas enchantés*
-			Dr.Chirugien: C'est pour votre bien, c'est le moyen le plus efficace pour vous soigner 
-			- *rester rétissant*
+		- *Vous vous étiez préparé à cela, mais vous n'êtes pas enchanté*
+			Dr.Chirurgien: C'est pour votre bien, c'est le moyen le plus efficace pour vous soigner 
+			- *rester réticent*
 				do modify_stress(10)
 				=> retissant
 		 		  
 	- *Acquiescer simplement *
-		Dr.Chirugien : Je vois que vous comprenez ce que ça implique. Vous allez devoir subir une opération pour vous soigner
-		- *Demander le type de  l'opération *
-			Dr.Chirugien : Ce sera une anesthésie générale mais les risques sont extrêmement faibles de nos jours
+		Dr.Chirurgien : Je vois que vous comprenez ce que ça implique. Vous allez devoir subir une opération pour vous soigner
+		- *Demander le type de l'opération*
 			do modify_stress(10)
-			- *Demander une anesthésie locale *
-				Dr.Chirugien: Vous êtes sûr? cela risque d'être compliqué et le contrecoup sera plus dur
+			Dr.Chirurgien : Ce sera une anesthésie générale, mais les risques sont extrêmement faibles de nos jours
+			- *Demander une anesthésie locale*
+				Dr.Chirurgien: Vous êtes sûr? cela risque d'être compliqué et le contrecoup sera plus dur
 				- *Oui, faire en anesthésie locale*
 					do modify_sante(20)
 				- *Non faire l'anesthésie générale*
 					do modify_sante(20)
 					do modify_stress(-10)
-			- * Demander la durée de l'opération * => op_duree
+			- *Demander la durée de l'opération* => op_duree
 				
-		- *Demander les risques de l'opérations* 
-			Dr.Chirugien: C'est une opération classique, elle ne comporte quasiment aucun risques
+		- *Demander les risques de l'opération* 
 			do modify_stress(10)
+			Dr.Chirurgien: C'est une opération classique, elle ne comporte quasiment aucun risque
 			- * Demander la durée de l'opération * => op_duree
-			- *Demander si il peut y avoir des effets secondaires indésirables*
-				Dr.Chirugien: C'est possible mais rien d'insurmontable
+			- *Demander s'il peut y avoir des effets secondaires indésirables*
 				do modify_stress(10)
+				Dr.Chirurgien: C'est possible, mais rien d'insurmontable
 				 - *Très bien passons à l'opération *
 					do modify_sante(30)
 	
@@ -63,7 +63,7 @@ Dr.Chirugien: Bonjour, alors dites moi qu'est-ce qui vous amène dans mon cabine
 
 ~ retissant
 
-Dr.Chirugien: Vous allez bien devoir y passer alors autant y mettre du votre
+Dr.Chirurgien: Vous allez bien devoir y passer alors autant y mettre du vôtre
 - * repousser l'échéance au maximum*
 	do modify_sante(20)
 	do modify_stress(-10)
@@ -76,22 +76,22 @@ Dr.Chirugien: Vous allez bien devoir y passer alors autant y mettre du votre
 
 
 ~ remerciement
-Dr.Chirugien: Bien merci et à bientôt
 do modify_sante(30)
+Dr.Chirurgien: Bien merci et à bientôt
 
 => fin 
 
 
 ~ op_duree
 
-Dr.Chirugien: L'opération reste lourde et va donc demander un peu de temps
-do modify_stress(10)
+do modify_stress(-10)
+Dr.Chirurgien: L'opération reste lourde et va donc demander un peu de temps
 - *Très bien passons à l'opération*
 	do modify_sante(30)
 => fin
 
 
-~ fin
+~ fin 
 do emit_interaction_finished()
 
 => END

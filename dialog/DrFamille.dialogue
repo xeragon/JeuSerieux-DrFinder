@@ -1,43 +1,43 @@
 ~ start
 [speed=5] [next=auto]
-Dr.Famille: Salut ! ça fait un bail. qu'est-ce qui t'amène aujourd'hui ,
+Dr.Famille: Salut ! Ça fait un bail. Qu'est-ce qui t'amène aujourd'hui ?
 - *Dire que vous ne vous sentez pas très bien.*
-	Dr.Famille: Dit moi ce qu'il ne vas pas.
-	- * Décrire vos symptômes  en insistant sur ce que vous ressentez mentalement * 
-		Dr.Famille :  C'est intéressant je vais voir a quel point je peux t'être utile, mais un psychologue peut être plus efficace 
+	Dr.Famille: Dis-moi ce qui ne va pas.
+	- *Décrire vos symptômes en insistant sur ce que vous ressentez mentalement* 
 		do modify_stress(10)
+		Dr.Famille: C'est intéressant. Je vais voir à quel point je peux t'être utile, mais un psychologue peut être plus efficace.
 		- *Dire que vous ne trouvez plus de médecins qui font l'affaire*
-			Dr.Famille: C'est vrai que de nos jours ça peut paraître difficile de trouver chaussure à son pied. Mais revenons à votre situation
-			- *Continuer de se plaindre*
-				Dr.Famille: Je ne suis pas là pour vous entendre pleurer un peu de sérieux s'il vous plaît
+			Dr.Famille: C'est vrai que de nos jours ça peut paraître difficile de trouver chaussure à son pied. Mais revenons à votre situation.
+			- *Continuer de vous plaindre*
 				do modify_stress(10)
+				Dr.Famille: Je ne suis pas là pour vous entendre pleurer un peu de sérieux s'il vous plaît.
 				- *Vous vous calmez et suivez les directives du docteur*
 					do modify_sante(10)
 			- *Revenir à votre situation et faire les tests basiques* => test
 			
 		- *Dire que vous venez le voir car vous avez confiance en lui*
-			Dr.Famille: C'est bien gentil, en effet on se connaît depuis un bout de temps maintenant
 			do modify_stress(10)
+			Dr.Famille: C'est bien gentil. En effet, on se connaît depuis un bout de temps maintenant.
 			- *Revenir à votre situation et faire les tests basiques* => test
-			- *Se rappeler le bon vieux temps avec le médecin*
-				Dr.Famille: On s'amusait bien à l'époque et on avait pas toutes ces technologies 
+			- *Se rappeler du bon vieux temps avec le médecin*
+				Dr.Famille: On s'amusait bien à l'époque et on n'avait pas toutes ces technologies.
 				- *Vous ressassez ainsi pendant encore 30 minutes avant de partir* 
 					do modify_stress(20)
 					do modify_sante(10)
-	- * Décrire vos symptômes en insistant sur les effets physiques qu'ils impliquent *
-		Dr.Famille: D'accord on va pouvoir faire quelques diagnostics mais un chirurgien pourrait être plus efficace pour ça
+	- *Décrire vos symptômes en insistant sur les effets physiques qu'ils impliquent*
 		do modify_sante(10)
-		- *dire que vous préférez ne pas faire tout ces tests*
-			Dr.Famille: C'est votre choix mais au vu de vos antécédents familiaux ce serait plus sage de faire ces tests 
-			- *Etre d'accord il sait ce qu'il dit*
+		Dr.Famille: D'accord, on va pouvoir faire quelques diagnostics, mais un chirurgien pourrait être plus efficace pour ça.
+		- *Dire que vous préférez ne pas faire tous ces tests*
+			Dr.Famille: C'est votre choix, mais au vu de vos antécédents familiaux, ce serait plus sage de faire ces tests.
+			- *Être d'accord, il sait ce qu'il dit*
 				do modify_stress(10)
-				Dr.Famille: parfait , si après cette consultation la situation ne s'améliore pas essayez d'aller voir un spécialiste
+				Dr.Famille: Parfait, si après cette consultation la situation ne s'améliore pas, essayez d'aller voir un spécialiste.
 				do modify_sante(20)
-			- *Vous faites parti de la génération épargnée par ces antécédents*
-				Dr.Famille: Bien, si vous le dites, laissez moi quand même faire les analyses basiques
+			- *Vous faites partie de la génération épargnée par ces antécédents*
+				Dr.Famille: Bien, si vous le dites, laissez-moi quand même faire les analyses basiques.
 				do modify_sante(10)
-		- *Aller faire des testes médicaux*
-			Dr.Famille: Si ces test ne donnent rien de concluant allez voir un spécialiste il sera plus utile que moi
+		- *Aller faire des tests médicaux*
+			Dr.Famille: Si ces tests ne donnent rien de concluant, allez voir un spécialiste, il sera plus utile que moi.
 			- *Remercier le médecin pour ses conseils avisés*
 				do modify_sante(20)
 				do modify_stress(10)
@@ -45,13 +45,10 @@ Dr.Famille: Salut ! ça fait un bail. qu'est-ce qui t'amène aujourd'hui ,
 => fin
 
 ~ test
-Dr.Famille: Bien je vais vous prescrire le minimum mais n'hésitez pas à faire plus si vous ressentez le besoin
 do modify_sante(20)
-- *Merci Docteur , à la prochaine  *
+Dr.Famille: Bien, je vais vous prescrire le minimum, mais n'hésitez pas à faire plus si vous ressentez le besoin.
+- *Merci Docteur, à la prochaine*
 => fin
-
-
-
 
 ~ fin
 do emit_interaction_finished()

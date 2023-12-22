@@ -3,6 +3,7 @@ extends Node
 const BASE_STAT = 30
 const WANTED_TOTAL_QUEUE = 25
 const WANTED_TOTAL_QUEUE_SPE = 45
+
 var is_reservation_used = false
 var reserved_doc : String  
 var str : String
@@ -104,10 +105,14 @@ func set_docs_queue():
 		n = rng.randi_range(10,20)
 		docs_queue[x] = n
 		total_spe += n
-	pump_up_queues(total,DocType.DOC)
-	pump_up_queues(total_spe,DocType.SPE_DOC)
-	pump_down_queues(total,DocType.DOC)
-	pump_down_queues(total_spe,DocType.SPE_DOC)
+
+	if (total < WANTED_TOTAL_QUEUE):
+		pump_up_queues(total,DocType.DOC)
+
+	if (total_spe < WANTED_TOTAL_QUEUE_SPE):
+		pump_up_queues(total_spe,DocType.SPE_DOC)
+
+
 	if is_reservation_used and not is_reservation_over:
 		if docs_queue.has(reserved_doc):
 			docs_queue[reserved_doc] = 0
@@ -121,7 +126,7 @@ func pump_up_queues(total : int , doc_type : DocType):
 	var doc_dico : Dictionary
 
 	if doc_type == DocType.DOC:
-		while  current_total < WANTED_TOTAL_QUEUE:
+		while current_total < WANTED_TOTAL_QUEUE:
 			doc_key = docs_queue.keys()[rng.randi_range(0,docs_queue.size()-1)]
 			docs_queue[doc_key] += 1
 			current_total += 1
@@ -149,24 +154,23 @@ func pump_down_queues(total : int, doc_type : DocType ):
 				spe_docs_queue[doc_key] -= 1
 				current_total -= 1
 
-
-
 func get_round_start_str():
 	return "Visite " + str(round_count)
-
 
 func get_end_speech():
 	var r = "";
 	if player_sante == 100:
 		if player_stress > 50:
-			r += "Félicitations ! vous voila rétablis et tout ca en restant serein !"
+			r += "[color=green]Félicitations ! vous voila rétablis et tout ca en restant serein ![color]"
 		else:
-			r += "Vous voila rétablis mais à quel prix ? Vous êtes maintenant traumatiser par le monde médical..."
+			r += "[color=orange]Vous voila rétablis mais à quel prix ? Vous êtes maintenant traumatiser par le monde médical...[/color]"
 	elif player_stress  == 100:
 		if player_sante > 50:
-			r += "Pfiouu ! vous voila totalement rassuré, le reste de votre maladie s'effacera d'elle pas de quoi s'inquiter !" 
+			r += "[color=green]Pfiouu ! vous voila totalement rassuré, le reste de votre maladie s'effacera d'elle pas de quoi s'inquiter ! [/color]" 
 		else:
-			r += "Bon... vous êtes serein. C'est bien mais ca ne vous sauvera pas du cancer..."
+			r += "[color=orange]Bon... vous êtes serein. C'est bien mais ca ne vous sauvera pas du cancer...[/color]"
+	elif (player_sante + player_stress) == 150:
+		r = "[color=green]Bien jouer votre état de santé moyen est plus que correct ![/color]"
 	else:
-		r = "Alors la vous êtes bien dans la merde..."
+		r = "[color=red]Bon... vous ferez mieux la prochaine fois...[/color]"
 	return r
