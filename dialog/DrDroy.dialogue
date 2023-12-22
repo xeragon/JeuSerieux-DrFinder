@@ -19,17 +19,14 @@ Dr.Droy: Très bien j'ai ma petite idée sur ce que ça peut être mais nous all
 	- *S'excuser et faire les tests correctement*
 		=> antibios
 - *Accepter l'examen sans rechigner*
-	Dr.Droy : Je vais prendre votre pression artérielle et je vais vous faire un examen physique , détendez vous et allongez vous sur le banc
-	- *S'allonger et faire le nécessaire*
-	- *Demander quel est la solution la plus efficace*
-		Dr.Droy: Bien je vous laisse vous mettre a l'aise pour les tests
-		- *Faire ce que dit le médecin et se préparer*
-			=> antibios
-		- *Mettre les pieds sur le bureau et se mettre vraiment à l'aise*
-			do modify_stress(10)
-			Dr.Droy: [shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]
-			do modify_stress(-30)
-			do modify_sante(10)
+	Dr.Droy: Bien je vous laisse vous mettre a l'aise pour les tests
+	- *Faire ce que dit le médecin et se préparer*
+		=> antibios
+	- *Mettre les pieds sur le bureau et se mettre vraiment à l'aise*
+		do modify_stress(10)
+		Dr.Droy: [shake rate=20 level=10][b]Non mais vous vous croyez chez vous ici ? dégagez de mon cabinet et ne revenez plus me voir ! [/b][/shake]
+		do modify_stress(-30)
+		do modify_sante(10)
 => fin
 ~ cherche_mots
 Dr.Droy : Bon écoutez vous allez devoir m'aider je n'y arriverais pas si vous ne me décrivez pas vos symptomes !
