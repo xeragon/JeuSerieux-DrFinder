@@ -357,6 +357,70 @@ lines = {
 "translation_key": "*Décrire l'ensemble des symptômes que vous ressentez*",
 "type": "response"
 },
+"38": {
+"id": "38",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 10
+}])])
+}])
+},
+"next_id": "54",
+"parent_id": "37",
+"type": "mutation"
+},
+"39": {
+"id": "39",
+"next_id": "40",
+"next_id_after": "54",
+"tags": PackedStringArray(),
+"text": "*Décrire l'ensemble des symptômes que vous ressentez*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Décrire l'ensemble des symptômes que vous ressentez*",
+"type": "response"
+},
+"37": {
+"id": "37",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "modify_sante",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "number",
+"value": 10
+}])])
+}])
+},
+"next_id": "53",
+"parent_id": "36",
+"type": "mutation"
+},
+"38": {
+"id": "38",
+"next_id": "39",
+"next_id_after": "53",
+"tags": PackedStringArray(),
+"text": "*Décrire l'ensemble des symptomes que vous ressentez*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "*Décrire l'ensemble des symptomes que vous ressentez*",
+"type": "response"
+},
+"39": {
+"character": "Dr.Droy",
+"character_replacements": Array[Dictionary]([]),
+"id": "39",
+"next_id": "40",
+"parent_id": "38",
+"tags": PackedStringArray(),
+"text": "Merci pour ces précisions utiles, je vais réaliser quelques test afin de déterminer ce que vous avez.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Merci pour ces précisions utiles, je vais réaliser quelques test afin de déterminer ce que vous avez.",
+"type": "dialogue"
+},
 "4": {
 "id": "4",
 "next_id": "13",
@@ -667,6 +731,24 @@ lines = {
 "next_id": "67",
 "text": "fin",
 "type": "title"
+},
+"67": {
+"id": "67",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit_interaction_finished",
+"type": "function",
+"value": Array[Array]([])
+}])
+},
+"next_id": "69",
+"type": "mutation"
+},
+"69": {
+"id": "69",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
 },
 "67": {
 "id": "67",
