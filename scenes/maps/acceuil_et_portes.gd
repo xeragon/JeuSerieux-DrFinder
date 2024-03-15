@@ -25,6 +25,7 @@ func _ready():
 	%round_label.modulate.a = 0 
 	%round_label.text = GlobalScript.get_round_start_str()
 	var node : Label
+	
 	for x in GlobalScript.docs_queue:
 		node = get_node("porte_" + x + "/panneau/Label")
 		node.text = str(GlobalScript.docs_queue[x])
@@ -43,8 +44,10 @@ func _ready():
 			doc_doors[x].get_node("filter").modulate = DEFAULT_FILTER
 			doc_doors[x].get_node("collision").disabled = false
 	elif GlobalScript.is_reservation_used:
+		
 		GlobalScript.is_reservation_over = true
 		var doc = GlobalScript.reserved_doc
+		
 		for x in doc_doors:
 			doc_doors[x].get_node("filter").modulate = GRAY_FILTER
 			doc_doors[x].get_node("collision").disabled = true

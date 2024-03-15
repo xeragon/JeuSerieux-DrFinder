@@ -7,8 +7,8 @@ extends map
 func _ready():
 	self.focus_on_map.emit()
 	
-	
 	var anim: Animation = animPlayer.get_animation("entering_room")
+	
 	var track_id : int = 0 
 	var key_id: int = anim.track_find_key(track_id, 1.4)
 	anim.track_set_key_value(track_id, key_id, $pos1.position)
@@ -42,11 +42,13 @@ func _enter_tree():
 	super._enter_tree()
 
 
+func _on_interaction_finished():
+	animPlayer.play("quit_room")
+
 func exit_room():
 	GlobalScript.next_round()
 
-func _on_interaction_finished():
-	animPlayer.play("quit_room")
+
 
 func interact():
 	room_doc.interact()

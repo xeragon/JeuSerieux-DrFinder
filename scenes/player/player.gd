@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 enum State {IDLE ,MOVE,SIT}
 enum MoveDirection {DOWN,UP,RIGHT,LEFT}
+
 @onready var camera = $Camera2D
 @onready var anim = $AnimatedSprite2D
 @onready var emote = $emote
@@ -12,8 +13,10 @@ enum MoveDirection {DOWN,UP,RIGHT,LEFT}
 @export var is_sitting : bool = false
 @export var state : State = State.IDLE
 @export var move_direction : MoveDirection = MoveDirection.DOWN
+
 var direction : Vector2
 var body_in_interact_range = null
+
 @export var friction = 300
 @export var cutscene = false
 @onready var stress = %serenity_bar
@@ -28,9 +31,12 @@ var body_in_interact_range = null
 
 func _ready():
 	interacting = false
+	
 	GlobalScript.player_name = "alex"
 	GlobalScript.player = self
 	GlobalScript.load_player_stats()
+	
+	
 	emote.visible = false
 	$player_hud.visible = true
 	GlobalScript.interaction_finished.connect(_on_interaction_finished)
@@ -41,15 +47,17 @@ func _ready():
 	
 	phone.visible = false
 	%phone_bg.visible = false
-	if get_parent() is Room:
+	
+	if GlobalScript.current_map is Room:
 		can_input = false
 		%ui.visible = true
 	else:
 		can_input = true
 		%ui.visible = false
-		
+
 	
 func _physics_process(delta):
+	
 	if Input.is_action_pressed("open_interface"):
 		if interacting and can_input:
 			can_input = false

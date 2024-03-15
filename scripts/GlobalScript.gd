@@ -20,7 +20,9 @@ var end_speech : String
 var is_reservation_over = false
 
 var rng = RandomNumberGenerator.new()
+
 enum DocType {DOC, SPE_DOC}
+
 var docs_queue : Dictionary  = {
 	"DrZen" : 0,
 	"DrDroy" : 0,
@@ -34,7 +36,28 @@ var spe_docs_queue : Dictionary  = {
 	}
 
 
-signal interaction_finished 
+var docs_queues : Dictionary = {
+	
+	DocType.DOC : {
+		"wanted_total" : 25,
+		"docs" : {
+		"DrZen" : 0,
+		"DrDroy" : 0,
+		"DrZimZim" : 0,
+		"DrFamille" : 0
+		}
+	},
+	
+	DocType.SPE_DOC : {
+		"wanted_total" : 45,
+		"docs" : {
+			"DrChirurgien" : 0,
+			"DrPsy" : 0
+		}
+	}
+}
+
+
 
 func reset_player_stat():
 	player_sante = BASE_STAT
@@ -43,9 +66,14 @@ func reset_player_stat():
 func _ready():
 	reset_player_stat()
 	set_docs_queue()
+	
 func reserve_doc(doc : String):
 	reserved_doc = doc
 	is_reservation_used = true
+	
+	
+signal interaction_finished 
+
 func emit_interaction_finished():
 	emit_signal("interaction_finished")
 
@@ -56,6 +84,8 @@ func modify_stress(value : int):
 	else:
 		player.emote.play("sad")
 	player.stress.value += value
+	
+	
 func modify_sante(value : int):
 	player.emote.visible = true
 	if value > 0:
@@ -96,6 +126,7 @@ func set_docs_queue():
 	var total : int = 0
 	var total_spe : int = 0
 	var n : int 
+	
 	for x in docs_queue:
 		n = rng.randi_range(0,10)
 		docs_queue[x] = n
@@ -112,30 +143,51 @@ func set_docs_queue():
 	if (total_spe < WANTED_TOTAL_QUEUE_SPE):
 		pump_up_queues(total_spe,DocType.SPE_DOC)
 
-
 	if is_reservation_used and not is_reservation_over:
 		if docs_queue.has(reserved_doc):
 			docs_queue[reserved_doc] = 0
 		else:
 			spe_docs_queue[reserved_doc] = 0
-	
-	
+
+
 func pump_up_queues(total : int , doc_type : DocType):
 	var current_total = total
+	var nb_point_to_distribute : int = WANTED_TOTAL_QUEUE - total
 	var doc_key : String
 	var doc_dico : Dictionary
 
 	if doc_type == DocType.DOC:
-		while current_total < WANTED_TOTAL_QUEUE:
+		nb_point_to_distribute = WANTED_TOTAL_QUEUE - total
+		for x in range(0,nb_point_to_distribute):
 			doc_key = docs_queue.keys()[rng.randi_range(0,docs_queue.size()-1)]
 			docs_queue[doc_key] += 1
 			current_total += 1
 	else:
-		while  current_total < WANTED_TOTAL_QUEUE_SPE:
+		nb_point_to_distribute = WANTED_TOTAL_QUEUE_SPE - total
+		for x in range(0,nb_point_to_distribute):
 			doc_key = spe_docs_queue.keys()[rng.randi_range(0,spe_docs_queue.size()-1)]
 			spe_docs_queue[doc_key] += 1
 			current_total += 1
-		
+	print(current_total)
+
+
+
+func better_pump_up_queues(total : int , doc_type : DocType):
+	var current_total = total
+	var doc_key : String
+	var doc_dico : Dictionary = docs_queues[DocType]["docs"]
+	var nb_point_to_distribute : int = docs_queues[DocType]["wanted_total"] - total
+
+	for x in range(0,nb_point_to_distribute):
+			doc_key = doc_dico.keys()[rng.randi_range(0,doc_dico.size()-1)]
+			doc_dico[doc_key] += 1
+			current_total += 1
+
+	print(current_total)
+
+
+
+
 func pump_down_queues(total : int, doc_type : DocType ):
 	var current_total = total
 	var doc_key : String
